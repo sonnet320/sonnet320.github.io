@@ -103,9 +103,20 @@ canvas.edit{touch-action:none}
 .chip i{font-style:normal;font-size:clamp(9px,.8cqw,11px);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
 
 /* ---------- controls ---------- */
-.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;align-items:start}
-/* masonry: each card spans rows for its own height (set by the page), so short cards stack instead of leaving gaps */
-.controls.masonry{grid-auto-rows:1px;row-gap:0;grid-auto-flow:row dense}
+/* settings: three fixed columns (fans and view / case and load / parts and saving), then the wide cards in a stack */
+.controls{display:flex;flex-direction:column;gap:14px}
+.cgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:start}
+.ccol{display:flex;flex-direction:column;gap:14px;min-width:0}
+.ccol>.card{min-width:0}
+.ccol>.card:last-child{flex:1}   /* the columns end on one line */
+.card select{min-width:0;text-overflow:ellipsis}
+.picks{gap:8px 10px}
+.picks select{max-width:100%;width:100%}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px 12px}
+.chk{display:flex;align-items:center;gap:6px;font-size:13px;min-width:0}
+.chk input{margin:0;accent-color:var(--accent)}
+@media (min-width:720px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}.ccol.c3{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}.ccol.c3>.card:last-child:nth-child(odd){grid-column:1/-1}}
+@media (min-width:1100px){.cgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.ccol.c3{grid-column:auto;display:flex}}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:11px}
 .card h2{margin:0;font-size:15px;font-weight:700}
 .hint{margin:0;color:var(--muted);font-size:13px}
@@ -219,6 +230,11 @@ body.present .about{display:none}
 .nztab td small{display:block;color:var(--muted);font-size:11px;line-height:1.4}
 .nztab tr.cur td{background:color-mix(in srgb,var(--accent) 8%,transparent)}
 .nztab .btn{padding:3px 8px;font-size:11.5px}
+.nzmore summary{cursor:pointer;font-size:12.5px;color:var(--muted);width:fit-content}
+.nzmore summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.nzmore p{margin:6px 0 0}
+#nz-excl p{margin:0}
+#nz-excl .nzmore{margin-top:4px}
 body.present #noisecard{display:none}
 
 /* ---------- prices ---------- */
@@ -372,11 +388,13 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
   </section>
 
   <div class="controls">
+    <div class="cgrid">
+    <div class="ccol">
     <div class="card">
       <h2>ファン</h2>
-      <p class="hint">図のファンはドラッグで移動、矢印の先の丸いつまみで向きを変えます。壁に近づけると自動で取り付きます。何もない所のダブルクリックでも追加できます。構成表の「前面ファン」〜「底面ファン」の行に台数(例:120mm ×3)や吸気・排気を書くか、▼で選んでも配置が変わります。</p>
+      <p class="hint">図のファンはドラッグで移動、矢印の先のつまみで向きを変えます(壁に近づけると取り付きます)。構成表の「前面ファン」などの行に台数や吸気・排気を書いても配置が変わります。</p>
       <div class="btns"><button class="btn primary" id="addfan">＋ ファンを追加</button><button class="btn" id="addside">＋ 側面吸気</button><button class="btn" id="addsideout">＋ 側面排気</button></div>
-      <p class="hint">側面ファンは、ピラーレスケースなどの側面パネルに付くファンです。図の奥の面から空気を出し入れします(⊙が吸気、⊗が排気)。付けた後でも吸気と排気を切り替えられます。</p>
+      <p class="hint">側面ファンはピラーレスケースなどの側面パネルのファンで、図の奥の面から出し入れします(⊙吸気・⊗排気)。</p>
       <div class="insp">
         <div class="insp-head"><b id="i-title">ファンが選ばれていません</b><span class="hint" id="i-sub">図のファンをタップすると設定できます</span></div>
         <div class="sub" id="i-body" hidden style="border-top:0;padding-top:0">
@@ -417,28 +435,101 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
         </div>
       </div>
     </div>
-
-    <div class="card wide" id="noisecard">
-      <h2>ファンの騒音</h2>
-      <p class="hint">メーカーが公表している騒音(dBA)と、その回転数をもとにした推定です。ARCTIC は dBA を公表していないため、Cybenetics の測定(ファン単体・1m・25 dBA になる回転数)を使っています。回転数を下げたときの騒音は「回転数が2倍で約15dB上がる」という近似で計算しています。メーカーごとに測り方(距離・部屋・取り付け)が違い、ケースの中ではフィルターや共振でも変わるため、数値は比べるための目安です。</p>
-      <div class="nzgrid">
-        <div class="nzcol">
-          <b class="subh">いまのファンの騒音(推定)</b>
-          <p class="nztotal" id="nz-total"></p>
-          <div class="nzlist" id="nz-list"></div>
-          <div class="sub">
-            <label class="inline">目標の騒音(ファン1台あたり) <span class="nzin"><input class="numin sm" type="number" id="nz-target" min="10" max="45" step="0.5"> dBA</span></label>
-            <div class="btns"><button class="btn primary" id="nz-apply" type="button">全ファンをこの騒音にそろえる</button></div>
-            <p class="msg" id="nz-msg" role="status"></p>
-          </div>
+    <div class="card">
+      <h2>シミュレーション</h2>
+      <label class="inline">色で表示
+        <select id="overlay"><option value="temp">温度</option><option value="speed">風速</option><option value="pressure">圧力(正圧・負圧)</option><option value="age">よどみ(空気の滞留時間)</option><option value="none">なし</option></select>
+      </label>
+      <div class="checks">
+        <label class="chk"><input type="checkbox" id="v-part"> 空気の粒子</label>
+        <label class="chk"><input type="checkbox" id="v-arrow"> 風向きの矢印</label>
+        <label class="chk"><input type="checkbox" id="v-cfm"> ファンの風量を表示</label>
+        <label class="chk"><input type="checkbox" id="v-conf"> 渦を細かく再現</label>
+        <label class="chk"><input type="checkbox" id="mirror"> フロントを右側に表示</label>
+      </div>
+      <label class="inline">粒子の量 <input type="range" id="v-count" min="600" max="4000" step="200"> <b class="num" id="v-countv"></b></label>
+      <label class="inline">再生速度
+        <select id="v-speed"><option value="0.25">1/4倍(スロー)</option><option value="0.5">1/2倍</option><option value="1">等速</option></select>
+      </label>
+      <div class="btns">
+        <button class="btn" id="run">一時停止</button>
+        <button class="btn" id="ff">安定するまで早送り</button>
+        <button class="btn" id="resetair">空気をリセット</button>
+      </div>
+      <div class="sub" id="s3box">
+        <span class="hint"><b style="color:var(--ink)">3次元の計算(WebGPU)</b></span>
+        <label class="inline">パネルの開口(3D) <select id="p3d"><option value="real">実機に近い(メッシュはファン部分)</option><option value="full">2次元版と同じ(全面が通気)</option></select></label>
+        <label class="inline">空気の流れ(3D) <select id="f3d"><option value="smoke">煙</option><option value="line">線</option><option value="both">煙と線</option></select></label>
+        <p class="hint" id="s3note"></p>
+      </div>
+      <div class="btns"><button class="btn primary" id="present">録画モードにする</button></div>
+      <p class="hint">2Dはケースを真横から見た流体シミュレーションです(ファンの性能曲線・パーツやメッシュの抵抗・発熱と対流)。数値は配置を比べるための目安です。</p>
+    </div>
+    </div>
+    <div class="ccol">
+    <div class="card">
+      <h2>ケース</h2>
+      <label class="inline">ケースの大きさ
+        <select id="casesize"><option value="itx">小型(Mini-ITX)</option><option value="micro">ミニタワー(Micro-ATX)</option><option value="mid">ミドルタワー</option><option value="full">フルタワー</option><option value="wide">ピラーレス(幅広)</option><option value="h5flow24">NZXT H5 Flow (2024)</option><option value="custom">カスタム</option></select>
+      </label>
+      <div class="grid3">
+        <label class="stack">奥行き(mm)<input class="numin" type="number" id="cd-d" min="300" max="700" step="5"></label>
+        <label class="stack">高さ(mm)<input class="numin" type="number" id="cd-h" min="280" max="700" step="5"></label>
+        <label class="stack">幅(mm)<input class="numin" type="number" id="cd-w" min="160" max="320" step="5"></label>
+      </div>
+      <p class="hint">外寸です(幅はサイドパネル間)。</p>
+      <p class="msg" id="caseinfo"></p>
+      <p class="msg warn" id="casewarn" role="status"></p>
+      <label class="inline">ケースの構造
+        <select id="casetype"><option value="standard">電源下置き(シュラウドあり)</option><option value="dual">デュアルチャンバー(電源は裏側)</option></select>
+      </label>
+      <p class="hint">底面吸気のピラーレスケースは「デュアルチャンバー」にすると、底面全体にファンを付けられます。</p>
+      <div class="grid2 picks">
+        <label class="stack">前面パネル<select id="p-front"><option value="mesh">メッシュ</option><option value="glass">ガラス(側面スリット)</option></select></label>
+        <label class="stack">上面<select id="p-top"><option value="mesh">メッシュ</option><option value="closed">閉じている</option></select></label>
+        <label class="stack">背面<select id="p-rear"><option value="vent">通気穴あり</option><option value="closed">閉じている</option></select></label>
+        <label class="stack">底面<select id="p-bottom"><option value="fanonly">ファン部だけ開口(フィルター)</option><option value="mesh">全面メッシュ</option><option value="closed">閉じている</option></select></label>
+      </div>
+      <div class="sub" id="psubox">
+        <span class="hint">電源のまわり(電源下置きのケース)</span>
+        <div class="grid2 picks">
+          <label class="stack">カバーの上面<select id="pa-shroud"><option value="solid">閉じている</option><option value="mesh">メッシュ・通気穴</option></select></label>
+          <label class="stack">カバーの側面<select id="pa-side"><option value="closed">閉じている</option><option value="vent">通気穴あり</option></select></label>
+          <label class="stack">電源の下(底面)<select id="pa-bottom"><option value="mesh">メッシュ(フィルター)</option><option value="closed">閉じている</option></select></label>
+          <label class="stack">脚の高さ(床まで)<select id="clearance"><option value="10">10mm(低い・敷物の上)</option><option value="25">25mm(標準)</option><option value="35">35mm(高め)</option></select></label>
         </div>
-        <div class="nzcol">
-          <div class="nzhead"><b class="subh" id="nz-cap">同じ騒音で比べる</b><select id="nz-size" aria-label="比べるファンのサイズ"><option value="120">120mm</option><option value="140">140mm</option><option value="all">すべて</option></select></div>
-          <div class="dtab-wrap"><table class="dtab nztab" id="nz-table"></table></div>
-          <p class="hint" id="nz-excl"></p>
-        </div>
+        <p class="msg" id="pa-note"></p>
       </div>
     </div>
+    <div class="card" id="cardbox">
+      <h2>拡張カード</h2>
+      <p class="hint">グラボ以外のカード(キャプチャーボードなど)。</p>
+        <label class="inline">カード <select id="card-model"><option value="none">なし</option><option value="kuro4k1c1">玄人志向 KURO-CPC-4K1C1PTwA(キャプチャーボード)</option><option value="custom">その他(大きさを入力)</option></select></label>
+        <label class="inline">位置 <select id="card-off"><option value="1">グラボのすぐ下のスロット(1段下)</option><option value="2">2段下</option><option value="3">3段下</option><option value="4">4段下</option><option value="5">5段下</option><option value="6">6段下</option></select></label>
+        <label class="inline">グラボとのすき間(実測) <input class="numin sm" type="number" id="card-gap" min="0" max="200" step="1" placeholder="未入力"> mm</label>
+        <div class="grid3" id="card-dims">
+          <label class="stack">長さ(mm)<input class="numin" type="number" id="card-L" min="60" max="320" step="1"></label>
+          <label class="stack">高さ(mm)<input class="numin" type="number" id="card-H" min="40" max="160" step="1"></label>
+          <label class="stack">厚さ(mm)<input class="numin" type="number" id="card-T" min="5" max="60" step="1"></label>
+        </div>
+        <label class="inline">発熱 <input class="numin sm" type="number" id="card-W" min="0" max="75" step="1"> W</label>
+        <p class="hint">位置は背面のスロットカバーで、グラボの金具の段から何段下かで数えます。すき間を測って入れると、そちらを優先します。</p>
+        <p class="msg" id="card-note"></p>
+    </div>
+    <div class="card">
+      <h2>保存と読み込み</h2>
+      <p class="hint">BTOショップの構成表(「CPU: Ryzen 7 9700X」のような行)を貼り付けると、構成表と設定に入力します。入力はこのブラウザに自動保存されます。動画ごとの構成は「データをコピー」で残し、次回ここに貼り付けると読み込めます。</p>
+      <div class="btns">
+        <button class="btn" id="copy">データをコピー</button>
+<button class="btn" id="export-result" type="button">計算結果を書き出す</button>
+        <button class="btn" id="load-json">貼り付けた内容を読み込む</button>
+        <button class="btn" id="reset">サンプルに戻す</button>
+      </div>
+      <textarea id="json" aria-label="構成の貼り付け欄" placeholder="BTOショップの構成表、またはコピーしたデータを貼り付け&#10;例)&#10;CPU: Ryzen 7 9700X&#10;グラフィック: GeForce RTX 5070 Ti 16GB&#10;メモリ: DDR5-5600 32GB (16GB×2)"></textarea>
+      <div class="est-row"><p class="msg" id="msg" role="status"></p><button class="btn" id="undo-import" type="button" hidden>元に戻す</button></div>
+    </div>
+    </div>
+    <div class="ccol c3">
     <div class="card">
       <h2>CPUクーラーとマザーボード</h2>
       <label class="inline">マザーボード
@@ -468,7 +559,6 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
       <label class="inline" id="radposbox">ラジエーターの位置 <select id="radpos"><option value="top">上面</option><option value="front">前面</option></select></label>
       <p class="msg warn" id="coolwarn" role="status"></p>
     </div>
-
     <div class="card">
       <h2>グラフィックボード</h2>
       <p class="hint" id="g-chip"></p>
@@ -493,101 +583,40 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
       <p class="hint" id="gfan-note"></p>
       <p class="msg warn" id="gpuwarn" role="status"></p>
     </div>
-
     <div class="card">
-      <h2>ケースと環境</h2>
-      <label class="inline">ケースの大きさ
-        <select id="casesize"><option value="itx">小型(Mini-ITX)</option><option value="micro">ミニタワー(Micro-ATX)</option><option value="mid">ミドルタワー</option><option value="full">フルタワー</option><option value="wide">ピラーレス(幅広)</option><option value="h5flow24">NZXT H5 Flow (2024)</option><option value="custom">カスタム</option></select>
-      </label>
-      <div class="grid3">
-        <label class="stack">奥行き(mm)<input class="numin" type="number" id="cd-d" min="300" max="700" step="5"></label>
-        <label class="stack">高さ(mm)<input class="numin" type="number" id="cd-h" min="280" max="700" step="5"></label>
-        <label class="stack">幅(mm)<input class="numin" type="number" id="cd-w" min="160" max="320" step="5"></label>
-      </div>
-      <p class="hint">外寸で入力します。幅はサイドパネル間の距離で、同じ風量でも幅が広いほど中の風速は下がります。</p>
-      <p class="msg" id="caseinfo"></p>
-      <p class="msg warn" id="casewarn" role="status"></p>
-      <label class="inline">ケースの構造
-        <select id="casetype"><option value="standard">電源下置き(シュラウドあり)</option><option value="dual">デュアルチャンバー(電源は裏側)</option></select>
-      </label>
-      <p class="hint">底面吸気のピラーレスケースは「デュアルチャンバー」を選ぶと、底面全体にファンを付けられます。電源下置きでは、底面ファンはシュラウドより前側だけに付きます。</p>
-      <label class="inline">前面パネル <select id="p-front"><option value="mesh">メッシュ</option><option value="glass">ガラス(側面スリット)</option></select></label>
-      <label class="inline">上面 <select id="p-top"><option value="mesh">メッシュ</option><option value="closed">閉じている</option></select></label>
-      <label class="inline">背面 <select id="p-rear"><option value="vent">通気穴あり</option><option value="closed">閉じている</option></select></label>
-      <label class="inline">底面 <select id="p-bottom"><option value="fanonly">ファン部だけ開口(フィルター)</option><option value="mesh">全面メッシュ</option><option value="closed">閉じている</option></select></label>
-      <div class="sub" id="psubox">
-        <span class="hint">電源のまわり(電源下置きのケース。電源カバー=シュラウド)</span>
-        <label class="inline">電源カバーの上面 <select id="pa-shroud"><option value="solid">閉じている</option><option value="mesh">メッシュ・通気穴</option></select></label>
-        <label class="inline">電源カバーの側面 <select id="pa-side"><option value="closed">閉じている</option><option value="vent">通気穴あり</option></select></label>
-        <label class="inline">電源の下(底面) <select id="pa-bottom"><option value="mesh">メッシュ(フィルター)</option><option value="closed">閉じている</option></select></label>
-        <p class="msg" id="pa-note"></p>
-      </div>
-      <label class="inline">脚の高さ(床とのすき間)
-        <select id="clearance"><option value="10">10mm(低い・敷物の上)</option><option value="25">25mm(標準)</option><option value="35">35mm(高め)</option></select>
-      </label>
-      <div class="sub" id="cardbox">
-        <span class="hint">グラボ以外の拡張カード(キャプチャーボードなど)</span>
-        <label class="inline">カード <select id="card-model"><option value="none">なし</option><option value="kuro4k1c1">玄人志向 KURO-CPC-4K1C1PTwA(キャプチャーボード)</option><option value="custom">その他(大きさを入力)</option></select></label>
-        <label class="inline">位置 <select id="card-off"><option value="1">グラボのすぐ下のスロット(1段下)</option><option value="2">2段下</option><option value="3">3段下</option><option value="4">4段下</option><option value="5">5段下</option><option value="6">6段下</option></select></label>
-        <label class="inline">グラボとのすき間(実測) <input class="numin sm" type="number" id="card-gap" min="0" max="200" step="1" placeholder="未入力"> mm</label>
-        <div class="grid3" id="card-dims">
-          <label class="stack">長さ(mm)<input class="numin" type="number" id="card-L" min="60" max="320" step="1"></label>
-          <label class="stack">高さ(mm)<input class="numin" type="number" id="card-H" min="40" max="160" step="1"></label>
-          <label class="stack">厚さ(mm)<input class="numin" type="number" id="card-T" min="5" max="60" step="1"></label>
-        </div>
-        <label class="inline">発熱 <input class="numin sm" type="number" id="card-W" min="0" max="75" step="1"> W</label>
-        <p class="hint">位置はケース背面のスロットカバーで数えます(グラボの一番上の金具の段から、カードの金具の段まで何段下か)。グラボの下面からカードまでのすき間を測って入れると、段数よりそちらを優先します。</p>
-        <p class="msg" id="card-note"></p>
-      </div>
+      <h2>負荷と室温</h2>
       <label class="inline">室温 <input type="range" id="room" min="15" max="35" step="1"> <b class="num" id="roomv"></b></label>
       <label class="inline">CPUの負荷 <select id="cpumode"></select></label>
       <label class="inline" id="cpuloadbox">CPU使用率 <input type="range" id="cpuload" min="0" max="100" step="5"> <b class="num" id="cpuloadv"></b></label>
       <label class="inline" id="cpuwbox" hidden>CPUの消費電力 <input class="numin sm" type="number" id="cpuw" min="1" max="600" step="1" placeholder="例 88"> W</label>
       <p class="hint" id="cpuheat"></p>
       <label class="inline">GPU使用率 <input type="range" id="gpuload" min="0" max="100" step="5"> <b class="num" id="gpuloadv"></b></label>
-      <p class="hint">使用率100%は最大の消費電力で動き続ける状態、0%はアイドルです。CPUは「ゲーム」「動画の書き出し」を選ぶと、レビューサイトの実測の消費電力(測定条件つきの目安)を使います。実機の HWiNFO の CPU Package Power が分かれば「消費電力を入力」が一番正確です。</p>
-      <label class="inline">フロントを右側に表示 <input type="checkbox" id="mirror"></label>
+      <p class="hint">100%は最大の消費電力で動き続ける状態、0%はアイドルです。CPUの「ゲーム」「動画の書き出し」はレビューサイトの実測(条件つきの目安)を使います。HWiNFO の CPU Package Power が分かれば「消費電力を入力」が一番正確です。</p>
     </div>
-
-    <div class="card">
-      <h2>シミュレーション</h2>
-      <label class="inline">色で表示
-        <select id="overlay"><option value="temp">温度</option><option value="speed">風速</option><option value="pressure">圧力(正圧・負圧)</option><option value="age">よどみ(空気の滞留時間)</option><option value="none">なし</option></select>
-      </label>
-      <label class="inline">空気の粒子 <input type="checkbox" id="v-part"></label>
-      <label class="inline">粒子の量 <input type="range" id="v-count" min="600" max="4000" step="200"> <b class="num" id="v-countv"></b></label>
-      <label class="inline">風向きの矢印 <input type="checkbox" id="v-arrow"></label>
-      <label class="inline">ファンの風量を表示 <input type="checkbox" id="v-cfm"></label>
-      <label class="inline">渦を細かく再現 <input type="checkbox" id="v-conf"></label>
-      <label class="inline">再生速度
-        <select id="v-speed"><option value="0.25">1/4倍(スロー)</option><option value="0.5">1/2倍</option><option value="1">等速</option></select>
-      </label>
-      <div class="btns">
-        <button class="btn" id="run">一時停止</button>
-        <button class="btn" id="ff">安定するまで早送り</button>
-        <button class="btn" id="resetair">空気をリセット</button>
-      </div>
-      <div class="sub" id="s3box">
-        <span class="hint"><b style="color:var(--ink)">3次元の計算(WebGPU)</b></span>
-        <label class="inline">パネルの開口(3D) <select id="p3d"><option value="real">実機に近い(メッシュはファン部分)</option><option value="full">2次元版と同じ(全面が通気)</option></select></label>
-        <label class="inline">空気の流れ(3D) <select id="f3d"><option value="smoke">煙</option><option value="line">線</option><option value="both">煙と線</option></select></label>
-        <p class="hint" id="s3note"></p>
-      </div>
-      <div class="btns"><button class="btn primary" id="present">録画モードにする</button></div>
-      <p class="hint">奥行き20cmのケースを真横から見た2次元の流体シミュレーションです。ファンの性能曲線、ヒートシンクやメッシュの抵抗、発熱と暖かい空気の上昇を計算しています。数値は配置を比べるための目安です。</p>
     </div>
-
-    <div class="card">
-      <h2>保存と読み込み</h2>
-      <p class="hint">下の欄にBTOショップの構成表(「CPU: Ryzen 7 9700X」のような項目名と内容の行)を貼り付けると、構成表と下の設定に自動で入力します。入力内容はこのブラウザに自動保存されます。動画ごとの構成は「データをコピー」で保存し、次回この欄に貼り付けると読み込めます。</p>
-      <div class="btns">
-        <button class="btn" id="copy">データをコピー</button>
-<button class="btn" id="export-result" type="button">計算結果を書き出す</button>
-        <button class="btn" id="load-json">貼り付けた内容を読み込む</button>
-        <button class="btn" id="reset">サンプルに戻す</button>
+    </div>
+    <div class="card wide" id="noisecard">
+      <h2>ファンの騒音</h2>
+      <p class="hint">メーカー公称の騒音(dBA)からの推定です。メーカーごとに測り方が違うため、比べるための目安です。</p>
+      <details class="nzmore"><summary>計算のしかた</summary><p class="hint">メーカーが公表している騒音(dBA)と、その回転数をもとにしています。ARCTIC は dBA を公表していないため、Cybenetics の測定(ファン単体・1m・25 dBA になる回転数)を使っています。回転数を下げたときの騒音は「回転数が2倍で約15dB上がる」という近似で計算しています。メーカーごとに測り方(距離・部屋・取り付け)が違い、ケースの中ではフィルターや共振でも変わります。</p></details>
+      <div class="nzgrid">
+        <div class="nzcol">
+          <b class="subh">いまのファンの騒音(推定)</b>
+          <p class="nztotal" id="nz-total"></p>
+          <div class="nzlist" id="nz-list"></div>
+          <div class="sub">
+            <label class="inline">目標の騒音(ファン1台あたり) <span class="nzin"><input class="numin sm" type="number" id="nz-target" min="10" max="45" step="0.5"> dBA</span></label>
+            <div class="btns"><button class="btn primary" id="nz-apply" type="button">全ファンをこの騒音にそろえる</button></div>
+            <p class="msg" id="nz-msg" role="status"></p>
+          </div>
+        </div>
+        <div class="nzcol">
+          <div class="nzhead"><b class="subh" id="nz-cap">同じ騒音で比べる</b><select id="nz-size" aria-label="比べるファンのサイズ"><option value="120">120mm</option><option value="140">140mm</option><option value="all">すべて</option></select></div>
+          <div class="dtab-wrap"><table class="dtab nztab" id="nz-table"></table></div>
+          <div class="btns"><button class="btn" id="nz-all" type="button" aria-expanded="false"></button></div>
+          <div class="hint" id="nz-excl"></div>
+        </div>
       </div>
-      <textarea id="json" aria-label="構成の貼り付け欄" placeholder="BTOショップの構成表、またはコピーしたデータを貼り付け&#10;例)&#10;CPU: Ryzen 7 9700X&#10;グラフィック: GeForce RTX 5070 Ti 16GB&#10;メモリ: DDR5-5600 32GB (16GB×2)"></textarea>
-      <div class="est-row"><p class="msg" id="msg" role="status"></p><button class="btn" id="undo-import" type="button" hidden>元に戻す</button></div>
     </div>
     <div class="card wide" id="pricecard">
       <h2>価格</h2>
@@ -4496,17 +4525,6 @@ gcSet('gc-L','L',optNum(120,420));gcSet('gc-H','H',optNum(60,180));gcSet('gc-T',
 gcSet('gc-fans','fans',Number);gcSet('gc-type','type');gcSet('gc-vc','vc');
 
 
-/* ---------- settings cards: masonry ----------
-   Each card spans as many 1px rows as it is tall (plus the gap), and dense placement drops the next card
-   into the highest free spot, so cards of different heights pack without empty areas. */
-(function(){
-  const box=document.querySelector('.controls');if(!box||typeof ResizeObserver==='undefined')return;
-  const GAP=14;let pend=0;
-  const lay=()=>{pend=0;for(const c of box.children){const h=c.getBoundingClientRect().height;c.style.gridRowEnd=h?'span '+Math.ceil(h+GAP):'';}box.classList.add('masonry');};
-  const ro=new ResizeObserver(()=>{if(!pend)pend=setTimeout(lay,0);});
-  for(const c of box.children)ro.observe(c);
-  lay();
-})();
 /* ---------- controls ---------- */
 let selId=null, needRebuild=true, running=!window.matchMedia('(prefers-reduced-motion: reduce)').matches, warm=0;
 function dirty(){needRebuild=true;save();renderNoiseNow();renderNoiseTable();}
@@ -4809,6 +4827,7 @@ function renderNoiseNow(){
     return `<div class="nzrow"><span>${esc(g.name)} ×${g.n}</span><i>${g.rpm}%・約${Math.round(g.max*g.rpm/100)}rpm</i><b class="num">${v}</b></div>`;}).join('');
 }
 /* the same-noise table: every catalog fan of the chosen size at the target noise */
+const NZ_TOP=8;let nzAll=false;   // rows shown before 「すべて表示」
 function renderNoiseTable(){
   if(!$('nz-table'))return;
   const T=state.noiseT, sz=state.noiseSize, ms=FAN_DB.filter(m=>!m.typ&&!m.aio&&(sz==='all'||m.size===+sz));
@@ -4822,13 +4841,22 @@ function renderNoiseTable(){
     rows.push({m,n,r,q:m.cfm*Math.pow(k,NOISE_QEXP),p:m.mm*k*k});
   }
   rows.sort((a,b)=>b.q-a.q);
+  // a short list by default: the top few by flow, plus the fans in use (wherever they rank)
+  const shown=nzAll?rows:rows.filter((x,i)=>i<NZ_TOP||used.has(x.m.id));
+  $('nz-all').hidden=rows.length<=NZ_TOP;
+  $('nz-all').textContent=nzAll?`上位${NZ_TOP}機種だけ表示`:`すべて表示(${rows.length}機種)`;
+  $('nz-all').setAttribute('aria-expanded',String(nzAll));
   const note=x=>x.r.cap?`最大回転でも ${nzFmt(x.r.db)} dBA(目標に届かない)`:x.r.low?`これ以上は下げられない(${nzFmt(x.r.db)} dBA)`:'';
-  $('nz-table').innerHTML='<thead><tr><th>ファン</th><th>回転数</th><th>風量(開放)</th><th>静圧</th><th></th></tr></thead><tbody>'+rows.map(x=>
+  $('nz-table').innerHTML='<thead><tr><th>ファン</th><th>回転数</th><th>風量(開放)</th><th>静圧</th><th></th></tr></thead><tbody>'+shown.map(x=>
     `<tr${used.has(x.m.id)?' class="cur"':''}><td class="nzname">${esc(x.m.name)}${x.m.rev?'(リバース)':''}<small>${esc(noiseRefText(x.n,x.m.rpm))}${note(x)?'・'+note(x):''}</small></td>`
     +`<td class="num">${Math.round(x.r.N)}rpm<small>${Math.round(x.r.pct)}%</small></td><td class="num">${nzFmt(x.q)} CFM</td><td class="num">${(Math.round(x.p*100)/100).toFixed(2)} mmH2O</td>`
     +`<td><button class="btn" type="button" data-nzuse="${x.m.id}">使う</button></td></tr>`).join('')+'</tbody>';
-  $('nz-excl').textContent=`並びは開放時の風量の順です。風量・静圧は最大の公称値を回転数に合わせて換算した目安(風量 ∝ 回転数^1.14、静圧 ∝ 回転数²)で、同時に出る値ではありません。色の付いた行は今使っている機種です。「使う」を押すと、全ファンをその機種にして目標の騒音にそろえます。`
-    +(out.length?` 騒音の公称値で比べられない機種(${out.length}):${out.join('、')}。`:'');
+  const ex=`<p>風量の多い順。色付きの行は使用中の機種で、「使う」で全ファンをその機種にそろえます。</p>`
+    +`<details class="nzmore"><summary>風量・静圧の換算${out.length?`と、比べられない機種(${out.length})`:''}</summary><p>風量・静圧は最大の公称値を回転数に合わせて換算した目安(風量 ∝ 回転数^1.14、静圧 ∝ 回転数²)で、同時に出る値ではありません。</p>`
+    +(out.length?`<p>騒音の公称値で比べられない機種:${esc(out.join('、'))}。</p>`:'')+'</details>';
+  const ed=$('nz-excl').querySelector('details'), op=ed&&ed.open;
+  if($('nz-excl').innerHTML!==ex)$('nz-excl').innerHTML=ex;
+  if(op){const d=$('nz-excl').querySelector('details');if(d)d.open=true;}
 }
 /* set every fan with data to the target noise (each fan the same loudness) */
 function applyNoise(){
@@ -4846,6 +4874,7 @@ function applyNoise(){
 }
 $('nz-target').onchange=e=>{const v=+e.target.value;if(e.target.value!==''&&isFinite(v))state.noiseT=clamp(Math.round(v*2)/2,10,45);renderNoiseTable();save();};
 $('nz-size').onchange=e=>{state.noiseSize=e.target.value;renderNoiseTable();save();};
+$('nz-all').onclick=()=>{nzAll=!nzAll;renderNoiseTable();};
 $('nz-apply').onclick=applyNoise;
 $('nz-table').onclick=e=>{const b=e.target.closest('[data-nzuse]');if(!b)return;applyModelAll({model:b.dataset.nzuse});applyNoise();renderNoiseTable();};
 $('addsideout').onclick=()=>addSide('out');
