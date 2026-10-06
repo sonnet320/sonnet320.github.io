@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v56-cpupower",
+  "mode": "2d",
+  "computedAt": "2026-10-06T12:04:25.508Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 90,
+    "grade": "優",
+    "cap": null,
+    "cpu": 62.9,
+    "gpu": 54.1,
+    "vrm": 49.8,
+    "intake": 3.76,
+    "stag": 5.7,
+    "press": -5.6,
+    "rows": {
+      "cpu": "良",
+      "gpu": "優",
+      "vrm": "良",
+      "intake": "優",
+      "stag": "良",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 2.31,
+      "cpuT": 3.76,
+      "gpuT": 0.71,
+      "vrmT": 4.31,
+      "vrmV": 0.482,
+      "exT": 4.15,
+      "pIn": 0.087,
+      "stag": 0.057,
+      "fanIn": 81.1,
+      "fanOut": 87.7,
+      "leakIn": 33.5,
+      "leakOut": 27
+    },
+    "coolQ": 40.2,
+    "gpuQ": 38.8
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "pct",
+    "cpuLoad": 100,
+    "gpuLoad": 100,
+    "fanRpm": 70,
+    "cpuPower": 88,
+    "gpuPower": 145
+  },
+  "image": "results/sample-20.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "sample-20"
+}
