@@ -1,5 +1,9 @@
 'use strict';
 const $=id=>document.getElementById(id), frame=$('pc-sheet');
+/* parts from the price page (?parts=) and fans from the ranking page (?fans=) go on to the sheet below */
+(()=>{const q=new URLSearchParams(location.search),next=new URLSearchParams(),ok=v=>typeof v==='string'&&/^[a-z0-9:,-]{1,800}$/.test(v);
+  for(const k of ['parts','fans'])if(ok(q.get(k)))next.set(k,q.get(k));
+  if([...next].length){frame.src='pc-sheet/?'+next.toString();try{history.replaceState(null,'',location.pathname+'#sheet');}catch{}}})();
 const tiers={20:'20万円以下',30:'30万円以下',40:'40万円以下',plus:'40万円以上'};
 let config=null,selected=null,currentTier='all',sheetReady=false,resultSequence=0,loadingBuild=false;
 const cache=new Map(),pending=new Map();
@@ -74,7 +78,7 @@ $('load-build').addEventListener('click',async()=>{
   try{
     config=await getJSON('config.json');if(!Array.isArray(config.products))throw new Error('構成一覧の形式が違います。');
     $('site-name').textContent=config.siteName;$('footer-name').textContent=config.siteName;document.title=config.sheetName+' | '+config.siteName;
-    $('menu').replaceChildren();for(const item of config.menu||[]){if(!/^#[a-zA-Z][\w-]*$/.test(item.href))continue;const a=node('a','',item.label);a.href=item.href;$('menu').append(a);}
+    $('menu').replaceChildren();for(const item of config.menu||[]){if(!/^#[a-zA-Z][\w-]*$/.test(item.href)&&!/^[a-z0-9-]+\/$/.test(item.href))continue;const a=node('a','',item.label);a.href=item.href;if(item.href==='#sheet')a.setAttribute('aria-current','page');$('menu').append(a);}
     displayLink('channel-link',config.channelUrl);displayLink('contact-link',config.contactUrl);
     $('sample-notice').hidden=!config.products.some(p=>p.sample);renderCards();if(config.products.length)selectProduct(config.products[0]);
   }catch(e){$('card-count').textContent='一覧を読み込めませんでした';$('catalog-error').textContent=e.message+' 公開後のURL、またはローカルサーバーから開いてください。';$('catalog-error').hidden=false;}

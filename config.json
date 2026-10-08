@@ -11,6 +11,14 @@
     {
       "label": "おすすめBTO",
       "href": "#recommendations"
+    },
+    {
+      "label": "パーツ価格",
+      "href": "prices/"
+    },
+    {
+      "label": "ファン・クーラー",
+      "href": "ranking/"
     }
   ],
   "products": [

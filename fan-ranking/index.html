@@ -1,0 +1,476 @@
+<!doctype html><html lang="ja" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ファン・クーラーランキング</title>
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+/* Layout: PC構成シート・パーツ価格シートと同じ部品(色・書体)。上にタブ、その下に条件の帯、順位表を1列 */
+:root{
+  color-scheme:light;
+  --bg:#E9EDF2;--stage:#F7F9FB;--panel:#FFFFFF;--line:#CDD5DF;--ink:#18202C;--muted:#5A6576;--soft:#DDE3EA;
+  --accent:#2E7CE6;--bar:#2E7CE6;--bar2:#9DBDEB;--hl:#EEF4FD;--hl-line:#C5D8F5;
+  --gold:#B8860B;--silver:#6E7B8C;--bronze:#A0522D;--ok:#0E8A52;--warn:#9A6A00;
+  --shadow:0 1px 2px rgba(24,32,44,.06),0 8px 24px rgba(24,32,44,.06);
+  --jp:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --bg:#0E1218;--stage:#151B24;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--soft:#222B38;
+  --accent:#4E9BFF;--bar:#4E9BFF;--bar2:#2F4A73;--hl:#1E2C44;--hl-line:#2F4A73;
+  --gold:#E3B341;--silver:#A9B4C2;--bronze:#D98B5F;--ok:#35C985;--warn:#E0B04A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0E1218;--stage:#151B24;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--soft:#222B38;
+  --accent:#4E9BFF;--bar:#4E9BFF;--bar2:#2F4A73;--hl:#1E2C44;--hl-line:#2F4A73;
+  --gold:#E3B341;--silver:#A9B4C2;--bronze:#D98B5F;--ok:#35C985;--warn:#E0B04A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--jp);font-size:14px;line-height:1.55;padding:20px 16px 28px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 20px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.eyebrow{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font-size:24px;font-weight:900;line-height:1.3;text-wrap:balance}
+.meta{font:500 12px var(--mono);color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tabs button{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--muted);font-weight:700;padding:8px 18px}
+.tabs button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);min-width:0}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.grp{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.grp>span{font:600 11px var(--mono);letter-spacing:.06em;margin-right:2px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.seg button{border:0;border-right:1px solid var(--line);background:var(--panel);color:var(--muted);font-size:13px;font-weight:700;padding:5px 11px}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--panel)}
+.chk{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.chk input{margin:0;width:15px;height:15px;accent-color:var(--accent)}
+.lead{padding:12px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.lead b{color:var(--ink);font-size:14px}
+ol.rank{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:44px minmax(0,1fr) minmax(150px,240px);gap:4px 14px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--soft)}
+.row:last-child{border-bottom:0}
+.no{font:700 20px var(--mono);text-align:center;color:var(--muted);font-variant-numeric:tabular-nums}
+.row.r1 .no{color:var(--gold)}.row.r2 .no{color:var(--silver)}.row.r3 .no{color:var(--bronze)}
+.row.r1,.row.r2,.row.r3{background:var(--stage)}
+.nm{font-weight:700;overflow-wrap:anywhere;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.tag{font:600 10.5px var(--mono);letter-spacing:.03em;border:1px solid var(--line);border-radius:4px;padding:0 5px;color:var(--muted);background:var(--panel);white-space:nowrap}
+.tag.rev{border-color:var(--hl-line);color:var(--accent)}
+.tag.price{border-color:transparent;background:var(--hl);color:var(--ink)}
+.sub{font-size:12px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}
+.sub .w{color:var(--warn)}
+.val{display:flex;flex-direction:column;gap:4px;min-width:0}
+.big{font:700 18px var(--mono);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.big small{font-size:11px;font-weight:500;color:var(--muted);margin-left:3px}
+.track{height:7px;border-radius:4px;background:var(--soft);overflow:hidden}
+.fill{height:100%;border-radius:4px;background:var(--bar)}
+.fill.alt{background:var(--bar2)}
+.side{font:500 11px var(--mono);color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.empty{padding:22px 14px;color:var(--muted);font-size:13px}
+.out{padding:12px 14px;border-top:1px solid var(--line);background:var(--stage);font-size:12px;color:var(--muted);border-radius:0 0 12px 12px}
+.out summary{cursor:pointer;font-weight:700}
+.out ul{margin:6px 0 0;padding-left:18px}
+.how{padding:14px 16px;font-size:13px}
+.how h2{margin:0 0 6px;font-size:15px}
+.how p{margin:6px 0;max-width:70ch}
+.how code{font:500 12px var(--mono);background:var(--stage);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.foot{font-size:12px;color:var(--muted)}
+/* fan → PC構成シート */
+.addb{margin-top:6px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--accent);font-size:12px;font-weight:700;padding:2px 10px}
+.addb:hover{border-color:var(--accent)}
+.addb.on{background:var(--hl);border-color:var(--hl-line)}
+.tray{padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.tray-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 12px}
+.tray-head b{font-size:15px}
+.tray-head span{font-size:12px;color:var(--muted)}
+.slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.slot{border:1px solid var(--line);border-radius:9px;padding:7px 9px;background:var(--stage);display:flex;flex-direction:column;gap:1px;min-width:0;position:relative}
+.slot.empty{border-style:dashed;background:transparent}
+.slot .k{font:700 10.5px var(--mono);letter-spacing:.06em;color:var(--muted)}
+.slot .v{font-weight:700;font-size:13px;overflow-wrap:anywhere;padding-right:20px}
+.slot .d{font-size:11.5px;color:var(--muted)}
+.slot .x{position:absolute;top:4px;right:4px;border:0;background:transparent;color:var(--muted);width:22px;height:22px;border-radius:5px;font-size:15px;line-height:1}
+.slot .x:hover{background:var(--soft);color:var(--ink)}
+.tray-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.btn{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font-size:13px;font-weight:700;padding:6px 14px;text-decoration:none;display:inline-block}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.btn:disabled{opacity:.45;cursor:default}
+.tmsg{font-size:12px;color:var(--muted);margin:0}
+.copybox{width:100%;font:500 11px var(--mono);border:1px solid var(--line);border-radius:6px;background:var(--stage);color:var(--ink);padding:6px;min-height:60px}
+.ov{position:fixed;inset:0;z-index:30;background:color-mix(in srgb,var(--ink) 40%,transparent);display:flex;align-items:center;justify-content:center;padding:16px}
+/* embedded in a page that grows the frame to full height: the popup opens next to the button, not mid-frame */
+.ov.emb{position:absolute;inset:0 0 auto 0;align-items:flex-start}
+.ov.emb .dlg{max-height:none}
+.dlg{width:min(460px,100%);max-height:calc(100vh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:12px}
+.dlg h2{margin:0;font-size:16px;overflow-wrap:anywhere}
+.dlg .hint{margin:0;font-size:12px;color:var(--muted)}
+.prow{display:grid;grid-template-columns:3.2em auto minmax(0,1fr);align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--soft)}
+.prow:last-of-type{border-bottom:0}
+.prow>b{font-size:14px}
+.step{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.step button{border:0;background:var(--panel);color:var(--ink);width:32px;height:30px;font-size:16px;font-weight:700}
+.step button:disabled{color:var(--soft);cursor:default}
+.step output{min-width:2.4em;text-align:center;font:700 15px var(--mono);font-variant-numeric:tabular-nums}
+.prow .seg{justify-self:end}
+.prow .seg button{padding:4px 10px;font-size:12px}
+.prow.zero .seg{opacity:.35;pointer-events:none}
+.dlg-foot{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+@media (max-width:640px){.slots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .row{grid-template-columns:34px minmax(0,1fr);}
+  .row .val{grid-column:2}
+  .big{text-align:left}.side{text-align:left}
+  .no{font-size:17px}
+}
+@media (prefers-reduced-motion:no-preference){.fill{transition:width .25s ease}}
+</style>
+<style id="site-theme">
+/* sonnet320.github.io の色に合わせる(assets/style.css:--bg #F5F2EB, --card #FFFDF8, --line #E2DCCF, --ink #22251F, --muted #5F6458, --green #1F6B57, --selected #E1EEE8) */
+:root,:root[data-theme]{color-scheme:light;
+  --bg:#F7F5EF;--stage:#F3F0E8;--panel:#FFFDF8;--line:#E2DCCF;--ink:#22251F;--muted:#5F6458;--soft:#ECE8DD;
+  --accent:#1F6B57;--hl:#E1EEE8;--hl-line:#B9D8CB;--grid:#ECE8DD;--cross:#8E927E;
+  --bar:#1F6B57;--bar2:#BFD3C8;--up:#C8283F;--down:#1F6B57;
+  --s1:#1F6B57;--s3:#2a78d6;
+  --gold:#A87A12;--silver:#6E746A;--bronze:#9C5A33;--warn:#8A6512;
+  --shadow:0 1px 2px rgba(34,37,31,.05),0 6px 18px rgba(18,63,51,.05)}
+/* inside a site page, the page heading already names the sheet: hide the sheet's own title, keep its date line */
+html.embedded .head>div:first-child{display:none}
+html.embedded .head{justify-content:flex-end;padding-bottom:6px;border-bottom-width:1px}
+</style>
+<script>if(window.parent!==window)document.documentElement.classList.add('embedded');</script>
+</head><body>
+
+<div class="wrap">
+  <header class="head">
+    <div>
+      <div class="eyebrow">そねっとの趣味部屋 · PC構成シート</div>
+      <h1>ファン・クーラーランキング</h1>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="ランキングの種類">
+    <button type="button" role="tab" id="tab-fan" data-tab="fan" aria-selected="true">ケースファン</button>
+    <button type="button" role="tab" id="tab-air" data-tab="air" aria-selected="false">空冷CPUクーラー</button>
+    <button type="button" role="tab" id="tab-aio" data-tab="aio" aria-selected="false">水冷CPUクーラー</button>
+  </div>
+
+  <section class="card tray" id="tray" aria-label="PC構成シートに入れるファン"></section>
+
+  <section class="card" id="board" aria-live="polite">
+    <div class="ctrl" id="ctrl"></div>
+    <div class="lead" id="lead"></div>
+    <ol class="rank" id="list"></ol>
+    <div class="out" id="out" hidden></div>
+  </section>
+
+  <section class="card how" id="how"></section>
+  <p class="foot" id="foot"></p>
+</div>
+<div class="ov" id="ov" hidden><div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t" id="dlg"></div></div>
+
+<script>
+const D={"fans":[{"id":"f120q","name":"NZXT F120Q(ケース付属版)","size":120,"rpm":1350,"cfm":60.2,"mm":1.05,"t":25,"rev":false,"bundled":true,"src":null},{"id":"p12","name":"ARCTIC P12 PWM PST","size":120,"rpm":1800,"cfm":56.3,"mm":2.2,"t":25,"rev":false,"bundled":false,"src":null},{"id":"kazeflex2","name":"Scythe KAZE FLEX II 120 PWM(1500rpm)","size":120,"rpm":1500,"cfm":67.62,"mm":1.5,"t":25,"rev":false,"bundled":false,"src":null},{"id":"tlc12c","name":"Thermalright TL-C12C","size":120,"rpm":1550,"cfm":66.17,"mm":1.53,"t":25,"rev":false,"bundled":false,"src":null},{"id":"nfa12x25","name":"Noctua NF-A12x25 PWM","size":120,"rpm":2000,"cfm":60.09,"mm":2.34,"t":25,"rev":false,"bundled":false,"src":null},{"id":"sl120v2","name":"Lian Li UNI FAN SL120 V2","size":120,"rpm":2000,"cfm":64.5,"mm":2.59,"t":25,"rev":false,"bundled":false,"src":null},{"id":"rx120","name":"Corsair iCUE LINK RX120","size":120,"rpm":2100,"cfm":73.5,"mm":4.33,"t":25,"rev":false,"bundled":false,"src":null},{"id":"sw4hs","name":"be quiet! Silent Wings 4 120mm 高速版","size":120,"rpm":2500,"cfm":76.7,"mm":3.96,"t":25,"rev":false,"bundled":false,"src":null},{"id":"p12max","name":"ARCTIC P12 Max","size":120,"rpm":3300,"cfm":81.04,"mm":4.35,"t":25,"rev":false,"bundled":false,"src":null},{"id":"t30","name":"Phanteks T30-120(3000rpmモード)","size":120,"rpm":3000,"cfm":100.9,"mm":7.37,"t":30,"rev":false,"bundled":false,"src":null},{"id":"mach120","name":"Sudokoo MACH120","size":120,"rpm":3000,"cfm":108,"mm":7.31,"t":30,"rev":false,"bundled":false,"src":null},{"id":"nfa12x25g2","name":"Noctua NF-A12x25 G2 PWM","size":120,"rpm":1800,"cfm":63.2,"mm":3.14,"t":25,"rev":false,"bundled":false,"src":null},{"id":"p12pro","name":"ARCTIC P12 Pro PST","size":120,"rpm":3000,"cfm":77,"mm":6.9,"t":25,"rev":false,"bundled":false,"src":null},{"id":"wsnail120","name":"Scythe WONDER SNAIL 120 PWM(1800rpm)","size":120,"rpm":1800,"cfm":51.7,"mm":1.74,"t":26,"rev":false,"bundled":false,"src":null},{"id":"fc120","name":"DeepCool FC120","size":120,"rpm":1800,"cfm":61.9,"mm":1.83,"t":25,"rev":false,"bundled":false,"src":null},{"id":"rs120","name":"Corsair RS120 ARGB","size":120,"rpm":2100,"cfm":72.8,"mm":4.15,"t":25,"rev":false,"bundled":false,"src":null},{"id":"pw3hs","name":"be quiet! Pure Wings 3 120mm PWM 高速版","size":120,"rpm":2100,"cfm":59.6,"mm":2.41,"t":25,"rev":false,"bundled":false,"src":null},{"id":"p14","name":"ARCTIC P14 PWM PST","size":140,"rpm":1700,"cfm":72.8,"mm":2.4,"t":25,"rev":false,"bundled":false,"src":null},{"id":"nfa14","name":"Noctua NF-A14 PWM","size":140,"rpm":1500,"cfm":82.52,"mm":2.08,"t":25,"rev":false,"bundled":false,"src":null},{"id":"sl140v2","name":"Lian Li UNI FAN SL140 V2","size":140,"rpm":1600,"cfm":77.6,"mm":2.09,"t":25,"rev":false,"bundled":false,"src":null},{"id":"mach140","name":"Sudokoo MACH140","size":140,"rpm":2200,"cfm":129,"mm":5.91,"t":30,"rev":false,"bundled":false,"src":null},{"id":"p14pro","name":"ARCTIC P14 Pro PST","size":140,"rpm":2500,"cfm":110,"mm":5.2,"t":27,"rev":false,"bundled":false,"src":null},{"id":"nfa14g2","name":"Noctua NF-A14x25 G2 PWM","size":140,"rpm":1500,"cfm":91.6,"mm":2.56,"t":25,"rev":false,"bundled":false,"src":null},{"id":"sw4140","name":"be quiet! Silent Wings 4 140mm PWM","size":140,"rpm":1100,"cfm":51.3,"mm":0.92,"t":25,"rev":false,"bundled":false,"src":null},{"id":"kf140sq","name":"Scythe KAZE FLEX 140 SQUARE PWM(1200rpm)","size":140,"rpm":1200,"cfm":67.2,"mm":1.25,"t":27,"rev":false,"bundled":false,"src":null},{"id":"lltl120","name":"Lian Li UNI FAN TL 120","size":120,"rpm":2600,"cfm":90.1,"mm":3.97,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl/"},{"id":"lltl140","name":"Lian Li UNI FAN TL 140","size":140,"rpm":1800,"cfm":103.9,"mm":2.34,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl/"},{"id":"lltl120r","name":"Lian Li UNI FAN TL 120 Reverse","size":120,"rpm":2300,"cfm":83.4,"mm":2.66,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl/"},{"id":"lltl140r","name":"Lian Li UNI FAN TL 140 Reverse","size":140,"rpm":1800,"cfm":101.6,"mm":2.27,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl/"},{"id":"lltllcd120","name":"Lian Li UNI FAN TL LCD 120","size":120,"rpm":1900,"cfm":62,"mm":2.9,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-TL-LCD/"},{"id":"lltllcd140","name":"Lian Li UNI FAN TL LCD 140","size":140,"rpm":1600,"cfm":68.1,"mm":3.5,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-TL-LCD/"},{"id":"lltllcd120r","name":"Lian Li UNI FAN TL LCD 120 Reverse","size":120,"rpm":1900,"cfm":54.3,"mm":2.83,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-TL-LCD/"},{"id":"lltllcd140r","name":"Lian Li UNI FAN TL LCD 140 Reverse","size":140,"rpm":1600,"cfm":64,"mm":3.1,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-TL-LCD/"},{"id":"llslinf120","name":"Lian Li UNI FAN SL-INF 120","size":120,"rpm":2100,"cfm":61.3,"mm":2.66,"t":25,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-infinity/"},{"id":"llslinf140","name":"Lian Li UNI FAN SL-INF 140","size":140,"rpm":1600,"cfm":72.7,"mm":2.88,"t":25,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-infinity/"},{"id":"llslinf120r","name":"Lian Li UNI FAN SL-INF 120 Reverse","size":120,"rpm":2100,"cfm":63.6,"mm":2.02,"t":25,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-infinity-reverse-blade/"},{"id":"llslinf140r","name":"Lian Li UNI FAN SL-INF 140 Reverse","size":140,"rpm":1600,"cfm":71.6,"mm":2.95,"t":25,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-infinity-reverse-blade/"},{"id":"llslw120","name":"Lian Li UNI FAN SL Wireless 120 LED","size":120,"rpm":2000,"cfm":65.4,"mm":2.19,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-wireless/"},{"id":"llslw120r","name":"Lian Li UNI FAN SL Wireless 120 LED Reverse","size":120,"rpm":2000,"cfm":69.5,"mm":2.6,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-wireless/"},{"id":"llslwlcd120","name":"Lian Li UNI FAN SL Wireless 120 LCD","size":120,"rpm":1900,"cfm":58.08,"mm":2.4,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-wireless/"},{"id":"llslwlcd120r","name":"Lian Li UNI FAN SL Wireless 120 LCD Reverse","size":120,"rpm":1900,"cfm":51.45,"mm":2.1,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-wireless/"},{"id":"llslinfw120","name":"Lian Li UNI FAN SL-INF Wireless 120","size":120,"rpm":2300,"cfm":67,"mm":3.4,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-inf-wireless/"},{"id":"llslinfw120r","name":"Lian Li UNI FAN SL-INF Wireless 120 Reverse","size":120,"rpm":2200,"cfm":69.7,"mm":2.2,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-inf-wireless/"},{"id":"llslinfw140","name":"Lian Li UNI FAN SL-INF Wireless 140","size":140,"rpm":1800,"cfm":77.6,"mm":3.45,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-inf-wireless/"},{"id":"llslinfw140r","name":"Lian Li UNI FAN SL-INF Wireless 140 Reverse","size":140,"rpm":1700,"cfm":73.8,"mm":3.12,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-sl-inf-wireless/"},{"id":"lltlflex120","name":"Lian Li UNI FAN TL FLEX 120 LED","size":120,"rpm":2600,"cfm":90.1,"mm":3.97,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl-flex/"},{"id":"lltlflex120r","name":"Lian Li UNI FAN TL FLEX 120 LED Reverse","size":120,"rpm":2300,"cfm":83.4,"mm":2.66,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl-flex/"},{"id":"lltlflexlcd120","name":"Lian Li UNI FAN TL FLEX 120 LCD","size":120,"rpm":1900,"cfm":66,"mm":2.7,"t":28,"rev":false,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl-flex/"},{"id":"lltlflexlcd120r","name":"Lian Li UNI FAN TL FLEX 120 LCD Reverse","size":120,"rpm":1900,"cfm":63,"mm":2.83,"t":28,"rev":true,"bundled":false,"src":"https://lian-li.com/product/uni-fan-tl-flex/"},{"id":"p12prorev","name":"ARCTIC P12 Pro Reverse A-RGB","size":120,"rpm":3000,"cfm":73,"mm":4.5,"t":27,"rev":true,"bundled":false,"src":"https://www.arctic.de/en/P12-Pro-Reverse-A-RGB/ACFAN00322A"},{"id":"p12argb","name":"ARCTIC P12 PWM PST A-RGB","size":120,"rpm":2000,"cfm":48.8,"mm":1.85,"t":25,"rev":false,"bundled":false,"src":"https://www.arctic.de/en/P12-PWM-PST/"},{"id":"p14argb","name":"ARCTIC P14 PWM PST A-RGB","size":140,"rpm":1900,"cfm":68.9,"mm":2,"t":27,"rev":false,"bundled":false,"src":"https://www.arctic.de/en/P14-PWM-PST-A-RGB/ACFAN00239A"},{"id":"p14max","name":"ARCTIC P14 Max","size":140,"rpm":2800,"cfm":95,"mm":4.18,"t":27,"rev":false,"bundled":false,"src":"https://www.arctic.de/media/8a/18/01/1710507321/Spec_Sheet_P14_Max_EN.pdf"},{"id":"lx120","name":"Corsair iCUE LINK LX120 RGB","size":120,"rpm":2400,"cfm":69.9,"mm":5.22,"t":25,"rev":false,"bundled":false,"src":"https://www.corsair.com/us/en/explorer/diy-builder/fans/are-reverse-blade-fans-as-good-as-normal-fans/"},{"id":"lx140","name":"Corsair iCUE LINK LX140 RGB","size":140,"rpm":2000,"cfm":84.7,"mm":4.86,"t":25,"rev":false,"bundled":false,"src":"https://www.corsair.com/us/en/explorer/diy-builder/fans/are-reverse-blade-fans-as-good-as-normal-fans/"},{"id":"lx120r","name":"Corsair iCUE LINK LX120-R RGB","size":120,"rpm":2400,"cfm":66.7,"mm":4.72,"t":25,"rev":true,"bundled":false,"src":"https://www.corsair.com/us/en/explorer/diy-builder/fans/are-reverse-blade-fans-as-good-as-normal-fans/"},{"id":"lx140r","name":"Corsair iCUE LINK LX140-R RGB","size":140,"rpm":2000,"cfm":90.6,"mm":4.22,"t":25,"rev":true,"bundled":false,"src":"https://www.corsair.com/us/en/explorer/diy-builder/fans/are-reverse-blade-fans-as-good-as-normal-fans/"},{"id":"rs120r","name":"Corsair RS120-R ARGB","size":120,"rpm":2100,"cfm":65.8,"mm":2.81,"t":25,"rev":true,"bundled":false,"src":"https://www.corsair.com/jp/ja/explorer/diy-builder/fans/corsair-rs-r-argb-vs-lx-r-reverse-fans-whats-the-difference/"},{"id":"d30120","name":"Phanteks D30-120","size":120,"rpm":2000,"cfm":64.3,"mm":3.01,"t":30,"rev":false,"bundled":false,"src":"https://phanteks.com/product/d30-120-black/"},{"id":"d30120r","name":"Phanteks D30-120 Reverse","size":120,"rpm":2000,"cfm":61.5,"mm":2.72,"t":30,"rev":true,"bundled":false,"src":"https://phanteks.com/product/d30-120-black/"},{"id":"d30140","name":"Phanteks D30-140","size":140,"rpm":1800,"cfm":71.93,"mm":3.32,"t":30,"rev":false,"bundled":false,"src":"https://phanteks.com/product/d30-140-black/"},{"id":"d30140r","name":"Phanteks D30-140 Reverse","size":140,"rpm":1800,"cfm":71.76,"mm":3.08,"t":30,"rev":true,"bundled":false,"src":"https://phanteks.com/product/d30-140-black/"},{"id":"swafan12","name":"Thermaltake SWAFAN EX12 標準羽根","size":120,"rpm":2000,"cfm":57.11,"mm":2.39,"t":25,"rev":false,"bundled":false,"src":"https://thermaltake.com/products/swafan-ex12-argb-sync-pc-cooling-fan-white-tt-premium-edition-3-fan-pack"},{"id":"swafan12r","name":"Thermaltake SWAFAN EX12 リバース羽根","size":120,"rpm":2000,"cfm":56.26,"mm":2.02,"t":25,"rev":true,"bundled":false,"src":"https://thermaltake.com/products/swafan-ex12-argb-sync-pc-cooling-fan-white-tt-premium-edition-3-fan-pack"},{"id":"swafan14","name":"Thermaltake SWAFAN EX14 標準羽根","size":140,"rpm":2000,"cfm":81.6,"mm":3.17,"t":25,"rev":false,"bundled":false,"src":"https://thermaltake.com/products/swafan-ex14-argb-sync-pc-cooling-fan-tt-premium-edition-3-fan-pack"},{"id":"swafan14r","name":"Thermaltake SWAFAN EX14 リバース羽根","size":140,"rpm":2000,"cfm":79.3,"mm":2.73,"t":25,"rev":true,"bundled":false,"src":"https://thermaltake.com/products/swafan-ex14-argb-sync-pc-cooling-fan-tt-premium-edition-3-fan-pack"},{"id":"tlc12rbs","name":"Thermalright TL-C12RB-S V2","size":120,"rpm":1500,"cfm":58,"mm":1.53,"t":25,"rev":true,"bundled":false,"src":"https://www.thermalright.com/product/tl-c12rb-s-v2/"},{"id":"tlm12rs","name":"Thermalright TL-M12R-S","size":120,"rpm":1500,"cfm":34.43,"mm":1.31,"t":25,"rev":true,"bundled":false,"src":"https://www.thermalright.com/product/tl-m12r-s/"},{"id":"lwlx120r","name":"be quiet! Light Wings LX 120mm PWM Reverse","size":120,"rpm":1500,"cfm":48.8,"mm":1.04,"t":25,"rev":true,"bundled":false,"src":"https://www.bequiet.com/en/casefans/5779"},{"id":"swp4120","name":"be quiet! Silent Wings Pro 4 120mm PWM(最高速モード)","size":120,"rpm":3000,"cfm":83.9,"mm":5.31,"t":25,"rev":false,"bundled":false,"src":"https://www.bequiet.com/en/casefans/3705"},{"id":"swp4140","name":"be quiet! Silent Wings Pro 4 140mm PWM(最高速モード)","size":140,"rpm":2400,"cfm":97.4,"mm":3.64,"t":25,"rev":false,"bundled":false,"src":"https://www.bequiet.com/en/casefans/3706"},{"id":"fk120","name":"DeepCool FK120","size":120,"rpm":1850,"cfm":68.99,"mm":2.19,"t":25,"rev":false,"bundled":false,"src":"https://www.deepcool.com/products/Cooling/fans/FK120-Performance-Fan/2022/15422.shtml"},{"id":"ft12","name":"DeepCool FT12","size":120,"rpm":2150,"cfm":75,"mm":4.2,"t":25,"rev":false,"bundled":false,"src":"https://deepcool.com/products/Cooling/fans/FT12-120mm-Performance-Fan/2024/19006.shtml"},{"id":"mobius120","name":"Cooler Master Mobius 120","size":120,"rpm":2050,"cfm":63.1,"mm":2.69,"t":25,"rev":false,"bundled":false,"src":"https://www.coolermaster.com/en-global/products/MFZ-M2NN-21NPK-R1.html"},{"id":"sf120r","name":"Cooler Master SickleFlow 120 ARGB Reverse Edition","size":120,"rpm":1800,"cfm":62,"mm":2.5,"t":25,"rev":true,"bundled":false,"src":"https://www.coolermaster.com/en-au/products/sickleflow-120-argb-reverse-edition.html"},{"id":"nfa12x15","name":"Noctua NF-A12x15 PWM","size":120,"rpm":1850,"cfm":55.44,"mm":1.53,"t":15,"rev":false,"bundled":false,"src":"https://www.noctua.at/en/products/nf-a12x15-pwm/specifications"},{"id":"nfs12a","name":"Noctua NF-S12A PWM","size":120,"rpm":1200,"cfm":63.27,"mm":1.19,"t":25,"rev":false,"bundled":false,"src":"https://www.noctua.at/en/products/nf-s12a-pwm/specifications"}],"coolers":[{"id":"dc-ak400","brand":"DeepCool","name":"AK400","type":"air","pipes":4,"fans":1,"fs":120,"h":155,"tdp":220,"cap":{"E":212.5,"mech":205,"tdp":220,"src":"both"}},{"id":"dc-ag400g2","brand":"DeepCool","name":"AG400 G2","type":"air","pipes":null,"fans":1,"fs":120,"h":152,"tdp":230,"cap":{"E":230,"mech":null,"tdp":230,"src":"tdp"}},{"id":"dc-ak620","brand":"DeepCool","name":"AK620","type":"air2","pipes":6,"fans":2,"fs":120,"h":160,"tdp":260,"cap":{"E":263.3441538613572,"mech":266.68830772271434,"tdp":260,"src":"both"}},{"id":"dc-ak700vc","brand":"DeepCool","name":"AK700 VC","type":"air","pipes":7,"fans":1,"fs":120,"h":157,"tdp":300,"vc":true,"d":76,"fq":80.37,"fp":4.98,"fanNote":"120mm×1(2700rpm)","cap":{"E":304.11917202780944,"mech":308.23834405561894,"tdp":300,"src":"both"}},{"id":"sd-sk700","brand":"Sudokoo","name":"SK700","type":"air","pipes":7,"fans":1,"fs":120,"h":null,"tdp":220,"d":76,"fq":66.29,"fp":3.74,"cap":{"E":246.85016673060088,"mech":273.70033346120175,"tdp":220,"src":"both"}},{"id":"sd-sk700v","brand":"Sudokoo","name":"SK700V(ディスプレイ付き)","type":"air","pipes":7,"fans":1,"fs":120,"h":164,"tdp":220,"d":76,"fq":66.29,"fp":3.74,"cap":{"E":253.17099749510956,"mech":286.3419949902191,"tdp":220,"src":"both"}},{"id":"sd-sk700vm","brand":"Sudokoo","name":"SK700V MACH","type":"air","pipes":7,"fans":1,"fs":120,"h":164,"tdp":280,"d":76,"fq":108,"fp":7.31,"fanNote":"MACH120(30mm厚・3000rpm)×1","cap":{"E":305.44768570816063,"mech":330.8953714163213,"tdp":280,"src":"both"}},{"id":"sd-sk620v","brand":"Sudokoo","name":"SK620V(ディスプレイ付き)","type":"air2","pipes":6,"fans":2,"fs":120,"h":164,"tdp":265,"fq":56.46,"fp":2.93,"cap":{"E":264.0131505652256,"mech":263.02630113045115,"tdp":265,"src":"both"}},{"id":"sd-nex240","brand":"Sudokoo","name":"NEXAURA 240","type":"aio","rad":240,"thick":27,"fans":2,"fs":120,"tdp":280,"rf":"sdnex120","cap":{"E":265,"mech":250,"tdp":280,"src":"both"}},{"id":"sd-nex360","brand":"Sudokoo","name":"NEXAURA 360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":300,"rf":"sdnex120","cap":{"E":310,"mech":320,"tdp":300,"src":"both"}},{"id":"sd-energlo360","brand":"Sudokoo","name":"ENERGLO 360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":310,"rf":"sdeng120","cap":{"E":315,"mech":320,"tdp":310,"src":"both"}},{"id":"dc-assvc","brand":"DeepCool","name":"ASSASSIN VC ELITE","type":"air2","pipes":7,"fans":2,"fs":140,"h":164,"tdp":300,"vc":true,"cap":{"E":307.9743827738238,"mech":315.94876554764755,"tdp":300,"src":"both"}},{"id":"dc-lm360","brand":"DeepCool","name":"LM360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"dcfl12se","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"sc-kotetsu4","brand":"Scythe","name":"虎徹 MARK4","type":"air","pipes":4,"fans":1,"fs":120,"h":155,"tdp":null,"cap":{"E":205,"mech":205,"tdp":null,"src":"mech"}},{"id":"sc-mugen6","brand":"Scythe","name":"MUGEN6","type":"air","pipes":6,"fans":1,"fs":120,"h":154,"tdp":null,"d":80,"cap":{"E":263.13077300102077,"mech":263.13077300102077,"tdp":null,"src":"mech"}},{"id":"sc-mugen6be","brand":"Scythe","name":"MUGEN6 BLACK EDITION(ファン2基)","type":"air","pipes":6,"fans":2,"fs":120,"h":154,"tdp":null,"d":80,"cap":{"E":276.919285123345,"mech":276.919285123345,"tdp":null,"src":"mech"}},{"id":"tr-ax120","brand":"Thermalright","name":"Assassin X 120 Refined SE","type":"air","pipes":4,"fans":1,"fs":120,"h":148,"tdp":null,"cap":{"E":197.5594802088414,"mech":197.5594802088414,"tdp":null,"src":"mech"}},{"id":"tr-pa120v3","brand":"Thermalright","name":"Peerless Assassin 120 SE V3","type":"air2","pipes":6,"fans":2,"fs":120,"h":155,"tdp":null,"cap":{"E":260,"mech":260,"tdp":null,"src":"mech"}},{"id":"tr-ps120se","brand":"Thermalright","name":"Phantom Spirit 120 SE","type":"air2","pipes":7,"fans":2,"fs":120,"h":154,"tdp":null,"cap":{"E":270.59522096337463,"mech":270.59522096337463,"tdp":null,"src":"mech"}},{"id":"nc-d15g2","brand":"Noctua","name":"NH-D15 G2","type":"air2","pipes":8,"fans":2,"fs":140,"h":168,"tdp":null,"cap":{"E":318.89907179885574,"mech":318.89907179885574,"tdp":null,"src":"mech"}},{"id":"nc-u12a","brand":"Noctua","name":"NH-U12A","type":"air","pipes":7,"fans":2,"fs":120,"h":158,"tdp":null,"cap":{"E":256.9098953357704,"mech":256.9098953357704,"tdp":null,"src":"mech"}},{"id":"nc-l9a","brand":"Noctua","name":"NH-L9a-AM5","type":"top","pipes":2,"fans":1,"fs":92,"h":37,"tdp":null,"cap":{"E":67.25279655907589,"mech":67.25279655907589,"tdp":null,"src":"mech"}},{"id":"nc-lc1-36","brand":"Noctua","name":"NL-LC1-36","type":"aio","rad":360,"thick":30,"fans":3,"fs":120,"tdp":null,"rf":"nfa12x25g2","cap":{"E":329.6,"mech":329.6,"tdp":null,"src":"mech"}},{"id":"ar-f36","brand":"ARCTIC","name":"Freezer 36","type":"air","pipes":4,"fans":2,"fs":120,"h":159,"tdp":null,"cap":{"E":221.46855638561837,"mech":221.46855638561837,"tdp":null,"src":"mech"}},{"id":"ar-lf3-360","brand":"ARCTIC","name":"Liquid Freezer III Pro 360","type":"aio","rad":360,"thick":38,"fans":3,"fs":120,"tdp":null,"rf":"p12pro","cap":{"E":342.40000000000003,"mech":342.40000000000003,"tdp":null,"src":"mech"}},{"id":"ar-lf3-420","brand":"ARCTIC","name":"Liquid Freezer III Pro 420","type":"aio","rad":420,"thick":38,"fans":3,"fs":140,"tdp":null,"rf":"p14pro","cap":{"E":385.20000000000005,"mech":385.20000000000005,"tdp":null,"src":"mech"}},{"id":"cm-212-3dhp","brand":"Cooler Master","name":"Hyper 212 3DHP","type":"air","pipes":4,"fans":1,"fs":120,"h":158,"tdp":null,"fq":63.1,"fp":2.69,"note":"3Dヒートパイプ2本(通常の4本相当)","cap":{"E":205.5177617272987,"mech":205.5177617272987,"tdp":null,"src":"mech"}},{"id":"cm-atmos2-360","brand":"Cooler Master","name":"MasterLiquid 360 Atmos II","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"cmsfedge","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"id-a620se","brand":"ID-COOLING","name":"FROZN A620 PRO SE","type":"air2","pipes":6,"fans":2,"fs":120,"h":157,"tdp":260,"cap":{"E":261.3402128282373,"mech":262.68042565647465,"tdp":260,"src":"both"}},{"id":"id-is55","brand":"ID-COOLING","name":"IS-55 BLACK","type":"top","pipes":5,"fans":1,"fs":120,"h":55,"tdp":125,"cap":{"E":134.93456211341118,"mech":144.86912422682238,"tdp":125,"src":"both"}},{"id":"pc-rt400","brand":"PCCOOLER","name":"CPS RT400","type":"air","pipes":4,"fans":1,"fs":120,"h":148,"tdp":235,"cap":{"E":216.27974010442068,"mech":197.5594802088414,"tdp":235,"src":"both"}},{"id":"pc-rt620pro","brand":"PCCOOLER","name":"CPS RT620 PRO","type":"air2","pipes":6,"fans":2,"fs":120,"h":153,"tdp":265,"cap":{"E":261.1563239855933,"mech":257.31264797118655,"tdp":265,"src":"both"}},{"id":"pc-ds360","brand":"PCCOOLER","name":"CPS DS360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":310,"rf":"pcf5r120","cap":{"E":315,"mech":320,"tdp":310,"src":"both"}},{"id":"nz-kp360","brand":"NZXT","name":"Kraken Plus 360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"nzf120p","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"nz-kp280","brand":"NZXT","name":"Kraken Plus 280","type":"aio","rad":280,"thick":27,"fans":2,"fs":140,"tdp":null,"rf":"nzf140p","cap":{"E":280,"mech":280,"tdp":null,"src":"mech"}},{"id":"co-titan360","brand":"Corsair","name":"iCUE LINK TITAN 360 RX","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"rx120","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"co-naut240","brand":"Corsair","name":"NAUTILUS 240 RS","type":"aio","rad":240,"thick":27,"fans":2,"fs":120,"tdp":null,"rf":"rs120","cap":{"E":250,"mech":250,"tdp":null,"src":"mech"}},{"id":"as-lc4-360","brand":"ASUS","name":"ROG STRIX LC IV 360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"aslc4fan","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"ds-l240m2","brand":"ドスパラセレクト","name":"L240M2","type":"aio","rad":240,"thick":27,"fans":2,"fs":120,"tdp":null,"rf":"dsl240fan","cap":{"E":250,"mech":250,"tdp":null,"src":"mech"}},{"id":"tr-ps120evo","brand":"Thermalright","name":"Phantom Spirit 120 EVO","type":"air2","pipes":7,"fans":2,"fs":120,"h":157,"tdp":null,"fq":69,"fp":2.87,"cap":{"E":277.53197279935995,"mech":277.53197279935995,"tdp":null,"src":"mech"}},{"id":"dc-ak500","brand":"DeepCool","name":"AK500","type":"air","pipes":5,"fans":1,"fs":120,"h":158,"tdp":240,"fq":69,"fp":2.19,"cap":{"E":231.54763637404892,"mech":223.09527274809784,"tdp":240,"src":"both"}},{"id":"nc-u12s-redux","brand":"Noctua","name":"NH-U12S redux","type":"air","pipes":4,"fans":1,"fs":120,"h":158,"tdp":null,"d":45,"fq":70.7,"fp":2.83,"cap":{"E":200.63749251107885,"mech":200.63749251107885,"tdp":null,"src":"mech"}},{"id":"bq-drp5","brand":"be quiet!","name":"Dark Rock Pro 5","type":"air2","pipes":7,"fans":2,"fs":135,"h":168,"tdp":270,"fq":68.7,"fp":1.82,"fanNote":"135mm×1・120mm×1","cap":{"E":281.34694360160535,"mech":292.6938872032107,"tdp":270,"src":"both"}},{"id":"bq-pr3","brand":"be quiet!","name":"Pure Rock 3","type":"air","pipes":4,"fans":1,"fs":120,"h":154,"tdp":190,"fq":59.6,"fp":2.41,"cap":{"E":194.10549967783595,"mech":198.21099935567193,"tdp":190,"src":"both"}},{"id":"sc-fuma3","brand":"Scythe","name":"FUMA3(風魔3)","alias":"風魔3","type":"air2","pipes":6,"fans":2,"fs":120,"h":154,"tdp":null,"fq":67.6,"fp":1.5,"fanNote":"120mm×2(前側は厚さ15mm)","cap":{"E":260.0897594436201,"mech":260.0897594436201,"tdp":null,"src":"mech"}},{"id":"nz-ke360","brand":"NZXT","name":"Kraken Elite 360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"nzf120p","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"co-naut360","brand":"Corsair","name":"NAUTILUS 360 RS","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"rs120","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"ar-lf3-280","brand":"ARCTIC","name":"Liquid Freezer III Pro 280","type":"aio","rad":280,"thick":38,"fans":2,"fs":140,"tdp":null,"rf":"p14pro","cap":{"E":299.6,"mech":299.6,"tdp":null,"src":"mech"}},{"id":"msi-a13-360","brand":"MSI","name":"MAG CORELIQUID A13 360","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"msicb7","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"ll-hs2-360","brand":"Lian Li","name":"HydroShift II LCD-C 360TL","type":"aio","rad":360,"thick":24,"fans":3,"fs":120,"tdp":null,"rf":"lltlw","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}},{"id":"tr-ae360v3","brand":"Thermalright","name":"Aqua Elite 360 V3","type":"aio","rad":360,"thick":27,"fans":3,"fs":120,"tdp":null,"rf":"trtlc12bs","cap":{"E":320,"mech":320,"tdp":null,"src":"mech"}}],"fanSpec":{"rx120":{"name":"Corsair iCUE LINK RX120","cfm":73.5,"mm":4.33,"rpm":2100},"nfa12x25g2":{"name":"Noctua NF-A12x25 G2 PWM","cfm":63.2,"mm":3.14,"rpm":1800},"p12pro":{"name":"ARCTIC P12 Pro PST","cfm":77,"mm":6.9,"rpm":3000},"rs120":{"name":"Corsair RS120 ARGB","cfm":72.8,"mm":4.15,"rpm":2100},"p14pro":{"name":"ARCTIC P14 Pro PST","cfm":110,"mm":5.2,"rpm":2500},"sdnex120":{"name":"Sudokoo NEXAURA 付属ファン","cfm":55.27,"mm":2.69,"rpm":1900},"sdeng120":{"name":"Sudokoo ENERGLO 付属ファン","cfm":73.41,"mm":4.69,"rpm":2500},"dcfl12se":{"name":"DeepCool FL12 SE(LM360 付属)","cfm":66.23,"mm":3.27,"rpm":2400},"cmsfedge":{"name":"Cooler Master SickleFlow Edge(Atmos II 付属)","cfm":63.3,"mm":3.61,"rpm":2500},"pcf5r120":{"name":"PCCOOLER F5 R120(DS360 付属)","cfm":86.7,"mm":3.2,"rpm":2200},"nzf120p":{"name":"NZXT F120P(Kraken 付属)","cfm":73.47,"mm":4.5,"rpm":2000},"nzf140p":{"name":"NZXT F140P(Kraken 付属)","cfm":93.2,"mm":4.45,"rpm":1700},"aslc4fan":{"name":"ASUS ROG STRIX LC IV 付属ファン","cfm":82.57,"mm":4.36,"rpm":2500},"dsl240fan":{"name":"ドスパラセレクト L240M2 付属ファン","cfm":70.88,"mm":1.9,"rpm":2000},"msicb7":{"name":"MSI CycloBlade 7(CORELIQUID 付属)","cfm":62.6,"mm":2.36,"rpm":2000},"lltlw":{"name":"Lian Li UNI FAN TL Wireless(HydroShift II 付属)","cfm":90.1,"mm":3.97,"rpm":2600},"trtlc12bs":{"name":"Thermalright TL-C12B-S V2(Aqua Elite 付属)","cfm":66.17,"mm":1.53,"rpm":1500},"case120":{"name":"ケース付属ファン 120mm","cfm":40,"mm":1,"rpm":1200},"f120q":{"name":"NZXT F120Q(ケース付属版)","cfm":60.2,"mm":1.05,"rpm":1350},"gen120":{"name":"一般的な120mmファン","cfm":50,"mm":1.8,"rpm":1500},"p12":{"name":"ARCTIC P12 PWM PST","cfm":56.3,"mm":2.2,"rpm":1800},"kazeflex2":{"name":"Scythe KAZE FLEX II 120 PWM(1500rpm)","cfm":67.62,"mm":1.5,"rpm":1500},"tlc12c":{"name":"Thermalright TL-C12C","cfm":66.17,"mm":1.53,"rpm":1550},"nfa12x25":{"name":"Noctua NF-A12x25 PWM","cfm":60.09,"mm":2.34,"rpm":2000},"sl120v2":{"name":"Lian Li UNI FAN SL120 V2","cfm":64.5,"mm":2.59,"rpm":2000},"sw4hs":{"name":"be quiet! Silent Wings 4 120mm 高速版","cfm":76.7,"mm":3.96,"rpm":2500},"p12max":{"name":"ARCTIC P12 Max","cfm":81.04,"mm":4.35,"rpm":3300},"t30":{"name":"Phanteks T30-120(3000rpmモード)","cfm":100.9,"mm":7.37,"rpm":3000},"mach120":{"name":"Sudokoo MACH120","cfm":108,"mm":7.31,"rpm":3000},"wsnail120":{"name":"Scythe WONDER SNAIL 120 PWM(1800rpm)","cfm":51.7,"mm":1.74,"rpm":1800},"fc120":{"name":"DeepCool FC120","cfm":61.9,"mm":1.83,"rpm":1800},"pw3hs":{"name":"be quiet! Pure Wings 3 120mm PWM 高速版","cfm":59.6,"mm":2.41,"rpm":2100},"case140":{"name":"ケース付属ファン 140mm","cfm":55,"mm":0.9,"rpm":1000},"gen140":{"name":"一般的な140mmファン","cfm":65,"mm":1.5,"rpm":1200},"p14":{"name":"ARCTIC P14 PWM PST","cfm":72.8,"mm":2.4,"rpm":1700},"nfa14":{"name":"Noctua NF-A14 PWM","cfm":82.52,"mm":2.08,"rpm":1500},"sl140v2":{"name":"Lian Li UNI FAN SL140 V2","cfm":77.6,"mm":2.09,"rpm":1600},"mach140":{"name":"Sudokoo MACH140","cfm":129,"mm":5.91,"rpm":2200},"nfa14g2":{"name":"Noctua NF-A14x25 G2 PWM","cfm":91.6,"mm":2.56,"rpm":1500},"sw4140":{"name":"be quiet! Silent Wings 4 140mm PWM","cfm":51.3,"mm":0.92,"rpm":1100},"kf140sq":{"name":"Scythe KAZE FLEX 140 SQUARE PWM(1200rpm)","cfm":67.2,"mm":1.25,"rpm":1200},"lltl120":{"name":"Lian Li UNI FAN TL 120","cfm":90.1,"mm":3.97,"rpm":2600},"lltl140":{"name":"Lian Li UNI FAN TL 140","cfm":103.9,"mm":2.34,"rpm":1800},"lltl120r":{"name":"Lian Li UNI FAN TL 120 Reverse","cfm":83.4,"mm":2.66,"rpm":2300},"lltl140r":{"name":"Lian Li UNI FAN TL 140 Reverse","cfm":101.6,"mm":2.27,"rpm":1800},"lltllcd120":{"name":"Lian Li UNI FAN TL LCD 120","cfm":62,"mm":2.9,"rpm":1900},"lltllcd140":{"name":"Lian Li UNI FAN TL LCD 140","cfm":68.1,"mm":3.5,"rpm":1600},"lltllcd120r":{"name":"Lian Li UNI FAN TL LCD 120 Reverse","cfm":54.3,"mm":2.83,"rpm":1900},"lltllcd140r":{"name":"Lian Li UNI FAN TL LCD 140 Reverse","cfm":64,"mm":3.1,"rpm":1600},"llslinf120":{"name":"Lian Li UNI FAN SL-INF 120","cfm":61.3,"mm":2.66,"rpm":2100},"llslinf140":{"name":"Lian Li UNI FAN SL-INF 140","cfm":72.7,"mm":2.88,"rpm":1600},"llslinf120r":{"name":"Lian Li UNI FAN SL-INF 120 Reverse","cfm":63.6,"mm":2.02,"rpm":2100},"llslinf140r":{"name":"Lian Li UNI FAN SL-INF 140 Reverse","cfm":71.6,"mm":2.95,"rpm":1600},"llslw120":{"name":"Lian Li UNI FAN SL Wireless 120 LED","cfm":65.4,"mm":2.19,"rpm":2000},"llslw120r":{"name":"Lian Li UNI FAN SL Wireless 120 LED Reverse","cfm":69.5,"mm":2.6,"rpm":2000},"llslwlcd120":{"name":"Lian Li UNI FAN SL Wireless 120 LCD","cfm":58.08,"mm":2.4,"rpm":1900},"llslwlcd120r":{"name":"Lian Li UNI FAN SL Wireless 120 LCD Reverse","cfm":51.45,"mm":2.1,"rpm":1900},"llslinfw120":{"name":"Lian Li UNI FAN SL-INF Wireless 120","cfm":67,"mm":3.4,"rpm":2300},"llslinfw120r":{"name":"Lian Li UNI FAN SL-INF Wireless 120 Reverse","cfm":69.7,"mm":2.2,"rpm":2200},"llslinfw140":{"name":"Lian Li UNI FAN SL-INF Wireless 140","cfm":77.6,"mm":3.45,"rpm":1800},"llslinfw140r":{"name":"Lian Li UNI FAN SL-INF Wireless 140 Reverse","cfm":73.8,"mm":3.12,"rpm":1700},"lltlflex120":{"name":"Lian Li UNI FAN TL FLEX 120 LED","cfm":90.1,"mm":3.97,"rpm":2600},"lltlflex120r":{"name":"Lian Li UNI FAN TL FLEX 120 LED Reverse","cfm":83.4,"mm":2.66,"rpm":2300},"lltlflexlcd120":{"name":"Lian Li UNI FAN TL FLEX 120 LCD","cfm":66,"mm":2.7,"rpm":1900},"lltlflexlcd120r":{"name":"Lian Li UNI FAN TL FLEX 120 LCD Reverse","cfm":63,"mm":2.83,"rpm":1900},"p12prorev":{"name":"ARCTIC P12 Pro Reverse A-RGB","cfm":73,"mm":4.5,"rpm":3000},"p12argb":{"name":"ARCTIC P12 PWM PST A-RGB","cfm":48.8,"mm":1.85,"rpm":2000},"p14argb":{"name":"ARCTIC P14 PWM PST A-RGB","cfm":68.9,"mm":2,"rpm":1900},"p14max":{"name":"ARCTIC P14 Max","cfm":95,"mm":4.18,"rpm":2800},"lx120":{"name":"Corsair iCUE LINK LX120 RGB","cfm":69.9,"mm":5.22,"rpm":2400},"lx140":{"name":"Corsair iCUE LINK LX140 RGB","cfm":84.7,"mm":4.86,"rpm":2000},"lx120r":{"name":"Corsair iCUE LINK LX120-R RGB","cfm":66.7,"mm":4.72,"rpm":2400},"lx140r":{"name":"Corsair iCUE LINK LX140-R RGB","cfm":90.6,"mm":4.22,"rpm":2000},"rs120r":{"name":"Corsair RS120-R ARGB","cfm":65.8,"mm":2.81,"rpm":2100},"d30120":{"name":"Phanteks D30-120","cfm":64.3,"mm":3.01,"rpm":2000},"d30120r":{"name":"Phanteks D30-120 Reverse","cfm":61.5,"mm":2.72,"rpm":2000},"d30140":{"name":"Phanteks D30-140","cfm":71.93,"mm":3.32,"rpm":1800},"d30140r":{"name":"Phanteks D30-140 Reverse","cfm":71.76,"mm":3.08,"rpm":1800},"swafan12":{"name":"Thermaltake SWAFAN EX12 標準羽根","cfm":57.11,"mm":2.39,"rpm":2000},"swafan12r":{"name":"Thermaltake SWAFAN EX12 リバース羽根","cfm":56.26,"mm":2.02,"rpm":2000},"swafan14":{"name":"Thermaltake SWAFAN EX14 標準羽根","cfm":81.6,"mm":3.17,"rpm":2000},"swafan14r":{"name":"Thermaltake SWAFAN EX14 リバース羽根","cfm":79.3,"mm":2.73,"rpm":2000},"tlc12rbs":{"name":"Thermalright TL-C12RB-S V2","cfm":58,"mm":1.53,"rpm":1500},"tlm12rs":{"name":"Thermalright TL-M12R-S","cfm":34.43,"mm":1.31,"rpm":1500},"lwlx120r":{"name":"be quiet! Light Wings LX 120mm PWM Reverse","cfm":48.8,"mm":1.04,"rpm":1500},"swp4120":{"name":"be quiet! Silent Wings Pro 4 120mm PWM(最高速モード)","cfm":83.9,"mm":5.31,"rpm":3000},"swp4140":{"name":"be quiet! Silent Wings Pro 4 140mm PWM(最高速モード)","cfm":97.4,"mm":3.64,"rpm":2400},"fk120":{"name":"DeepCool FK120","cfm":68.99,"mm":2.19,"rpm":1850},"ft12":{"name":"DeepCool FT12","cfm":75,"mm":4.2,"rpm":2150},"mobius120":{"name":"Cooler Master Mobius 120","cfm":63.1,"mm":2.69,"rpm":2050},"sf120r":{"name":"Cooler Master SickleFlow 120 ARGB Reverse Edition","cfm":62,"mm":2.5,"rpm":1800},"nfa12x15":{"name":"Noctua NF-A12x15 PWM","cfm":55.44,"mm":1.53,"rpm":1850},"nfs12a":{"name":"Noctua NF-S12A PWM","cfm":63.27,"mm":1.19,"rpm":1200}},"noise":{"case120":{"why":"一般的な値の目安で、製品が決まっていないため"},"f120q":{"db":25.1,"rpm":1200,"s":0,"diff":true},"gen120":{"why":"一般的な値の目安で、製品が決まっていないため"},"p12":{"db":25,"rpm":1700,"s":1,"cyb":"67"},"kazeflex2":{"db":28.6,"rpm":1500,"s":2,"rmin":300},"tlc12c":{"db":25.6,"rpm":1550,"s":3},"nfa12x25":{"db":22.6,"rpm":2000,"s":4},"sl120v2":{"db":29.2,"rpm":2000,"s":5},"rx120":{"db":36,"rpm":2100,"s":6},"sw4hs":{"db":31.2,"rpm":2500,"s":7},"p12max":{"db":25,"rpm":1817,"s":8,"cyb":"83"},"t30":{"db":39.7,"rpm":3000,"s":9,"mode":"Advanced"},"mach120":{"db":39.9,"rpm":3000,"s":10,"le":true,"rmin":500},"nfa12x25g2":{"db":22.5,"rpm":1800,"s":11},"p12pro":{"db":25,"rpm":1775,"s":12,"cyb":"175","rel":"P12 Pro"},"wsnail120":{"db":22.9,"rpm":1800,"s":13,"rmin":350},"fc120":{"db":28,"rpm":1800,"s":14,"le":true,"rmin":500},"rs120":{"db":36,"rpm":2100,"s":15,"rmin":420},"pw3hs":{"db":30.9,"rpm":2100,"s":16},"case140":{"why":"一般的な値の目安で、製品が決まっていないため"},"gen140":{"why":"一般的な値の目安で、製品が決まっていないため"},"p14":{"db":25,"rpm":1415,"s":17,"cyb":"91"},"nfa14":{"db":24.6,"rpm":1500,"s":18},"sl140v2":{"db":29,"rpm":1600,"s":5},"mach140":{"db":39.9,"rpm":2200,"s":19,"le":true,"rmin":500},"p14pro":{"db":25,"rpm":1485,"s":20,"cyb":"204"},"nfa14g2":{"db":24.8,"rpm":1500,"s":21},"sw4140":{"db":13.6,"rpm":1100,"s":22},"kf140sq":{"db":19.4,"rpm":1200,"s":23,"rmin":300},"sdnex120":{"why":"簡易水冷の付属ファンの値で、1台分の値か分からない"},"sdeng120":{"why":"簡易水冷の付属ファンの値で、1台分の値か分からない"},"dcfl12se":{"why":"簡易水冷の付属ファンの値で、1台分の値か分からない"},"cmsfedge":{"why":"簡易水冷の付属ファンの値で、1台分の値か分からない"},"pcf5r120":{"why":"簡易水冷の付属ファンの値で、1台分の値か分からない"},"nzf120p":{"why":"公称値の型番・世代が確認できない"},"nzf140p":{"why":"公称値の型番・世代が確認できない"},"aslc4fan":{"why":"簡易水冷の付属ファンの値で、1台分の値か分からない"},"dsl240fan":{"why":"メーカーの騒音の公称値が見つからない"},"msicb7":{"why":"騒音の公称値の横に回転数がない"},"lltlw":{"db":33,"rpm":2600,"s":24,"rmin":200},"trtlc12bs":{"db":25.6,"rpm":1500,"s":25},"lltl120":{"db":33,"rpm":2600,"s":26},"lltl140":{"db":29,"rpm":1800,"s":26},"lltl120r":{"db":34,"rpm":2300,"s":26},"lltl140r":{"db":31,"rpm":1800,"s":26},"lltllcd120":{"db":27,"rpm":1900,"s":27},"lltllcd140":{"db":28.5,"rpm":1600,"s":27},"lltllcd120r":{"db":31,"rpm":1900,"s":27},"lltllcd140r":{"db":29.4,"rpm":1600,"s":27},"llslinf120":{"db":29,"rpm":2100,"s":28},"llslinf140":{"db":28,"rpm":1600,"s":28},"llslinf120r":{"db":32,"rpm":2100,"s":29},"llslinf140r":{"db":28.6,"rpm":1600,"s":29},"llslw120":{"db":32,"rpm":2000,"s":30},"llslw120r":{"db":31,"rpm":2000,"s":30},"llslwlcd120":{"db":29.5,"rpm":1900,"s":30},"llslwlcd120r":{"db":31,"rpm":1900,"s":30},"llslinfw120":{"db":29.2,"rpm":2300,"s":31},"llslinfw120r":{"db":32.2,"rpm":2200,"s":31},"llslinfw140":{"db":27.7,"rpm":1800,"s":31},"llslinfw140r":{"db":28.6,"rpm":1700,"s":31},"lltlflex120":{"db":33,"rpm":2600,"s":32},"lltlflex120r":{"db":34,"rpm":2300,"s":32},"lltlflexlcd120":{"db":26,"rpm":1900,"s":32},"lltlflexlcd120r":{"db":29,"rpm":1900,"s":32},"p12prorev":{"db":25,"rpm":1875,"s":33,"cyb":"228"},"p12argb":{"why":"メーカーの公称値が sone だけで、Cybenetics の測定もない"},"p14argb":{"why":"メーカーの公称値が sone だけで、Cybenetics の測定もない"},"p14max":{"db":25,"rpm":1622,"s":34,"cyb":"106"},"lx120":{"db":36,"rpm":2400,"s":35},"lx140":{"db":36,"rpm":2000,"s":35},"lx120r":{"db":37.7,"rpm":2400,"s":36},"lx140r":{"db":38.3,"rpm":2000,"s":36},"rs120r":{"db":34.6,"rpm":2100,"s":37,"rmin":420},"d30120":{"db":30.2,"rpm":2000,"s":38,"rmin":250},"d30120r":{"db":31.8,"rpm":2000,"s":38,"rmin":250},"d30140":{"db":29.5,"rpm":1800,"s":39,"rmin":250},"d30140r":{"db":32.1,"rpm":1800,"s":39,"rmin":250},"swafan12":{"db":30.6,"rpm":2000,"s":40},"swafan12r":{"db":32.5,"rpm":2000,"s":40},"swafan14":{"db":34.5,"rpm":2000,"s":41},"swafan14r":{"db":38.8,"rpm":2000,"s":41},"tlc12rbs":{"db":25.6,"rpm":1500,"s":42},"tlm12rs":{"db":23.2,"rpm":1500,"s":43},"lwlx120r":{"db":28.5,"rpm":1500,"s":44},"swp4120":{"db":36.9,"rpm":3000,"s":45,"mode":"UHS"},"swp4140":{"db":36.8,"rpm":2400,"s":46,"mode":"UHS"},"fk120":{"db":28,"rpm":1850,"s":47,"le":true,"rmin":500},"ft12":{"db":32,"rpm":2150,"s":48,"le":true,"rmin":500},"mobius120":{"db":22.6,"rpm":2050,"s":49},"sf120r":{"db":27,"rpm":1800,"s":50,"rmin":650},"nfa12x15":{"db":23.9,"rpm":1850,"s":51},"nfs12a":{"db":17.8,"rpm":1200,"s":52}},"noiseSrc":[{"t":"H9 (2023) Series Specs – NZXT Support Center","u":"https://support.nzxt.com/hc/en-us/articles/37840024628891-H9-2023-Series-Specs","c":"2026-10-05"},{"t":"ARCTIC P12 PWM PST","u":"https://www.cybenetics.com/evaluations/fans/67/cert/en/","c":"2026-10-05"},{"t":"SCYTHE / KAZE FLEXⅡ 120 PWM - 株式会社サイズ","u":"https://www.scythe.co.jp/product/fan/kazeflex2-120p/","c":"2026-10-05"},{"t":"TL-C12C – Thermalright","u":"https://www.thermalright.com/product/tl-c12c/","c":"2026-10-05"},{"t":"NF-A12x25 PWM: Specifications | Noctua","u":"https://www.noctua.at/en/products/nf-a12x25-pwm/specifications","c":"2026-10-05"},{"t":"UNI FAN SL V2 - LIAN LI is a Leading Provider of PC Cases | Computer Cases","u":"https://lian-li.com/product/uni-fan-sl-v2/?cn-reloaded=1","c":"2026-10-05"},{"t":"iCUE LINK RX120 120mm PWM Single Fan Expansion","u":"https://www.corsair.com/us/en/p/case-fans/co-9051009-ww/icue-link-rx120-120mm-pwm-single-fan-expansion-co-9051009-ww","c":"2026-10-05"},{"t":"SILENT WINGS 4 | 120mm PWM HS silent high-end Fans from be quiet!","u":"https://www.bequiet.com/en/casefans/3701","c":"2026-10-05"},{"t":"ARCTIC P12 Max Black","u":"https://www.cybenetics.com/evaluations/fans/83/cert/en/","c":"2026-10-05"},{"t":"Phanteks T30-120","u":"https://phanteks.com/product/t30-120/","c":"2026-10-05"},{"t":"MACH120_Sudokoo","u":"https://sudokoo.com/products/Cooling/fans/MACH120-30mm-THICK-LCP-TURBO-DUAL-BEARING-AERODYNAMIC-FAN/2025/20899.shtml","c":"2026-10-05"},{"t":"NF-A12x25 G2 PWM: Specifications | Noctua","u":"https://www.noctua.at/en/products/nf-a12x25-g2-pwm/specifications","c":"2026-10-05"},{"t":"ARCTIC P12 Pro","u":"https://www.cybenetics.com/evaluations/fans/175/cert/en/","c":"2026-10-05"},{"t":"SCYTHE / WONDER SNAIL 120 PWM - 株式会社サイズ","u":"https://www.scythe.co.jp/product/fan/wondersnail120-pwm/","c":"2026-10-05"},{"t":"FC120 - DeepCool","u":"https://www.deepcool.com/products/Cooling/fans/FC120-Daisy-Chain-Performance-ARGB-Fan/2021/13581.shtml","c":"2026-10-05"},{"t":"RS120 ARGB 120mm PWM Fan","u":"https://www.corsair.com/us/en/p/case-fans/co-9050180-ww/rs120-argb-120mm-pwm-fan-co-9050180-ww","c":"2026-10-05"},{"t":"PURE WINGS 3 | 120mm PWM HS silent essential Fans from be quiet!","u":"https://www.bequiet.com/en/casefans/4607","c":"2026-10-05"},{"t":"ARCTIC P14 PWM PST","u":"https://www.cybenetics.com/evaluations/fans/91/cert/en/","c":"2026-10-05"},{"t":"NF-A14 PWM: Specifications | Noctua","u":"https://www.noctua.at/en/products/nf-a14-pwm/specifications","c":"2026-10-05"},{"t":"MACH140_Sudokoo","u":"https://jp.sudokoo.com/products/Cooling/fans/MACH140-30mm-THICK-LCP-TURBO-DUAL-BEARING-AERODYNAMIC-FAN/2025/21755.shtml","c":"2026-10-05"},{"t":"ARCTIC P14 Pro PST","u":"https://www.cybenetics.com/evaluations/fans/204/cert/en/","c":"2026-10-05"},{"t":"NF-A14x25 G2 PWM: Specifications | Noctua","u":"https://www.noctua.at/en/products/nf-a14x25-g2-pwm/specifications","c":"2026-10-05"},{"t":"SILENT WINGS 4 | 140mm PWM silent high-end Fans from be quiet!","u":"https://www.bequiet.com/en/casefans/3703","c":"2026-10-05"},{"t":"SCYTHE / KAZE FLEX 140 SQUARE PWM 1200rpm - 株式会社サイズ","u":"https://www.scythe.co.jp/product/fan/kf1425fd12s-p/","c":"2026-10-05"},{"t":"UNI FAN TL Wireless - LIAN LI is a Leading Provider of PC Cases | Computer Cases","u":"https://lian-li.com/product/uni-fan-tl-wireless/","c":"2026-10-05"},{"t":"Aqua Elite 360 V3 – Thermalright","u":"https://www.thermalright.com/product/aqua-elite-360-v3/","c":"2026-10-05"},{"t":"UNI FAN TL - LIAN LI is a Leading Provider of PC Cases | Computer Cases","u":"https://lian-li.com/product/uni-fan-tl/","c":"2026-10-05"},{"t":"UNI FAN TL LCD - LIAN LI is a Leading Provider of PC Cases | Computer Cases","u":"https://lian-li.com/product/uni-fan-TL-LCD/","c":"2026-10-05"},{"t":"UNI FAN SL-INF - LIAN LI is a Leading Provider of PC Cases | Computer Cases","u":"https://lian-li.com/product/uni-fan-sl-infinity/","c":"2026-10-05"},{"t":"UNI FAN SL-INF REVERSE BLADE - LIAN LI is a Leading Provider of PC Cases | Computer Cases","u":"https://lian-li.com/product/uni-fan-sl-infinity-reverse-blade/?cn-reloaded=%2527","c":"2026-10-05"},{"t":"LIAN LI UNI FAN SL Wireless","u":"https://lian-li.com/product/uni-fan-sl-wireless/","c":"2026-10-05"},{"t":"UNI FAN SL-INF ワイヤレス - LIAN LIはPCケースのリーディングプロバイダーです | コンピューターケース","u":"https://lian-li.com/ja/product/uni-fan-sl-inf-wireless/","c":"2026-10-05"},{"t":"UNI FAN TL FLEX - LIAN LI is a Leading Provider of PC Cases | Computer Cases","u":"https://lian-li.com/product/uni-fan-tl-flex/","c":"2026-10-05"},{"t":"ARCTIC P12 Pro Reverse A-RGB","u":"https://www.cybenetics.com/evaluations/fans/228/cert/en/","c":"2026-10-05"},{"t":"ARCTIC P14 Max","u":"https://www.cybenetics.com/evaluations/fans/106/cert/en/","c":"2026-10-05"},{"t":"LX vs QX Fans: What's the difference? | CORSAIR","u":"https://www.corsair.com/ca/en/explorer/diy-builder/fans/lx-vs-qx-fans-whats-the-difference/","c":"2026-10-05"},{"t":"iCUE LINK LX-R RGB fans: Everything you need to know | CORSAIR","u":"https://www.corsair.com/ca/en/explorer/diy-builder/fans/icue-link-lx-r-rgb-fans-everything-you-need-to-know/","c":"2026-10-05"},{"t":"RS120-R ARGB 120mm PWM Reverse Fans Triple Pack - White","u":"https://www.corsair.com/ww/en/p/case-fans/co-9050197-ww/rs120-r-argb-120mm-pwm-reverse-fans-triple-pack-white-co-9050197-ww?position=1&queryID=f455a0e66a021b5a15c2235f585fc3b2","c":"2026-10-05"},{"t":"Phanteks D30-120 | Black","u":"https://phanteks.com/product/d30-120-black/","c":"2026-10-05"},{"t":"Phanteks D30-140 | Black","u":"https://phanteks.com/product/d30-140-black/","c":"2026-10-05"},{"t":"SWAFAN EX12 ARGB Sync PC Cooling Fan White TT Premium Edition (3-Fan P – Thermaltake Global","u":"https://thermaltake.com/products/swafan-ex12-argb-sync-pc-cooling-fan-white-tt-premium-edition-3-fan-pack","c":"2026-10-05"},{"t":"SWAFAN EX14 ARGB Sync PC Cooling Fan TT Premium Edition (3-Fan Pack) – Thermaltake Global","u":"https://thermaltake.com/products/swafan-ex14-argb-sync-pc-cooling-fan-tt-premium-edition-3-fan-pack","c":"2026-10-05"},{"t":"TL-C12RB-S V2 – Thermalright","u":"https://www.thermalright.com/product/tl-c12rb-s-v2/","c":"2026-10-05"},{"t":"TL-M12R-S – Thermalright","u":"https://www.thermalright.com/product/tl-m12r-s/","c":"2026-10-05"},{"t":"LIGHT WINGS LX | 120mm PWM Reverse Black silent essential Fans from be quiet!","u":"https://www.bequiet.com/en/casefans/5779","c":"2026-10-05"},{"t":"SILENT WINGS PRO 4 | 120mm PWM silent high-end Fans from be quiet!","u":"https://www.bequiet.com/en/casefans/3705","c":"2026-10-05"},{"t":"SILENT WINGS PRO 4 | 140mm PWM silent high-end Fans from be quiet!","u":"https://www.bequiet.com/en/casefans/3706","c":"2026-10-05"},{"t":"FK120 - DeepCool","u":"https://www.deepcool.com/products/Cooling/fans/FK120-Performance-Fan/2022/15422.shtml","c":"2026-10-05"},{"t":"FT12 - DeepCool","u":"https://deepcool.com/products/Cooling/fans/FT12-120mm-Performance-Fan/2024/19006.shtml","c":"2026-10-05"},{"t":"Mobius 120 Case Fan","u":"https://www.coolermaster.com/en-global/products/MFZ-M2NN-21NPK-R1.html","c":"2026-10-05"},{"t":"SickleFlow 120 ARGB Reverse Edition","u":"https://www.coolermaster.com/en-au/products/sickleflow-120-argb-reverse-edition.html","c":"2026-10-05"},{"t":"NF-A12x15 PWM: Specifications | Noctua","u":"https://www.noctua.at/en/products/nf-a12x15-pwm/specifications","c":"2026-10-05"},{"t":"NF-S12A PWM: Specifications | Noctua","u":"https://www.noctua.at/en/products/nf-s12a-pwm/specifications","c":"2026-10-05"}],"price":{"fan":{"p12pro":1100,"p12prorev":1690,"p14pro":1449,"rs120":1993,"rs120r":1500,"lx120":5251,"lx120r":4717,"lx140r":6010,"rx120":3740,"ft12":3780,"lltl120":6660,"lltl140":6479,"nfa12x15":2470,"nfa12x25g2":4390,"nfa12x25":4100,"nfa14":3080,"nfa14g2":5140,"nfs12a":2790,"kf140sq":1072,"kazeflex2":500,"wsnail120":980,"mach120":4780,"mach140":5080,"lwlx120r":2780},"cooler":{"dc-ag400g2":2979,"dc-ak620":5980,"tr-ax120":2350,"sd-energlo360":22280,"id-a620se":4020,"sc-fuma3":5280,"ll-hs2-360":32959,"cm-212-3dhp":3027,"id-is55":4680,"nz-ke360":37980,"nz-kp360":23780,"ds-l240m2":7680,"dc-lm360":15480,"msi-a13-360":12100,"co-naut360":11815,"nc-d15g2":20076,"nc-l9a":6165,"nc-u12a":14979,"nc-u12s-redux":6800,"nc-lc1-36":44980,"sd-sk700":11880,"sc-kotetsu4":2952}},"priceDate":"2026-10-07"};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const f1=v=>(Math.round(v*10)/10).toFixed(1);
+const yen=v=>'¥'+Math.round(v).toLocaleString('ja-JP');
+const PD=D.priceDate.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$2/$3');
+
+/* ---- state (per viewer; remembered when the browser allows) ---- */
+const SITE=true;
+const DEF={build:{},tab:'fan',fan:{mode:'same',T:25,size:'all',rev:true,priced:false},air:{kind:'all',sort:'cap',priced:false},aio:{kind:'all',sort:'cap',priced:false}};
+let S=JSON.parse(JSON.stringify(DEF));
+try{const v=JSON.parse(localStorage.getItem('fan-cooler-rank')||'null');if(v&&v.fan&&v.air&&v.aio)S=Object.assign(S,v,{build:v.build&&typeof v.build==='object'?v.build:{}},{fan:Object.assign(S.fan,v.fan),air:Object.assign(S.air,v.air),aio:Object.assign(S.aio,v.aio)});}catch(e){}
+const h0=(location.hash||'').slice(1);if(['fan','air','aio'].includes(h0))S.tab=h0;
+const save=()=>{try{localStorage.setItem('fan-cooler-rank',JSON.stringify(S));}catch(e){}};
+
+/* ---- fan noise model: the same as the PC構成シート (L = Lref + 50·log10(N/Nref), airflow ∝ rpm^1.14) ---- */
+const NOISE_K=50,NOISE_FLOOR=0.2,QEXP=1.14;
+function rpmForNoise(n,max,T){
+  let N=n.rpm*Math.pow(10,(T-n.db)/NOISE_K),cap=false,low=false;
+  if(N>max){N=max;cap=true;}
+  const lo=Math.max(n.rmin||0,NOISE_FLOOR*max);if(N<lo){N=lo;low=true;}
+  return {N,cap,low,pct:N/max*100,db:n.db+NOISE_K*Math.log10(N/n.rpm)};
+}
+function noiseMax(n,max){return n.db+NOISE_K*Math.log10(max/n.rpm);}   // estimated dBA at the maker's max rpm
+function noiseRef(n,max){
+  const s=D.noiseSrc[n.s], link=s?` <a href="${esc(s.u)}" target="_blank" rel="noopener">${n.cyb?'Cybenetics #'+esc(n.cyb):'出典'}</a>`:'';
+  if(n.cyb)return `Cybenetics 実測 ${n.db} dBA(${Math.round(n.rpm)}rpm)`+(n.rel?`<span class="w">・測定は「${esc(n.rel)}」</span>`:'')+link;
+  return `公称 ${n.le?'≤':''}${n.db} dBA(${n.rpm}rpm${n.mode?'・'+esc(n.mode)+'モード':''})`+(n.diff?`<span class="w">・最大${max}rpmとは別の回転数の値</span>`:'')+link;
+}
+
+/* ---- rows ---- */
+function fanRows(){
+  const F=S.fan, rows=[], out=[];
+  for(const m of D.fans){
+    if(F.size!=='all'&&m.size!==+F.size)continue;
+    if(!F.rev&&m.rev)continue;
+    const price=D.price.fan[m.id];
+    if(F.priced&&price==null)continue;
+    const n=D.noise[m.id], has=n&&n.db!=null;
+    const r={m,n:has?n:null,price,why:has?null:(n&&n.why)||'騒音のデータがない'};
+    if(has){
+      r.maxDb=noiseMax(n,m.rpm);
+      const x=rpmForNoise(n,m.rpm,F.T),k=x.N/m.rpm;
+      Object.assign(r,{x,q:m.cfm*Math.pow(k,QEXP),p:m.mm*k*k});
+    }
+    if(F.mode!=='max'&&!has){out.push(r);continue;}
+    rows.push(r);
+  }
+  if(F.mode==='same')rows.sort((a,b)=>b.q-a.q||b.m.cfm-a.m.cfm);
+  else if(F.mode==='max')rows.sort((a,b)=>b.m.cfm-a.m.cfm||(a.maxDb??99)-(b.maxDb??99));
+  else rows.sort((a,b)=>b.m.cfm/b.maxDb-a.m.cfm/a.maxDb);
+  return {rows,out};
+}
+const AIR_KIND={single:c=>c.type==='air',dual:c=>c.type==='air2',top:c=>c.type==='top'};
+const KIND_NAME={air:'シングルタワー',air2:'デュアルタワー',top:'トップフロー',aio:'簡易水冷'};
+function radFan(c){const f=c.rf&&D.fanSpec[c.rf];return f?{name:f.name,cfm:f.cfm,total:f.cfm*c.fans}:null;}
+function coolerRows(t){
+  const C=S[t], rows=[], out=[];
+  for(const c of D.coolers){
+    if(t==='aio'?c.type!=='aio':c.type==='aio')continue;
+    if(C.kind!=='all'&&(t==='aio'?c.rad!==+C.kind:!AIR_KIND[C.kind](c)))continue;
+    const price=D.price.cooler[c.id];
+    if(C.priced&&price==null)continue;
+    const r={c,E:c.cap.E,price,rf:t==='aio'?radFan(c):null};
+    r.cp=price?r.E/price*1000:null;
+    if(C.sort!=='cap'&&price==null){out.push(r);continue;}
+    rows.push(r);
+  }
+  const tie=(a,b)=>((b.rf?b.rf.total:b.c.fq||0)-(a.rf?a.rf.total:a.c.fq||0));
+  if(C.sort==='cap')rows.sort((a,b)=>b.E-a.E||tie(a,b));
+  else if(C.sort==='price')rows.sort((a,b)=>a.price-b.price||b.E-a.E);
+  else rows.sort((a,b)=>b.cp-a.cp||b.E-a.E);
+  return {rows,out};
+}
+
+/* ---- controls ---- */
+const seg=(key,opts,cur,label)=>`<div class="grp"><span>${label}</span><div class="seg" role="group" aria-label="${label}">`+
+  opts.map(([v,t])=>`<button type="button" data-k="${key}" data-v="${v}" aria-pressed="${String(String(cur)===String(v))}">${t}</button>`).join('')+'</div></div>';
+const chk=(key,on,label)=>`<label class="chk"><input type="checkbox" id="c-${key.replace('.','-')}" data-k="${key}"${on?' checked':''}>${label}</label>`;
+function renderCtrl(){
+  const t=S.tab;let h='';
+  if(t==='fan'){const F=S.fan;
+    h=seg('fan.mode',[['same','同じ騒音での風量'],['max','最大風量'],['ratio','風量÷騒音']],F.mode,'並び順')
+     +(F.mode==='same'?seg('fan.T',[[20,'20'],[25,'25'],[30,'30'],[35,'35']],F.T,'騒音 dBA'):'')
+     +seg('fan.size',[['all','すべて'],[120,'120mm'],[140,'140mm']],F.size,'サイズ')
+     +chk('fan.rev',F.rev,'リバースを含む')+chk('fan.priced',F.priced,`在庫ありの価格があるものだけ`);
+  }else{const C=S[t];
+    h=seg(t+'.sort',[['cap','冷却性能'],['cp','コスパ'],['price','価格の安い順']],C.sort,'並び順')
+     +(t==='air'?seg('air.kind',[['all','すべて'],['single','シングル'],['dual','デュアル'],['top','トップフロー']],C.kind,'形')
+               :seg('aio.kind',[['all','すべて'],[240,'240'],[280,'280'],[360,'360'],[420,'420']],C.kind,'ラジエーター mm'))
+     +chk(t+'.priced',C.priced,'在庫ありの価格があるものだけ');
+  }
+  $('ctrl').innerHTML=h;
+}
+$('ctrl').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-k]');if(!b)return;
+  const [g,k]=b.dataset.k.split('.'),v=b.dataset.v;
+  S[g][k]=/^\d+$/.test(v)&&k==='T'?+v:v;save();render();
+});
+$('ctrl').addEventListener('change',e=>{
+  const i=e.target.closest('input[data-k]');if(!i)return;
+  const [g,k]=i.dataset.k.split('.');S[g][k]=i.checked;save();render();
+});
+
+/* ---- list ---- */
+const bar=(v,max,alt)=>`<div class="track"><div class="fill${alt?' alt':''}" style="width:${Math.max(2,Math.min(100,v/max*100)).toFixed(1)}%"></div></div>`;
+const rk=i=>i<3?` r${i+1}`:'';
+const priceTag=p=>p!=null?`<span class="tag price">${yen(p)}</span>`:'';
+function renderFan(){
+  const F=S.fan,{rows,out}=fanRows();
+  const lead={same:[`ファン1台を約 ${F.T} dBA に合わせたときの風量`,`同じ音の大きさで、どれだけ風を送れるかの順位です。目標の音に届かない静かなファンは最高回転のまま比べます。`],
+    max:['最大回転のときの風量(メーカー公称)','音の大きさは考えない順位です。'],
+    ratio:['最大風量 ÷ 最大回転時の騒音','最大回転での「1 dBAあたりの風量」です。回転数を下げて使うなら「同じ騒音での風量」の方が実際に近くなります。']}[F.mode];
+  $('lead').innerHTML=`<b>${lead[0]}</b><span>${lead[1]} 表示 ${rows.length}機種。</span>`;
+  if(!rows.length){$('list').innerHTML='<li class="empty">条件に合うファンがありません。サイズや「在庫ありの価格があるものだけ」を変えてください。</li>';}
+  else{
+    const val=r=>F.mode==='same'?r.q:F.mode==='max'?r.m.cfm:r.m.cfm/r.maxDb, mx=Math.max(...rows.map(val));
+    $('list').innerHTML=rows.map((r,i)=>{
+      const m=r.m, tags=`<span class="tag">${m.size}mm</span>`+(m.t!==25?`<span class="tag">厚さ${m.t}mm</span>`:'')+(m.rev?'<span class="tag rev">リバース</span>':'')+priceTag(r.price);
+      let big,side,sub;
+      if(F.mode==='same'){
+        big=`${f1(r.q)}<small>CFM</small>`;
+        side=`${Math.round(r.x.N)}rpm(${Math.round(r.x.pct)}%)・静圧 ${r.p.toFixed(2)} mmH2O`;
+        sub=`最大 ${m.cfm} CFM / ${m.rpm}rpm・${noiseRef(r.n,m.rpm)}`+(r.x.cap?`<span class="w">・最高回転でも約 ${f1(r.x.db)} dBA</span>`:'')+(r.x.low?`<span class="w">・これ以上回転を下げられない(約 ${f1(r.x.db)} dBA)</span>`:'');
+      }else if(F.mode==='max'){
+        big=`${m.cfm}<small>CFM</small>`;
+        side=`${m.rpm}rpm・静圧 ${m.mm} mmH2O`+(r.n?`・最大時 約 ${r.n.le?'≤':''}${f1(r.maxDb)} dBA`:'');
+        sub=r.n?noiseRef(r.n,m.rpm):`騒音:${esc(r.why)}`;
+      }else{
+        big=`${(m.cfm/r.maxDb).toFixed(2)}<small>CFM/dBA</small>`;
+        side=`${m.cfm} CFM ÷ 約 ${r.n.le?'≤':''}${f1(r.maxDb)} dBA`;
+        sub=noiseRef(r.n,m.rpm)+((r.n.cyb||r.n.diff)?`<span class="w">・最大回転の騒音は換算値</span>`:'');
+      }
+      return `<li class="row${rk(i)}"><div class="no">${i+1}</div><div style="min-width:0"><div class="nm">${esc(m.name)}</div><div class="tags">${tags}</div><div class="sub">${sub}</div><button type="button" class="addb${inBuild(m.id)?' on':''}" data-add="${m.id}">${inBuild(m.id)?'構成に入れた位置を変える':'＋ 構成に入れる'}</button></div>`
+        +`<div class="val"><div class="big">${big}</div>${bar(val(r),mx)}<div class="side">${side}</div></div></li>`;
+    }).join('');
+  }
+  renderOut(out.map(r=>`${esc(r.m.name)}:${esc(r.why)}`),'騒音の値がなく順位に入らない機種');
+}
+function coolerSub(r,t){
+  const c=r.c, cap=c.cap;
+  const how=cap.src==='both'?`構造からの推定 ${Math.round(cap.mech)}W とメーカー公称TDP ${cap.tdp}W の平均`:cap.src==='mech'?(t==='aio'?'ラジエーターの大きさと厚さからの推定':'ヒートパイプ・フィン・ファンからの推定'):'メーカー公称TDP';
+  if(t==='aio')return `ラジエーター ${c.rad}mm・厚さ ${c.thick}mm・ファン ${c.fs}mm×${c.fans}`+(r.rf?`(${esc(r.rf.name)}、1台 ${r.rf.cfm} CFM)`:'')+`<br>${how}`;
+  const parts=[KIND_NAME[c.type]];
+  if(c.pipes)parts.push(`ヒートパイプ ${c.pipes}本`);
+  if(c.vc)parts.push('ベイパーチャンバー');
+  if(c.h)parts.push(`高さ ${c.h}mm`);
+  parts.push(c.fanNote?esc(c.fanNote):`ファン ${c.fs}mm×${c.fans}`);
+  return parts.join('・')+(c.note?`(${esc(c.note)})`:'')+`<br>${how}`;
+}
+function renderCooler(t){
+  const C=S[t],{rows,out}=coolerRows(t);
+  const lead={cap:['推定の冷却能力(W)','CPUとケース内の空気の温度差が約30℃のとき、どれだけの熱を逃がせるかの目安です。PC構成シートのCPU温度の計算と同じ値です。'+(t==='aio'?' 同じ値のときは、付属ファンの合計風量が多い方を上にしています。':'')],
+    cp:['1,000円あたりの冷却能力','推定の冷却能力 ÷ 在庫ありの最安値。価格を調べていない製品は入りません。'],
+    price:['在庫ありの最安値','安い順。価格を調べていない製品は入りません。']}[C.sort];
+  $('lead').innerHTML=`<b>${lead[0]}</b><span>${lead[1]} 表示 ${rows.length}製品。</span>`;
+  if(!rows.length){$('list').innerHTML='<li class="empty">条件に合うクーラーがありません。形・サイズの条件を変えてください。</li>';}
+  else{
+    const val=r=>C.sort==='cap'?r.E:C.sort==='cp'?r.cp:r.price, mx=Math.max(...rows.map(val));
+    $('list').innerHTML=rows.map((r,i)=>{
+      const c=r.c, tags=`<span class="tag">${t==='aio'?c.rad+'mm':KIND_NAME[c.type]}</span>`+(r.c.vc?'<span class="tag">VC</span>':'')+priceTag(r.price);
+      let big,side;
+      if(C.sort==='cap'){big=`${Math.round(r.E)}<small>W</small>`;side=(r.price!=null?`${yen(r.price)}・${r.cp.toFixed(1)} W/千円`:'在庫ありの価格は未調査')+(t==='aio'&&r.rf?`・ファン合計 ${f1(r.rf.total)} CFM`:'');}
+      else if(C.sort==='cp'){big=`${r.cp.toFixed(1)}<small>W/千円</small>`;side=`${Math.round(r.E)}W ÷ ${yen(r.price)}`;}
+      else{big=`${yen(r.price)}`;side=`${Math.round(r.E)}W・${r.cp.toFixed(1)} W/千円`;}
+      return `<li class="row${rk(i)}"><div class="no">${i+1}</div><div style="min-width:0"><div class="nm">${esc((c.brand?c.brand+' ':'')+c.name)}</div><div class="tags">${tags}</div><div class="sub">${coolerSub(r,t)}</div></div>`
+        +`<div class="val"><div class="big">${big}</div>${bar(val(r),mx,C.sort==='price')}<div class="side">${side}</div></div></li>`;
+    }).join('');
+  }
+  renderOut(out.map(r=>esc((r.c.brand?r.c.brand+' ':'')+r.c.name)),'在庫ありの価格がなく、この並び順に入らない製品');
+}
+function renderOut(items,title){
+  const o=$('out');if(!items.length){o.hidden=true;o.innerHTML='';return;}
+  o.hidden=false;o.innerHTML=`<details id="outd"><summary>${title}(${items.length})</summary><ul>${items.map(x=>`<li>${x}</li>`).join('')}</ul></details>`;
+}
+
+/* ---- explanation ---- */
+const HOW={
+ fan:`<h2>順位の決め方(ケースファン)</h2>
+  <p><b>同じ騒音での風量</b>:各ファンの騒音の値(メーカー公称、ARCTICは Cybenetics の実測で25 dBAになる回転数)から、目標の騒音になる回転数を求め、そのときの風量を出して比べます。騒音は回転数で <code>騒音 = 基準の騒音 + 50 × log10(回転数 ÷ 基準の回転数)</code>、風量は <code>回転数の1.14乗</code> に比例するとして換算しています。PC構成シートの「同じ騒音で比べる」と同じ計算です。</p>
+  <p>メーカーごとに騒音の測り方が違うので、1〜2 dBA 程度の差は誤差の範囲と考えてください。最大風量と最大静圧は同時に出る値ではありません。ケースやラジエーターに付けると、実際の風量はこれより少なくなります。</p>
+  <p>価格は ${PD} に通販5店(アーク・ツクモ・ドスパラ・パソコン工房・アプライド)で調べた、在庫ありの最安値(1個・税込)です。</p>`,
+ air:`<h2>順位の決め方(空冷CPUクーラー)</h2>
+  <p>冷却能力は、ヒートパイプの本数、タワーの数と高さ、ファンの大きさと風量、ベイパーチャンバーの有無から計算した推定値です。メーカーがTDP(対応する発熱量)を公表している製品は、推定値と公称TDPの平均にしています。PC構成シートでCPU温度を計算するときと同じ値です。</p>
+  <p>メーカーのTDPは測り方がそろっていないため、実機の温度テストの順位とは入れ替わることがあります。コスパと価格は、${PD} の在庫ありの最安値(通販5店・税込)がある製品だけで並べます。</p>`,
+ aio:`<h2>順位の決め方(水冷CPUクーラー)</h2>
+  <p>冷却能力はラジエーターの大きさ(240・280・360・420mm)と厚さから計算した推定値で、メーカーがTDPを公表している製品は推定値との平均にしています。同じ値の製品は、付属ファンの合計風量(最大回転・公称)が多い方を上にしています。</p>
+  <p>ポンプの性能や水冷ヘッドの作りは数値になっていないため、同じサイズの製品の差は小さく出ます。コスパと価格は、${PD} の在庫ありの最安値(通販5店・税込)がある製品だけで並べます。</p>`};
+
+function render(){
+  for(const b of document.querySelectorAll('.tabs button'))b.setAttribute('aria-selected',String(b.dataset.tab===S.tab));
+  const op=$('outd')&&$('outd').open;
+  renderCtrl();
+  if(S.tab==='fan')renderFan();else renderCooler(S.tab);
+  if(op&&$('outd'))$('outd').open=true;
+  $('how').innerHTML=HOW[S.tab];
+  renderTray();
+}
+document.querySelector('.tabs').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-tab]');if(!b)return;
+  S.tab=b.dataset.tab;save();
+  try{history.replaceState(null,'','#'+S.tab);}catch(err){}
+  render();
+});
+/* ---- fans → PC構成シート: a position popup and a tray ---- */
+const POS=[['front','前面','in',4],['top','天面','out',4],['rear','背面','out',1],['bottom','底面','in',4]];
+const fanById=id=>D.fans.find(f=>f.id===id)||null;
+const inBuild=id=>POS.some(([p])=>S.build[p]&&S.build[p].model===id);
+let dlgFan=null, dlgSel={}, lastFocus=null;
+function openDlg(id){
+  const m=fanById(id);if(!m)return;
+  dlgFan=m;lastFocus=document.activeElement;dlgSel={};
+  for(const [p,,dir] of POS){const b=S.build[p];dlgSel[p]=b&&b.model===id?{n:b.count,dir:b.dir}:{n:0,dir};}
+  if(!POS.some(([p])=>dlgSel[p].n)){   // a starting point: the first wall not yet chosen
+    const free=POS.find(([p])=>!S.build[p]);
+    if(free)dlgSel[free[0]].n=free[3]===1?1:m.size===140?2:3;
+  }
+  renderDlg();
+  const ov=$('ov'), emb=window.parent!==window;   // the site grows this frame to full height, so the frame's own viewport is the whole page
+  ov.classList.toggle('emb',emb);
+  if(emb){ov.style.height=document.documentElement.scrollHeight+'px';const y=(lastFocus&&lastFocus.getBoundingClientRect?lastFocus.getBoundingClientRect().top:0)+window.scrollY;$('dlg').style.marginTop=Math.max(16,y-160)+'px';}
+  else{ov.style.height='';$('dlg').style.marginTop='';}
+  ov.hidden=false;
+  const f=$('dlg').querySelector('.step button:not(:disabled)');if(f)f.focus();
+}
+function renderDlg(){
+  const m=dlgFan, others=POS.filter(([p])=>S.build[p]&&S.build[p].model!==m.id&&dlgSel[p].n).map(([,n])=>n);
+  $('dlg').innerHTML=`<h2 id="dlg-t">${esc(m.name)}</h2><p class="hint">付ける位置と台数を選んでください。ケースに入りきらない台数は、PC構成シートが入る分だけに減らします。</p><div>`
+    +POS.map(([p,name,,max])=>{const v=dlgSel[p],mx=m.size===140&&max===4?3:max;
+      return `<div class="prow${v.n?'':' zero'}"><b>${name}</b><span class="step"><button type="button" data-st="${p}" data-d="-1" aria-label="${name}を1台減らす"${v.n<=0?' disabled':''}>−</button><output aria-live="polite">${v.n}</output><button type="button" data-st="${p}" data-d="1" aria-label="${name}を1台増やす"${v.n>=mx?' disabled':''}>＋</button></span>`
+        +`<span class="seg" role="group" aria-label="${name}の向き"><button type="button" data-dir="${p}" data-v="in" aria-pressed="${v.dir==='in'}">吸気</button><button type="button" data-dir="${p}" data-v="out" aria-pressed="${v.dir==='out'}">排気</button></span></div>`;}).join('')
+    +`</div>`+(others.length?`<p class="hint">${others.join('・')}に入れていた別のファンは、このファンに置き換わります。</p>`:'')
+    +`<div class="dlg-foot"><button type="button" class="btn" data-dlg="cancel">キャンセル</button><button type="button" class="btn primary" data-dlg="ok">構成に入れる</button></div>`;
+}
+function closeDlg(){$('ov').hidden=true;dlgFan=null;if(lastFocus&&document.contains(lastFocus))lastFocus.focus();}
+$('dlg').addEventListener('click',e=>{
+  const st=e.target.closest('[data-st]'),dr=e.target.closest('[data-dir]'),act=e.target.closest('[data-dlg]');
+  if(st){const p=st.dataset.st,mx=+(POS.find(x=>x[0]===p)[3]);const lim=dlgFan.size===140&&mx===4?3:mx;dlgSel[p].n=Math.max(0,Math.min(lim,dlgSel[p].n+ +st.dataset.d));const k=document.activeElement&&document.activeElement.dataset;const keep=k?[k.st,k.d]:null;renderDlg();if(keep){const b=$('dlg').querySelector(`[data-st="${keep[0]}"][data-d="${keep[1]}"]`);if(b&&!b.disabled)b.focus();else{const o=$('dlg').querySelector(`[data-st="${keep[0]}"]:not(:disabled)`);if(o)o.focus();}}return;}
+  if(dr){dlgSel[dr.dataset.dir].dir=dr.dataset.v;renderDlg();const b=$('dlg').querySelector(`[data-dir="${dr.dataset.dir}"][data-v="${dr.dataset.v}"]`);if(b)b.focus();return;}
+  if(act&&act.dataset.dlg==='cancel'){closeDlg();return;}
+  if(act&&act.dataset.dlg==='ok'){
+    for(const [p] of POS){
+      const v=dlgSel[p];
+      if(v.n>0)S.build[p]={model:dlgFan.id,count:v.n,dir:v.dir};
+      else if(S.build[p]&&S.build[p].model===dlgFan.id)delete S.build[p];
+    }
+    save();closeDlg();render();trayMsg('');
+  }
+});
+$('ov').addEventListener('click',e=>{if(e.target===$('ov'))closeDlg();});
+document.addEventListener('keydown',e=>{
+  if($('ov').hidden)return;
+  if(e.key==='Escape'){closeDlg();return;}
+  if(e.key==='Tab'){const f=[...$('dlg').querySelectorAll('button:not(:disabled)')];if(!f.length)return;const i=f.indexOf(document.activeElement);
+    if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus();}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus();}}
+});
+$('list').addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(b)openDlg(b.dataset.add);});
+
+function buildData(){
+  return {type:'pc-sheet-fans',version:1,fans:POS.filter(([p])=>S.build[p]).map(([p])=>{const b=S.build[p],m=fanById(b.model);return {pos:p,model:b.model,count:b.count,dir:b.dir,name:m?m.name:''};})};
+}
+function sheetUrl(){return '../?fans='+buildData().fans.map(f=>`${f.model}:${f.pos}:${f.count}:${f.dir}`).join(',');}
+let trayNote='';
+function trayMsg(t){trayNote=t;const el=$('tmsg');if(el)el.textContent=t;}
+function renderTray(){
+  const t=$('tray'), has=POS.some(([p])=>S.build[p]);
+  t.hidden=S.tab!=='fan'&&!has;
+  const total=POS.reduce((s,[p])=>{const b=S.build[p];if(!b)return s;const pr=D.price.fan[b.model];return pr==null||s==null?null:s+pr*b.count;},has?0:null);
+  t.innerHTML=`<div class="tray-head"><b>PC構成シートに入れるファン</b><span>${has?'入れていない位置は、PC構成シートの今の配置のままです。':'ランキングの「＋ 構成に入れる」で、付ける位置と台数を選べます。'}</span></div>`
+    +`<div class="slots">`+POS.map(([p,name])=>{const b=S.build[p],m=b&&fanById(b.model);
+      if(!b||!m)return `<div class="slot empty"><span class="k">${name}</span><span class="v" style="color:var(--muted);font-weight:500">そのまま</span></div>`;
+      const pr=D.price.fan[b.model];
+      return `<div class="slot"><span class="k">${name}</span><span class="v">${esc(m.name)} ×${b.count}</span><span class="d">${b.dir==='in'?'吸気':'排気'}${pr!=null?'・'+yen(pr*b.count):''}</span><button type="button" class="x" data-rm="${p}" aria-label="${name}のファンを外す">×</button></div>`;}).join('')+`</div>`
+    +`<div class="tray-foot">`+(SITE?`<a class="btn primary" id="t-open" target="_top" href="${has?esc(sheetUrl()):'#'}"${has?'':' aria-disabled="true" tabindex="-1" style="opacity:.45;pointer-events:none"'}>PC構成シートで見る</a>`:'')
+    +`<button type="button" class="btn${SITE?'':' primary'}" id="t-copy"${has?'':' disabled'}>構成をコピー</button>`
+    +(has?`<button type="button" class="btn" id="t-clear">すべて外す</button>`:'')
+    +(total?`<span class="tmsg">ファン代 ${yen(total)}(在庫ありの最安値・税込)</span>`:'')+`</div>`
+    +`<p class="tmsg" id="tmsg" role="status">${esc(trayNote)}</p><textarea class="copybox" id="t-box" readonly hidden aria-label="コピーする内容"></textarea>`;
+}
+$('tray').addEventListener('click',async e=>{
+  const rm=e.target.closest('[data-rm]');
+  if(rm){delete S.build[rm.dataset.rm];save();render();return;}
+  if(e.target.closest('#t-clear')){S.build={};save();trayMsg('');render();return;}
+  if(e.target.closest('#t-copy')){
+    const txt=JSON.stringify(buildData()), box=$('t-box');
+    try{await navigator.clipboard.writeText(txt);box.hidden=true;
+      trayMsg('コピーしました。PC構成シートの「保存と読み込み」の欄に貼り付けると、ファンが配置されます(「元に戻す」で戻せます)。');}
+    catch(err){box.hidden=false;box.value=txt;box.focus();box.select();
+      trayMsg('自動でコピーできなかったので、下の欄の文字を選んでコピーし、PC構成シートの「保存と読み込み」に貼り付けてください。');}
+  }
+});
+
+if(SITE&&window.parent!==window){
+  let ht=0;const sendH=()=>{clearTimeout(ht);ht=setTimeout(()=>{const w=document.querySelector('.wrap');const h=Math.ceil(w.getBoundingClientRect().bottom+window.scrollY+28);window.parent.postMessage({channel:'fan-ranking',version:1,type:'height',height:h},location.origin);},60);};
+  if(typeof ResizeObserver!=='undefined')new ResizeObserver(sendH).observe(document.querySelector('.wrap'));
+  addEventListener('message',e=>{if(e.source===window.parent&&e.origin===location.origin&&e.data&&e.data.channel==='fan-ranking'&&e.data.type==='request-height')sendH();});
+  sendH();
+}
+$('meta').textContent=`ファン ${D.fans.length}機種・クーラー ${D.coolers.length}製品 · 価格 ${D.priceDate}`;
+$('foot').innerHTML='仕様はメーカー公表値(2026年9〜10月確認)。冷却能力と換算した風量は目安で、実際の温度・騒音はケースや取り付け方で変わります。';
+render();
+</script>
+</body></html>

@@ -1,4 +1,5 @@
-<!doctype html><html lang="ja" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PC構成シート 公開版</title>
+<!doctype html><html lang="ja" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PC構成シート 公開版</title>
 
 
 
@@ -518,7 +519,7 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
     </div>
     <div class="card">
       <h2>保存と読み込み</h2>
-      <p class="hint">BTOショップの構成表(「CPU: Ryzen 7 9700X」のような行)を貼り付けると、構成表と設定に入力します。入力はこのブラウザに自動保存されます。動画ごとの構成は「データをコピー」で残し、次回ここに貼り付けると読み込めます。</p>
+      <p class="hint">BTOショップの構成表(「CPU: Ryzen 7 9700X」のような行)、パーツ価格シートやファン・クーラーランキングの「構成をコピー」の内容を貼り付けると、構成表と設定に入力します。入力はこのブラウザに自動保存されます。動画ごとの構成は「データをコピー」で残し、次回ここに貼り付けると読み込めます。</p>
       <div class="btns">
         <button class="btn" id="copy">データをコピー</button>
 <button class="btn" id="export-result" type="button">計算結果を書き出す</button>
@@ -620,7 +621,7 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
     </div>
     <div class="card wide" id="pricecard">
       <h2>価格</h2>
-      <p class="hint">構成表のパーツに合わせて目安の価格が入り、その合計が構成表の価格になります。実際の価格が分かるパーツは入力してください(入力した価格が優先されます)。目安は2026年9月下旬の秋葉原の最安値・実売価格をもとにしています。構成表の価格欄にBTOの販売価格を入れると、その価格を基準に、パーツを変えた差額の分だけ価格が動きます。</p>
+      <p class="hint">構成表のパーツに合わせて目安の価格が入り、その合計が構成表の価格になります。実際の価格が分かるパーツは入力してください(入力した価格が優先されます)。目安は、CPU・CPUクーラー・ケースファン・一部のグラフィックボードが2026年10月7日時点の通販5店(アーク・ツクモ・ドスパラ・パソコン工房・アプライド)の在庫ありの最安値、そのほかは2026年9月下旬の秋葉原の最安値・実売価格をもとにしています。構成表の価格欄にBTOの販売価格を入れると、その価格を基準に、パーツを変えた差額の分だけ価格が動きます。</p>
       <div class="pgrid">
         <div class="pcol">
           <div class="ptable" id="ptable"></div>
@@ -673,7 +674,7 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
       <li>ファンの騒音は、各メーカーが公表している騒音(dBA)と回転数から推定しています。ARCTIC のファンだけは、メーカーが dBA を公表していないため、Cybenetics(cybenetics.com)が公開している測定値(25 dBA になる回転数)を使い、ファンごとに元の報告へのリンクを表示しています。メーカーごとに測定条件が違うため、比較は目安です。「≤」はメーカーが上限として示している値です。</li>
       <li>3Dの計算では、ケースファンとラジエーターのファンの性能曲線(風量と静圧の関係)を、Cybenetics の公開測定と ARCTIC の公開データ(38機種・271本)から作った平均的な形で近似しています。個別の製品の実測曲線ではありません。回転数を下げたときの風量の落ち方も、同じ測定から求めています。</li>
       <li>CPUの発熱は、AMD・Intel の公式仕様(TDP・PBP・電力上限・温度の上限)と、レビューサイト ComputerBase・Tom's Hardware などが公開している CPU パッケージの消費電力の測定値(標準の電力設定。Intel は上限 MTP で動かし続ける設定)を使っています。測定値は記事ごとに条件が違う目安で、出典はCPUの設定欄に表示しています。測定のないCPUは電力上限から計算します。</li>
-      <li>パーツのサイズや仕様は、メーカーの公表値や販売店の掲載情報などをもとにした値です。目安の価格は2026年9月下旬時点の秋葉原の最安値・実売価格をもとにしており、現在の販売価格とは異なる場合があります。</li>
+      <li>パーツのサイズや仕様は、メーカーの公表値や販売店の掲載情報などをもとにした値です。目安の価格は、CPU・CPUクーラー・ケースファン・一部のグラフィックボードが2026年10月7日時点の通販5店(アーク・ツクモ・ドスパラ・パソコン工房・アプライド)の在庫ありの最安値、そのほかは2026年9月下旬時点の秋葉原の最安値・実売価格をもとにしており、現在の販売価格とは異なる場合があります。</li>
     </ul>
     <h2 class="about-sub">ご利用について</h2>
     <ul>
@@ -5174,11 +5175,72 @@ function loadSaved(txt){
   let next;try{next=normalize(s);}catch(e){applyCase(state);throw e;}   // the case on screen stays as it was
   const cr=state.criteria;state=next;if(!s.criteria)state.criteria=cr;selId=null;boot();
 }
+/* parts chosen on the price sheet (「構成をコピー」): {type:'pc-sheet-parts',version:1,date,parts:[{category,name,detail,price,...}]}
+   replaces the CPU / GPU / SSD rows and keeps each price as a typed price; everything else stays as it is */
+function applyPartsData(d){
+  const items=(d&&Array.isArray(d.parts)?d.parts:[]).slice(0,12), cfg=JSON.parse(JSON.stringify(state)), done=[], noPrice=[];
+  for(const it of items){
+    const label={CPU:'CPU',GPU:'GPU',SSD:'SSD'}[it&&it.category];
+    if(!label||typeof it.name!=='string'||!it.name.trim())continue;
+    let row=cfg.specs.find(r=>r.label===label);if(!row){row={label,name:'',detail:''};cfg.specs.push(row);}
+    let name=it.name.trim().slice(0,120), detail=String(it.detail||'').slice(0,120);
+    if(label==='GPU'){const chip=chipOf(name);if(chip){name=chip.name;detail=chip.vram;}}
+    row.name=name;row.detail=detail;delete row.auto;
+    const p=Math.round(+it.price);
+    if(isFinite(p)&&p>0&&p<10000000){row.price=p;row.priceFor=name;}else{delete row.price;delete row.priceFor;noPrice.push(name);}
+    done.push(label);
+  }
+  if(!done.length)return null;
+  cfg.pricing={...cfg.pricing,base:null};
+  if(/^\d{4}-\d{2}-\d{2}$/.test(d.date||''))cfg.note=`${done.join('・')}は価格シートの最安値(税込・${d.date}時点)。ほかのパーツは目安の価格です。`;
+  loadSaved(JSON.stringify(cfg));save();
+  return {done,noPrice};
+}
+/* fans chosen on the fan ranking (「構成をコピー」): {type:'pc-sheet-fans',version:1,fans:[{model,pos,count,dir}]}
+   pos = front / top / rear / bottom, dir = in / out (omitted: the wall's usual direction). Each wall listed is replaced
+   with that model and count through setPosFans, so a case that has no room for that many keeps as many as fit. */
+const FANS_POS=['front','top','rear','bottom'];
+function applyFansData(d){
+  const items=(d&&Array.isArray(d.fans)?d.fans:[]).slice(0,8), seen=new Set(), done=[], short=[];
+  for(const it of items){
+    const pos=it&&it.pos, m=it&&fanModel(it.model), n=Math.round(+(it&&it.count));
+    if(!FANS_POS.includes(pos)||seen.has(pos)||!m||m.typ||!(n>=0&&n<=6))continue;
+    seen.add(pos);
+    const dir=it.dir==='in'||it.dir==='out'?it.dir:null;
+    if(dim3){Air3D.stop();dim3=false;}
+    setPosFans(pos,{count:n,model:m.id,dir});
+    const got=fansAt(pos).length;
+    done.push({pos,name:fanDisplayName({model:m.id,size:m.size}),n,got});
+    if(got<n)short.push(`${POS_NAME[pos]}は${got}基`);
+  }
+  if(!done.length)return null;
+  state.view.dim='2d';if(typeof syncDim==='function')syncDim();
+  save();warm=70;
+  return {done,short};
+}
+function fansImportText(r){
+  return 'ランキングで選んだファンを配置しました('+r.done.map(x=>`${POS_NAME[x.pos]}:${x.got?x.name+' ×'+x.got:'なし'}`).join('、')+')。'
+    +(r.short.length?`ケースの大きさやラジエーターの位置の都合で、${r.short.join('・')}にしています。`:'');
+}
 function runImport(how){
   const txt=$('json').value.trim();if(!txt)return;
   const before=JSON.stringify(state);
-  if(txt[0]==='{'){   // data saved with 「データをコピー」
+  if(txt[0]==='{'){   // data saved with 「データをコピー」, or parts from the price sheet
     if(how==='type')return;
+    let pd=null;try{pd=JSON.parse(txt);}catch(e){}
+    if(pd&&pd.type==='pc-sheet-fans'){
+      let r=null;try{r=applyFansData(pd);}catch(e){r=null;}
+      if(!r){msg('ランキングのファンを読み込めませんでした。「構成をコピー」で出力した内容をそのまま貼り付けてください。');return;}
+      if(importFresh){importSnap=before;importFresh=false;}
+      lastImported=txt;$('undo-import').hidden=false;msg(fansImportText(r));return;
+    }
+    if(pd&&pd.type==='pc-sheet-parts'){
+      let r=null;try{r=applyPartsData(pd);}catch(e){r=null;}
+      if(!r){msg('価格シートの部品を読み込めませんでした。「構成をコピー」で出力した内容をそのまま貼り付けてください。');return;}
+      if(importFresh){importSnap=before;importFresh=false;}
+      lastImported=txt;$('undo-import').hidden=false;
+      msg(`価格シートで選んだ${r.done.join('・')}を構成表に入れました。`+(r.noPrice.length?`${r.noPrice.join('、')}は価格がないため目安の価格です。`:''));return;
+    }
     try{loadSaved(txt);}catch(e){msg('読み込めませんでした。「データをコピー」で出力した内容をそのまま貼り付けてください。');return;}
     if(importFresh){importSnap=before;importFresh=false;}
     lastImported=txt;$('undo-import').hidden=false;msg('保存したデータを読み込みました。');return;
@@ -5228,6 +5290,13 @@ const FAN_PRICE={case120:0,case140:0,gen120:1000,gen140:1300,p12:1200,kazeflex2:
 const fanRefPrice=f=>{if(f.model==='custom')return 1500;if(FAN_PRICE[f.model]!=null)return FAN_PRICE[f.model];const m=fanModel(f.model);return m&&m.noTrack?null:1000;};
 const CASE_PRICE={mid:12000,wide:15000,micro:9000,full:25000,itx:13000,custom:12000};
 const MB_PRICE={A520:9000,B550:13000,A620:13000,B650:18000,B850:25000,X670:38000,X670E:50000,X870:40000,X870E:60000,H610:10000,H810:13000,B760:17000,B860:20000,Z790:35000,Z890:40000};
+/* generated by pricedata.py from price_research_20261007: the lowest in-stock, model-matched price (tax in, one unit) of each part among the 5 shops, checked 2026-10-07 */
+const PRICE_RESEARCH={"cpu":{"Core Ultra 5 225":31780,"Core Ultra 5 225F":25980,"Core Ultra 5 235":48880,"Core Ultra 5 245K":36800,"Core Ultra 5 245KF":30980,"Core Ultra 5 250K Plus":41680,"Core Ultra 5 250KF Plus":35980,"Core Ultra 7 265":63980,"Core Ultra 7 265F":54980,"Core Ultra 7 265K":49800,"Core Ultra 7 265KF":48800,"Core Ultra 7 270K Plus":59480,"Core i3-14100":21380,"Core i3-14100F":16480,"Core i5-14400":34980,"Core i5-14400F":27980,"Core i5-14600KF":44980,"Core i7-14700":65800,"Core i7-14700F":59980,"Core i7-14700K":69800,"Core i7-14700KF":65480,"Ryzen 5 7500F":25000,"Ryzen 5 7600":28440,"Ryzen 5 8500G":25749,"Ryzen 5 8600G":33480,"Ryzen 5 9500F":35820,"Ryzen 5 9600":40800,"Ryzen 5 9600X":39800,"Ryzen 7 7700X3D":59456,"Ryzen 7 7800X3D":54800,"Ryzen 7 8700F":36469,"Ryzen 7 8700G":51980,"Ryzen 7 9700X":47320,"Ryzen 7 9800X3D":63570,"Ryzen 7 9850X3D":73967,"Ryzen 9 9900X":70280,"Ryzen 9 9900X3D":88100,"Ryzen 9 9950X":111680,"Ryzen 9 9950X3D":126764,"Ryzen 9 9950X3D2 Dual Edition":168678},"cooler":{"dc-ag400g2":2979,"dc-ak620":5980,"tr-ax120":2350,"sd-energlo360":22280,"id-a620se":4020,"sc-fuma3":5280,"ll-hs2-360":32959,"cm-212-3dhp":3027,"id-is55":4680,"nz-ke360":37980,"nz-kp360":23780,"ds-l240m2":7680,"dc-lm360":15480,"msi-a13-360":12100,"co-naut360":11815,"nc-d15g2":20076,"nc-l9a":6165,"nc-u12a":14979,"nc-u12s-redux":6800,"nc-lc1-36":44980,"sd-sk700":11880,"sc-kotetsu4":2952},"fan":{"p12pro":1100,"p12prorev":1690,"p14pro":1449,"rs120":1993,"rs120r":1500,"lx120":5251,"lx120r":4717,"lx140r":6010,"rx120":3740,"ft12":3780,"lltl120":6660,"lltl140":6479,"nfa12x15":2470,"nfa12x25g2":4390,"nfa12x25":4100,"nfa14":3080,"nfa14g2":5140,"nfs12a":2790,"kf140sq":1072,"kazeflex2":500,"wsnail120":980,"mach120":4780,"mach140":5080,"lwlx120r":2780},"gpuCard":{"asus-dual-9060xt":96800,"asus-tuf-gaming-oc-5080":366800,"palit-gamingpro-oc-5080":269800,"powercolor-hellhound-9060xt":129000,"powercolor-reaper-9060xt":92801,"powercolor-red-devil-9070xt":159826,"sapphire-pulse-9060xt":109800,"sapphire-pulse-9070":143999}};
+/* The price research of 2026-10-07 (pricedata.py → pricedata.js; research/price_research_20261007): for the parts it covers, the lowest in-stock,
+   model-matched price among the five shops (Ark, Tsukumo, Dospara, PC Koubou, Applied; one unit, tax in) replaces the typical price above.
+   GPU cards are priced one by one (GPU_CARD_PRICE, by card id); the chip prices above still serve the cards the research did not cover. */
+Object.assign(CPU_PRICE,PRICE_RESEARCH.cpu);Object.assign(COOLER_PRICE,PRICE_RESEARCH.cooler);Object.assign(FAN_PRICE,PRICE_RESEARCH.fan);
+const GPU_CARD_PRICE=PRICE_RESEARCH.gpuCard;
 const r100=v=>Math.round(v/100)*100;
 const modelRe=nm=>new RegExp('(?<![A-Za-z0-9])'+tidy(nm).split(/[\s\-]+/).map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('[\\s\\-]*')+'(?![A-Za-z0-9])','i');
 function cpuModel(n,names){let best=null,bl=0;const t=tidy(n);for(const nm of names)if(modelRe(nm).test(t)&&nm.length>bl){best=nm;bl=nm.length;}return best;}
@@ -5283,7 +5352,9 @@ function refPrice(r){
   if(cat==='cpu'){const best=cpuModel(n,Object.keys(CPU_PRICE));return best?CPU_PRICE[best]:null;}
   if(cat==='gpu'){
     const chip=chipOf(n), base=chip?GPU_CHIP_PRICE[chip.key]:null;if(!base)return null;
-    const series=r===gpuRow()&&curGpu&&curGpu.brand&&!curGpu.generic&&!curGpu.custom?curGpu.series:n;   // the card chosen below, when it belongs to this row
+    const card=r===gpuRow()&&curGpu&&curGpu.brand&&!curGpu.generic&&!curGpu.custom?curGpu:null;   // the card chosen below, when it belongs to this row
+    if(card&&card.chip===chip.key&&GPU_CARD_PRICE[card.id]!=null)return GPU_CARD_PRICE[card.id];   // this very card was priced by the research
+    const series=card?card.series:n;
     let f=1;for(const [re,x] of GPU_TIER)if(re.test(series)){f=x;break;}
     return r100(base*f);
   }
@@ -6800,10 +6871,52 @@ async function websiteCompute(options={}){
       image:websitePicture(),calculation:{settle,average:avg,gridMm:Sim.HMM}};
   }finally{websiteComputing=false;diagRun=prevDiag;running=prevRun;warm=0;document.body.inert=previousInert;}
 }
+
+/* ---- parts from the price sheet (?parts=id,id,id or an 'apply-parts' message) ---- */
+let websitePrices=null;
+async function websitePriceData(){
+  if(websitePrices)return websitePrices;
+  const r=await fetch('../data/prices.json',{cache:'no-cache'});
+  if(!r.ok)throw new Error('価格データを読み込めませんでした。');
+  websitePrices=await r.json();return websitePrices;
+}
+function websiteGpuName(g){return /^RTX/i.test(g)?'GeForce '+g:/^RX/i.test(g)?'Radeon '+g:/^Arc/i.test(g)?'Intel '+g:g;}
+async function websiteApplyParts(input){
+  const list=(Array.isArray(input)?input:[]).map(x=>typeof x==='string'?x:x&&x.id);
+  if(!list.length||list.length>12||list.some(id=>!/^[a-z0-9][a-z0-9-]{0,99}$/.test(id||'')))throw new Error('部品の指定が正しくありません。');
+  if(websiteComputing)throw new Error('計算中です。少し待ってから読み込んでください。');
+  const data=await websitePriceData(), day=data.updated, parts=[];
+  for(const id of list){
+    const prod=data.products.find(p=>p.id===id);if(!prod)throw new Error('部品が見つかりません: '+id);
+    const offers=data.observations.filter(o=>o.id===id&&o.date===day&&o.status==='購入可'&&o.price).sort((a,b)=>a.price-b.price);
+    parts.push({category:prod.category,id,name:prod.category==='GPU'?websiteGpuName(prod.group):prod.name,detail:prod.category==='SSD'?(prod.model||''):'',price:offers.length?offers[0].price:null});
+  }
+  if(dim3){Air3D.stop();dim3=false;}
+  const r=applyPartsData({type:'pc-sheet-parts',version:1,date:day,parts});
+  if(!r)throw new Error('構成表に入れられる部品がありませんでした。');
+  state.view.dim='2d';syncDim();save();warm=70;
+  msg(`価格シートで選んだ${r.done.join('・')}を構成表に入れました。`+(r.noPrice.length?`${r.noPrice.join('、')}は購入できる在庫がないため目安の価格です。`:''));
+  websiteHeight();
+  return {title:state.title,applied:r.done,noPrice:r.noPrice,total:parts.reduce((s,x)=>s+(x.price||0),0)};
+}
+
+/* ---- fans from the fan ranking (?fans=model:pos:count[:dir],… or an 'apply-fans' message) ---- */
+function websiteApplyFans(input){
+  const list=(Array.isArray(input)?input:[]).map(x=>{
+    if(typeof x!=='string')return x;
+    const [model,pos,count,dir]=x.split(':');return {model,pos,count:+count,dir};
+  });
+  if(!list.length||list.length>8||list.some(x=>!x||!/^[a-z0-9]{1,40}$/.test(x.model||'')))throw new Error('ファンの指定が正しくありません。');
+  if(websiteComputing)throw new Error('計算中です。少し待ってから読み込んでください。');
+  const r=applyFansData({type:'pc-sheet-fans',version:1,fans:list});
+  if(!r)throw new Error('配置できるファンがありませんでした。');
+  msg(fansImportText(r));websiteHeight();
+  return {title:state.title,applied:r.done};
+}
 async function initWebsiteBridge(){
   document.documentElement.dataset.theme='light';
   window.PCSheet={version:1,importConfig:websiteImport,exportResult:websiteResult,computeResult:websiteCompute,
-    getConfig:()=>JSON.parse(JSON.stringify(state)),
+    getConfig:()=>JSON.parse(JSON.stringify(state)),applyParts:websiteApplyParts,applyFans:websiteApplyFans,
     createSample:(cpu,gpu,aio=false)=>{
       const cfg=sample();cfg.specs.find(r=>r.label==='CPU').name=cpu;cfg.specs.find(r=>r.label==='GPU').name=gpu;
       cfg.view={...cfg.view,dim:'2d',count:1000,arrows:true};
@@ -6825,6 +6938,8 @@ async function initWebsiteBridge(){
     if(e.source!==window.parent||e.origin!==location.origin||!d||d.channel!=='pc-sheet'||d.version!==1)return;
     try{
       if(d.type==='load-config')websiteSend('loaded',websiteImport(d.config),d.requestId);
+      if(d.type==='apply-fans')websiteSend('loaded',websiteApplyFans(d.fans),d.requestId);
+      if(d.type==='apply-parts')websiteSend('loaded',await websiteApplyParts(d.parts),d.requestId);
       if(d.type==='request-height')websiteHeight();
       if(d.type==='visibility')websiteOffscreen=d.visible===false;
       if(d.type==='export-result')websiteSend('result',{result:await websiteCompute()},d.requestId);
@@ -6840,6 +6955,16 @@ async function initWebsiteBridge(){
       const response=await fetch('../presets/'+preset+'.json');if(!response.ok)throw new Error('指定の構成が見つかりませんでした。');
       websiteImport(await response.json());
     }catch(e){msg(e.message);websiteSend('error',{message:e.message});}
+  }
+  const parts=new URLSearchParams(location.search).get('parts');
+  if(parts){
+    try{await websiteApplyParts(parts.split(',').filter(Boolean));}
+    catch(e){msg(e.message);websiteSend('error',{message:e.message});}
+  }
+  const fans=new URLSearchParams(location.search).get('fans');
+  if(fans){
+    try{websiteApplyFans(fans.split(',').filter(Boolean));}
+    catch(e){msg(e.message);websiteSend('error',{message:e.message});}
   }
   websiteSend('ready');websiteHeight();
 }

@@ -1,0 +1,479 @@
+﻿日付,カテゴリ,製品ID,製品名,型番,区分,容量,店舗,購入可能価格(税込),在庫状況,購入可否,商品URL,備考
+2026-10-07,CPU,cpu-core-i3-14100,Core i3-14100,,Core i3,,ツクモ,21380,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0735858547512/,
+2026-10-07,CPU,cpu-core-i3-14100,Core i3-14100,,Core i3,,ドスパラ,21380,在庫あり,購入可,https://www.dospara.co.jp/SBR1482/IC497969.html,
+2026-10-07,CPU,cpu-core-i3-14100f,Core i3-14100F,,Core i3,,ドスパラ,16480,在庫あり,購入可,https://www.dospara.co.jp/SBR1482/IC497970.html,
+2026-10-07,CPU,cpu-core-i5-13600k,Core i5-13600K,,Core i5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1481/IC482989.html,
+2026-10-07,CPU,cpu-core-i5-14400,Core i5-14400,,Core i5,,アーク,37800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150664/,
+2026-10-07,CPU,cpu-core-i5-14400,Core i5-14400,,Core i5,,ドスパラ,34980,在庫あり,購入可,https://www.dospara.co.jp/SBR1481/IC497967.html,
+2026-10-07,CPU,cpu-core-i5-14400f,Core i5-14400F,,Core i5,,アーク,29980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150665/,
+2026-10-07,CPU,cpu-core-i5-14400f,Core i5-14400F,,Core i5,,ドスパラ,27980,在庫あり,購入可,https://www.dospara.co.jp/SBR1481/IC497968.html,
+2026-10-07,CPU,cpu-core-i5-14500,Core i5-14500,,Core i5,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858547611/,
+2026-10-07,CPU,cpu-core-i5-14500,Core i5-14500,,Core i5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1481/IC497966.html?msockid=05154f64988b6f06136359fc99ca6ee4,
+2026-10-07,CPU,cpu-core-i5-14600k,Core i5-14600K,,Core i5,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858546881/,
+2026-10-07,CPU,cpu-core-i5-14600k,Core i5-14600K,,Core i5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1481/IC494975.html,
+2026-10-07,CPU,cpu-core-i5-14600kf,Core i5-14600KF,,Core i5,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858546904/,
+2026-10-07,CPU,cpu-core-i5-14600kf,Core i5-14600KF,,Core i5,,ドスパラ,44980,在庫あり,購入可,https://www.dospara.co.jp/SBR1481/IC494976.html?msockid=264ad57f4fc66ab8213fc3df4e486b05,
+2026-10-07,CPU,cpu-core-i7-13700k,Core i7-13700K,,Core i7,,ツクモ,,販売終了,購入不可,https://shop.tsukumo.co.jp/goods/0735858526678/,
+2026-10-07,CPU,cpu-core-i7-14700,Core i7-14700,,Core i7,,ドスパラ,65800,在庫あり,購入可,https://www.dospara.co.jp/SBR1328/IC497964.html,
+2026-10-07,CPU,cpu-core-i7-14700f,Core i7-14700F,,Core i7,,アーク,61980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150662/,
+2026-10-07,CPU,cpu-core-i7-14700f,Core i7-14700F,,Core i7,,ドスパラ,59980,在庫あり,購入可,https://www.dospara.co.jp/SBR1328/IC497965.html,
+2026-10-07,CPU,cpu-core-i7-14700k,Core i7-14700K,,Core i7,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150655/,
+2026-10-07,CPU,cpu-core-i7-14700k,Core i7-14700K,,Core i7,,ツクモ,,完売,購入不可,https://shop.tsukumo.co.jp/goods/0409170221015/,
+2026-10-07,CPU,cpu-core-i7-14700k,Core i7-14700K,,Core i7,,ドスパラ,69800,在庫あり,購入可,https://www.dospara.co.jp/SBR1328/IC494973.html,
+2026-10-07,CPU,cpu-core-i7-14700kf,Core i7-14700KF,,Core i7,,ドスパラ,65480,在庫あり,購入可,https://www.dospara.co.jp/SBR1328/IC494974.html,
+2026-10-07,CPU,cpu-core-i9-13900k,Core i9-13900K,,Core i9,,ツクモ,,販売終了,購入不可,https://shop.tsukumo.co.jp/goods/0735858526616/,
+2026-10-07,CPU,cpu-core-i9-14900,Core i9-14900,,Core i9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1329/IC497962.html,
+2026-10-07,CPU,cpu-core-i9-14900f,Core i9-14900F,,Core i9,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858547642/,
+2026-10-07,CPU,cpu-core-i9-14900k,Core i9-14900K,,Core i9,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858546966/,
+2026-10-07,CPU,cpu-core-i9-14900kf,Core i9-14900KF,,Core i9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1329/IC494972.html?msockid=2e2502e7ff5a69a0372414aefef56868,
+2026-10-07,CPU,cpu-core-i9-14900ks,Core i9-14900KS,,Core i9,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150676/,
+2026-10-07,CPU,cpu-core-ultra-5-225,Core Ultra 5 225,,Core Ultra 5,,アーク,31780,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150691/,
+2026-10-07,CPU,cpu-core-ultra-5-225,Core Ultra 5 225,,Core Ultra 5,,ドスパラ,31780,在庫あり,購入可,https://www.dospara.co.jp/SBR1887/IC518588.html,
+2026-10-07,CPU,cpu-core-ultra-5-225f,Core Ultra 5 225F,,Core Ultra 5,,アプライド,,在庫なし,購入不可,https://shop.applied-net.co.jp/view/item/000000448971,
+2026-10-07,CPU,cpu-core-ultra-5-225f,Core Ultra 5 225F,,Core Ultra 5,,アーク,25980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150692/,
+2026-10-07,CPU,cpu-core-ultra-5-225f,Core Ultra 5 225F,,Core Ultra 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1887/IC518589.html,
+2026-10-07,CPU,cpu-core-ultra-5-235,Core Ultra 5 235,,Core Ultra 5,,アーク,48880,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150690/,
+2026-10-07,CPU,cpu-core-ultra-5-235,Core Ultra 5 235,,Core Ultra 5,,ツクモ,48880,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0735858551397/,
+2026-10-07,CPU,cpu-core-ultra-5-245k,Core Ultra 5 245K,,Core Ultra 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150680/,
+2026-10-07,CPU,cpu-core-ultra-5-245k,Core Ultra 5 245K,,Core Ultra 5,,ツクモ,36800,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0735858550543,
+2026-10-07,CPU,cpu-core-ultra-5-245k,Core Ultra 5 245K,,Core Ultra 5,,ドスパラ,36800,在庫あり,購入可,https://www.dospara.co.jp/SBR1887/IC512738.html,
+2026-10-07,CPU,cpu-core-ultra-5-245kf,Core Ultra 5 245KF,,Core Ultra 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150681/,
+2026-10-07,CPU,cpu-core-ultra-5-245kf,Core Ultra 5 245KF,,Core Ultra 5,,ツクモ,30980,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0735858550567/,
+2026-10-07,CPU,cpu-core-ultra-5-245kf,Core Ultra 5 245KF,,Core Ultra 5,,ドスパラ,30980,在庫あり,購入可,https://www.dospara.co.jp/SBR1887/IC512739.html,
+2026-10-07,CPU,cpu-core-ultra-5-250k-plus,Core Ultra 5 250K Plus,,Core Ultra 5,,アーク,41680,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150698/,
+2026-10-07,CPU,cpu-core-ultra-5-250k-plus,Core Ultra 5 250K Plus,,Core Ultra 5,,ツクモ,41680,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0735858553209,
+2026-10-07,CPU,cpu-core-ultra-5-250k-plus,Core Ultra 5 250K Plus,,Core Ultra 5,,ドスパラ,41680,在庫あり,購入可,https://www.dospara.co.jp/SBR1887/IC615466.html,
+2026-10-07,CPU,cpu-core-ultra-5-250kf-plus,Core Ultra 5 250KF Plus,,Core Ultra 5,,アプライド,35980,注文可能（在庫有 1～3営業日で出荷予定 休業日除く）,購入可,https://shop.applied-net.co.jp/view/item/000000451409,
+2026-10-07,CPU,cpu-core-ultra-5-250kf-plus,Core Ultra 5 250KF Plus,,Core Ultra 5,,アーク,37038,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150699/,
+2026-10-07,CPU,cpu-core-ultra-5-250kf-plus,Core Ultra 5 250KF Plus,,Core Ultra 5,,ツクモ,37038,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0735858553216/,
+2026-10-07,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,,Core Ultra 7,,アーク,63980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150688/,
+2026-10-07,CPU,cpu-core-ultra-7-265f,Core Ultra 7 265F,,Core Ultra 7,,アーク,54980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150689/,
+2026-10-07,CPU,cpu-core-ultra-7-265k,Core Ultra 7 265K,,Core Ultra 7,,アーク,,販売終了,未確認,https://www.ark-pc.co.jp/i/72003453/,対象商品の価格は現在非表示。関連商品の価格を採用していない。元の記入額は再確認できない。 CPU単体の欄だがリンク先はCore Ultra 7 265K搭載の完成品PC。 商品不一致
+2026-10-07,CPU,cpu-core-ultra-7-265k,Core Ultra 7 265K,,Core Ultra 7,,ドスパラ,49800,在庫あり,購入可,https://www.dospara.co.jp/SBR1886/IC512736.html,
+2026-10-07,CPU,cpu-core-ultra-7-265kf,Core Ultra 7 265KF,,Core Ultra 7,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858550444/,
+2026-10-07,CPU,cpu-core-ultra-7-265kf,Core Ultra 7 265KF,,Core Ultra 7,,ドスパラ,48800,在庫あり,購入可,https://www.dospara.co.jp/SBR1886/IC512737.html,
+2026-10-07,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,アプライド,59480,注文可能（在庫有 1～3営業日で出荷予定 休業日除く）,購入可,https://shop.applied-net.co.jp/view/item/000000449210,
+2026-10-07,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,アーク,59800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150697/,
+2026-10-07,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,ツクモ,59800,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0735858553308/,
+2026-10-07,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,ドスパラ,59800,在庫あり,購入可,https://www.dospara.co.jp/SBR1886/IC615465.html,
+2026-10-07,CPU,cpu-core-ultra-9-285,Core Ultra 9 285,,Core Ultra 9,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858550864/,
+2026-10-07,CPU,cpu-core-ultra-9-285k,Core Ultra 9 285K,,Core Ultra 9,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150677/,
+2026-10-07,CPU,cpu-core-ultra-9-285k,Core Ultra 9 285K,,Core Ultra 9,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0735858550383/,
+2026-10-07,CPU,cpu-core-ultra-9-285k,Core Ultra 9 285K,,Core Ultra 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1885/IC512735.html,
+2026-10-07,CPU,cpu-ryzen-5-7500f,Ryzen 5 7500F,,Ryzen 5,,アーク,25000,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240289/,
+2026-10-07,CPU,cpu-ryzen-5-7600,Ryzen 5 7600,,Ryzen 5,,ツクモ,28440,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0730143314572/,
+2026-10-07,CPU,cpu-ryzen-5-7600,Ryzen 5 7600,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC484675.html,
+2026-10-07,CPU,cpu-ryzen-5-7600,Ryzen 5 7600,,Ryzen 5,,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=954063,
+2026-10-07,CPU,cpu-ryzen-5-7600x,Ryzen 5 7600X,,Ryzen 5,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0730143314442/,
+2026-10-07,CPU,cpu-ryzen-5-7600x,Ryzen 5 7600X,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC482484.html,
+2026-10-07,CPU,cpu-ryzen-5-7600x,Ryzen 5 7600X,,Ryzen 5,,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?pre=tamd_bnr&product_id=925794,
+2026-10-07,CPU,cpu-ryzen-5-8400f,Ryzen 5 8400F,,Ryzen 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240252/,
+2026-10-07,CPU,cpu-ryzen-5-8400f,Ryzen 5 8400F,,Ryzen 5,,ツクモ,,完売,購入不可,https://shop.tsukumo.co.jp/goods/0409172473016/,
+2026-10-07,CPU,cpu-ryzen-5-8400f,Ryzen 5 8400F,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC506925.html,
+2026-10-07,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,,Ryzen 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240244/,
+2026-10-07,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,,Ryzen 5,,ツクモ,25749,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0409173183013/,
+2026-10-07,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC500262.html,
+2026-10-07,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,,Ryzen 5,,パソコン工房,25749,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1049803,
+2026-10-07,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,,Ryzen 5,,アーク,33480,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240243/,
+2026-10-07,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,,Ryzen 5,,ツクモ,33480,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0409173179016/,
+2026-10-07,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC500263.html,
+2026-10-07,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,,Ryzen 5,,パソコン工房,33480,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1049802,
+2026-10-07,CPU,cpu-ryzen-5-9500f,Ryzen 5 9500F,,Ryzen 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240288/,
+2026-10-07,CPU,cpu-ryzen-5-9500f,Ryzen 5 9500F,,Ryzen 5,,ツクモ,35820,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0730143317924/,
+2026-10-07,CPU,cpu-ryzen-5-9500f,Ryzen 5 9500F,,Ryzen 5,,ドスパラ,35820,在庫あり,購入可,https://www.dospara.co.jp/SBR1883/IC580319.html,
+2026-10-07,CPU,cpu-ryzen-5-9600,Ryzen 5 9600,,Ryzen 5,,アーク,40800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240274/,
+2026-10-07,CPU,cpu-ryzen-5-9600,Ryzen 5 9600,,Ryzen 5,,ツクモ,,完売,購入不可,https://shop.tsukumo.co.jp/goods/0409172913017/,
+2026-10-07,CPU,cpu-ryzen-5-9600,Ryzen 5 9600,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC522584.html,
+2026-10-07,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,アーク,39800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240258/,
+2026-10-07,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,ツクモ,39800,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0730143315609/,
+2026-10-07,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,ドスパラ,39800,在庫あり,購入可,https://www.dospara.co.jp/SBR1883/IC509914.html,
+2026-10-07,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,パソコン工房,39800,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083339,
+2026-10-07,CPU,cpu-ryzen-7-7700x,Ryzen 7 7700X,,Ryzen 7,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0409172238011/,
+2026-10-07,CPU,cpu-ryzen-7-7700x,Ryzen 7 7700X,,Ryzen 7,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1882/IC482483.html,
+2026-10-07,CPU,cpu-ryzen-7-7700x,Ryzen 7 7700X,,Ryzen 7,,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=925793,
+2026-10-07,CPU,cpu-ryzen-7-7700x3d,Ryzen 7 7700X3D,,Ryzen 7,,アーク,59456,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240297/,
+2026-10-07,CPU,cpu-ryzen-7-7800x3d,Ryzen 7 7800X3D,,Ryzen 7,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0730143314930/,
+2026-10-07,CPU,cpu-ryzen-7-7800x3d,Ryzen 7 7800X3D,,Ryzen 7,,ドスパラ,54800,在庫あり,購入可,https://www.dospara.co.jp/SBR1882/IC488570.html,
+2026-10-07,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,,Ryzen 7,,アプライド,50780,注文可能（2～4営業日で出荷予定 休業日除く）,購入可,https://shop.applied-net.co.jp/view/item/000000432057,
+2026-10-07,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,,Ryzen 7,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240251/,
+2026-10-07,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,,Ryzen 7,,ツクモ,36469,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0730143316699/,
+2026-10-07,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,,Ryzen 7,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1882/IC506924.html,
+2026-10-07,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,,Ryzen 7,,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1073212,
+2026-10-07,CPU,cpu-ryzen-7-8700g,Ryzen 7 8700G,,Ryzen 7,,アーク,51980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240286/,
+2026-10-07,CPU,cpu-ryzen-7-8700g,Ryzen 7 8700G,,Ryzen 7,,ツクモ,51980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0730143317696/,
+2026-10-07,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,ツクモ,50149,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0730143315593/,
+2026-10-07,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,ドスパラ,47320,在庫あり,購入可,https://www.dospara.co.jp/SBR1882/IC509913.html,
+2026-10-07,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,ツクモ,63570,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/0730143315289/,
+2026-10-07,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,ドスパラ,63570,在庫あり,購入可,https://www.dospara.co.jp/SBR1882/IC516296.html,
+2026-10-07,CPU,cpu-ryzen-7-9850x3d,Ryzen 7 9850X3D,,Ryzen 7,,アーク,76184,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240292/,
+2026-10-07,CPU,cpu-ryzen-7-9850x3d,Ryzen 7 9850X3D,,Ryzen 7,,パソコン工房,73967,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1202557,
+2026-10-07,CPU,cpu-ryzen-9-7900,Ryzen 9 7900,,Ryzen 9,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0730143314466/,
+2026-10-07,CPU,cpu-ryzen-9-7900,Ryzen 9 7900,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC484673.html,
+2026-10-07,CPU,cpu-ryzen-9-7900x,Ryzen 9 7900X,,Ryzen 9,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0730143314558/,
+2026-10-07,CPU,cpu-ryzen-9-7900x,Ryzen 9 7900X,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC482478.html,
+2026-10-07,CPU,cpu-ryzen-9-7900x3d,Ryzen 9 7900X3D,,Ryzen 9,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0730143314916/,
+2026-10-07,CPU,cpu-ryzen-9-7900x3d,Ryzen 9 7900X3D,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC487087.html,
+2026-10-07,CPU,cpu-ryzen-9-7950x,Ryzen 9 7950X,,Ryzen 9,,ツクモ,,完売,購入不可,https://shop.tsukumo.co.jp/goods/2030010015228/,
+2026-10-07,CPU,cpu-ryzen-9-7950x,Ryzen 9 7950X,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC482477.html,
+2026-10-07,CPU,cpu-ryzen-9-7950x3d,Ryzen 9 7950X3D,,Ryzen 9,,ツクモ,,完売,購入不可,https://shop.tsukumo.co.jp/goods/2030010032195/,
+2026-10-07,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,,Ryzen 9,,アーク,70280,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240256/,
+2026-10-07,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,,Ryzen 9,,ツクモ,70280,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0730143315296/,
+2026-10-07,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,,Ryzen 9,,ドスパラ,70280,在庫あり,購入可,https://www.dospara.co.jp/SBR1881/IC509912.html,
+2026-10-07,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,,Ryzen 9,,パソコン工房,70280,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083341,
+2026-10-07,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,アーク,88100,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240273/,
+2026-10-07,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,ツクモ,,完売,購入不可,https://shop.tsukumo.co.jp/goods/0409172469019/,
+2026-10-07,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,ドスパラ,88100,在庫あり,購入可,https://www.dospara.co.jp/SBR1881/IC522583.html?msockid=3c8ec637ba0368391da4d076bbbe69bf,
+2026-10-07,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,パソコン工房,88100,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145161,
+2026-10-07,CPU,cpu-ryzen-9-9950x,Ryzen 9 9950X,,Ryzen 9,,アーク,111680,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240255/,
+2026-10-07,CPU,cpu-ryzen-9-9950x,Ryzen 9 9950X,,Ryzen 9,,ドスパラ,111680,在庫あり,購入可,https://www.dospara.co.jp/SBR1881/IC509911.html,
+2026-10-07,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,,Ryzen 9,,ツクモ,126764,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0730143315555/,
+2026-10-07,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,,Ryzen 9,,ドスパラ,126764,在庫あり,購入可,https://www.dospara.co.jp/SBR1881/IC522582.html,
+2026-10-07,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,,Ryzen 9,,パソコン工房,126764,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145159,
+2026-10-07,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,ツクモ,168678,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0730143318327,
+2026-10-07,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1222461,
+2026-10-07,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,ドスパラ,96800,在庫あり,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,,RTX 5080,,アーク,366800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107424/,
+2026-10-07,GPU,gpu-gigabyte-aorus-elite-rx-9070-xt,GIGABYTE AORUS Elite RX 9070 XT,,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107517/,
+2026-10-07,GPU,gpu-msi-suprim-soc-rtx-5080,MSI SUPRIM SOC RTX 5080,,RTX 5080,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377292238/,
+2026-10-07,GPU,gpu-msi-suprim-soc-rtx-5080,MSI SUPRIM SOC RTX 5080,,RTX 5080,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520170.html,
+2026-10-07,GPU,gpu-msi-suprim-soc-rtx-5090,MSI SUPRIM SOC RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377302487/,
+2026-10-07,GPU,gpu-msi-suprim-soc-rtx-5090,MSI SUPRIM SOC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520165.html,
+2026-10-07,GPU,gpu-palit-gamerock-oc-rtx-5070-ti,Palit GameRock OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC519934.html,
+2026-10-07,GPU,gpu-palit-gamerock-oc-rtx-5090,Palit GameRock OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC594816.html,
+2026-10-07,GPU,gpu-palit-gamingpro-oc-rtx-5070-ti,Palit GamingPro OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,,在庫なし,未確認,https://www.dospara.co.jp/SBR1892/IC594905.html,GamingPro OCの欄だがリンク先はGamingPro-S OC（NE7507TS19T2-GB2031U）。 商品不一致
+2026-10-07,GPU,gpu-palit-gamingpro-oc-rtx-5080,Palit GamingPro OC RTX 5080,,RTX 5080,,ドスパラ,269800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC594817.html,
+2026-10-07,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,,RX 9060 XT,,パソコン工房,129000,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,パソコン工房,92801,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107513/,
+2026-10-07,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,ツクモ,190000,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/4713436175735/,
+2026-10-07,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,パソコン工房,159826,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?pre=radeon_rx9070xt&product_id=1137071,
+2026-10-07,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ツクモ,109800,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107527/,
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4895106295971/,
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522650.html,
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,パソコン工房,143999,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1133338,
+2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4537694369909,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,今回確認したリンク先は16GB版。
+2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アプライド,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アーク,54780,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512601/,公式商品ページで型番・本体価格・在庫を確認。クーポン適用前。
+2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528939944/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC497397.html,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,パソコン工房,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,アプライド,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/13512720/,公式商品ページに取扱終了・EOL表示。本体価格表示なし。関連商品の価格は除外。
+2026-10-07,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528940810/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC504199.html,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,パソコン工房,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,アプライド,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/13512878/,公式商品ページに取扱終了・EOL表示。本体価格表示なし。関連商品の価格は除外。
+2026-10-07,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528947048/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC529730.html,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,パソコン工房,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,アプライド,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,アーク,99800,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512602/,公式商品ページの本体価格と在庫表示を確認。会員クーポン適用前。
+2026-10-07,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528939951/,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC497398.html,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,パソコン工房,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,アプライド,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,アーク,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。 公式T705・2TB絞込検索0件。
+2026-10-07,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528940957/,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC504200.html,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,パソコン工房,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,アプライド,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,アーク,99800,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512879/,公式商品ページの本体価格と在庫表示を確認。会員クーポン適用前。
+2026-10-07,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528947079/,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC529731.html,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,パソコン工房,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,アプライド,34980,注文可能・～3営業日で出荷予定,購入可,https://shop.applied-net.co.jp/view/item/000000422862,公式ページ本文と構造化データを確認。税込商品単体価格。
+2026-10-07,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,アーク,34980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512528/,公式商品ページで型番・本体価格・在庫を確認。クーポン適用前。
+2026-10-07,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,ツクモ,34980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4560441097961/,公式ページ本文と構造化データを確認。税込商品単体価格。
+2026-10-07,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,ドスパラ,34980,在庫あり,購入可,https://www.dospara.co.jp/SBR1144/IC484404.html,公式ページ本文と構造化データを確認。税込商品単体価格。
+2026-10-07,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,パソコン工房,34980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=951371,公式ページ本文と構造化データを確認。税込商品単体価格。
+2026-10-07,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,アプライド,,在庫なし,購入不可,https://shop.applied-net.co.jp/view/item/000000422863,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,アーク,89980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512529/,公式商品ページの本体価格と在庫表示を確認。会員クーポン適用前。
+2026-10-07,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,ツクモ,89980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4560441097978/,公式商品ページ本文とProduct構造化データを照合。
+2026-10-07,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,ドスパラ,89980,在庫あり,購入可,https://www.dospara.co.jp/SBR1144/IC484405.html,公式商品ページ本文とProduct構造化データを照合。
+2026-10-07,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,パソコン工房,89980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=951372,公式商品ページ本文の本体価格・出荷予定を確認。保証追加価格を除外。
+2026-10-07,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,アプライド,45980,注文可能・～3営業日で出荷予定・お取り寄せ,購入可,https://shop.applied-net.co.jp/view/item/000000439655,公式ページ本文と構造化データを確認。税込商品単体価格。
+2026-10-07,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,アーク,45980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512836/,公式商品ページで型番・本体価格・在庫を確認。クーポン適用前。
+2026-10-07,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4560441099828/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,ドスパラ,45980,在庫あり,購入可,https://www.dospara.co.jp/SBR1144/IC523800.html,公式ページ本文と構造化データを確認。税込商品単体価格。
+2026-10-07,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,パソコン工房,45980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136902,公式ページ本文と構造化データを確認。税込商品単体価格。
+2026-10-07,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,アプライド,102980,在庫有・1～3営業日で出荷,購入可,https://shop.applied-net.co.jp/view/item/000000449188,公式商品ページ本文とProduct構造化データを照合。
+2026-10-07,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,アーク,102980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512837/,公式商品ページの本体価格と在庫表示を確認。会員クーポン適用前。
+2026-10-07,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,ツクモ,102980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4560441099835/,公式商品ページ本文とProduct構造化データを照合。
+2026-10-07,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,ドスパラ,102980,在庫あり,購入可,https://www.dospara.co.jp/SBR1144/IC523801.html,公式商品ページ本文とProduct構造化データを照合。
+2026-10-07,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,パソコン工房,102980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136903,公式商品ページ本文の本体価格・出荷予定を確認。保証追加価格を除外。
+2026-10-07,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,アプライド,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,アーク,55490,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512466/,公式商品ページで型番・本体価格・在庫を確認。クーポン適用前。
+2026-10-07,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037891392/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC482024.html,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=920503,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,アプライド,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,アーク,45080,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512808/,公式商品ページで型番・本体価格・在庫を確認。クーポン適用前。
+2026-10-07,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037893204/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC520427.html,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1122998,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,アプライド,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,アーク,109530,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512467/,公式商品ページの本体価格と在庫表示を確認。会員クーポン適用前。
+2026-10-07,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037891408/,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC482025.html,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=920504,公式商品ページ本文の本体価格・出荷予定を確認。保証追加価格を除外。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,アプライド,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,アーク,86760,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512809/,公式商品ページの本体価格と在庫表示を確認。会員クーポン適用前。
+2026-10-07,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037893211/,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC520428.html,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1122999,公式商品ページ本文の本体価格・出荷予定を確認。保証追加価格を除外。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,アプライド,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,アーク,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。 過去記事のリンク13512563は取得できず。
+2026-10-07,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0763649174623/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
+2026-10-07,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,ドスパラ,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,パソコン工房,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
+2026-10-07,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,アプライド,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,アーク,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。 過去記事の製品リンク https://www.ark-pc.co.jp/i/13512564/ は404。公式シリーズ検索0件。
+2026-10-07,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0763649174630/,公式商品ページ本文とProduct構造化データを照合。 在庫なしのため掲載価格は参考値。
+2026-10-07,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,ドスパラ,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-07,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,パソコン工房,,販売ページ未確認,未確認,,型番・シリーズ名で店舗内検索と外部検索を実施。一致する単品販売ページを確認できず。取扱なしを断定するものではありません。
+2026-10-08,CPU,cpu-core-i3-14100,Core i3-14100,BX8071514100,Core i3,,ツクモ,21380,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0735858547512/,
+2026-10-08,CPU,cpu-core-i3-14100,Core i3-14100,,Core i3,,ドスパラ,21380,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1482/IC497969.html,
+2026-10-08,CPU,cpu-core-i3-14100f,Core i3-14100F,,Core i3,,ドスパラ,16480,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1482/IC497970.html,
+2026-10-08,CPU,cpu-core-i5-13600k,Core i5-13600K,,Core i5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1481/IC482989.html,
+2026-10-08,CPU,cpu-core-i5-14400,Core i5-14400,BX8071514400,Core i5,,アーク,37800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150664/,
+2026-10-08,CPU,cpu-core-i5-14400,Core i5-14400,,Core i5,,ドスパラ,34980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1481/IC497967.html,
+2026-10-08,CPU,cpu-core-i5-14400f,Core i5-14400F,BX8071514400F,Core i5,,アーク,29980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150665/,
+2026-10-08,CPU,cpu-core-i5-14400f,Core i5-14400F,,Core i5,,ドスパラ,27980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1481/IC497968.html,
+2026-10-08,CPU,cpu-core-i5-14500,Core i5-14500,,Core i5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858547611/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i5-14500,Core i5-14500,,Core i5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1481/IC497966.html?msockid=05154f64988b6f06136359fc99ca6ee4,
+2026-10-08,CPU,cpu-core-i5-14600k,Core i5-14600K,,Core i5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858546881/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i5-14600k,Core i5-14600K,,Core i5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1481/IC494975.html,
+2026-10-08,CPU,cpu-core-i5-14600kf,Core i5-14600KF,,Core i5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858546904/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i5-14600kf,Core i5-14600KF,,Core i5,,ドスパラ,44980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1481/IC494976.html?msockid=264ad57f4fc66ab8213fc3df4e486b05,
+2026-10-08,CPU,cpu-core-i7-13700k,Core i7-13700K,,Core i7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858526678/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i7-14700,Core i7-14700,,Core i7,,ドスパラ,65800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1328/IC497964.html,
+2026-10-08,CPU,cpu-core-i7-14700f,Core i7-14700F,BX8071514700F,Core i7,,アーク,61980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150662/,
+2026-10-08,CPU,cpu-core-i7-14700f,Core i7-14700F,,Core i7,,ドスパラ,59980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1328/IC497965.html,
+2026-10-08,CPU,cpu-core-i7-14700k,Core i7-14700K,BX8071514700K,Core i7,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150655/,
+2026-10-08,CPU,cpu-core-i7-14700k,Core i7-14700K,,Core i7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0409170221015/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i7-14700k,Core i7-14700K,,Core i7,,ドスパラ,69800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1328/IC494973.html,
+2026-10-08,CPU,cpu-core-i7-14700kf,Core i7-14700KF,,Core i7,,ドスパラ,65480,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1328/IC494974.html,
+2026-10-08,CPU,cpu-core-i9-13900k,Core i9-13900K,,Core i9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858526616/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i9-14900,Core i9-14900,,Core i9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1329/IC497962.html,
+2026-10-08,CPU,cpu-core-i9-14900f,Core i9-14900F,,Core i9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858547642/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i9-14900k,Core i9-14900K,,Core i9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858546966/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-i9-14900kf,Core i9-14900KF,,Core i9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1329/IC494972.html?msockid=2e2502e7ff5a69a0372414aefef56868,
+2026-10-08,CPU,cpu-core-i9-14900ks,Core i9-14900KS,BX8071514900KS,Core i9,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150676/,
+2026-10-08,CPU,cpu-core-ultra-5-225,Core Ultra 5 225,BX80768225,Core Ultra 5,,アーク,31780,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150691/,
+2026-10-08,CPU,cpu-core-ultra-5-225,Core Ultra 5 225,,Core Ultra 5,,ドスパラ,31780,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1887/IC518588.html,
+2026-10-08,CPU,cpu-core-ultra-5-225f,Core Ultra 5 225F,BX80768225F,Core Ultra 5,,アプライド,,SOLD OUT 在庫有 1～3営業日で出荷予定 休業日除く,購入不可,https://shop.applied-net.co.jp/view/item/000000448971?category_page_id=ct4141,
+2026-10-08,CPU,cpu-core-ultra-5-225f,Core Ultra 5 225F,BX80768225F,Core Ultra 5,,アーク,25980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150692/,
+2026-10-08,CPU,cpu-core-ultra-5-225f,Core Ultra 5 225F,,Core Ultra 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1887/IC518589.html,
+2026-10-08,CPU,cpu-core-ultra-5-235,Core Ultra 5 235,BX80768235,Core Ultra 5,,アーク,48880,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150690/,
+2026-10-08,CPU,cpu-core-ultra-5-235,Core Ultra 5 235,BX80768235,Core Ultra 5,,ツクモ,48880,ポイント：489ポイント 在庫わずか 24時間以内に出荷 在庫状況について,購入可,https://shop.tsukumo.co.jp/goods/0735858551397/,
+2026-10-08,CPU,cpu-core-ultra-5-245k,Core Ultra 5 245K,BX80768245K,Core Ultra 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150680/,
+2026-10-08,CPU,cpu-core-ultra-5-245k,Core Ultra 5 245K,,Core Ultra 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858550543,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-5-245k,Core Ultra 5 245K,,Core Ultra 5,,ドスパラ,36800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1887/IC512738.html,
+2026-10-08,CPU,cpu-core-ultra-5-245kf,Core Ultra 5 245KF,BX80768245KF,Core Ultra 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150681/,
+2026-10-08,CPU,cpu-core-ultra-5-245kf,Core Ultra 5 245KF,,Core Ultra 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858550567/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-5-245kf,Core Ultra 5 245KF,,Core Ultra 5,,ドスパラ,30980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1887/IC512739.html,
+2026-10-08,CPU,cpu-core-ultra-5-250k-plus,Core Ultra 5 250K Plus,BX80768250K,Core Ultra 5,,アーク,41680,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150698/,
+2026-10-08,CPU,cpu-core-ultra-5-250k-plus,Core Ultra 5 250K Plus,,Core Ultra 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858553209,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-5-250k-plus,Core Ultra 5 250K Plus,,Core Ultra 5,,ドスパラ,41680,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1887/IC615466.html,
+2026-10-08,CPU,cpu-core-ultra-5-250kf-plus,Core Ultra 5 250KF Plus,,Core Ultra 5,,アプライド,35980,在庫有 1～3営業日で出荷予定 休業日除く,購入可,https://shop.applied-net.co.jp/view/item/000000451409,
+2026-10-08,CPU,cpu-core-ultra-5-250kf-plus,Core Ultra 5 250KF Plus,BX80768250KF,Core Ultra 5,,アーク,37038,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150699/,
+2026-10-08,CPU,cpu-core-ultra-5-250kf-plus,Core Ultra 5 250KF Plus,,Core Ultra 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858553216/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,BX80768265,Core Ultra 7,,アーク,63980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150688/,
+2026-10-08,CPU,cpu-core-ultra-7-265f,Core Ultra 7 265F,BX80768265F,Core Ultra 7,,アーク,54980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150689/,
+2026-10-08,CPU,cpu-core-ultra-7-265k,Core Ultra 7 265K,,Core Ultra 7,,ドスパラ,49800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1886/IC512736.html,
+2026-10-08,CPU,cpu-core-ultra-7-265kf,Core Ultra 7 265KF,,Core Ultra 7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858550444/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-7-265kf,Core Ultra 7 265KF,,Core Ultra 7,,ドスパラ,48800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1886/IC512737.html,
+2026-10-08,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,BX80768270K,Core Ultra 7,,アプライド,59480,在庫有 1～3営業日で出荷予定 休業日除く,購入可,https://shop.applied-net.co.jp/view/item/000000449210,
+2026-10-08,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,BX80768270K,Core Ultra 7,,アーク,59800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150697/,
+2026-10-08,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858553308/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,ドスパラ,59800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1886/IC615465.html,
+2026-10-08,CPU,cpu-core-ultra-9-285,Core Ultra 9 285,,Core Ultra 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858550864/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-9-285k,Core Ultra 9 285K,BX80768285K,Core Ultra 9,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10150677/,
+2026-10-08,CPU,cpu-core-ultra-9-285k,Core Ultra 9 285K,,Core Ultra 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0735858550383/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-core-ultra-9-285k,Core Ultra 9 285K,,Core Ultra 9,,ドスパラ,109800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1885/IC512735.html,
+2026-10-08,CPU,cpu-ryzen-5-7500f,Ryzen 5 7500F,100-100000597BOX,Ryzen 5,,アーク,29280,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240289/,
+2026-10-08,CPU,cpu-ryzen-5-7600,Ryzen 5 7600,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143314572/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-7600,Ryzen 5 7600,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC484675.html,
+2026-10-08,CPU,cpu-ryzen-5-7600,Ryzen 5 7600,100-100001015BOX,Ryzen 5,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=954063,
+2026-10-08,CPU,cpu-ryzen-5-7600x,Ryzen 5 7600X,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143314442/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-7600x,Ryzen 5 7600X,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC482484.html,
+2026-10-08,CPU,cpu-ryzen-5-7600x,Ryzen 5 7600X,100-100000593WOF,Ryzen 5,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?pre=tamd_bnr&product_id=925794,
+2026-10-08,CPU,cpu-ryzen-5-8400f,Ryzen 5 8400F,100-100001591BOX,Ryzen 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240252/,
+2026-10-08,CPU,cpu-ryzen-5-8400f,Ryzen 5 8400F,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0409172473016/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-8400f,Ryzen 5 8400F,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC506925.html,
+2026-10-08,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,100-100000931BOX,Ryzen 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240244/,
+2026-10-08,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0409173183013/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,,Ryzen 5,,ドスパラ,28980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1883/IC500262.html,
+2026-10-08,CPU,cpu-ryzen-5-8500g,Ryzen 5 8500G,100-100000931BOX,Ryzen 5,,パソコン工房,28980,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1049803,
+2026-10-08,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,100-100001237BOX,Ryzen 5,,アーク,36800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240243/,
+2026-10-08,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0409173179016/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,,Ryzen 5,,ドスパラ,36800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1883/IC500263.html,
+2026-10-08,CPU,cpu-ryzen-5-8600g,Ryzen 5 8600G,100-100001237BOX,Ryzen 5,,パソコン工房,36800,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1049802,
+2026-10-08,CPU,cpu-ryzen-5-9500f,Ryzen 5 9500F,100-100001406BOX,Ryzen 5,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240288/,
+2026-10-08,CPU,cpu-ryzen-5-9500f,Ryzen 5 9500F,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143317924/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-9500f,Ryzen 5 9500F,,Ryzen 5,,ドスパラ,36480,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1883/IC580319.html,
+2026-10-08,CPU,cpu-ryzen-5-9600,Ryzen 5 9600,100-100000718BOX,Ryzen 5,,アーク,42581,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240274/,
+2026-10-08,CPU,cpu-ryzen-5-9600,Ryzen 5 9600,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0409172913017/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-9600,Ryzen 5 9600,,Ryzen 5,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1883/IC522584.html,
+2026-10-08,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,100-100001405WOF,Ryzen 5,,アーク,45480,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240258/,
+2026-10-08,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143315609/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,ドスパラ,39800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1883/IC509914.html,
+2026-10-08,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,100-100001405WOF,Ryzen 5,,パソコン工房,39800,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083339,
+2026-10-08,CPU,cpu-ryzen-7-7700x,Ryzen 7 7700X,,Ryzen 7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0409172238011/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-7-7700x,Ryzen 7 7700X,,Ryzen 7,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1882/IC482483.html,
+2026-10-08,CPU,cpu-ryzen-7-7700x,Ryzen 7 7700X,100-100000591WOF,Ryzen 7,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=925793,
+2026-10-08,CPU,cpu-ryzen-7-7700x3d,Ryzen 7 7700X3D,100-100002235WOF,Ryzen 7,,アーク,60800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240297/,
+2026-10-08,CPU,cpu-ryzen-7-7800x3d,Ryzen 7 7800X3D,,Ryzen 7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143314930/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-7-7800x3d,Ryzen 7 7800X3D,,Ryzen 7,,ドスパラ,54800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1882/IC488570.html,
+2026-10-08,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,100-100001590BOX,Ryzen 7,,アプライド,50780,2～4営業日で出荷予定 休業日除く,購入可,https://shop.applied-net.co.jp/view/item/000000432057,
+2026-10-08,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,100-100001590BOX,Ryzen 7,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/10240251/,
+2026-10-08,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,,Ryzen 7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143316699/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,,Ryzen 7,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1882/IC506924.html,
+2026-10-08,CPU,cpu-ryzen-7-8700f,Ryzen 7 8700F,100-100001590BOX,Ryzen 7,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1073212,
+2026-10-08,CPU,cpu-ryzen-7-8700g,Ryzen 7 8700G,100-100001236SBX,Ryzen 7,,アーク,53801,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240286/,付属クーラー変更版SBX。掲載型番・商品名を保持。
+2026-10-08,CPU,cpu-ryzen-7-8700g,Ryzen 7 8700G,,Ryzen 7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143317696/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143315593/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,ドスパラ,47320,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1882/IC509913.html,
+2026-10-08,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,100-100001084WOF,Ryzen 7,,ツクモ,74800,在庫限り,購入可,https://shop.tsukumo.co.jp/goods/0730143315289/,
+2026-10-08,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,ドスパラ,63570,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1882/IC516296.html,
+2026-10-08,CPU,cpu-ryzen-7-9850x3d,Ryzen 7 9850X3D,100-100001973WOF,Ryzen 7,,アーク,81800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240292/,
+2026-10-08,CPU,cpu-ryzen-7-9850x3d,Ryzen 7 9850X3D,Ryzen 7 9850X3D 100-100001973W,Ryzen 7,,パソコン工房,81800,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1202557,
+2026-10-08,CPU,cpu-ryzen-9-7900,Ryzen 9 7900,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143314466/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-7900,Ryzen 9 7900,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC484673.html,
+2026-10-08,CPU,cpu-ryzen-9-7900x,Ryzen 9 7900X,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143314558/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-7900x,Ryzen 9 7900X,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC482478.html,
+2026-10-08,CPU,cpu-ryzen-9-7900x3d,Ryzen 9 7900X3D,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143314916/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-7900x3d,Ryzen 9 7900X3D,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC487087.html,
+2026-10-08,CPU,cpu-ryzen-9-7950x,Ryzen 9 7950X,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/2030010015228/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-7950x,Ryzen 9 7950X,,Ryzen 9,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1881/IC482477.html,
+2026-10-08,CPU,cpu-ryzen-9-7950x3d,Ryzen 9 7950X3D,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/2030010032195/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,100-100000662WOF,Ryzen 9,,アーク,80800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240256/,
+2026-10-08,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143315296/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,,Ryzen 9,,ドスパラ,70280,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1881/IC509912.html,
+2026-10-08,CPU,cpu-ryzen-9-9900x,Ryzen 9 9900X,100-100000662WOF,Ryzen 9,,パソコン工房,70280,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083341,
+2026-10-08,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,100-100001368WOF,Ryzen 9,,アーク,115800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240273/,
+2026-10-08,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0409172469019/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,ドスパラ,115800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1881/IC522583.html?msockid=3c8ec637ba0368391da4d076bbbe69bf,
+2026-10-08,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,Ryzen 9 9900X3D 100-100001368W,Ryzen 9,,パソコン工房,115800,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145161,
+2026-10-08,CPU,cpu-ryzen-9-9950x,Ryzen 9 9950X,100-100001277WOF,Ryzen 9,,アーク,114800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240255/,
+2026-10-08,CPU,cpu-ryzen-9-9950x,Ryzen 9 9950X,,Ryzen 9,,ドスパラ,114800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1881/IC509911.html,
+2026-10-08,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143315555/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,,Ryzen 9,,ドスパラ,126764,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1881/IC522582.html,
+2026-10-08,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,Ryzen 9 9950X3D 100-100000719W,Ryzen 9,,パソコン工房,132800,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145159,
+2026-10-08,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143318327,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,100-100001978WOF,Ryzen 9,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1222461,
+2026-10-08,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,ドスパラ,96800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,
+2026-10-08,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,TUF-RTX5080-O16G-GAMING,RTX 5080,,アーク,366800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107424/,
+2026-10-08,GPU,gpu-gigabyte-aorus-elite-rx-9070-xt,GIGABYTE AORUS Elite RX 9070 XT,GV-R9070XTAORUS E-16GD,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107517/,
+2026-10-08,GPU,gpu-msi-suprim-soc-rtx-5080,MSI SUPRIM SOC RTX 5080,,RTX 5080,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4711377292238/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,GPU,gpu-msi-suprim-soc-rtx-5080,MSI SUPRIM SOC RTX 5080,,RTX 5080,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520170.html,
+2026-10-08,GPU,gpu-msi-suprim-soc-rtx-5090,MSI SUPRIM SOC RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377302487,
+2026-10-08,GPU,gpu-msi-suprim-soc-rtx-5090,MSI SUPRIM SOC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520165.html,
+2026-10-08,GPU,gpu-palit-gamerock-oc-rtx-5070-ti,Palit GameRock OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC519934.html,
+2026-10-08,GPU,gpu-palit-gamerock-oc-rtx-5090,Palit GameRock OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC594816.html,
+2026-10-08,GPU,gpu-palit-gamingpro-oc-rtx-5080,Palit GamingPro OC RTX 5080,,RTX 5080,,ドスパラ,269800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC594817.html,
+2026-10-08,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,RX9060XT 16G-L/OC,RX 9060 XT,,パソコン工房,129000,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,
+2026-10-08,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,RX9060XT 16G-A,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,
+2026-10-08,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,RX9060XT 16G-A,RX 9060 XT,,パソコン工房,92801,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,
+2026-10-08,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,RX9070XT 16G-E/OC,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107513/,
+2026-10-08,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4713436175735/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,RX9070XT 16G-E/OC,RX 9070 XT,,パソコン工房,159826,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?pre=radeon_rx9070xt&product_id=1137071,
+2026-10-08,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX9060XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,PULSERX9060XT16GB/11350-03-20G VD9219,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ツクモ,109800,在庫限り,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,PULSERX907016GB/11349-03-20G VD8988,RX 9070,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107527/,
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4895106295971/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522650.html,
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,PULSERX907016GB/11349-03-20G,RX 9070,,パソコン工房,143999,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1133338,
+2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,PURERX9060XT16GB/11350-02-20G VD9221,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,
+2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4537694369909,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,
+2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アーク,54780,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512601/,
+2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0649528939944/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC497397.html,
+2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/13512720/,販売終了の表示を確認。対象商品の価格非表示。関連商品の価格は不採用。
+2026-10-08,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528940810/,
+2026-10-08,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC504199.html,
+2026-10-08,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/13512878/,販売終了の表示を確認。対象商品の価格非表示。関連商品の価格は不採用。
+2026-10-08,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528947048/,
+2026-10-08,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC529730.html,
+2026-10-08,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,アーク,99800,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512602/,
+2026-10-08,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528939951/,
+2026-10-08,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC497398.html,
+2026-10-08,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/13512721/,販売終了の表示を確認。対象商品の価格非表示。関連商品の価格は不採用。
+2026-10-08,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528940957/,
+2026-10-08,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC504200.html,
+2026-10-08,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,アーク,99800,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512879/,
+2026-10-08,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528947079/,
+2026-10-08,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC529731.html,
+2026-10-08,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,アプライド,34980,～3営業日で出荷予定 休業日除く,購入可,https://shop.applied-net.co.jp/view/item/000000422862,
+2026-10-08,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,アーク,34980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512528/,
+2026-10-08,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,ツクモ,34980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4560441097961/,
+2026-10-08,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,ドスパラ,34980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC484404.html,
+2026-10-08,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,パソコン工房,34980,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=951371,
+2026-10-08,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,アプライド,,SOLD OUT ～3営業日で出荷予定 休業日除く,購入不可,https://shop.applied-net.co.jp/view/item/000000422863,
+2026-10-08,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,アーク,89980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512529/,
+2026-10-08,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,ツクモ,89980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4560441097978/,
+2026-10-08,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,ドスパラ,89980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC484405.html,
+2026-10-08,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,パソコン工房,89980,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=951372,
+2026-10-08,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,アプライド,45980,Image: Samsung SSD 9100 PRO 1TB MZ-VAP1T0B-IT PCIe 5.0 NVMe M.2 1000GB PCI-Express Gen5 サムスン 〖キャンセル不可・北海道沖縄離島配,購入可,https://shop.applied-net.co.jp/view/item/000000439655,
+2026-10-08,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,アーク,45980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512836/,
+2026-10-08,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4560441099828/,
+2026-10-08,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,ドスパラ,45980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC523800.html,
+2026-10-08,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,パソコン工房,45980,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136902,
+2026-10-08,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,アプライド,,,未確認,https://shop.applied-net.co.jp/view/item/000000449188,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,アーク,102980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512837/,
+2026-10-08,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,ツクモ,102980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4560441099835/,
+2026-10-08,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,ドスパラ,102980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC523801.html,
+2026-10-08,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,パソコン工房,102980,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136903,
+2026-10-08,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,アーク,55490,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512466/,
+2026-10-08,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037891392/,
+2026-10-08,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC482024.html,
+2026-10-08,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=920503,
+2026-10-08,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,アーク,45080,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512808/,
+2026-10-08,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037893204/,
+2026-10-08,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC520427.html,
+2026-10-08,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1122998,
+2026-10-08,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,アーク,109530,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512467/,
+2026-10-08,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0718037891408/,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC482025.html,
+2026-10-08,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=920504,
+2026-10-08,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,アーク,86760,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512809/,
+2026-10-08,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037893211/,
+2026-10-08,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC520428.html,
+2026-10-08,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1122999,
+2026-10-08,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,アーク,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0763649174623/,
+2026-10-08,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,ドスパラ,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,アーク,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0763649174630/,
+2026-10-08,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,ドスパラ,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
+2026-10-08,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,パソコン工房,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。

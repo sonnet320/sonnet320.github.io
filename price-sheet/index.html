@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>パーツ価格シート</title>
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#E9EDF2;--stage:#F7F9FB;--panel:#FFFFFF;--line:#CDD5DF;--ink:#18202C;--muted:#5A6576;--soft:#DDE3EA;
+  --accent:#2E7CE6;--up:#C8283F;--down:#0E8A52;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4;--s6:#008300;--s7:#4a3aa7;--s8:#e34948;
+  --grid:#DDE3EA;--cross:#8C9AAB;--hl:#EEF4FD;--hl-line:#C5D8F5;--err-bg:#FBE8E3;--err-fg:#863C2A;
+  --shadow:0 1px 2px rgba(24,32,44,.06),0 8px 24px rgba(24,32,44,.06);
+  --jp:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --bg:#0E1218;--stage:#151B24;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--soft:#222B38;--accent:#4E9BFF;--up:#FF6B7D;--down:#35C985;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#008300;--s7:#9085e9;--s8:#e66767;
+  --grid:#2C3646;--cross:#6B7A8E;--hl:#1E2C44;--hl-line:#2F4A73;--err-bg:#3A1F1A;--err-fg:#FFB4A3;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0E1218;--stage:#151B24;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--soft:#222B38;--accent:#4E9BFF;--up:#FF6B7D;--down:#35C985;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#008300;--s7:#9085e9;--s8:#e66767;
+  --grid:#2C3646;--cross:#6B7A8E;--hl:#1E2C44;--hl-line:#2F4A73;--err-bg:#3A1F1A;--err-fg:#FFB4A3;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--jp);font-size:14px;line-height:1.55;padding:20px 16px 28px}
+.wrap{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 20px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.eyebrow{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font-size:24px;font-weight:900;line-height:1.3}
+.meta{font:500 12px var(--mono);color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.tabs{display:flex;gap:6px}.tabs button{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--muted);font-weight:700;padding:7px 18px}.tabs button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.filters{display:flex;flex-wrap:wrap;gap:8px 14px;margin-left:auto;font-size:13px;color:var(--muted)}.filters label{display:flex;align-items:center;gap:6px}
+select{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);max-width:11em}
+.note{margin:0;font-size:12px;color:var(--muted)}
+.err{margin:0;padding:10px 12px;border-radius:8px;background:var(--err-bg);color:var(--err-fg);font-size:13px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:14px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:16px;min-width:0}
+.card h2{margin:0;font-size:15px;font-weight:700}
+.listcard{padding:0;overflow:hidden}
+.lmeta{font-size:12px;color:var(--muted);padding:12px 14px;border-bottom:1px solid var(--line)}
+.list{display:flex;flex-direction:column}
+@media(min-width:900px){.list{max-height:760px;overflow-y:auto}}
+.grp{font:600 11px var(--mono);letter-spacing:.08em;color:var(--muted);padding:8px 14px 5px;background:var(--stage);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1}
+.row{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:2px 10px;align-items:center;padding:9px 14px;border-bottom:1px solid var(--soft);cursor:pointer}
+.row:hover{background:var(--stage)}.row.on{background:var(--hl)}
+.row input{margin:0;width:16px;height:16px;accent-color:var(--accent)}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:7px;vertical-align:-1px}
+.nm{font-weight:700;overflow-wrap:anywhere}.sub{grid-column:2;font-size:11px;color:var(--muted)}
+.pc{font:600 15px var(--mono);text-align:right;white-space:nowrap}
+.chg{grid-column:3;font:500 11px var(--mono);color:var(--muted);text-align:right}.chg.up{color:var(--up)}.chg.down{color:var(--down)}
+.add{grid-column:2/4;justify-self:start;margin-top:3px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--accent);font-size:12px;font-weight:700;padding:2px 10px}
+.add:hover{border-color:var(--accent)}.add[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.row.none{cursor:default;background:transparent}.row.none .nm,.row.none .pc{color:var(--muted);font-weight:500}.row.none input{visibility:hidden}
+.more{width:100%;border:0;background:var(--stage);color:var(--muted);font-size:12px;padding:10px 14px;text-align:left}
+.buildbar{border:1px solid var(--line);border-radius:10px;background:var(--stage);padding:10px 12px;margin-bottom:14px}
+.bb-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.bb-head b{font-size:14px}
+.slots{display:flex;flex-direction:column;gap:2px;margin:6px 0}
+.slot{display:grid;grid-template-columns:44px minmax(0,1fr) auto 24px;gap:8px;align-items:center;font-size:13px;padding:3px 0;border-bottom:1px solid var(--soft)}
+.slot:last-child{border-bottom:0}
+.slot .k{font:700 10px var(--mono);letter-spacing:.06em;color:var(--muted)}
+.slot .v{overflow-wrap:anywhere;font-weight:700}.slot .v.e{font-weight:500;color:var(--muted)}
+.slot .p{font:600 13px var(--mono)}
+.slot button{border:0;background:transparent;color:var(--muted);font-size:16px;line-height:1;width:24px;height:24px;border-radius:6px}.slot button:hover{background:var(--soft)}
+.bb-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px}
+.total{font-size:13px;color:var(--muted)}.total b{font:700 18px var(--mono);color:var(--ink)}
+.acts{display:flex;flex-wrap:wrap;gap:8px}.go,.cp{border-radius:8px;font-weight:700;padding:9px 16px}.go{border:0;background:var(--ink);color:var(--panel)}.cp{border:1px solid var(--line);background:var(--panel);color:var(--ink)}.cp:hover{border-color:var(--accent)}.go:disabled,.cp:disabled{opacity:.4;cursor:default}
+.copyout{margin-top:8px;display:flex;flex-direction:column;gap:6px}.copyout textarea{width:100%;min-height:90px;font:12px var(--mono);border:1px solid var(--line);border-radius:8px;padding:8px;background:var(--panel);color:var(--ink)}
+.bbmsg{margin:6px 0 0;font-size:12px;color:var(--muted)}.bbmsg:empty{display:none}
+.ptop{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:4px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px;background:var(--panel)}.seg button{border:0;background:transparent;color:var(--muted);font-size:12px;font-weight:700;padding:2px 12px;border-radius:999px}.seg button[aria-pressed=true]{background:var(--ink);color:var(--panel)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;margin:8px 0;min-height:18px}.legend span{display:inline-flex;align-items:center}
+.chartbox{position:relative}.chartbox svg{display:block;width:100%;height:auto;overflow:visible}
+.g{stroke:var(--grid);stroke-width:1}.tk{fill:var(--muted);font:11px var(--mono)}.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}.dt{stroke:var(--panel);stroke-width:2}.cx{stroke:var(--cross);stroke-width:1}
+.tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 10px;box-shadow:var(--shadow);font-size:12px;min-width:150px;z-index:2}
+.tip b{display:block;font:600 11px var(--mono);color:var(--muted);margin-bottom:3px}.tip div{display:flex;justify-content:space-between;gap:14px}.tip i{font-style:normal;color:var(--muted);font-size:11px}
+.empty{display:grid;place-items:center;min-height:240px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:13px;text-align:center;padding:20px}
+.banner{margin:10px 0 0;padding:8px 12px;background:var(--hl);border:1px solid var(--hl-line);border-radius:8px;font-size:12px}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}.tbl th,.tbl td{padding:6px 8px;border-bottom:1px solid var(--soft);text-align:right;white-space:nowrap}.tbl th:first-child,.tbl td:first-child{text-align:left}.tbl th{font-weight:700;color:var(--muted);font-size:11px;white-space:normal}.tbl td{font-family:var(--mono)}
+.scroll{overflow-x:auto}
+.stores{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}.stores h3{margin:0 0 4px;font-size:13px}
+.st{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--soft);font-size:12px}.st:last-child{border-bottom:0}.st strong{flex:1 1 100%;font-size:13px}
+.st a{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:2px 8px;font-family:var(--mono)}.st a:hover{border-color:var(--accent);color:var(--accent)}.st a.min{background:var(--hl);border-color:var(--hl-line);font-weight:700}.st span{color:var(--muted)}
+.foot{margin:12px 0 0;font-size:11px;color:var(--muted);line-height:1.7}
+@media(max-width:899px){.grid{grid-template-columns:1fr}.panel{order:-1}.filters{margin-left:0}h1{font-size:21px}}
+</style>
+<style id="site-theme">
+/* sonnet320.github.io の色に合わせる(assets/style.css:--bg #F5F2EB, --card #FFFDF8, --line #E2DCCF, --ink #22251F, --muted #5F6458, --green #1F6B57, --selected #E1EEE8) */
+:root,:root[data-theme]{color-scheme:light;
+  --bg:#F7F5EF;--stage:#F3F0E8;--panel:#FFFDF8;--line:#E2DCCF;--ink:#22251F;--muted:#5F6458;--soft:#ECE8DD;
+  --accent:#1F6B57;--hl:#E1EEE8;--hl-line:#B9D8CB;--grid:#ECE8DD;--cross:#8E927E;
+  --bar:#1F6B57;--bar2:#BFD3C8;--up:#C8283F;--down:#1F6B57;
+  --s1:#1F6B57;--s3:#2a78d6;
+  --gold:#A87A12;--silver:#6E746A;--bronze:#9C5A33;--warn:#8A6512;
+  --shadow:0 1px 2px rgba(34,37,31,.05),0 6px 18px rgba(18,63,51,.05)}
+/* inside a site page, the page heading already names the sheet: hide the sheet's own title, keep its date line */
+html.embedded .head>div:first-child{display:none}
+html.embedded .head{justify-content:flex-end;padding-bottom:6px;border-bottom-width:1px}
+</style>
+<script>if(window.parent!==window)document.documentElement.classList.add('embedded');</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div><div class="eyebrow">Price Sheet ／ Parts</div><h1>パーツ価格シート</h1></div>
+    <div class="meta" id="updated"></div>
+  </div>
+  <div class="bar">
+    <div class="tabs" id="tabs" role="group" aria-label="パーツの種類"></div>
+    <div class="filters"><label id="fg-wrap">区分 <select id="fg"></select></label><label id="fc-wrap" hidden>容量 <select id="fc"></select></label></div>
+  </div>
+  <p class="note">購入できる(在庫のある)価格の、店舗最安値です。税込・取得時点の掲載額で、送料・ポイント・クーポンは含みません。在庫なし・取扱終了の参考価格は含めていません。</p>
+  <p class="err" id="err" role="alert" hidden></p>
+  <div class="grid">
+    <section class="card listcard" aria-label="製品の一覧">
+      <div class="lmeta" id="meta" aria-live="polite">読み込み中</div>
+      <div class="list" id="list"></div>
+    </section>
+    <section class="card panel" aria-labelledby="ptitle">
+      <div class="buildbar" aria-label="構成">
+        <div class="bb-head"><b>構成(CPU・GPU・SSD)</b><span class="note">一覧の「構成に入れる」で選びます</span></div>
+        <div class="slots" id="slots"></div>
+        <div class="bb-foot"><div class="total">合計(最安値・税込) <b id="total">—</b></div><div class="acts"><button type="button" class="cp" id="copy" disabled>構成をコピー</button><button type="button" class="go" id="go" disabled>PC構成シートで見る</button></div></div>
+        <p class="bbmsg" id="bbmsg" role="status"></p>
+        <div class="copyout" id="copyout" hidden><span class="note">下の内容を選んでコピーし、PC構成シートの「保存と読み込み」の欄に貼り付けてください。</span><textarea id="copytext" readonly aria-label="コピーする構成"></textarea></div>
+      </div>
+      <div class="ptop"><h2 id="ptitle">価格の推移</h2><div class="seg" role="group" aria-label="表示"><button type="button" data-m="chart" aria-pressed="true">グラフ</button><button type="button" data-m="table" aria-pressed="false">表</button></div></div>
+      <p class="note">左の一覧のチェックで、最大8製品を重ねて比べられます。</p>
+      <div class="legend" id="legend"></div>
+      <div id="view"></div>
+      <div class="banner" id="banner" hidden></div>
+      <div class="stores" id="stores" hidden></div>
+      <p class="foot">対象店舗:アーク、ツクモ、ドスパラ、パソコン工房、アプライド。同じ製品でも型番・色・販売単位が違う場合があります。購入前に各店舗のページで確認してください。GPUはチップごとの表示で、ボードの種類ごとの価格は店舗別の欄で確認できます。</p>
+    </section>
+  </div>
+</div>
+<script type="application/json" id="embedded-prices"></script>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id);
+const COLORS=['--s1','--s2','--s3','--s4','--s5','--s6','--s7','--s8'],MAX=COLORS.length;
+const yen=n=>'¥'+Math.round(n).toLocaleString('ja-JP');
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;};
+const NS='http://www.w3.org/2000/svg';
+const se=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+const col=i=>'var('+COLORS[i]+')';
+const BUILD_CATS=['CPU','GPU','SSD'];
+let D,dates=[],prod={},cat='CPU',grp='all',cap='all',sel=[],mode='chart',expanded=false;
+const slots={},build={};
+
+/* ---------- parent page protocol (same origin only) ---------- */
+function send(type,payload){if(window.parent!==window)window.parent.postMessage({channel:'price-sheet',version:1,type,...(payload||{})},location.origin);}
+let ht=0;function height(){clearTimeout(ht);ht=setTimeout(()=>{const w=document.querySelector('.wrap');send('height',{height:Math.ceil(w.getBoundingClientRect().bottom+scrollY+28)});},100);}
+function buildIds(){return BUILD_CATS.map(c=>build[c]).filter(Boolean);}
+function buildTotal(){return buildIds().reduce((s,id)=>s+(prod[id]?prod[id].now||0:0),0);}
+function notify(){send('build-change',{parts:buildIds(),total:buildTotal()});}
+function setParts(ids){
+  for(const c of BUILD_CATS)delete build[c];
+  for(const id of ids||[]){const p=prod[id];if(p&&BUILD_CATS.includes(p.category)&&p.now!=null)build[p.category]=id;}
+  renderBuild();renderList();notify();
+}
+window.PriceSheet={version:1,getParts:buildIds,setParts,getTotal:buildTotal};
+addEventListener('message',e=>{
+  const d=e.data;if(e.source!==window.parent||e.origin!==location.origin||!d||d.channel!=='price-sheet'||d.version!==1)return;
+  if(d.type==='request-height')height();
+  if(d.type==='set-parts'&&D&&Array.isArray(d.parts))setParts(d.parts.filter(x=>typeof x==='string').slice(0,12));
+});
+if(typeof ResizeObserver!=='undefined')new ResizeObserver(height).observe(document.querySelector('.wrap'));
+
+/* ---------- data ---------- */
+function derive(){
+  dates=[...new Set(D.observations.map(o=>o.date))].sort();
+  prod={};for(const p of D.products)prod[p.id]={...p,by:{}};
+  for(const o of D.observations){if(o.status!=='購入可'||!o.price)continue;(prod[o.id].by[o.date]=prod[o.id].by[o.date]||[]).push(o);}
+  const last=dates[dates.length-1];
+  for(const id in prod){const p=prod[id];
+    p.min=dates.map(d=>p.by[d]?Math.min(...p.by[d].map(o=>o.price)):null);
+    const li=p.min.length-1;p.now=p.min[li];
+    const prev=p.min.slice(0,li).reverse().find(v=>v!=null);p.prev=prev==null?null:prev;
+  }
+}
+const cats=()=>[...new Set(D.products.map(p=>p.category))];
+const inCat=()=>D.products.map(p=>prod[p.id]).filter(p=>p.category===cat);
+const visible=()=>inCat().filter(p=>(grp==='all'||p.group===grp)&&(cap==='all'||p.capacity===cap));
+function resetSel(){for(const k in slots)delete slots[k];sel=[];}
+function autoSel(){visible().filter(p=>p.now!=null).sort((a,b)=>a.now-b.now).slice(0,3).forEach((p,i)=>{slots[p.id]=i;sel.push(p.id);});}
+
+/* ---------- list ---------- */
+function renderTabs(){
+  const t=$('tabs');t.replaceChildren();
+  for(const c of cats()){const b=el('button',null,c);b.type='button';b.setAttribute('aria-pressed',String(c===cat));b.onclick=()=>{cat=c;grp='all';cap='all';expanded=false;resetSel();autoSel();renderAll();};t.append(b);}
+}
+function renderFilters(){
+  const items=inCat();
+  const gs=[...new Set(items.map(p=>p.group).filter(Boolean))];
+  const fg=$('fg');fg.replaceChildren(new Option('すべて','all'));gs.forEach(g=>fg.append(new Option(g,g)));fg.value=grp;$('fg-wrap').hidden=gs.length<2;
+  const cs=[...new Set(items.map(p=>p.capacity).filter(Boolean))].sort((a,b)=>parseInt(a)-parseInt(b));
+  const fc=$('fc');fc.replaceChildren(new Option('すべて','all'));cs.forEach(c=>fc.append(new Option(c,c)));fc.value=cap;$('fc-wrap').hidden=cs.length<2;
+}
+function toggleCompare(id){
+  const i=sel.indexOf(id);
+  if(i>=0){sel.splice(i,1);delete slots[id];}
+  else{if(sel.length>=MAX){$('meta').textContent='重ねて比べられるのは最大'+MAX+'製品です。外してから追加してください。';return;}
+    const used=new Set(sel.map(s=>slots[s]));let k=0;while(used.has(k))k++;slots[id]=k;sel.push(id);}
+  renderList();renderPanel();
+}
+function toggleBuild(id){
+  const p=prod[id];if(!p||!BUILD_CATS.includes(p.category))return;
+  if(build[p.category]===id)delete build[p.category];else build[p.category]=id;
+  renderBuild();renderList();notify();
+}
+function row(p,none){
+  const r=el('div','row'+(none?' none':'')+(sel.includes(p.id)?' on':''));
+  const cb=el('input');cb.type='checkbox';cb.checked=sel.includes(p.id);cb.disabled=none;cb.setAttribute('aria-label',p.name+'をグラフで比べる');
+  cb.onchange=()=>toggleCompare(p.id);
+  r.onclick=e=>{if(none||e.target.closest('button')||e.target===cb)return;cb.checked=!cb.checked;toggleCompare(p.id);};
+  const nm=el('div','nm');
+  if(sel.includes(p.id)){const s=el('span','sw');s.style.background=col(slots[p.id]);nm.append(s);}
+  nm.append(document.createTextNode(p.name));
+  const pc=el('div','pc',none?'—':yen(p.now));
+  const sub=[];if(p.model)sub.push(p.model);
+  const n=p.by[dates[dates.length-1]];
+  if(!none&&n){const m=Math.min(...n.map(o=>o.price));sub.push(n.filter(o=>o.price===m).map(o=>o.store).join('・')+(n.length>1?` ほか${n.length-1}店`:''));}
+  if(none)sub.push('購入できる在庫なし');
+  r.append(cb,nm,pc,el('div','sub',sub.join(' / ')));
+  if(!none&&p.prev!=null){const d=p.now-p.prev;r.append(el('div','chg'+(d>0?' up':d<0?' down':''),d===0?'変動なし':(d>0?'+':'−')+yen(Math.abs(d)).slice(1)));}
+  if(!none&&BUILD_CATS.includes(p.category)){
+    const on=build[p.category]===p.id;const b=el('button','add',on?'✓ 構成に入れた':'＋ 構成に入れる');b.type='button';b.setAttribute('aria-pressed',String(on));b.onclick=()=>toggleBuild(p.id);r.append(b);
+  }
+  return r;
+}
+function renderList(){
+  const L=$('list');L.replaceChildren();
+  const items=visible(),buy=items.filter(p=>p.now!=null),none=items.filter(p=>p.now==null);
+  $('meta').textContent=`${items.length}製品(購入できる価格あり ${buy.length}、在庫なし・未確認 ${none.length})`;
+  buy.sort((a,b)=>(a.group||'').localeCompare(b.group||'','ja',{numeric:true})||a.now-b.now);
+  let g=null;
+  for(const p of buy){if((p.group||'')!==g){g=p.group||'';if(g)L.append(el('div','grp',g));}L.append(row(p,false));}
+  if(none.length){
+    if(!expanded){const b=el('button','more',`購入できる在庫のない ${none.length} 製品を表示`);b.type='button';b.onclick=()=>{expanded=true;renderList();};L.append(b);}
+    else{L.append(el('div','grp','購入できる在庫なし・未確認'));none.slice(0,200).forEach(p=>L.append(row(p,true)));}
+  }
+  if(!items.length)L.append(el('div','empty','この条件の製品はありません'));
+}
+
+/* ---------- build bar ---------- */
+function renderBuild(){
+  const S=$('slots');S.replaceChildren();
+  for(const c of BUILD_CATS){
+    const id=build[c],p=id&&prod[id];
+    const r=el('div','slot');r.append(el('span','k',c));
+    r.append(el('span','v'+(p?'':' e'),p?p.name:'未選択'));
+    r.append(el('span','p',p?yen(p.now):''));
+    if(p){const x=el('button',null,'×');x.type='button';x.setAttribute('aria-label',p.name+'を構成から外す');x.onclick=()=>toggleBuild(id);r.append(x);}else r.append(el('span'));
+    S.append(r);
+  }
+  const n=buildIds().length;
+  $('total').textContent=n?yen(buildTotal()):'—';
+  $('go').disabled=!n;$('copy').disabled=!n;$('copyout').hidden=true;$('bbmsg').textContent='';
+}
+let embedded=false;
+const gpuName=g=>/^RTX/i.test(g)?'GeForce '+g:/^RX/i.test(g)?'Radeon '+g:/^Arc/i.test(g)?'Intel '+g:g;
+function partsJSON(){
+  const day=dates[dates.length-1];
+  return JSON.stringify({type:'pc-sheet-parts',version:1,date:day,parts:buildIds().map(id=>{const p=prod[id],o=(p.by[day]||[]).slice().sort((a,b)=>a.price-b.price)[0];
+    return {category:p.category,id,name:p.category==='GPU'?gpuName(p.group):p.name,detail:p.category==='SSD'?(p.model||''):'',product:p.name,price:p.now,store:o?o.store:'',url:o?o.url:''};})});
+}
+$('copy').onclick=()=>{
+  const txt=partsJSON(),out=$('copyout'),ta=$('copytext');
+  const fallback=()=>{ta.value=txt;out.hidden=false;ta.focus();ta.select();$('bbmsg').textContent='自動でコピーできませんでした。下の欄の内容をコピーしてください。';height();};
+  try{navigator.clipboard.writeText(txt).then(()=>{out.hidden=true;$('bbmsg').textContent='コピーしました。PC構成シートの「保存と読み込み」の欄に貼り付けると、CPU・GPU・SSDと価格が入ります。';},fallback);}catch(e){fallback();}
+};
+$('go').onclick=()=>{
+  const ids=buildIds();if(!ids.length)return;
+  const rel='pc-sheet/?parts='+ids.map(encodeURIComponent).join(',');
+  const abs=new URL('../'+rel,location.href).href;
+  if(window.parent!==window)send('open-build',{parts:ids,url:abs});else location.href=abs;
+};
+
+/* ---------- chart ---------- */
+function niceTicks(lo,hi,n){
+  if(lo===hi){const pad=Math.max(lo*0.05,500);lo-=pad;hi+=pad;}
+  const raw=(hi-lo)/n,pow=Math.pow(10,Math.floor(Math.log10(raw))),f=raw/pow,step=(f<=1?1:f<=2?2:f<=5?5:10)*pow;
+  const a=Math.floor(lo/step)*step,b=Math.ceil(hi/step)*step,t=[];for(let v=a;v<=b+1e-9;v+=step)t.push(v);return t;
+}
+function renderLegend(){
+  const g=$('legend');g.replaceChildren();if(sel.length<2)return;
+  for(const id of sel){const s=el('span');const sw=el('span','sw');sw.style.background=col(slots[id]);s.append(sw,document.createTextNode(prod[id].name));g.append(s);}
+}
+function renderChart(){
+  const V=$('view');V.replaceChildren();
+  if(!sel.length){V.append(el('div','empty','左の一覧で、比べる製品にチェックを入れてください。'));return;}
+  const all=sel.flatMap(id=>prod[id].min).filter(v=>v!=null);
+  if(!all.length){V.append(el('div','empty','選んだ製品に購入できる価格がありません。'));return;}
+  const narrow=V.clientWidth&&V.clientWidth<520;
+  const W=narrow?400:720,H=narrow?320:360,m={l:narrow?62:68,r:narrow?16:22,t:14,b:36};
+  const ticks=niceTicks(Math.min(...all),Math.max(...all),4),y0=ticks[0],y1=ticks[ticks.length-1];
+  const t0=new Date(dates[0]).getTime(),t1=new Date(dates[dates.length-1]).getTime();
+  const X=i=>dates.length===1?m.l+(W-m.l-m.r)/2:m.l+(new Date(dates[i]).getTime()-t0)/(t1-t0)*(W-m.l-m.r);
+  const Y=v=>m.t+(1-(v-y0)/(y1-y0))*(H-m.t-m.b);
+  const svg=se('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'選んだ製品の最安値の推移'});
+  for(const v of ticks){svg.append(se('line',{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),class:'g'}));const t=se('text',{x:m.l-8,y:Y(v)+4,'text-anchor':'end',class:'tk'});t.textContent=yen(v);svg.append(t);}
+  const step=Math.max(1,Math.ceil(dates.length/7));
+  dates.forEach((d,i)=>{if(i%step&&i!==dates.length-1)return;const t=se('text',{x:X(i),y:H-12,'text-anchor':'middle',class:'tk'});t.textContent=d.slice(5).replace('-','/');svg.append(t);});
+  sel.forEach(id=>{
+    const c=col(slots[id]),mn=prod[id].min;let d='',pen=false;
+    mn.forEach((v,i)=>{if(v==null){pen=false;return;}d+=(pen?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1);pen=true;});
+    if(dates.length>1)svg.append(se('path',{d,class:'ln',stroke:c}));
+    mn.forEach((v,i)=>{if(v!=null)svg.append(se('circle',{cx:X(i),cy:Y(v),r:dates.length>1?3.5:6,fill:c,class:'dt'}));});
+  });
+  const cx=se('line',{class:'cx',y1:m.t,y2:H-m.b,visibility:'hidden'});svg.append(cx);
+  const box=el('div','chartbox'),tip=el('div','tip');tip.hidden=true;
+  const hit=se('rect',{x:m.l,y:m.t,width:W-m.l-m.r,height:H-m.t-m.b,fill:'transparent'});
+  const show=ev=>{
+    const r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)/r.width*W;
+    let bi=0,bd=1e9;dates.forEach((d,i)=>{const dd=Math.abs(X(i)-px);if(dd<bd){bd=dd;bi=i;}});
+    cx.setAttribute('x1',X(bi));cx.setAttribute('x2',X(bi));cx.setAttribute('visibility','visible');
+    tip.replaceChildren();tip.append(el('b',null,dates[bi]));
+    for(const id of sel){const v=prod[id].min[bi],o=prod[id].by[dates[bi]],st=o&&v!=null?o.find(x=>x.price===v).store:'';
+      const row=el('div'),l=el('span'),sw=el('span','sw');sw.style.background=col(slots[id]);l.append(sw,document.createTextNode(prod[id].name));
+      const rv=el('span');rv.append(document.createTextNode(v==null?'在庫なし':yen(v)));if(st){rv.append(document.createTextNode(' '));rv.append(el('i',null,st));}
+      row.append(l,rv);tip.append(row);}
+    tip.hidden=false;const bw=box.getBoundingClientRect();let left=X(bi)/W*r.width+14;
+    if(left+tip.offsetWidth+8>bw.width)left=X(bi)/W*r.width-tip.offsetWidth-14;tip.style.left=Math.max(0,left)+'px';tip.style.top='8px';
+  };
+  hit.addEventListener('pointermove',show);hit.addEventListener('pointerdown',show);
+  hit.addEventListener('pointerleave',()=>{cx.setAttribute('visibility','hidden');tip.hidden=true;});
+  svg.append(hit);box.append(svg,tip);V.append(box);
+}
+function renderTable(){
+  const V=$('view');V.replaceChildren();
+  if(!sel.length){V.append(el('div','empty','左の一覧で、比べる製品にチェックを入れてください。'));return;}
+  const sc=el('div','scroll'),t=el('table','tbl'),hr=el('tr');
+  hr.append(el('th',null,'日付'));sel.forEach(id=>hr.append(el('th',null,prod[id].name)));t.append(hr);
+  [...dates].reverse().forEach(d=>{const i=dates.indexOf(d),r=el('tr');r.append(el('td',null,d));sel.forEach(id=>{const v=prod[id].min[i];r.append(el('td',null,v==null?'—':yen(v)));});t.append(r);});
+  sc.append(t);V.append(sc);
+}
+function renderStores(){
+  const S=$('stores');S.replaceChildren();S.hidden=!sel.length;if(!sel.length)return;
+  const d=dates[dates.length-1];S.append(el('h3',null,`店舗別の価格(${d})`));
+  for(const id of sel){
+    const p=prod[id],o=(p.by[d]||[]).slice().sort((a,b)=>a.price-b.price);
+    const r=el('div','st'),nm=el('strong'),sw=el('span','sw');sw.style.background=col(slots[id]);nm.append(sw,document.createTextNode(p.name));r.append(nm);
+    if(!o.length)r.append(el('span',null,'この日は購入できる在庫がありません'));
+    o.forEach((x,i)=>{const a=el('a',i===0?'min':null,`${x.store} ${yen(x.price)}`);a.href=x.url;a.target='_blank';a.rel='noopener noreferrer';r.append(a);});
+    S.append(r);
+  }
+}
+function renderPanel(){
+  renderLegend();mode==='chart'?renderChart():renderTable();
+  const B=$('banner');
+  if(dates.length<2){B.hidden=false;B.textContent=`データを蓄積中です(現在${dates.length}日分)。2日分以上たまると、推移の線が表示されます。いまは最新の最安値を点で表示しています。`;}else B.hidden=true;
+  renderStores();height();
+}
+function renderAll(){renderTabs();renderFilters();renderList();renderBuild();renderPanel();}
+
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderPanel();});
+$('fg').onchange=e=>{grp=e.target.value;expanded=false;renderList();};
+$('fc').onchange=e=>{cap=e.target.value;expanded=false;renderList();};
+let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{if(D)renderPanel();},150);});
+
+const emb=document.getElementById('embedded-prices').textContent.trim();
+(emb?Promise.resolve(JSON.parse(emb)).then(j=>{embedded=true;return j;}):fetch('../data/prices.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})).then(j=>{
+  if(embedded){$('go').hidden=true;}
+  D=j;derive();
+  $('updated').textContent='最終更新 '+D.updated+` · ${dates.length}日分`;
+  autoSel();renderAll();
+  const q=new URLSearchParams(location.search).get('parts');
+  if(q)setParts(q.split(',').filter(x=>/^[a-z0-9][a-z0-9-]{0,99}$/.test(x)).slice(0,12));
+  send('ready');height();
+}).catch(()=>{const E=$('err');E.hidden=false;E.textContent='価格データを読み込めませんでした。時間をおいて再読み込みしてください。';$('meta').textContent='';send('error',{message:'価格データを読み込めませんでした。'});});
+})();
+</script>
+</body>
+</html>
