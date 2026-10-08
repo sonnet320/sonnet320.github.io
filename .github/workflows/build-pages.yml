@@ -1,0 +1,108 @@
+# 製品(ファン・クーラー・ケース)を追加したときに、サイトのページを作り直す。
+#   1. Claude が src/pc-sheet.html を直して、main 以外のブランチ(例 claude/add-xxx)に push する
+#   2. このワークフローが pc-sheet/index.html と fan-ranking/index.html を作り直して、同じブランチに保存する
+#   3. main へのプルリクエストを作る(まだなければ)。サイトはまだ変わらない
+#   4. あなたがプルリクエストを「Merge」したときだけ、サイトに反映される(= 許可)
+# プルリクエストでは、ページが src から作り直した最新のものかも確かめる(古いままならマージ前に赤くなる)。
+name: ページを作り直す
+
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - 'src/**'
+      - 'tools/build/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'tools/build/**'
+      - 'pc-sheet/**'
+      - 'fan-ranking/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: build-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: ページを作り直す
+        run: python tools/build/build_pages.py
+
+      - name: 結果を保存
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add pc-sheet/index.html fan-ranking/index.html
+          if git diff --cached --quiet; then
+            echo "ページは最新です"
+          else
+            git commit -m "ページを作り直す(src/pc-sheet.html から)"
+            git push
+          fi
+
+      - name: プルリクエストを作る
+        if: github.ref != 'refs/heads/main'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')" ]; then
+            echo "プルリクエストはもうあります"
+            exit 0
+          fi
+          title="$(git log --format=%s origin/main..HEAD | grep -v '^ページを作り直す' | tail -n 1)"
+          [ -n "$title" ] || title="$BRANCH"
+          {
+            echo "src/pc-sheet.html の変更から、サイトのページ(PC構成シート・ファン・クーラーランキング)を作り直しました。"
+            echo
+            echo "**Merge するとサイトに反映されます。** 反映したくないときは、このまま閉じてください。"
+            echo
+            echo "変更したコミット:"
+            git log --format='- %s' origin/main..HEAD
+          } > pr-body.md
+          gh pr create --base main --head "$BRANCH" --title "$title" --body-file pr-body.md \
+            || echo "::warning::プルリクエストを自動で作れませんでした。Settings → Actions → General の「Allow GitHub Actions to create and approve pull requests」をオンにするか、GitHub の画面から作ってください。"
+
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: ページが最新か確かめる
+        run: python tools/build/build_pages.py --check
