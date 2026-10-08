@@ -423,6 +423,7 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
       <label class="inline">全ファンの種類 <select id="allmodel"></select></label>
       <label class="inline">全ファンの回転数 <input type="range" id="allrpm" min="0" max="100" step="5"> <b class="num" id="allrpmv"></b></label>
       <p class="msg" id="fanmsg" role="status"></p>
+      <div class="btns" id="stockbox" hidden><button class="btn" id="stockswap" type="button"></button></div>
       <div class="sub">
         <span class="hint">配置のプリセット</span>
         <div class="btns">
@@ -4419,7 +4420,13 @@ function applyCaseChoice(k,opt){
     if(wasPillar)Object.assign(state.panels,md.panels);
     const n=snapShroudFans();
     if(state.cooler==='aio')syncRadFans();
-    notes.push(`${md.name}の形(大きさ・パネル・電源カバー・ファンの取り付け位置)にしました`+(n?`。底面(電源カバーの上)のファンは${shroudFans(state).xs.length}基までなので、${n}基外しました`:''));
+    if(md.stock&&md.stock.length&&!opt.keepFans){   // its own fans go in; the fans before (moved onto this case) stay one click away
+      const before=JSON.parse(JSON.stringify(state.fans));
+      state.fans=presetFans('stock',state);
+      if(state.cooler==='aio')syncRadFans();
+      notes.push(`${md.name}の形(大きさ・パネル・電源カバー・ファンの取り付け位置)にし、ファンを付属ファン(${stockText(md)})にしました`);
+      showStockSwap(before,'前のファン配置に戻す');
+    }else notes.push(`${md.name}の形(大きさ・パネル・電源カバー・ファンの取り付け位置)にしました`+(n?`。底面(電源カバーの上)のファンは${shroudFans(state).xs.length}基までなので、${n}基外しました`:''));
   }
   const order=['eatx','atx','matx','itx'], cur=order.indexOf(state.board), max=order.indexOf(CASE_MAXBOARD[k]||'eatx');
   if(cur<max){setBoard(order[max],true);notes.push(`マザーボードをケースに合う${BOARDS[order[max]].name}にしました`);}
@@ -4429,6 +4436,25 @@ function applyCaseChoice(k,opt){
   if(notes.length)$('fanmsg').textContent=notes.join('。')+'。';
   selId=null;renderInspector();dirty();
 }
+/* the stock fans as text: 前面120mm×1(吸気)・背面120mm×1(排気) */
+function stockText(md){
+  const g={};
+  for(const st of md.stock){const m=fanModel(st.model), k=`${st.pos}|${m?m.size:120}|${st.dir==='out'?'out':'in'}`;g[k]=(g[k]||0)+1;}
+  return Object.entries(g).map(([k,n])=>{const [p,sz,d]=k.split('|');return `${POS_NAME[p]||p}${sz}mm×${n}(${d==='out'?'排気':'吸気'})`;}).join('・');
+}
+/* one button that swaps between the case's stock fans and the fans that were there before */
+var stockOther=null;   // var: boot() may run before this line
+function showStockSwap(other,label){stockOther=other;$('stockswap').textContent=label;$('stockbox').hidden=false;}
+function hideStockSwap(){stockOther=null;$('stockbox').hidden=true;}
+$('stockswap').onclick=()=>{
+  if(!stockOther)return;
+  const cur=state.fans, toStock=$('stockswap').textContent!=='前のファン配置に戻す';
+  state.fans=stockOther;stockOther=cur;
+  if(state.cooler==='aio')syncRadFans();
+  $('stockswap').textContent=toStock?'前のファン配置に戻す':'付属ファンにする';
+  $('fanmsg').textContent=toStock?`付属ファン(${CASE_MODEL?stockText(CASE_MODEL):''})にしました。`:'前のファン配置に戻しました(ケースに合わせて位置を移しています)。';
+  selId=null;renderInspector();dirty();
+};
 function detectCase(t){for(const [re,k] of CASE_WORDS)if(re.test(t)){if(k!==state.caseDim.preset)applyCaseChoice(k,{});return;}}
 /* typed cooler / card names: the longest catalog model name found in the text wins */
 function detectCooler(t){
@@ -4716,6 +4742,7 @@ $('run').onclick=()=>{running=!running;$('run').textContent=running?'一時停�
 $('ff').onclick=()=>{if(dim3)Air3D.fastForward();else warm=110;running=true;$('run').textContent='一時停止';};
 $('resetair').onclick=()=>{if(dim3){Air3D.reset();M={};fanQ={};return;}Sim.reset();M={};fanQ={};allocParticles(state.view.count);};
 function applyPreset(k){
+  hideStockSwap();
   const pl=k==='pillar'||k==='pillarout';
   if(pl){state.caseType='dual';state.panels.front='glass';state.panels.bottom='fanonly';syncControls();}
   state.fans=presetFans(k,state);
@@ -4764,6 +4791,7 @@ function resizeSim(dm){
   makeOverlay();M={};fanQ={};allocParticles(state.view.count);fit();warm=70;
 }
 function changeCase(next){
+  hideStockSwap();
   const oc={x0:C.x0,y0:C.y0,x1:C.x1,y1:C.y1}, roles=new Map(state.fans.map(f=>[f.id,fanRole(f)]));
   state.caseDim=next;
   const dm=applyCase(state), sx=(C.x1-C.x0)/(oc.x1-oc.x0), sy=(C.y1-C.y0)/(oc.y1-oc.y0);
@@ -5265,6 +5293,8 @@ function importSpecText(txt){
   if(cooler&&cooler.coolerId){const c=coolerById(cooler.coolerId);state.coolerBrand=c.brand||'generic';state.coolerModel=c.id;resolveParts();}
   if(gpuName){state.gpuBrand='generic';state.gpuModel='c3';resolveParts();detectGpuCard(gpuName);}
   if(fan&&(fan.layout||fan.model)){
+    if(!$('stockbox').hidden)$('fanmsg').textContent=`${CASE_MODEL?CASE_MODEL.name+'の形にし、':''}ファンは付属ファンではなく、構成表のファンの行に合わせて配置しました。`;
+    hideStockSwap();
     const fitSize=sz=>{const m=fanModel(state.fanModel);return m&&m.size===sz?state.fanModel:(sz===140?'gen140':'gen120');};
     if(fan.model)state.fanModel=fan.model;else state.fanModel=fitSize(fan.layout.size);
     if(fan.layout){state.fans=presetFans('counts',state,fan.layout.cnt);if(state.cooler==='aio')syncRadFans();
@@ -6929,7 +6959,7 @@ function loop(ts){
   draw();
 }
 
-function boot(){curGpu=null;curCooler=null;tipShown=null;state.cooler=null;const dm=applyCase(state);Sim.resize(Math.round(W/Sim.HMM),Math.round(H/Sim.HMM));Sim.setDepth(dm.depth);Sim.reset();makeOverlay();M={};fanQ={};renderSpecs();syncControls();syncCaseInputs();needRebuild=true;rebuild();fit();lastEval=null;lastVals={};evS={};renderCriteria();setStageView(state.view.stage);renderNoiseTable();renderNoiseNow();}
+function boot(){hideStockSwap();curGpu=null;curCooler=null;tipShown=null;state.cooler=null;const dm=applyCase(state);Sim.resize(Math.round(W/Sim.HMM),Math.round(H/Sim.HMM));Sim.setDepth(dm.depth);Sim.reset();makeOverlay();M={};fanQ={};renderSpecs();syncControls();syncCaseInputs();needRebuild=true;rebuild();fit();lastEval=null;lastVals={};evS={};renderCriteria();setStageView(state.view.stage);renderNoiseTable();renderNoiseNow();}
 readColors();
 cv.classList.add('edit');
 /* PC構成シート website integration. Same-origin, parent-only message protocol v1. */
