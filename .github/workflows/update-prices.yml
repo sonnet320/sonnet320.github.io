@@ -1,0 +1,57 @@
+# GPTの価格CSVを data/incoming/ に置くと、自動で data/prices.json と data/prices_long.csv を作り直す。
+# 処理したCSVは data/archive/ に移す。CSVに決まり違反があると止まり、GitHubからメールが届く(サイトは前のまま)。
+name: 価格データを更新
+
+on:
+  push:
+    paths:
+      - 'data/incoming/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: CSVを変換
+        id: convert
+        shell: bash
+        run: |
+          shopt -s nullglob
+          files=(data/incoming/*.csv)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "data/incoming/ にCSVがありません。"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python tools/make_prices.py --out data "${files[@]}"
+          mkdir -p data/archive
+          for f in "${files[@]}"; do git mv "$f" "data/archive/$(basename "$f")" 2>/dev/null || mv "$f" data/archive/; done
+          echo "found=true" >> "$GITHUB_OUTPUT"
+
+      - name: 結果を保存
+        if: steps.convert.outputs.found == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            day=$(python -c "import json;print(json.load(open('data/prices.json'))['updated'])")
+            git commit -m "価格データを更新(${day})"
+            git push
+          fi
