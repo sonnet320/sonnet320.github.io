@@ -1260,18 +1260,20 @@ CASE_MODELS.nghd={
 /* mouse computer NEXTGEAR mini-tower case (JG-A… series, 2025-). Official (mouse-jp.co.jp, 2026-10): body W220 × D405 × H390 mm
    (W220 × D418 × H410 mm with protrusions), black, tempered-glass side panel; the customize page lists a 240 mm radiator on the top.
    A review of the same new case (JG-A7G6T): mesh front, mesh top with a magnetic filter, PSU at the bottom in its own cover,
-   breathing through a filtered opening in the floor. The stock case fans differ by model and are not published (2026-10-09), so this
-   model has no stock fans; everything in est is estimated from the size and the photos. */
+   breathing through a filtered opening in the floor. Stock fans (mouse product page, 2026-10-09, the user): RGB case fans front ×3 /
+   top ×2 / rear ×1; the top pair is taken as the 240 mm radiator's fans (the user's estimate). Everything in est is estimated. */
 CASE_MODELS.ngjg={
   name:'マウス NEXTGEAR ミニタワー(JG)', code:'NEXTGEAR JG', detail:'ミニタワー・前面/天面メッシュ(BTO専用)',
   d:405,h:390,w:220, dimText:'本体 405×220×390mm・突起含む 418×220×410mm',
   maxBoard:'matx', gpuMax:300, coolerMax:155, psuMax:160, cable:20,
   est:['gpuMax','coolerMax','psuMax','cable'],
   rad:{front:240,top:240,topLowRam:240,topStack:55},
-  mounts:'天面 240mm水冷(公式)。ケースファンの位置・数はモデルにより異なり非公表',
+  mounts:'前面 120×3・上面 120×2(240mm水冷)・背面 120×1(RGBケースファン)',
   panels:{front:'mesh',top:'mesh',rear:'vent',bottom:'fanonly'},
   psuArea:{shroud:'solid',side:'closed',bottom:'mesh'},      // PSU cover, breathing through the floor filter (review photos)
   shroud:{front:30,h:80,fanX:[]},                            // est: low enough for a Micro-ATX board under the 390 mm top (a 90 mm cover would overlap it)
+  stock:[{pos:'front',model:'ngrgb120',dir:'in'},{pos:'front',model:'ngrgb120',dir:'in'},{pos:'front',model:'ngrgb120',dir:'in'},
+         {pos:'top',model:'ngrgb120',dir:'out'},{pos:'top',model:'ngrgb120',dir:'out'},{pos:'rear',model:'ngrgb120',dir:'out'}],
 };
 /* Cooler Master HAF II 500 (H500G2). Official (coolermaster.com/ja-jp, 2026-10): L557 × W262 × H548 mm incl. protrusions, 79.98 L,
    Mini-ITX to E-ATX (310 mm wide), CPU cooler 220 mm (AMD) / 221 mm (Intel), PSU 210 mm (150 mm with drives north-south),

@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "id": "mouse-nextgear-jg-a7g6t-tgs2026",
+  "shop": "マウスコンピューター",
+  "model": "NEXTGEAR JG-A7G6T",
+  "grade": "TGS2026出展記念モデル・JGA7G6TB5BBDW101DECTGST",
+  "case": "NEXTGEAR JG ミニタワーケース・ブラック・強化ガラスサイドパネル（OEM元型番は不明）",
+  "sample": false,
+  "state": {
+    "title": "マウスコンピューター NEXTGEAR JG-A7G6T",
+    "price": "¥181,200",
+    "note": "TGS2026出展記念モデル・JGA7G6TB5BBDW101DECTGST",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 5700X",
+        "detail": "8コア / 16スレッド・TDP 65W"
+      },
+      {
+        "label": "クーラー",
+        "name": "水冷CPUクーラー、240mmラジエーター",
+        "detail": "型番不明"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5060 Ti",
+        "detail": "VRAM 16GB"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR4-3200 32GB",
+        "detail": "16GB × 2"
+      },
+      {
+        "label": "SSD",
+        "name": "NVMe Gen4×4 1TB",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "B550 Micro-ATX",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "650W",
+        "detail": "80PLUS Bronze"
+      },
+      {
+        "label": "ケース",
+        "name": "マウス NEXTGEAR ミニタワー(JG)",
+        "detail": "ミニタワー・前面/天面メッシュ(BTO専用)"
+      },
+      {
+        "label": "前面ファン",
+        "name": "マウス NEXTGEAR 付属 120mm RGBファン ×3",
+        "detail": "吸気",
+        "auto": {
+          "name": "マウス NEXTGEAR 付属 120mm RGBファン ×3",
+          "detail": "吸気"
+        }
+      },
+      {
+        "label": "天面ファン",
+        "name": "ラジエーターのファン ×2",
+        "detail": "排気・240mmラジエーター",
+        "auto": {
+          "name": "ラジエーターのファン ×2",
+          "detail": "排気・240mmラジエーター"
+        }
+      },
+      {
+        "label": "背面ファン",
+        "name": "マウス NEXTGEAR 付属 120mm RGBファン ×1",
+        "detail": "排気",
+        "auto": {
+          "name": "マウス NEXTGEAR 付属 120mm RGBファン ×1",
+          "detail": "排気"
+        }
+      },
+      {
+        "label": "底面ファン",
+        "name": "なし",
+        "detail": "",
+        "auto": {
+          "name": "なし",
+          "detail": ""
+        }
+      }
+    ],
+    "board": "matx",
+    "cooler": "aio",
+    "radSize": 240,
+    "radPos": "top",
+    "coolerTdp": 250,
+    "gpuSlots": 2,
+    "gpuLen": 240,
+    "gpuCooler": "open",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio240",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c2",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "clearance": 25,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": null,
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": "gen-aio240"
+    },
+    "caseDim": {
+      "preset": "ngjg",
+      "d": 405,
+      "h": 390,
+      "w": 220
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "i0qnyel",
+        "x": 52.5,
+        "y": 100,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ngrgb120"
+      },
+      {
+        "id": "res899j",
+        "x": 52.5,
+        "y": 225,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ngrgb120"
+      },
+      {
+        "id": "45gtr6q",
+        "x": 52.5,
+        "y": 350,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ngrgb120"
+      },
+      {
+        "id": "8fwf8fm",
+        "x": 422.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ngrgb120"
+      },
+      {
+        "id": "p56qclb",
+        "x": 165,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "bhhadbx",
+        "x": 290,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 41,
+    "gpuH": 120,
+    "gpuFans": 2,
+    "cFans": 2,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27
+  }
+}
