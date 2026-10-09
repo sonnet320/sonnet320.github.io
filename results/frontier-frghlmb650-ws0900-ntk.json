@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v58-hubfix2",
+  "mode": "2d",
+  "computedAt": "2026-10-09T02:58:32.337Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 73,
+    "grade": "並",
+    "cap": null,
+    "cpu": 75.1,
+    "gpu": 64.7,
+    "vrm": 51.9,
+    "intake": 9.79,
+    "stag": 2.2,
+    "press": 43.4,
+    "rows": {
+      "cpu": "並",
+      "gpu": "良",
+      "vrm": "良",
+      "intake": "要改善",
+      "stag": "優",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 5.4,
+      "cpuT": 9.79,
+      "gpuT": 1.38,
+      "vrmT": 8.32,
+      "vrmV": 0.351,
+      "exT": 6.78,
+      "pIn": 0.087,
+      "stag": 0.022,
+      "fanIn": 79.3,
+      "fanOut": 35.3,
+      "leakIn": 22.3,
+      "leakOut": 66.4
+    },
+    "coolQ": 29.7,
+    "gpuQ": 44.4
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 61.3,
+    "gpuPower": 275.424
+  },
+  "image": "results/frontier-frghlmb650-ws0900-ntk.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "frontier-frghlmb650-ws0900-ntk"
+}

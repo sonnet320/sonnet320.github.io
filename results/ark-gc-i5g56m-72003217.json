@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v58-hubfix2",
+  "mode": "2d",
+  "computedAt": "2026-10-09T02:58:21.268Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 42,
+    "grade": "要改善",
+    "cap": null,
+    "cpu": 80.6,
+    "gpu": 60.3,
+    "vrm": 71,
+    "intake": 13.89,
+    "stag": 33.2,
+    "press": -43.2,
+    "rows": {
+      "cpu": "並",
+      "gpu": "優",
+      "vrm": "並",
+      "intake": "要改善",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 9.8,
+      "cpuT": 13.89,
+      "gpuT": 4.59,
+      "vrmT": 28.53,
+      "vrmV": 0.047,
+      "exT": 11.28,
+      "pIn": -0.061,
+      "stag": 0.332,
+      "fanIn": 0.4,
+      "fanOut": 19.7,
+      "leakIn": 44.2,
+      "leakOut": 24.9
+    },
+    "coolQ": null,
+    "gpuQ": 42.2
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 63,
+    "gpuPower": 163.07999999999998
+  },
+  "image": "results/ark-gc-i5g56m-72003217.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "ark-gc-i5g56m-72003217"
+}

@@ -51,7 +51,9 @@ async function selectProduct(p){
   ['temp-cpu','temp-gpu','temp-vrm','result-grade'].forEach(id=>$(id).textContent='—');$('result-conditions').replaceChildren();
   $('load-build').disabled=!sheetReady||loadingBuild;$('load-status').textContent='';
   $('case-note').textContent=p.genericCase?'目安（汎用ケースで計算）':'ケース：'+p.case;
-  const shop=safeURL(p.affiliateUrl);$('shop-link').hidden=!p.affiliateUrl||!shop||p.sample;if(shop)$('shop-link').href=shop.href;
+  // an affiliate link is marked PR (rel sponsored); without one, the product page itself is linked without the mark
+  const aff=!!p.affiliateUrl, shop=safeURL(p.affiliateUrl||p.url||''), sl=$('shop-link');
+  sl.hidden=!shop||p.sample;if(shop)sl.href=shop.href;sl.rel=aff?'noopener noreferrer sponsored':'noopener noreferrer';$('shop-pr').hidden=!aff;
   try{
     const r=await getJSON(p.result);if(seq!==resultSequence)return;
     if(r.presetId&&r.presetId!==p.id)throw new Error('この構成と計算結果が一致していません。');
@@ -59,7 +61,7 @@ async function selectProduct(p){
     const e=r.evaluation;showTemp('temp-cpu',e.cpu);showTemp('temp-gpu',e.gpu);showTemp('temp-vrm',e.vrm);
     $('result-grade').textContent=e.grade?(e.grade+' · '+e.score+'点'):'評価なし';
     const c=r.conditions||{};const dl=$('result-conditions');
-    for(const [k,v]of [['室温',c.room+'°C'],['負荷','CPU '+c.cpuLoad+'% / GPU '+c.gpuLoad+'%'],['ファン回転数',c.fanRpm+'%'],['計算条件','2D · '+(r.calculation?.gridMm||5)+'mm格子 / '+r.simulatedSeconds+'秒'],['計算日',r.computedAt?.slice(0,10)||'未登録']])dl.append(node('dt','',k),node('dd','',v));
+    for(const [k,v]of [['室温',c.room+'°C'],['負荷',(c.cpuMode==='game'?'CPU ゲーム時(約'+Math.round(c.cpuPower)+'W)':c.cpuMode==='enc'?'CPU 動画の書き出し(約'+Math.round(c.cpuPower)+'W)':'CPU '+c.cpuLoad+'%')+' / GPU '+c.gpuLoad+'%'],['ファン回転数',c.fanRpm+'%'],['計算条件','2D · '+(r.calculation?.gridMm||5)+'mm格子 / '+r.simulatedSeconds+'秒'],['計算日',r.computedAt?.slice(0,10)||'未登録']])dl.append(node('dt','',k),node('dd','',v));
     const img=r.image;if(typeof img==='string'&&(/^data:image\/(png|jpeg);base64,/.test(img)||safeURL(img)?.origin===location.origin)){
       const image=$('result-image');image.onload=()=>{if(seq===resultSequence){image.hidden=false;$('result-placeholder').hidden=true;}};image.onerror=()=>{$('result-placeholder').textContent='図を読み込めませんでした。温度は上の計算条件による結果です。';};image.src=img;image.alt=p.name+'：2Dで計算した空気の流れと温度分布';
     }else $('result-placeholder').textContent='エアフロー図が未登録です。';

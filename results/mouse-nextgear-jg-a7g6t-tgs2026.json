@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v58-hubfix2",
+  "mode": "2d",
+  "computedAt": "2026-10-09T03:04:54.086Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 80,
+    "grade": "良",
+    "cap": null,
+    "cpu": 55.7,
+    "gpu": 65,
+    "vrm": 57.9,
+    "intake": 5.93,
+    "stag": 9.1,
+    "press": -13.3,
+    "rows": {
+      "cpu": "優",
+      "gpu": "良",
+      "vrm": "良",
+      "intake": "良",
+      "stag": "並",
+      "press": "並"
+    },
+    "air": {
+      "tIn": 5.94,
+      "cpuT": 5.93,
+      "gpuT": 2.76,
+      "vrmT": 13.67,
+      "vrmV": 0.296,
+      "exT": 6.17,
+      "pIn": 0.117,
+      "stag": 0.091,
+      "fanIn": 52.3,
+      "fanOut": 61.6,
+      "leakIn": 18.7,
+      "leakOut": 9.3
+    },
+    "coolQ": null,
+    "gpuQ": 36.7
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 57.024,
+    "gpuPower": 163.07999999999998
+  },
+  "image": "results/mouse-nextgear-jg-a7g6t-tgs2026.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "mouse-nextgear-jg-a7g6t-tgs2026"
+}
