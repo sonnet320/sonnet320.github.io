@@ -21,6 +21,9 @@ on:
       - 'src/**'
       - 'tools/build/**'
       - 'data/id-map.json'
+      - 'data/prices.json'
+      - 'data/parts.json'
+      - 'data/sheet-prices.json'
       - 'pc-sheet/**'
       - 'fan-ranking/**'
   workflow_dispatch:

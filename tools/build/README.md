@@ -2,7 +2,7 @@
 
 ## 分担
 - **製品の追加(ファン・クーラー・ケース):Claude。** PC構成シートの本文 `src/pc-sheet.html` を直す。
-- **価格の調査:GPT。** これまでどおり、CSVを `data/incoming/` に置く(`.github/workflows/update-prices.yml` が `data/prices.json` を更新する)。
+- **価格の調査:GPT。** 答えのCSVは Claude に渡す。Claude が `claude/…` ブランチの `data/incoming/` に置き、`update-prices.yml` が変換してプルリクエストを作る。
 - **公開の許可:あなた。** プルリクエストを Merge したときだけサイトが変わる。
 
 ## 流れ
@@ -31,7 +31,7 @@
 ## 価格との連動
 - サイトのPC構成シートとランキングは、開いたときに `data/sheet-prices.json` を読み、製品ごとの「いちばん新しい調査日の在庫ありの最安値」で目安の価格を置き換える
   (CPU・グラフィックボード・CPUクーラー・ケースファン・ケース。メモリ・電源・マザーボード・SSDの目安は今のまま)。
-- GPTのCSVを `data/incoming/` に置くと、`update-prices.yml` が `prices.json`・`parts.json`・`sheet-prices.json` を作り直す(価格は許可なしで反映される。今までどおり)。
+- GPTのCSVを Claude が `claude/…` ブランチの `data/incoming/` に置くと、`update-prices.yml` が `prices.json`・`parts.json`・`sheet-prices.json` を作り直してプルリクエストを作る。価格も Merge したときだけ反映される(`main` に直接置いたCSVは処理しない)。
 - 製品を追加したとき(このページの作り直し)も `sheet-prices.json` を作り直すので、追加した製品にすでに価格データがあればすぐ結び付く。
 
 ## 価格調査(GPT → Claude)
