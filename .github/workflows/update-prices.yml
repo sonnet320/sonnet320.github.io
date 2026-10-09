@@ -1,5 +1,6 @@
 # GPTの価格CSVを data/incoming/ に置くと、自動で data/prices.json と data/prices_long.csv を作り直す。
-# 処理したCSVは data/archive/ に移す。CSVに決まり違反があると止まり、GitHubからメールが届く(サイトは前のまま)。
+# 処理したCSVは data/archive/ に移す。CPU・GPU・SSD 以外(ファン・CPUクーラー・ケース)は data/parts.json に入り、
+# data/sheet-prices.json(シート・ランキング用の最新価格)も作り直す。CSVに決まり違反があると止まり、GitHubからメールが届く(サイトは前のまま)。
 name: 価格データを更新
 
 on:
@@ -25,6 +26,10 @@ jobs:
         with:
           python-version: '3.12'
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: CSVを変換
         id: convert
         shell: bash
@@ -39,6 +44,8 @@ jobs:
           python tools/make_prices.py --out data "${files[@]}"
           mkdir -p data/archive
           for f in "${files[@]}"; do git mv "$f" "data/archive/$(basename "$f")" 2>/dev/null || mv "$f" data/archive/; done
+          # 価格をPC構成シート・ランキングの製品に結び付ける(data/sheet-prices.json。サイトのシートとランキングが開いたときに読む)
+          python tools/build/link_prices.py
           echo "found=true" >> "$GITHUB_OUTPUT"
 
       - name: 結果を保存

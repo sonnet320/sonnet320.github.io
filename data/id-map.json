@@ -1,0 +1,4 @@
+{
+ "_説明": "価格データ(GPTのCSV)の製品ID → PC構成シートのID。自動で結び付かない製品だけ書く。例 \"fan-xxx\": \"nfa14\"(ファン)、\"cooler-xxx\": \"nc-d15g2\"(クーラー)、\"case-xxx\": \"haf2500\"(ケース)、\"gpu-xxx\": \"msi-suprim-soc-5080\"(グラボのカード)。CPUは製品名のまま結び付くので不要。",
+ "_例": {"fan-example-id": "nfa14"}
+}

@@ -24,8 +24,15 @@
 | `tools/build/sheet-bridge.js` | サイトに埋め込むときのつなぎ(おすすめBTO・ランキングからの受け渡し) |
 | `tools/build/ranking-template.html`・`extract_data.cjs` | ランキングのひな形と、シートからデータを取り出すスクリプト |
 | `tools/build/site_theme.py` | ランキングをサイトの色(生成り・深緑)にする |
+| `tools/build/link_prices.py`・`catalog.cjs` | 毎日の価格データ(`data/prices.json`・`data/parts.json`)をシートの製品に結び付けて `data/sheet-prices.json` を作る。結び付かない製品は `data/id-map.json` に書く |
 
 手元で作るとき:`python3 tools/build/build_pages.py`(Python 3 と Node.js が必要)。
+
+## 価格との連動
+- サイトのPC構成シートとランキングは、開いたときに `data/sheet-prices.json` を読み、製品ごとの「いちばん新しい調査日の在庫ありの最安値」で目安の価格を置き換える
+  (CPU・グラフィックボード・CPUクーラー・ケースファン・ケース。メモリ・電源・マザーボード・SSDの目安は今のまま)。
+- GPTのCSVを `data/incoming/` に置くと、`update-prices.yml` が `prices.json`・`parts.json`・`sheet-prices.json` を作り直す(価格は許可なしで反映される。今までどおり)。
+- 製品を追加したとき(このページの作り直し)も `sheet-prices.json` を作り直すので、追加した製品にすでに価格データがあればすぐ結び付く。
 
 ## 気をつけること
 - `pc-sheet/index.html`・`fan-ranking/index.html` は直接直さない(次に作り直したとき消える)。直すのは `src/` と `tools/build/`。

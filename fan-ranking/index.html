@@ -176,7 +176,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const f1=v=>(Math.round(v*10)/10).toFixed(1);
 const yen=v=>'¥'+Math.round(v).toLocaleString('ja-JP');
-const PD=D.priceDate.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$2/$3');
+let PD=D.priceDate.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$2/$3');
 
 /* ---- state (per viewer; remembered when the browser allows) ---- */
 const SITE=true;
@@ -470,8 +470,18 @@ if(SITE&&window.parent!==window){
   addEventListener('message',e=>{if(e.source===window.parent&&e.origin===location.origin&&e.data&&e.data.channel==='fan-ranking'&&e.data.type==='request-height')sendH();});
   sendH();
 }
-$('meta').textContent=`ファン ${D.fans.length}機種・クーラー ${D.coolers.length}製品 · 価格 ${D.priceDate}`;
+const setMeta=()=>{$('meta').textContent=`ファン ${D.fans.length}機種・クーラー ${D.coolers.length}製品 · 価格 ${D.priceDate}`;};
+setMeta();
 $('foot').innerHTML='仕様はメーカー公表値(2026年9〜10月確認)。冷却能力と換算した風量は目安で、実際の温度・騒音はケースや取り付け方で変わります。';
 render();
+/* the site: the daily price research (data/sheet-prices.json) replaces the built-in prices of the products it found in stock */
+if(SITE)fetch('../data/sheet-prices.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{
+  if(!d)return;
+  const ok=v=>Number.isFinite(v)&&v>0&&v<10000000, days=[];
+  for(const [k,src] of [['fan',d.fan],['cooler',d.cooler]])for(const [id,v] of Object.entries(src||{}))if(ok(v)){D.price[k][id]=v;const t=(d.date||{})[k+'/'+id];if(t)days.push(t);}
+  if(!days.length)return;
+  days.push(D.priceDate);days.sort();const md=t=>t.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$2/$3');
+  if(days[days.length-1]>D.priceDate){D.priceDate=days[days.length-1];PD=days[0]===days[days.length-1]?md(days[0]):`${md(days[0])}〜${md(days[days.length-1])}`;setMeta();render();}
+}).catch(()=>{});
 </script>
 </body></html>

@@ -4,7 +4,7 @@
   fan-ranking/index.html … ファン・クーラーランキング(サイト版)
 
 usage:
-  python3 tools/build/build_pages.py                 サイトの2ページを作る(GitHub Actions もこれを実行)
+  python3 tools/build/build_pages.py                 サイトの2ページと data/sheet-prices.json を作る(GitHub Actions もこれを実行)
   python3 tools/build/build_pages.py --check         作り直した結果が今のファイルと同じか調べる(違えば終了コード1)
   python3 tools/build/build_pages.py --artifact-ranking out.html   Artifact版のランキングを out.html に作る
 
@@ -77,6 +77,12 @@ def main(argv):
         open(out, 'w', encoding='utf-8').write(ranking_body(SRC, False))
         print('wrote', out)
         return 0
+    import link_prices   # data/sheet-prices.json(毎日の価格をシートの製品に結び付けたもの)も一緒に作る
+    if '--check' in argv:
+        if link_prices.main(['--check']):
+            return 1
+    else:
+        link_prices.main([])
     src = read(SRC)
     pages = {
         os.path.join(ROOT, 'pc-sheet', 'index.html'): sheet_page(src),

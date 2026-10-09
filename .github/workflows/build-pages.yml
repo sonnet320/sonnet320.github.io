@@ -13,12 +13,14 @@ on:
     paths:
       - 'src/**'
       - 'tools/build/**'
+      - 'data/id-map.json'
   pull_request:
     branches:
       - main
     paths:
       - 'src/**'
       - 'tools/build/**'
+      - 'data/id-map.json'
       - 'pc-sheet/**'
       - 'fan-ranking/**'
   workflow_dispatch:
@@ -56,7 +58,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add pc-sheet/index.html fan-ranking/index.html
+          git add pc-sheet/index.html fan-ranking/index.html data/sheet-prices.json
           if git diff --cached --quiet; then
             echo "ページは最新です"
           else

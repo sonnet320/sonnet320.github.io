@@ -57,6 +57,29 @@ async function websiteCompute(options={}){
   }finally{websiteComputing=false;diagRun=prevDiag;running=prevRun;warm=0;document.body.inert=previousInert;}
 }
 
+/* ---- daily prices (GPT's research → data/sheet-prices.json, made by tools/build/link_prices.py) ----
+   the site's sheet replaces its built-in reference prices with the latest lowest in-stock price of each matched product */
+let websiteLivePrices=null;
+const websiteMd=d=>{const m=/^\d{4}-(\d{2})-(\d{2})$/.exec(d||'');return m?`${+m[1]}月${+m[2]}日`:d;};
+async function websiteLoadLivePrices(){
+  try{
+    const r=await fetch('../data/sheet-prices.json',{cache:'no-cache'});if(!r.ok)return;
+    const d=await r.json();if(!d||typeof d!=='object')return;
+    const num=o=>Object.fromEntries(Object.entries(o||{}).filter(([k,v])=>typeof k==='string'&&Number.isFinite(v)&&v>0&&v<10000000));
+    Object.assign(CPU_PRICE,num(d.cpu));Object.assign(GPU_CARD_PRICE,num(d.gpuCard));Object.assign(COOLER_PRICE,num(d.cooler));
+    Object.assign(FAN_PRICE,num(d.fan));Object.assign(CASE_PRICE,num(d.case));
+    websiteLivePrices=d;
+    const days=[...new Set(Object.values(d.date||{}))].sort(), LBL={cpu:'CPU',gpuCard:'グラフィックボード',cooler:'CPUクーラー',fan:'ケースファン',case:'ケース'}, has=Object.keys(LBL).filter(k=>Object.keys(num(d[k])).length), n=has.reduce((s,k)=>s+Object.keys(num(d[k])).length,0);
+    const card=document.getElementById('pricecard'), hint=card&&card.querySelector('.hint');
+    if(hint&&n&&!document.getElementById('live-price-note')){
+      const p=document.createElement('p');p.className='hint';p.id='live-price-note';
+      p.textContent=`このサイトでは、毎日の価格調査(${days.length>1?websiteMd(days[0])+'〜'+websiteMd(days[days.length-1]):websiteMd(days[0])})で在庫ありの最安値が分かった${n}製品(${has.map(k=>LBL[k]).join('・')})の目安を、その価格に置き換えています。`;
+      hint.after(p);
+    }
+    updatePrices();
+  }catch(e){}
+}
+
 /* ---- parts from the price sheet (?parts=id,id,id or an 'apply-parts' message) ---- */
 let websitePrices=null;
 async function websitePriceData(){
@@ -151,5 +174,6 @@ async function initWebsiteBridge(){
     try{websiteApplyFans(fans.split(',').filter(Boolean));}
     catch(e){msg(e.message);websiteSend('error',{message:e.message});}
   }
+  await websiteLoadLivePrices();
   websiteSend('ready');websiteHeight();
 }
