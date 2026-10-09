@@ -51,7 +51,9 @@ async function selectProduct(p){
   ['temp-cpu','temp-gpu','temp-vrm','result-grade'].forEach(id=>$(id).textContent='—');$('result-conditions').replaceChildren();
   $('load-build').disabled=!sheetReady||loadingBuild;$('load-status').textContent='';
   $('case-note').textContent=p.genericCase?'目安（汎用ケースで計算）':'ケース：'+p.case;
-  const shop=safeURL(p.affiliateUrl);$('shop-link').hidden=!p.affiliateUrl||!shop||p.sample;if(shop)$('shop-link').href=shop.href;
+  // an affiliate link is marked PR (rel sponsored); without one, the product page itself is linked without the mark
+  const aff=!!p.affiliateUrl, shop=safeURL(p.affiliateUrl||p.url||''), sl=$('shop-link');
+  sl.hidden=!shop||p.sample;if(shop)sl.href=shop.href;sl.rel=aff?'noopener noreferrer sponsored':'noopener noreferrer';$('shop-pr').hidden=!aff;
   try{
     const r=await getJSON(p.result);if(seq!==resultSequence)return;
     if(r.presetId&&r.presetId!==p.id)throw new Error('この構成と計算結果が一致していません。');
