@@ -7,7 +7,8 @@
 - 入力は列名で自動判別します(古い台帳形式 / SSD形式 / 標準形式)。
 - 既存の out/prices_long.csv があれば読み込み、(日付, 製品ID, 店舗) が同じ行は新しい入力で置き換えます。
 - グラフに使う価格は「購入できる価格」だけ。在庫なし・取扱終了の参考価格は価格欄に入れません。
-- 出力: prices_long.csv(標準列・追記用) と prices.json(グラフ用)
+- 出力: prices_long.csv(標準列・追記用) と prices.json(グラフ用)。CPU・GPU・SSD 以外(ファン・CPUクーラー・ケースなど)は
+  parts_long.csv と parts.json に分けて書く(価格推移ページは使わず、PC構成シートとランキングが使う)
 """
 import argparse, csv, json, re, sys
 from pathlib import Path
@@ -121,31 +122,12 @@ def read(path):
         return [x for x in (conv(r) for r in rd) if x]
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument('inputs', nargs='+')
-    ap.add_argument('--out', required=True)
-    ap.add_argument('--categories', default='CPU,GPU,SSD')
-    a = ap.parse_args()
-    cats = set(a.categories.split(','))
-    out = Path(a.out)
-    out.mkdir(parents=True, exist_ok=True)
-    rows = {}
-    old = out / 'prices_long.csv'
-    if old.exists():
-        for r in read(old):
-            rows[(r['date'], r['id'], r['store'])] = r
-    n = 0
-    for p in a.inputs:
-        for r in read(p):
-            if r['category'] in cats and r['date']:
-                rows[(r['date'], r['id'], r['store'])] = r
-                n += 1
-    data = sorted(rows.values(), key=lambda r: (r['date'], r['category'], r['id'], r['store']))
+def write_set(out, base, data, title):
+    """data(標準列の行)を out/<base>_long.csv と out/<base>.json に書く。"""
     for r in data:
         assert r['status'] in STATUSES, r
         assert (r['status'] == '購入可') == bool(r['price']), r  # 価格は「購入可」の行だけ
-    with open(out / 'prices_long.csv', 'w', encoding='utf-8-sig', newline='') as f:
+    with open(out / f'{base}_long.csv', 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.writer(f)
         w.writerow(STD)
         for r in data:
@@ -158,14 +140,43 @@ def main():
           'stores': sorted({r['store'] for r in data}),
           'products': sorted(prods.values(), key=lambda p: (p['category'], p['group'], p['name'])),
           'observations': obs}
-    (out / 'prices.json').write_text(json.dumps(js, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    (out / f'{base}.json').write_text(json.dumps(js, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     by = {}
     for r in data:
         by.setdefault((r['date'], r['category']), []).append(r)
-    print(f'入力 {n} 行 → 合計 {len(data)} 行 / 製品 {len(prods)}')
+    print(f'{title}:合計 {len(data)} 行 / 製品 {len(prods)}')
     for (d, c), v in sorted(by.items()):
         b = sum(1 for r in v if r['status'] == '購入可')
         print(f'  {d} {c}: {len(v)} 行(購入可 {b})')
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('inputs', nargs='+')
+    ap.add_argument('--out', required=True)
+    ap.add_argument('--categories', default='CPU,GPU,SSD')
+    a = ap.parse_args()
+    cats = set(a.categories.split(','))
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    # prices.*:価格推移ページの CPU・GPU・SSD。parts.*:それ以外(ファン・CPUクーラー・ケースなど。PC構成シートとランキングが使う)
+    rows, parts = {}, {}
+    for base, store in (('prices', rows), ('parts', parts)):
+        old = out / f'{base}_long.csv'
+        if old.exists():
+            for r in read(old):
+                store[(r['date'], r['id'], r['store'])] = r
+    n = 0
+    for p in a.inputs:
+        for r in read(p):
+            if r['date']:
+                (rows if r['category'] in cats else parts)[(r['date'], r['id'], r['store'])] = r
+                n += 1
+    print(f'入力 {n} 行')
+    key = lambda r: (r['date'], r['category'], r['id'], r['store'])
+    write_set(out, 'prices', sorted(rows.values(), key=key), 'CPU・GPU・SSD')
+    if parts:
+        write_set(out, 'parts', sorted(parts.values(), key=key), 'ファン・クーラー・ケースなど')
 
 
 if __name__ == '__main__':

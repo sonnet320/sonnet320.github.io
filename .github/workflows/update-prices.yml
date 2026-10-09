@@ -1,5 +1,12 @@
-# GPTの価格CSVを data/incoming/ に置くと、自動で data/prices.json と data/prices_long.csv を作り直す。
-# 処理したCSVは data/archive/ に移す。CSVに決まり違反があると止まり、GitHubからメールが届く(サイトは前のまま)。
+# 価格の反映(GPTの調査 → Claude → あなたの Merge で公開)
+#   1. GPTの価格CSVを Claude に渡す。Claude が main 以外のブランチ(例 claude/prices-20261010)の data/incoming/ に置いて push する
+#   2. このワークフローがそのブランチで CSV を変換する:data/prices.json・prices_long.csv(CPU・GPU・SSD)、
+#      data/parts.json・parts_long.csv(ファン・CPUクーラー・ケース)、data/sheet-prices.json(シート・ランキング用の最新価格)。
+#      処理したCSVは data/archive/ に移す
+#   3. main へのプルリクエストを作る(まだなければ)。サイトはまだ変わらない
+#   4. あなたがプルリクエストを Merge したときだけ、サイトの価格が変わる(= 許可)
+# CSVに決まり違反があると止まり、GitHubからメールが届く(サイトは前のまま)。
+# main の data/incoming/ に直接置かれたCSVは処理しない(許可なしで反映しないため)。そのときは警告を出す。
 name: 価格データを更新
 
 on:
@@ -10,20 +17,28 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
-  group: update-prices
+  group: update-prices-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   update:
+    if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: CSVを変換
         id: convert
@@ -39,6 +54,8 @@ jobs:
           python tools/make_prices.py --out data "${files[@]}"
           mkdir -p data/archive
           for f in "${files[@]}"; do git mv "$f" "data/archive/$(basename "$f")" 2>/dev/null || mv "$f" data/archive/; done
+          # 価格をPC構成シート・ランキングの製品に結び付ける(結び付かない製品は警告に出る → data/id-map.json に足す)
+          python tools/build/link_prices.py
           echo "found=true" >> "$GITHUB_OUTPUT"
 
       - name: 結果を保存
@@ -54,4 +71,43 @@ jobs:
             day=$(python -c "import json;print(json.load(open('data/prices.json'))['updated'])")
             git commit -m "価格データを更新(${day})"
             git push
+          fi
+
+      - name: プルリクエストを作る
+        if: steps.convert.outputs.found == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')" ]; then
+            echo "プルリクエストはもうあります"
+            exit 0
+          fi
+          title="$(git log --format=%s origin/main..HEAD | grep -v '^ページを作り直す' | tail -n 1)"
+          [ -n "$title" ] || title="$BRANCH"
+          {
+            echo "GPTの価格調査を変換しました(価格推移ページ・PC構成シート・ファン・クーラーランキングの価格)。"
+            echo
+            echo "**Merge するとサイトの価格が変わります。** 反映したくないときは、このまま閉じてください。"
+            echo
+            echo "変更したコミット:"
+            git log --format='- %s' origin/main..HEAD
+          } > pr-body.md
+          gh pr create --base main --head "$BRANCH" --title "$title" --body-file pr-body.md \
+            || echo "::warning::プルリクエストを自動で作れませんでした。Settings → Actions → General の「Allow GitHub Actions to create and approve pull requests」をオンにするか、GitHub の画面から作ってください。"
+
+  main-guard:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: main に直接置かれたCSVは処理しない
+        shell: bash
+        run: |
+          shopt -s nullglob
+          files=(data/incoming/*.csv)
+          if [ ${#files[@]} -gt 0 ]; then
+            echo "::warning::main の data/incoming/ に置かれたCSV(${files[*]})は処理しません(価格の反映は Merge で許可する決まり)。CSVを Claude に渡してください。"
           fi

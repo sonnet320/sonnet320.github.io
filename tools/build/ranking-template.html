@@ -1,0 +1,471 @@
+<title>ファン・クーラーランキング</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<style>
+/* Layout: PC構成シート・パーツ価格シートと同じ部品(色・書体)。上にタブ、その下に条件の帯、順位表を1列 */
+:root{
+  color-scheme:light;
+  --bg:#E9EDF2;--stage:#F7F9FB;--panel:#FFFFFF;--line:#CDD5DF;--ink:#18202C;--muted:#5A6576;--soft:#DDE3EA;
+  --accent:#2E7CE6;--bar:#2E7CE6;--bar2:#9DBDEB;--hl:#EEF4FD;--hl-line:#C5D8F5;
+  --gold:#B8860B;--silver:#6E7B8C;--bronze:#A0522D;--ok:#0E8A52;--warn:#9A6A00;
+  --shadow:0 1px 2px rgba(24,32,44,.06),0 8px 24px rgba(24,32,44,.06);
+  --jp:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --bg:#0E1218;--stage:#151B24;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--soft:#222B38;
+  --accent:#4E9BFF;--bar:#4E9BFF;--bar2:#2F4A73;--hl:#1E2C44;--hl-line:#2F4A73;
+  --gold:#E3B341;--silver:#A9B4C2;--bronze:#D98B5F;--ok:#35C985;--warn:#E0B04A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0E1218;--stage:#151B24;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--soft:#222B38;
+  --accent:#4E9BFF;--bar:#4E9BFF;--bar2:#2F4A73;--hl:#1E2C44;--hl-line:#2F4A73;
+  --gold:#E3B341;--silver:#A9B4C2;--bronze:#D98B5F;--ok:#35C985;--warn:#E0B04A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--jp);font-size:14px;line-height:1.55;padding:20px 16px 28px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 20px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.eyebrow{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font-size:24px;font-weight:900;line-height:1.3;text-wrap:balance}
+.meta{font:500 12px var(--mono);color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tabs button{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--muted);font-weight:700;padding:8px 18px}
+.tabs button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);min-width:0}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.grp{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.grp>span{font:600 11px var(--mono);letter-spacing:.06em;margin-right:2px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.seg button{border:0;border-right:1px solid var(--line);background:var(--panel);color:var(--muted);font-size:13px;font-weight:700;padding:5px 11px}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--panel)}
+.chk{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.chk input{margin:0;width:15px;height:15px;accent-color:var(--accent)}
+.lead{padding:12px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.lead b{color:var(--ink);font-size:14px}
+ol.rank{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:44px minmax(0,1fr) minmax(150px,240px);gap:4px 14px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--soft)}
+.row:last-child{border-bottom:0}
+.no{font:700 20px var(--mono);text-align:center;color:var(--muted);font-variant-numeric:tabular-nums}
+.row.r1 .no{color:var(--gold)}.row.r2 .no{color:var(--silver)}.row.r3 .no{color:var(--bronze)}
+.row.r1,.row.r2,.row.r3{background:var(--stage)}
+.nm{font-weight:700;overflow-wrap:anywhere;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.tag{font:600 10.5px var(--mono);letter-spacing:.03em;border:1px solid var(--line);border-radius:4px;padding:0 5px;color:var(--muted);background:var(--panel);white-space:nowrap}
+.tag.rev{border-color:var(--hl-line);color:var(--accent)}
+.tag.price{border-color:transparent;background:var(--hl);color:var(--ink)}
+.sub{font-size:12px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}
+.sub .w{color:var(--warn)}
+.val{display:flex;flex-direction:column;gap:4px;min-width:0}
+.big{font:700 18px var(--mono);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.big small{font-size:11px;font-weight:500;color:var(--muted);margin-left:3px}
+.track{height:7px;border-radius:4px;background:var(--soft);overflow:hidden}
+.fill{height:100%;border-radius:4px;background:var(--bar)}
+.fill.alt{background:var(--bar2)}
+.side{font:500 11px var(--mono);color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.empty{padding:22px 14px;color:var(--muted);font-size:13px}
+.out{padding:12px 14px;border-top:1px solid var(--line);background:var(--stage);font-size:12px;color:var(--muted);border-radius:0 0 12px 12px}
+.out summary{cursor:pointer;font-weight:700}
+.out ul{margin:6px 0 0;padding-left:18px}
+.how{padding:14px 16px;font-size:13px}
+.how h2{margin:0 0 6px;font-size:15px}
+.how p{margin:6px 0;max-width:70ch}
+.how code{font:500 12px var(--mono);background:var(--stage);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.foot{font-size:12px;color:var(--muted)}
+/* fan → PC構成シート */
+.addb{margin-top:6px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--accent);font-size:12px;font-weight:700;padding:2px 10px}
+.addb:hover{border-color:var(--accent)}
+.addb.on{background:var(--hl);border-color:var(--hl-line)}
+.tray{padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.tray-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 12px}
+.tray-head b{font-size:15px}
+.tray-head span{font-size:12px;color:var(--muted)}
+.slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.slot{border:1px solid var(--line);border-radius:9px;padding:7px 9px;background:var(--stage);display:flex;flex-direction:column;gap:1px;min-width:0;position:relative}
+.slot.empty{border-style:dashed;background:transparent}
+.slot .k{font:700 10.5px var(--mono);letter-spacing:.06em;color:var(--muted)}
+.slot .v{font-weight:700;font-size:13px;overflow-wrap:anywhere;padding-right:20px}
+.slot .d{font-size:11.5px;color:var(--muted)}
+.slot .x{position:absolute;top:4px;right:4px;border:0;background:transparent;color:var(--muted);width:22px;height:22px;border-radius:5px;font-size:15px;line-height:1}
+.slot .x:hover{background:var(--soft);color:var(--ink)}
+.tray-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.btn{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font-size:13px;font-weight:700;padding:6px 14px;text-decoration:none;display:inline-block}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--panel)}
+.btn:disabled{opacity:.45;cursor:default}
+.tmsg{font-size:12px;color:var(--muted);margin:0}
+.copybox{width:100%;font:500 11px var(--mono);border:1px solid var(--line);border-radius:6px;background:var(--stage);color:var(--ink);padding:6px;min-height:60px}
+.ov{position:fixed;inset:0;z-index:30;background:color-mix(in srgb,var(--ink) 40%,transparent);display:flex;align-items:center;justify-content:center;padding:16px}
+/* embedded in a page that grows the frame to full height: the popup opens next to the button, not mid-frame */
+.ov.emb{position:absolute;inset:0 0 auto 0;align-items:flex-start}
+.ov.emb .dlg{max-height:none}
+.dlg{width:min(460px,100%);max-height:calc(100vh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:12px}
+.dlg h2{margin:0;font-size:16px;overflow-wrap:anywhere}
+.dlg .hint{margin:0;font-size:12px;color:var(--muted)}
+.prow{display:grid;grid-template-columns:3.2em auto minmax(0,1fr);align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--soft)}
+.prow:last-of-type{border-bottom:0}
+.prow>b{font-size:14px}
+.step{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.step button{border:0;background:var(--panel);color:var(--ink);width:32px;height:30px;font-size:16px;font-weight:700}
+.step button:disabled{color:var(--soft);cursor:default}
+.step output{min-width:2.4em;text-align:center;font:700 15px var(--mono);font-variant-numeric:tabular-nums}
+.prow .seg{justify-self:end}
+.prow .seg button{padding:4px 10px;font-size:12px}
+.prow.zero .seg{opacity:.35;pointer-events:none}
+.dlg-foot{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+@media (max-width:640px){.slots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .row{grid-template-columns:34px minmax(0,1fr);}
+  .row .val{grid-column:2}
+  .big{text-align:left}.side{text-align:left}
+  .no{font-size:17px}
+}
+@media (prefers-reduced-motion:no-preference){.fill{transition:width .25s ease}}
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <div>
+      <div class="eyebrow">そねっとの趣味部屋 · PC構成シート</div>
+      <h1>ファン・クーラーランキング</h1>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="ランキングの種類">
+    <button type="button" role="tab" id="tab-fan" data-tab="fan" aria-selected="true">ケースファン</button>
+    <button type="button" role="tab" id="tab-air" data-tab="air" aria-selected="false">空冷CPUクーラー</button>
+    <button type="button" role="tab" id="tab-aio" data-tab="aio" aria-selected="false">水冷CPUクーラー</button>
+  </div>
+
+  <section class="card tray" id="tray" aria-label="PC構成シートに入れるファン"></section>
+
+  <section class="card" id="board" aria-live="polite">
+    <div class="ctrl" id="ctrl"></div>
+    <div class="lead" id="lead"></div>
+    <ol class="rank" id="list"></ol>
+    <div class="out" id="out" hidden></div>
+  </section>
+
+  <section class="card how" id="how"></section>
+  <p class="foot" id="foot"></p>
+</div>
+<div class="ov" id="ov" hidden><div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t" id="dlg"></div></div>
+
+<script>
+const D=/*DATA*/null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const f1=v=>(Math.round(v*10)/10).toFixed(1);
+const yen=v=>'¥'+Math.round(v).toLocaleString('ja-JP');
+let PD=D.priceDate.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$2/$3');
+
+/* ---- state (per viewer; remembered when the browser allows) ---- */
+const SITE=/*SITE*/false;
+const DEF={build:{},tab:'fan',fan:{mode:'same',T:25,size:'all',rev:true,priced:false},air:{kind:'all',sort:'cap',priced:false},aio:{kind:'all',sort:'cap',priced:false}};
+let S=JSON.parse(JSON.stringify(DEF));
+try{const v=JSON.parse(localStorage.getItem('fan-cooler-rank')||'null');if(v&&v.fan&&v.air&&v.aio)S=Object.assign(S,v,{build:v.build&&typeof v.build==='object'?v.build:{}},{fan:Object.assign(S.fan,v.fan),air:Object.assign(S.air,v.air),aio:Object.assign(S.aio,v.aio)});}catch(e){}
+const h0=(location.hash||'').slice(1);if(['fan','air','aio'].includes(h0))S.tab=h0;
+const save=()=>{try{localStorage.setItem('fan-cooler-rank',JSON.stringify(S));}catch(e){}};
+
+/* ---- fan noise model: the same as the PC構成シート (L = Lref + 50·log10(N/Nref), airflow ∝ rpm^1.14) ---- */
+const NOISE_K=50,NOISE_FLOOR=0.2,QEXP=1.14;
+function rpmForNoise(n,max,T){
+  let N=n.rpm*Math.pow(10,(T-n.db)/NOISE_K),cap=false,low=false;
+  if(N>max){N=max;cap=true;}
+  const lo=Math.max(n.rmin||0,NOISE_FLOOR*max);if(N<lo){N=lo;low=true;}
+  return {N,cap,low,pct:N/max*100,db:n.db+NOISE_K*Math.log10(N/n.rpm)};
+}
+function noiseMax(n,max){return n.db+NOISE_K*Math.log10(max/n.rpm);}   // estimated dBA at the maker's max rpm
+function noiseRef(n,max){
+  const s=D.noiseSrc[n.s], link=s?` <a href="${esc(s.u)}" target="_blank" rel="noopener">${n.cyb?'Cybenetics #'+esc(n.cyb):'出典'}</a>`:'';
+  if(n.cyb)return `Cybenetics 実測 ${n.db} dBA(${Math.round(n.rpm)}rpm)`+(n.rel?`<span class="w">・測定は「${esc(n.rel)}」</span>`:'')+link;
+  return `公称 ${n.le?'≤':''}${n.db} dBA(${n.rpm}rpm${n.mode?'・'+esc(n.mode)+'モード':''})`+(n.diff?`<span class="w">・最大${max}rpmとは別の回転数の値</span>`:'')+link;
+}
+
+/* ---- rows ---- */
+function fanRows(){
+  const F=S.fan, rows=[], out=[];
+  for(const m of D.fans){
+    if(F.size!=='all'&&m.size!==+F.size)continue;
+    if(!F.rev&&m.rev)continue;
+    const price=D.price.fan[m.id];
+    if(F.priced&&price==null)continue;
+    const n=D.noise[m.id], has=n&&n.db!=null;
+    const r={m,n:has?n:null,price,why:has?null:(n&&n.why)||'騒音のデータがない'};
+    if(has){
+      r.maxDb=noiseMax(n,m.rpm);
+      const x=rpmForNoise(n,m.rpm,F.T),k=x.N/m.rpm;
+      Object.assign(r,{x,q:m.cfm*Math.pow(k,QEXP),p:m.mm*k*k});
+    }
+    if(F.mode!=='max'&&!has){out.push(r);continue;}
+    rows.push(r);
+  }
+  if(F.mode==='same')rows.sort((a,b)=>b.q-a.q||b.m.cfm-a.m.cfm);
+  else if(F.mode==='max')rows.sort((a,b)=>b.m.cfm-a.m.cfm||(a.maxDb??99)-(b.maxDb??99));
+  else rows.sort((a,b)=>b.m.cfm/b.maxDb-a.m.cfm/a.maxDb);
+  return {rows,out};
+}
+const AIR_KIND={single:c=>c.type==='air',dual:c=>c.type==='air2',top:c=>c.type==='top'};
+const KIND_NAME={air:'シングルタワー',air2:'デュアルタワー',top:'トップフロー',aio:'簡易水冷'};
+function radFan(c){const f=c.rf&&D.fanSpec[c.rf];return f?{name:f.name,cfm:f.cfm,total:f.cfm*c.fans}:null;}
+function coolerRows(t){
+  const C=S[t], rows=[], out=[];
+  for(const c of D.coolers){
+    if(t==='aio'?c.type!=='aio':c.type==='aio')continue;
+    if(C.kind!=='all'&&(t==='aio'?c.rad!==+C.kind:!AIR_KIND[C.kind](c)))continue;
+    const price=D.price.cooler[c.id];
+    if(C.priced&&price==null)continue;
+    const r={c,E:c.cap.E,price,rf:t==='aio'?radFan(c):null};
+    r.cp=price?r.E/price*1000:null;
+    if(C.sort!=='cap'&&price==null){out.push(r);continue;}
+    rows.push(r);
+  }
+  const tie=(a,b)=>((b.rf?b.rf.total:b.c.fq||0)-(a.rf?a.rf.total:a.c.fq||0));
+  if(C.sort==='cap')rows.sort((a,b)=>b.E-a.E||tie(a,b));
+  else if(C.sort==='price')rows.sort((a,b)=>a.price-b.price||b.E-a.E);
+  else rows.sort((a,b)=>b.cp-a.cp||b.E-a.E);
+  return {rows,out};
+}
+
+/* ---- controls ---- */
+const seg=(key,opts,cur,label)=>`<div class="grp"><span>${label}</span><div class="seg" role="group" aria-label="${label}">`+
+  opts.map(([v,t])=>`<button type="button" data-k="${key}" data-v="${v}" aria-pressed="${String(String(cur)===String(v))}">${t}</button>`).join('')+'</div></div>';
+const chk=(key,on,label)=>`<label class="chk"><input type="checkbox" id="c-${key.replace('.','-')}" data-k="${key}"${on?' checked':''}>${label}</label>`;
+function renderCtrl(){
+  const t=S.tab;let h='';
+  if(t==='fan'){const F=S.fan;
+    h=seg('fan.mode',[['same','同じ騒音での風量'],['max','最大風量'],['ratio','風量÷騒音']],F.mode,'並び順')
+     +(F.mode==='same'?seg('fan.T',[[20,'20'],[25,'25'],[30,'30'],[35,'35']],F.T,'騒音 dBA'):'')
+     +seg('fan.size',[['all','すべて'],...[...new Set(D.fans.map(f=>f.size))].sort((a,b)=>a-b).map(z=>[z,z+'mm'])],F.size,'サイズ')
+     +chk('fan.rev',F.rev,'リバースを含む')+chk('fan.priced',F.priced,`在庫ありの価格があるものだけ`);
+  }else{const C=S[t];
+    h=seg(t+'.sort',[['cap','冷却性能'],['cp','コスパ'],['price','価格の安い順']],C.sort,'並び順')
+     +(t==='air'?seg('air.kind',[['all','すべて'],['single','シングル'],['dual','デュアル'],['top','トップフロー']],C.kind,'形')
+               :seg('aio.kind',[['all','すべて'],[240,'240'],[280,'280'],[360,'360'],[420,'420']],C.kind,'ラジエーター mm'))
+     +chk(t+'.priced',C.priced,'在庫ありの価格があるものだけ');
+  }
+  $('ctrl').innerHTML=h;
+}
+$('ctrl').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-k]');if(!b)return;
+  const [g,k]=b.dataset.k.split('.'),v=b.dataset.v;
+  S[g][k]=/^\d+$/.test(v)&&k==='T'?+v:v;save();render();
+});
+$('ctrl').addEventListener('change',e=>{
+  const i=e.target.closest('input[data-k]');if(!i)return;
+  const [g,k]=i.dataset.k.split('.');S[g][k]=i.checked;save();render();
+});
+
+/* ---- list ---- */
+const bar=(v,max,alt)=>`<div class="track"><div class="fill${alt?' alt':''}" style="width:${Math.max(2,Math.min(100,v/max*100)).toFixed(1)}%"></div></div>`;
+const rk=i=>i<3?` r${i+1}`:'';
+const priceTag=p=>p!=null?`<span class="tag price">${yen(p)}</span>`:'';
+function renderFan(){
+  const F=S.fan,{rows,out}=fanRows();
+  const lead={same:[`ファン1台を約 ${F.T} dBA に合わせたときの風量`,`同じ音の大きさで、どれだけ風を送れるかの順位です。目標の音に届かない静かなファンは最高回転のまま比べます。`],
+    max:['最大回転のときの風量(メーカー公称)','音の大きさは考えない順位です。'],
+    ratio:['最大風量 ÷ 最大回転時の騒音','最大回転での「1 dBAあたりの風量」です。回転数を下げて使うなら「同じ騒音での風量」の方が実際に近くなります。']}[F.mode];
+  $('lead').innerHTML=`<b>${lead[0]}</b><span>${lead[1]} 表示 ${rows.length}機種。</span>`;
+  if(!rows.length){$('list').innerHTML='<li class="empty">条件に合うファンがありません。サイズや「在庫ありの価格があるものだけ」を変えてください。</li>';}
+  else{
+    const val=r=>F.mode==='same'?r.q:F.mode==='max'?r.m.cfm:r.m.cfm/r.maxDb, mx=Math.max(...rows.map(val));
+    $('list').innerHTML=rows.map((r,i)=>{
+      const m=r.m, tags=`<span class="tag">${m.size}mm</span>`+(m.t!==25?`<span class="tag">厚さ${m.t}mm</span>`:'')+(m.rev?'<span class="tag rev">リバース</span>':'')+(m.noRetail?'<span class="tag">ケース付属・単体販売なし</span>':'')+priceTag(r.price);
+      let big,side,sub;
+      if(F.mode==='same'){
+        big=`${f1(r.q)}<small>CFM</small>`;
+        side=`${Math.round(r.x.N)}rpm(${Math.round(r.x.pct)}%)・静圧 ${r.p.toFixed(2)} mmH2O`;
+        sub=`最大 ${m.cfm} CFM / ${m.rpm}rpm・${noiseRef(r.n,m.rpm)}`+(r.x.cap?`<span class="w">・最高回転でも約 ${f1(r.x.db)} dBA</span>`:'')+(r.x.low?`<span class="w">・これ以上回転を下げられない(約 ${f1(r.x.db)} dBA)</span>`:'');
+      }else if(F.mode==='max'){
+        big=`${m.cfm}<small>CFM</small>`;
+        side=`${m.rpm}rpm・静圧 ${m.mm} mmH2O`+(r.n?`・最大時 約 ${r.n.le?'≤':''}${f1(r.maxDb)} dBA`:'');
+        sub=r.n?noiseRef(r.n,m.rpm):`騒音:${esc(r.why)}`;
+      }else{
+        big=`${(m.cfm/r.maxDb).toFixed(2)}<small>CFM/dBA</small>`;
+        side=`${m.cfm} CFM ÷ 約 ${r.n.le?'≤':''}${f1(r.maxDb)} dBA`;
+        sub=noiseRef(r.n,m.rpm)+((r.n.cyb||r.n.diff)?`<span class="w">・最大回転の騒音は換算値</span>`:'');
+      }
+      return `<li class="row${rk(i)}"><div class="no">${i+1}</div><div style="min-width:0"><div class="nm">${esc(m.name)}</div><div class="tags">${tags}</div><div class="sub">${sub}</div><button type="button" class="addb${inBuild(m.id)?' on':''}" data-add="${m.id}">${inBuild(m.id)?'構成に入れた位置を変える':'＋ 構成に入れる'}</button></div>`
+        +`<div class="val"><div class="big">${big}</div>${bar(val(r),mx)}<div class="side">${side}</div></div></li>`;
+    }).join('');
+  }
+  renderOut(out.map(r=>`${esc(r.m.name)}:${esc(r.why)}`),'騒音の値がなく順位に入らない機種');
+}
+function coolerSub(r,t){
+  const c=r.c, cap=c.cap;
+  const how=cap.src==='both'?`構造からの推定 ${Math.round(cap.mech)}W とメーカー公称TDP ${cap.tdp}W の平均`:cap.src==='mech'?(t==='aio'?'ラジエーターの大きさと厚さからの推定':'ヒートパイプ・フィン・ファンからの推定'):'メーカー公称TDP';
+  if(t==='aio')return `ラジエーター ${c.rad}mm・厚さ ${c.thick}mm・ファン ${c.fs}mm×${c.fans}`+(r.rf?`(${esc(r.rf.name)}、1台 ${r.rf.cfm} CFM)`:'')+`<br>${how}`;
+  const parts=[KIND_NAME[c.type]];
+  if(c.pipes)parts.push(`ヒートパイプ ${c.pipes}本`);
+  if(c.vc)parts.push('ベイパーチャンバー');
+  if(c.h)parts.push(`高さ ${c.h}mm`);
+  parts.push(c.fanNote?esc(c.fanNote):`ファン ${c.fs}mm×${c.fans}`);
+  return parts.join('・')+(c.note?`(${esc(c.note)})`:'')+`<br>${how}`;
+}
+function renderCooler(t){
+  const C=S[t],{rows,out}=coolerRows(t);
+  const lead={cap:['推定の冷却能力(W)','CPUとケース内の空気の温度差が約30℃のとき、どれだけの熱を逃がせるかの目安です。PC構成シートのCPU温度の計算と同じ値です。'+(t==='aio'?' 同じ値のときは、付属ファンの合計風量が多い方を上にしています。':'')],
+    cp:['1,000円あたりの冷却能力','推定の冷却能力 ÷ 在庫ありの最安値。価格を調べていない製品は入りません。'],
+    price:['在庫ありの最安値','安い順。価格を調べていない製品は入りません。']}[C.sort];
+  $('lead').innerHTML=`<b>${lead[0]}</b><span>${lead[1]} 表示 ${rows.length}製品。</span>`;
+  if(!rows.length){$('list').innerHTML='<li class="empty">条件に合うクーラーがありません。形・サイズの条件を変えてください。</li>';}
+  else{
+    const val=r=>C.sort==='cap'?r.E:C.sort==='cp'?r.cp:r.price, mx=Math.max(...rows.map(val));
+    $('list').innerHTML=rows.map((r,i)=>{
+      const c=r.c, tags=`<span class="tag">${t==='aio'?c.rad+'mm':KIND_NAME[c.type]}</span>`+(r.c.vc?'<span class="tag">VC</span>':'')+priceTag(r.price);
+      let big,side;
+      if(C.sort==='cap'){big=`${Math.round(r.E)}<small>W</small>`;side=(r.price!=null?`${yen(r.price)}・${r.cp.toFixed(1)} W/千円`:'在庫ありの価格は未調査')+(t==='aio'&&r.rf?`・ファン合計 ${f1(r.rf.total)} CFM`:'');}
+      else if(C.sort==='cp'){big=`${r.cp.toFixed(1)}<small>W/千円</small>`;side=`${Math.round(r.E)}W ÷ ${yen(r.price)}`;}
+      else{big=`${yen(r.price)}`;side=`${Math.round(r.E)}W・${r.cp.toFixed(1)} W/千円`;}
+      return `<li class="row${rk(i)}"><div class="no">${i+1}</div><div style="min-width:0"><div class="nm">${esc((c.brand?c.brand+' ':'')+c.name)}</div><div class="tags">${tags}</div><div class="sub">${coolerSub(r,t)}</div></div>`
+        +`<div class="val"><div class="big">${big}</div>${bar(val(r),mx,C.sort==='price')}<div class="side">${side}</div></div></li>`;
+    }).join('');
+  }
+  renderOut(out.map(r=>esc((r.c.brand?r.c.brand+' ':'')+r.c.name)),'在庫ありの価格がなく、この並び順に入らない製品');
+}
+function renderOut(items,title){
+  const o=$('out');if(!items.length){o.hidden=true;o.innerHTML='';return;}
+  o.hidden=false;o.innerHTML=`<details id="outd"><summary>${title}(${items.length})</summary><ul>${items.map(x=>`<li>${x}</li>`).join('')}</ul></details>`;
+}
+
+/* ---- explanation ---- */
+const HOW={
+ fan:`<h2>順位の決め方(ケースファン)</h2>
+  <p><b>同じ騒音での風量</b>:各ファンの騒音の値(メーカー公称、ARCTICは Cybenetics の実測で25 dBAになる回転数)から、目標の騒音になる回転数を求め、そのときの風量を出して比べます。騒音は回転数で <code>騒音 = 基準の騒音 + 50 × log10(回転数 ÷ 基準の回転数)</code>、風量は <code>回転数の1.14乗</code> に比例するとして換算しています。PC構成シートの「同じ騒音で比べる」と同じ計算です。</p>
+  <p>メーカーごとに騒音の測り方が違うので、1〜2 dBA 程度の差は誤差の範囲と考えてください。最大風量と最大静圧は同時に出る値ではありません。ケースやラジエーターに付けると、実際の風量はこれより少なくなります。</p>
+  <p>価格は ${PD} に通販5店(アーク・ツクモ・ドスパラ・パソコン工房・アプライド)で調べた、在庫ありの最安値(1個・税込)です。</p>`,
+ air:`<h2>順位の決め方(空冷CPUクーラー)</h2>
+  <p>冷却能力は、ヒートパイプの本数、タワーの数と高さ、ファンの大きさと風量、ベイパーチャンバーの有無から計算した推定値です。メーカーがTDP(対応する発熱量)を公表している製品は、推定値と公称TDPの平均にしています。PC構成シートでCPU温度を計算するときと同じ値です。</p>
+  <p>メーカーのTDPは測り方がそろっていないため、実機の温度テストの順位とは入れ替わることがあります。コスパと価格は、${PD} の在庫ありの最安値(通販5店・税込)がある製品だけで並べます。</p>`,
+ aio:`<h2>順位の決め方(水冷CPUクーラー)</h2>
+  <p>冷却能力はラジエーターの大きさ(240・280・360・420mm)と厚さから計算した推定値で、メーカーがTDPを公表している製品は推定値との平均にしています。同じ値の製品は、付属ファンの合計風量(最大回転・公称)が多い方を上にしています。</p>
+  <p>ポンプの性能や水冷ヘッドの作りは数値になっていないため、同じサイズの製品の差は小さく出ます。コスパと価格は、${PD} の在庫ありの最安値(通販5店・税込)がある製品だけで並べます。</p>`};
+
+function render(){
+  for(const b of document.querySelectorAll('.tabs button'))b.setAttribute('aria-selected',String(b.dataset.tab===S.tab));
+  const op=$('outd')&&$('outd').open;
+  renderCtrl();
+  if(S.tab==='fan')renderFan();else renderCooler(S.tab);
+  if(op&&$('outd'))$('outd').open=true;
+  $('how').innerHTML=HOW[S.tab];
+  renderTray();
+}
+document.querySelector('.tabs').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-tab]');if(!b)return;
+  S.tab=b.dataset.tab;save();
+  try{history.replaceState(null,'','#'+S.tab);}catch(err){}
+  render();
+});
+/* ---- fans → PC構成シート: a position popup and a tray ---- */
+const POS=[['front','前面','in',4],['top','天面','out',4],['rear','背面','out',1],['bottom','底面','in',4]];
+const fitN=(m,max)=>m.size<=120?max:m.size===140?(max===4?3:max):Math.max(1,Math.floor(max*125/(m.size+5)));   // 180 / 220 mm: 2 on a wall that takes four 120s
+const fanById=id=>D.fans.find(f=>f.id===id)||null;
+const inBuild=id=>POS.some(([p])=>S.build[p]&&S.build[p].model===id);
+let dlgFan=null, dlgSel={}, lastFocus=null;
+function openDlg(id){
+  const m=fanById(id);if(!m)return;
+  dlgFan=m;lastFocus=document.activeElement;dlgSel={};
+  for(const [p,,dir] of POS){const b=S.build[p];dlgSel[p]=b&&b.model===id?{n:b.count,dir:b.dir}:{n:0,dir};}
+  if(!POS.some(([p])=>dlgSel[p].n)){   // a starting point: the first wall not yet chosen
+    const free=POS.find(([p])=>!S.build[p]);
+    if(free)dlgSel[free[0]].n=free[3]===1?1:Math.min(fitN(m,free[3]),m.size===140?2:3);
+  }
+  renderDlg();
+  const ov=$('ov'), emb=window.parent!==window;   // the site grows this frame to full height, so the frame's own viewport is the whole page
+  ov.classList.toggle('emb',emb);
+  if(emb){ov.style.height=document.documentElement.scrollHeight+'px';const y=(lastFocus&&lastFocus.getBoundingClientRect?lastFocus.getBoundingClientRect().top:0)+window.scrollY;$('dlg').style.marginTop=Math.max(16,y-160)+'px';}
+  else{ov.style.height='';$('dlg').style.marginTop='';}
+  ov.hidden=false;
+  const f=$('dlg').querySelector('.step button:not(:disabled)');if(f)f.focus();
+}
+function renderDlg(){
+  const m=dlgFan, others=POS.filter(([p])=>S.build[p]&&S.build[p].model!==m.id&&dlgSel[p].n).map(([,n])=>n);
+  $('dlg').innerHTML=`<h2 id="dlg-t">${esc(m.name)}</h2><p class="hint">付ける位置と台数を選んでください。ケースに入りきらない台数は、PC構成シートが入る分だけに減らします。</p><div>`
+    +POS.map(([p,name,,max])=>{const v=dlgSel[p],mx=fitN(m,max);
+      return `<div class="prow${v.n?'':' zero'}"><b>${name}</b><span class="step"><button type="button" data-st="${p}" data-d="-1" aria-label="${name}を1台減らす"${v.n<=0?' disabled':''}>−</button><output aria-live="polite">${v.n}</output><button type="button" data-st="${p}" data-d="1" aria-label="${name}を1台増やす"${v.n>=mx?' disabled':''}>＋</button></span>`
+        +`<span class="seg" role="group" aria-label="${name}の向き"><button type="button" data-dir="${p}" data-v="in" aria-pressed="${v.dir==='in'}">吸気</button><button type="button" data-dir="${p}" data-v="out" aria-pressed="${v.dir==='out'}">排気</button></span></div>`;}).join('')
+    +`</div>`+(others.length?`<p class="hint">${others.join('・')}に入れていた別のファンは、このファンに置き換わります。</p>`:'')
+    +`<div class="dlg-foot"><button type="button" class="btn" data-dlg="cancel">キャンセル</button><button type="button" class="btn primary" data-dlg="ok">構成に入れる</button></div>`;
+}
+function closeDlg(){$('ov').hidden=true;dlgFan=null;if(lastFocus&&document.contains(lastFocus))lastFocus.focus();}
+$('dlg').addEventListener('click',e=>{
+  const st=e.target.closest('[data-st]'),dr=e.target.closest('[data-dir]'),act=e.target.closest('[data-dlg]');
+  if(st){const p=st.dataset.st,mx=+(POS.find(x=>x[0]===p)[3]);const lim=fitN(dlgFan,mx);dlgSel[p].n=Math.max(0,Math.min(lim,dlgSel[p].n+ +st.dataset.d));const k=document.activeElement&&document.activeElement.dataset;const keep=k?[k.st,k.d]:null;renderDlg();if(keep){const b=$('dlg').querySelector(`[data-st="${keep[0]}"][data-d="${keep[1]}"]`);if(b&&!b.disabled)b.focus();else{const o=$('dlg').querySelector(`[data-st="${keep[0]}"]:not(:disabled)`);if(o)o.focus();}}return;}
+  if(dr){dlgSel[dr.dataset.dir].dir=dr.dataset.v;renderDlg();const b=$('dlg').querySelector(`[data-dir="${dr.dataset.dir}"][data-v="${dr.dataset.v}"]`);if(b)b.focus();return;}
+  if(act&&act.dataset.dlg==='cancel'){closeDlg();return;}
+  if(act&&act.dataset.dlg==='ok'){
+    for(const [p] of POS){
+      const v=dlgSel[p];
+      if(v.n>0)S.build[p]={model:dlgFan.id,count:v.n,dir:v.dir};
+      else if(S.build[p]&&S.build[p].model===dlgFan.id)delete S.build[p];
+    }
+    save();closeDlg();render();trayMsg('');
+  }
+});
+$('ov').addEventListener('click',e=>{if(e.target===$('ov'))closeDlg();});
+document.addEventListener('keydown',e=>{
+  if($('ov').hidden)return;
+  if(e.key==='Escape'){closeDlg();return;}
+  if(e.key==='Tab'){const f=[...$('dlg').querySelectorAll('button:not(:disabled)')];if(!f.length)return;const i=f.indexOf(document.activeElement);
+    if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus();}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus();}}
+});
+$('list').addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(b)openDlg(b.dataset.add);});
+
+function buildData(){
+  return {type:'pc-sheet-fans',version:1,fans:POS.filter(([p])=>S.build[p]).map(([p])=>{const b=S.build[p],m=fanById(b.model);return {pos:p,model:b.model,count:b.count,dir:b.dir,name:m?m.name:''};})};
+}
+function sheetUrl(){return '../?fans='+buildData().fans.map(f=>`${f.model}:${f.pos}:${f.count}:${f.dir}`).join(',');}
+let trayNote='';
+function trayMsg(t){trayNote=t;const el=$('tmsg');if(el)el.textContent=t;}
+function renderTray(){
+  const t=$('tray'), has=POS.some(([p])=>S.build[p]);
+  t.hidden=S.tab!=='fan'&&!has;
+  const total=POS.reduce((s,[p])=>{const b=S.build[p];if(!b)return s;const pr=D.price.fan[b.model];return pr==null||s==null?null:s+pr*b.count;},has?0:null);
+  t.innerHTML=`<div class="tray-head"><b>PC構成シートに入れるファン</b><span>${has?'入れていない位置は、PC構成シートの今の配置のままです。':'ランキングの「＋ 構成に入れる」で、付ける位置と台数を選べます。'}</span></div>`
+    +`<div class="slots">`+POS.map(([p,name])=>{const b=S.build[p],m=b&&fanById(b.model);
+      if(!b||!m)return `<div class="slot empty"><span class="k">${name}</span><span class="v" style="color:var(--muted);font-weight:500">そのまま</span></div>`;
+      const pr=D.price.fan[b.model];
+      return `<div class="slot"><span class="k">${name}</span><span class="v">${esc(m.name)} ×${b.count}</span><span class="d">${b.dir==='in'?'吸気':'排気'}${pr!=null?'・'+yen(pr*b.count):''}</span><button type="button" class="x" data-rm="${p}" aria-label="${name}のファンを外す">×</button></div>`;}).join('')+`</div>`
+    +`<div class="tray-foot">`+(SITE?`<a class="btn primary" id="t-open" target="_top" href="${has?esc(sheetUrl()):'#'}"${has?'':' aria-disabled="true" tabindex="-1" style="opacity:.45;pointer-events:none"'}>PC構成シートで見る</a>`:'')
+    +`<button type="button" class="btn${SITE?'':' primary'}" id="t-copy"${has?'':' disabled'}>構成をコピー</button>`
+    +(has?`<button type="button" class="btn" id="t-clear">すべて外す</button>`:'')
+    +(total?`<span class="tmsg">ファン代 ${yen(total)}(在庫ありの最安値・税込)</span>`:'')+`</div>`
+    +`<p class="tmsg" id="tmsg" role="status">${esc(trayNote)}</p><textarea class="copybox" id="t-box" readonly hidden aria-label="コピーする内容"></textarea>`;
+}
+$('tray').addEventListener('click',async e=>{
+  const rm=e.target.closest('[data-rm]');
+  if(rm){delete S.build[rm.dataset.rm];save();render();return;}
+  if(e.target.closest('#t-clear')){S.build={};save();trayMsg('');render();return;}
+  if(e.target.closest('#t-copy')){
+    const txt=JSON.stringify(buildData()), box=$('t-box');
+    try{await navigator.clipboard.writeText(txt);box.hidden=true;
+      trayMsg('コピーしました。PC構成シートの「保存と読み込み」の欄に貼り付けると、ファンが配置されます(「元に戻す」で戻せます)。');}
+    catch(err){box.hidden=false;box.value=txt;box.focus();box.select();
+      trayMsg('自動でコピーできなかったので、下の欄の文字を選んでコピーし、PC構成シートの「保存と読み込み」に貼り付けてください。');}
+  }
+});
+
+if(SITE&&window.parent!==window){
+  let ht=0;const sendH=()=>{clearTimeout(ht);ht=setTimeout(()=>{const w=document.querySelector('.wrap');const h=Math.ceil(w.getBoundingClientRect().bottom+window.scrollY+28);window.parent.postMessage({channel:'fan-ranking',version:1,type:'height',height:h},location.origin);},60);};
+  if(typeof ResizeObserver!=='undefined')new ResizeObserver(sendH).observe(document.querySelector('.wrap'));
+  addEventListener('message',e=>{if(e.source===window.parent&&e.origin===location.origin&&e.data&&e.data.channel==='fan-ranking'&&e.data.type==='request-height')sendH();});
+  sendH();
+}
+const setMeta=()=>{$('meta').textContent=`ファン ${D.fans.length}機種・クーラー ${D.coolers.length}製品 · 価格 ${D.priceDate}`;};
+setMeta();
+$('foot').innerHTML='仕様はメーカー公表値(2026年9〜10月確認)。冷却能力と換算した風量は目安で、実際の温度・騒音はケースや取り付け方で変わります。';
+render();
+/* the site: the daily price research (data/sheet-prices.json) replaces the built-in prices of the products it found in stock */
+if(SITE)fetch('../data/sheet-prices.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{
+  if(!d)return;
+  const ok=v=>Number.isFinite(v)&&v>0&&v<10000000, days=[];
+  for(const [k,src] of [['fan',d.fan],['cooler',d.cooler]])for(const [id,v] of Object.entries(src||{}))if(ok(v)){D.price[k][id]=v;const t=(d.date||{})[k+'/'+id];if(t)days.push(t);}
+  if(!days.length)return;
+  days.push(D.priceDate);days.sort();const md=t=>t.replace(/^(\d+)-0?(\d+)-0?(\d+)$/,'$2/$3');
+  if(days[days.length-1]>D.priceDate){D.priceDate=days[days.length-1];PD=days[0]===days[days.length-1]?md(days[0]):`${md(days[0])}〜${md(days[days.length-1])}`;setMeta();render();}
+}).catch(()=>{});
+</script>
