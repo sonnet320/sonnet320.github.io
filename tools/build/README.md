@@ -34,6 +34,13 @@
 - GPTのCSVを `data/incoming/` に置くと、`update-prices.yml` が `prices.json`・`parts.json`・`sheet-prices.json` を作り直す(価格は許可なしで反映される。今までどおり)。
 - 製品を追加したとき(このページの作り直し)も `sheet-prices.json` を作り直すので、追加した製品にすでに価格データがあればすぐ結び付く。
 
+## 価格調査(GPT → Claude)
+1. Claude が `python3 tools/build/make_research_kit.py 調査キット.zip` で、GPTに渡すキットを作る。
+   シートに載っている製品が全部入り、製品IDはシートに自動で結び付くもの(作るときに全部確かめる)。製品を追加したら作り直す。
+2. ユーザーがキットを GPT に渡す → GPT が答えのCSVを返す。
+3. ユーザーがCSVを Claude に渡す → Claude が `claude/…` ブランチの `data/incoming/` に置いて push
+   (`update-prices.yml` が prices.json・parts.json・sheet-prices.json を作り直す)→ プルリクエスト → Merge で公開。
+
 ## 気をつけること
 - `pc-sheet/index.html`・`fan-ranking/index.html` は直接直さない(次に作り直したとき消える)。直すのは `src/` と `tools/build/`。
 - Claude の Artifact(PC構成シート・ランキング)はサイトとは別物。Claude が同じ本文で更新する。
