@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "id": "ark-gc-i5g56m-72003217",
+  "shop": "アーク",
+  "model": "GC-I5G56M",
+  "grade": "AG-IR10B76M4GB6I-TS1",
+  "case": "Thermaltake S100 Tempered Glass / S100 TG（CA-1Q9-00S1WN-00）",
+  "sample": false,
+  "state": {
+    "title": "アーク GC-I5G56M",
+    "price": "¥174,180",
+    "note": "AG-IR10B76M4GB6I-TS1",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Core i5-14400F",
+        "detail": "10コア / 16スレッド・65W"
+      },
+      {
+        "label": "クーラー",
+        "name": "Intel CPU用標準空冷クーラー",
+        "detail": "型番不明"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5060 Ti",
+        "detail": "VRAM 8GB"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR4-3200 16GB",
+        "detail": "8GB × 2"
+      },
+      {
+        "label": "SSD",
+        "name": "Princeton PHD-ISM2G4シリーズ NVMe Gen4 1TB",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "GIGABYTE B760M G AC D4 GEN5 Micro-ATX",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "Antec CSK650 DC",
+        "detail": "650W・80PLUS Bronze"
+      },
+      {
+        "label": "ケース",
+        "name": "Thermaltake S100 TG",
+        "detail": "ミニタワー・前面は両側面から吸気"
+      },
+      {
+        "label": "前面ファン",
+        "name": "なし",
+        "detail": "",
+        "auto": {
+          "name": "なし",
+          "detail": ""
+        }
+      },
+      {
+        "label": "天面ファン",
+        "name": "なし",
+        "detail": "",
+        "auto": {
+          "name": "なし",
+          "detail": ""
+        }
+      },
+      {
+        "label": "背面ファン",
+        "name": "Thermaltake S100 付属 120mmファン ×1",
+        "detail": "排気",
+        "auto": {
+          "name": "Thermaltake S100 付属 120mmファン ×1",
+          "detail": "排気"
+        }
+      },
+      {
+        "label": "底面ファン",
+        "name": "なし",
+        "detail": "",
+        "auto": {
+          "name": "なし",
+          "detail": ""
+        }
+      }
+    ],
+    "board": "matx",
+    "cooler": "top",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 65,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-retail",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "clearance": 25,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": null,
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "s100tg",
+      "d": 411,
+      "h": 420,
+      "w": 220
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "h1w7o6p",
+        "x": 427.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "tts100"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 120,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 92,
+    "cFanQ": 0,
+    "cFanP": 0
+  }
+}

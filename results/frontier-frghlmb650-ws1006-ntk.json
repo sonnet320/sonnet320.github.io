@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v58-hubfix2",
+  "mode": "2d",
+  "computedAt": "2026-10-09T02:58:43.260Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 64,
+    "grade": "並",
+    "cap": null,
+    "cpu": 73.7,
+    "gpu": 70.5,
+    "vrm": 59.4,
+    "intake": 11.48,
+    "stag": 1.7,
+    "press": 44.3,
+    "rows": {
+      "cpu": "並",
+      "gpu": "並",
+      "vrm": "良",
+      "intake": "要改善",
+      "stag": "優",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 6.57,
+      "cpuT": 11.48,
+      "gpuT": 1.5,
+      "vrmT": 10.69,
+      "vrmV": 0.327,
+      "exT": 8.2,
+      "pIn": 0.088,
+      "stag": 0.017,
+      "fanIn": 79.6,
+      "fanOut": 34.9,
+      "leakIn": 21.5,
+      "leakOut": 66.2
+    },
+    "coolQ": 26.2,
+    "gpuQ": 42.3
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 82.6,
+    "gpuPower": 326.15999999999997
+  },
+  "image": "results/frontier-frghlmb650-ws1006-ntk.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "frontier-frghlmb650-ws1006-ntk"
+}

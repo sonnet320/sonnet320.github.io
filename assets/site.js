@@ -59,7 +59,7 @@ async function selectProduct(p){
     const e=r.evaluation;showTemp('temp-cpu',e.cpu);showTemp('temp-gpu',e.gpu);showTemp('temp-vrm',e.vrm);
     $('result-grade').textContent=e.grade?(e.grade+' · '+e.score+'点'):'評価なし';
     const c=r.conditions||{};const dl=$('result-conditions');
-    for(const [k,v]of [['室温',c.room+'°C'],['負荷','CPU '+c.cpuLoad+'% / GPU '+c.gpuLoad+'%'],['ファン回転数',c.fanRpm+'%'],['計算条件','2D · '+(r.calculation?.gridMm||5)+'mm格子 / '+r.simulatedSeconds+'秒'],['計算日',r.computedAt?.slice(0,10)||'未登録']])dl.append(node('dt','',k),node('dd','',v));
+    for(const [k,v]of [['室温',c.room+'°C'],['負荷',(c.cpuMode==='game'?'CPU ゲーム時(約'+Math.round(c.cpuPower)+'W)':c.cpuMode==='enc'?'CPU 動画の書き出し(約'+Math.round(c.cpuPower)+'W)':'CPU '+c.cpuLoad+'%')+' / GPU '+c.gpuLoad+'%'],['ファン回転数',c.fanRpm+'%'],['計算条件','2D · '+(r.calculation?.gridMm||5)+'mm格子 / '+r.simulatedSeconds+'秒'],['計算日',r.computedAt?.slice(0,10)||'未登録']])dl.append(node('dt','',k),node('dd','',v));
     const img=r.image;if(typeof img==='string'&&(/^data:image\/(png|jpeg);base64,/.test(img)||safeURL(img)?.origin===location.origin)){
       const image=$('result-image');image.onload=()=>{if(seq===resultSequence){image.hidden=false;$('result-placeholder').hidden=true;}};image.onerror=()=>{$('result-placeholder').textContent='図を読み込めませんでした。温度は上の計算条件による結果です。';};image.src=img;image.alt=p.name+'：2Dで計算した空気の流れと温度分布';
     }else $('result-placeholder').textContent='エアフロー図が未登録です。';

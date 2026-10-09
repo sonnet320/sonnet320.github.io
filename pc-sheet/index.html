@@ -471,7 +471,7 @@ body.present .f{border-bottom-color:transparent;pointer-events:none}
     <div class="card">
       <h2>ケース</h2>
       <label class="inline">ケースの大きさ
-        <select id="casesize"><option value="itx">小型(Mini-ITX)</option><option value="micro">ミニタワー(Micro-ATX)</option><option value="mid">ミドルタワー</option><option value="full">フルタワー</option><option value="wide">ピラーレス(幅広)</option><option value="h5flow24">NZXT H5 Flow (2024)</option><option value="ghl">FRONTIER GHL シリーズ</option><option value="s100tg">Thermaltake S100 TG</option><option value="levelth">パソコン工房 LEVELθ(S100 TG)</option><option value="nghd">マウス NEXTGEAR フルタワー(HD)</option><option value="haf2500">Cooler Master HAF II 500</option><option value="custom">カスタム</option></select>
+        <select id="casesize"><option value="itx">小型(Mini-ITX)</option><option value="micro">ミニタワー(Micro-ATX)</option><option value="mid">ミドルタワー</option><option value="full">フルタワー</option><option value="wide">ピラーレス(幅広)</option><option value="h5flow24">NZXT H5 Flow (2024)</option><option value="ghl">FRONTIER GHL シリーズ</option><option value="s100tg">Thermaltake S100 TG</option><option value="levelth">パソコン工房 LEVELθ(S100 TG)</option><option value="nghd">マウス NEXTGEAR フルタワー(HD)</option><option value="ngjg">マウス NEXTGEAR ミニタワー(JG)</option><option value="haf2500">Cooler Master HAF II 500</option><option value="custom">カスタム</option></select>
       </label>
       <div class="grid3">
         <label class="stack">奥行き(mm)<input class="numin" type="number" id="cd-d" min="300" max="700" step="5"></label>
@@ -1187,6 +1187,7 @@ const CASE_PRESETS={
   s100tg:{name:'Thermaltake S100 TG',d:411,h:420,w:220,model:'s100tg'},   // h: 441 mm with the ~20 mm feet (official) minus the feet
   levelth:{name:'パソコン工房 LEVELθ(S100 TG)',d:411,h:420,w:220,model:'levelth'},
   nghd:{name:'マウス NEXTGEAR フルタワー(HD)',d:428,h:470,w:205,model:'nghd'},
+  ngjg:{name:'マウス NEXTGEAR ミニタワー(JG)',d:405,h:390,w:220,model:'ngjg'},   // the body (official); 418 × 410 mm with protrusions
   haf2500:{name:'Cooler Master HAF II 500',d:557,h:540,w:262,model:'haf2500'},   // h: 548 mm incl. the ~8 mm feet (official side view)   // the body without handles / feet (official)   // h: 500 mm with the feet (official) minus ~15 mm of feet
 };
 /* Real case models. Official values from the maker's spec page (2026-10): outer size, clearances, mounts, included fans.
@@ -1255,6 +1256,22 @@ CASE_MODELS.nghd={
   shroud:{front:30,h:95,fanX:[]},                            // est from the photos
   stock:[{pos:'front',model:'ngrgb120',dir:'in'},{pos:'front',model:'ngrgb120',dir:'in'},{pos:'front',model:'ngrgb120',dir:'in'},
          {pos:'top',model:'ngrgb120',dir:'out'},{pos:'top',model:'ngrgb120',dir:'out'},{pos:'rear',model:'ngrgb120',dir:'out'}],
+};
+/* mouse computer NEXTGEAR mini-tower case (JG-A… series, 2025-). Official (mouse-jp.co.jp, 2026-10): body W220 × D405 × H390 mm
+   (W220 × D418 × H410 mm with protrusions), black, tempered-glass side panel; the customize page lists a 240 mm radiator on the top.
+   A review of the same new case (JG-A7G6T): mesh front, mesh top with a magnetic filter, PSU at the bottom in its own cover,
+   breathing through a filtered opening in the floor. The stock case fans differ by model and are not published (2026-10-09), so this
+   model has no stock fans; everything in est is estimated from the size and the photos. */
+CASE_MODELS.ngjg={
+  name:'マウス NEXTGEAR ミニタワー(JG)', code:'NEXTGEAR JG', detail:'ミニタワー・前面/天面メッシュ(BTO専用)',
+  d:405,h:390,w:220, dimText:'本体 405×220×390mm・突起含む 418×220×410mm',
+  maxBoard:'matx', gpuMax:300, coolerMax:155, psuMax:160, cable:20,
+  est:['gpuMax','coolerMax','psuMax','cable'],
+  rad:{front:240,top:240,topLowRam:240,topStack:55},
+  mounts:'天面 240mm水冷(公式)。ケースファンの位置・数はモデルにより異なり非公表',
+  panels:{front:'mesh',top:'mesh',rear:'vent',bottom:'fanonly'},
+  psuArea:{shroud:'solid',side:'closed',bottom:'mesh'},      // PSU cover, breathing through the floor filter (review photos)
+  shroud:{front:30,h:80,fanX:[]},                            // est: low enough for a Micro-ATX board under the 390 mm top (a 90 mm cover would overlap it)
 };
 /* Cooler Master HAF II 500 (H500G2). Official (coolermaster.com/ja-jp, 2026-10): L557 × W262 × H548 mm incl. protrusions, 79.98 L,
    Mini-ITX to E-ATX (310 mm wide), CPU cooler 220 mm (AMD) / 221 mm (Intel), PSU 210 mm (150 mm with drives north-south),
@@ -4032,7 +4049,7 @@ const CAT={
     ['サイズ(フォームファクター)',[['E-ATX','',{ff:'eatx'}],['ATX','',{ff:'atx'}],['Micro-ATX','',{ff:'matx'}],['Mini-ITX','',{ff:'itx'}]]],
   ],
   psu:[['',[['650W','80PLUS Bronze'],['750W','80PLUS Gold'],['850W','80PLUS Gold'],['1000W','80PLUS Gold'],['1200W','80PLUS Platinum']]]],
-  case:[['',[['ミドルタワー','強化ガラスサイドパネル',{casePreset:'mid'}],['ピラーレス ミドルタワー','前面・側面ガラス',{casePreset:'wide'}],['ミニタワー','Micro-ATX 対応',{casePreset:'micro'}],['フルタワー','E-ATX 対応',{casePreset:'full'}],['小型ケース','Mini-ITX 対応',{casePreset:'itx'}]]],['製品(形を実機に合わせる)',[['NZXT H5 Flow (2024)','ミドルタワー・前面/天面メッシュ',{casePreset:'h5flow24'}],['FRONTIER GHL シリーズ','ミドルタワー・前面/天面メッシュ(BTO専用)',{casePreset:'ghl'}],['Thermaltake S100 TG','ミニタワー・前面は両側面から吸気',{casePreset:'s100tg'}],['パソコン工房 LEVELθ(S100 TG)','ミニタワー(S100 TG)・天面ファン2基',{casePreset:'levelth'}],['マウス NEXTGEAR フルタワー(HD)','フルタワー・前面メッシュ(BTO専用)',{casePreset:'nghd'}],['Cooler Master HAF II 500','フルタワー・前面220mm×2/背面180mm',{casePreset:'haf2500'}]]]],
+  case:[['',[['ミドルタワー','強化ガラスサイドパネル',{casePreset:'mid'}],['ピラーレス ミドルタワー','前面・側面ガラス',{casePreset:'wide'}],['ミニタワー','Micro-ATX 対応',{casePreset:'micro'}],['フルタワー','E-ATX 対応',{casePreset:'full'}],['小型ケース','Mini-ITX 対応',{casePreset:'itx'}]]],['製品(形を実機に合わせる)',[['NZXT H5 Flow (2024)','ミドルタワー・前面/天面メッシュ',{casePreset:'h5flow24'}],['FRONTIER GHL シリーズ','ミドルタワー・前面/天面メッシュ(BTO専用)',{casePreset:'ghl'}],['Thermaltake S100 TG','ミニタワー・前面は両側面から吸気',{casePreset:'s100tg'}],['パソコン工房 LEVELθ(S100 TG)','ミニタワー(S100 TG)・天面ファン2基',{casePreset:'levelth'}],['マウス NEXTGEAR フルタワー(HD)','フルタワー・前面メッシュ(BTO専用)',{casePreset:'nghd'}],['マウス NEXTGEAR ミニタワー(JG)','ミニタワー・前面/天面メッシュ(BTO専用)',{casePreset:'ngjg'}],['Cooler Master HAF II 500','フルタワー・前面220mm×2/背面180mm',{casePreset:'haf2500'}]]]],
   fan:[
     ...FAN_GROUPS().map(([sz,rv,ms])=>[`${sz}mmファン${rv||'(全ファンの種類)'}`,ms.map(m=>[m.name+(m.typ?'(目安)':''),'',{fanModel:m.id}])]),
     ['配置',[['標準(前面3・上面2・背面1)','',{fanPreset:'std'}],['正圧寄り(底面吸気を追加)','',{fanPreset:'pos'}],['負圧寄り(排気を多めに)','',{fanPreset:'neg'}],['底面吸気・上面排気','',{fanPreset:'chim'}],['ピラーレス(側面吸気)','',{fanPreset:'pillar'}],['ピラーレス(側面排気)','',{fanPreset:'pillarout'}],['ケースファンなし','',{fanPreset:'clear'}],['ケース付属のファン(製品のケースを選んだとき)','',{fanPreset:'stock'}]]],
@@ -4364,9 +4381,9 @@ function renderPartsUI(){
 /* ---------- spec sheet → settings: choices and typed names drive the panels below ---------- */
 const normN=t=>String(t||'').toUpperCase().replace(/[（(][^)）]*[)）]/g,'').replace(/[\s\-_・]/g,'');
 const FF_WORDS=[[/E-?ATX/i,'eatx'],[/MICRO-?ATX|\bMATX\b|\bM-ATX\b/i,'matx'],[/MINI-?ITX|\bITX\b/i,'itx'],[/\bATX\b/i,'atx']];
-const CASE_NAMES={h5flow24:['NZXT H5 Flow (2024)','ミドルタワー・前面/天面メッシュ'],ghl:['FRONTIER GHL シリーズ','ミドルタワー・前面/天面メッシュ(BTO専用)'],haf2500:['Cooler Master HAF II 500','フルタワー・前面220mm×2/背面180mm'],s100tg:['Thermaltake S100 TG','ミニタワー・前面は両側面から吸気'],levelth:['パソコン工房 LEVELθ(S100 TG)','ミニタワー(S100 TG)・天面ファン2基'],nghd:['マウス NEXTGEAR フルタワー(HD)','フルタワー・前面メッシュ(BTO専用)'],mid:['ミドルタワー','強化ガラスサイドパネル'],wide:['ピラーレス ミドルタワー','前面・側面ガラス'],micro:['ミニタワー','Micro-ATX 対応'],full:['フルタワー','E-ATX 対応'],itx:['小型ケース','Mini-ITX 対応']};
-const CASE_WORDS=[[/H5\s*FLOW/i,'h5flow24'],[/GHL/i,'ghl'],[/HAF\s*II\s*500|HAF\s*2\s*500|H500G2/i,'haf2500'],[/NEXTGEAR\s*HD|\bHD-?[AI]\d[AG][0-9A-Z]{2}/i,'nghd'],[/LEVEL\s*[θΘ]|レベル\s*[θΘ]|レベルシータ|LEVEL\s*THETA/i,'levelth'],[/S100\s*TG|\bS100\b/i,'s100tg'],[/ピラーレス|PILLARLESS/i,'wide'],[/フルタワー|FULL\s*TOWER/i,'full'],[/ミニタワー|MINI\s*TOWER/i,'micro'],[/小型|MINI-?ITX|\bITX\b|\bSFF\b/i,'itx'],[/ミドルタワー|MID\s*TOWER/i,'mid']];
-const CASE_MAXBOARD={h5flow24:'eatx',ghl:'atx',s100tg:'matx',levelth:'matx',nghd:'matx',haf2500:'eatx',itx:'itx',micro:'matx',mid:'atx',wide:'atx',full:'eatx'};
+const CASE_NAMES={h5flow24:['NZXT H5 Flow (2024)','ミドルタワー・前面/天面メッシュ'],ghl:['FRONTIER GHL シリーズ','ミドルタワー・前面/天面メッシュ(BTO専用)'],haf2500:['Cooler Master HAF II 500','フルタワー・前面220mm×2/背面180mm'],s100tg:['Thermaltake S100 TG','ミニタワー・前面は両側面から吸気'],levelth:['パソコン工房 LEVELθ(S100 TG)','ミニタワー(S100 TG)・天面ファン2基'],nghd:['マウス NEXTGEAR フルタワー(HD)','フルタワー・前面メッシュ(BTO専用)'],ngjg:['マウス NEXTGEAR ミニタワー(JG)','ミニタワー・前面/天面メッシュ(BTO専用)'],mid:['ミドルタワー','強化ガラスサイドパネル'],wide:['ピラーレス ミドルタワー','前面・側面ガラス'],micro:['ミニタワー','Micro-ATX 対応'],full:['フルタワー','E-ATX 対応'],itx:['小型ケース','Mini-ITX 対応']};
+const CASE_WORDS=[[/H5\s*FLOW/i,'h5flow24'],[/GHL/i,'ghl'],[/HAF\s*II\s*500|HAF\s*2\s*500|H500G2/i,'haf2500'],[/NEXTGEAR\s*JG|\bJG-?[AI]\d[AG][0-9A-Z]{1,3}/i,'ngjg'],[/NEXTGEAR\s*HD|\bHD-?[AI]\d[AG][0-9A-Z]{2}/i,'nghd'],[/LEVEL\s*[θΘ]|レベル\s*[θΘ]|レベルシータ|LEVEL\s*THETA/i,'levelth'],[/S100\s*TG|\bS100\b/i,'s100tg'],[/ピラーレス|PILLARLESS/i,'wide'],[/フルタワー|FULL\s*TOWER/i,'full'],[/ミニタワー|MINI\s*TOWER/i,'micro'],[/小型|MINI-?ITX|\bITX\b|\bSFF\b/i,'itx'],[/ミドルタワー|MID\s*TOWER/i,'mid']];
+const CASE_MAXBOARD={h5flow24:'eatx',ghl:'atx',s100tg:'matx',levelth:'matx',nghd:'matx',ngjg:'matx',haf2500:'eatx',itx:'itx',micro:'matx',mid:'atx',wide:'atx',full:'eatx'};
 function setBoard(ff,rename){
   if(!BOARDS[ff])return;
   $('fanmsg').textContent='';
