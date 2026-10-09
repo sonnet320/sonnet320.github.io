@@ -131,7 +131,7 @@
 2026-10-07,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,,Ryzen 9,,パソコン工房,126764,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145159,
 2026-10-07,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,ツクモ,168678,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0730143318327,
 2026-10-07,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,パソコン工房,,在庫なし,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1222461,
-2026-10-07,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,ドスパラ,96800,在庫あり,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,ドスパラ,96800,在庫あり,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-asus-dual-rx-9060-xt)
 2026-10-07,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,,RTX 5080,,アーク,366800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107424/,
 2026-10-07,GPU,gpu-gigabyte-aorus-elite-rx-9070-xt,GIGABYTE AORUS Elite RX 9070 XT,,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107517/,
 2026-10-07,GPU,gpu-msi-suprim-soc-rtx-5080,MSI SUPRIM SOC RTX 5080,,RTX 5080,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377292238/,
@@ -142,23 +142,23 @@
 2026-10-07,GPU,gpu-palit-gamerock-oc-rtx-5090,Palit GameRock OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC594816.html,
 2026-10-07,GPU,gpu-palit-gamingpro-oc-rtx-5070-ti,Palit GamingPro OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,,在庫なし,未確認,https://www.dospara.co.jp/SBR1892/IC594905.html,GamingPro OCの欄だがリンク先はGamingPro-S OC（NE7507TS19T2-GB2031U）。 商品不一致
 2026-10-07,GPU,gpu-palit-gamingpro-oc-rtx-5080,Palit GamingPro OC RTX 5080,,RTX 5080,,ドスパラ,269800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC594817.html,
-2026-10-07,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,,RX 9060 XT,,パソコン工房,129000,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,今回確認したリンク先は16GB版。
-2026-10-07,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,今回確認したリンク先は16GB版。
-2026-10-07,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,パソコン工房,92801,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,パソコン工房,129000,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-powercolor-hellhound-rx-9060-xt)
+2026-10-07,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-powercolor-reaper-rx-9060-xt)
+2026-10-07,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,パソコン工房,92801,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-powercolor-reaper-rx-9060-xt)
 2026-10-07,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107513/,
 2026-10-07,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,ツクモ,190000,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/4713436175735/,
 2026-10-07,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,パソコン工房,159826,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?pre=radeon_rx9070xt&product_id=1137071,
-2026-10-07,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,今回確認したリンク先は16GB版。
-2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,今回確認したリンク先は16GB版。
-2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ツクモ,109800,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,今回確認したリンク先は16GB版。
-2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt-16gb,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT 16GB,RD-RX9060XT-E16GB/DF,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-rd-rx9060xt-e16gb-df-rx-9060-xt)
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pulse-rx-9060-xt)
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,ツクモ,109800,在庫限り／わずか,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pulse-rx-9060-xt)
+2026-10-07,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pulse-rx-9060-xt)
 2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107527/,
 2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4895106295971/,
 2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522650.html,
 2026-10-07,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,パソコン工房,143999,在庫あり（当日出荷）,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1133338,
-2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,今回確認したリンク先は16GB版。
-2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4537694369909,今回確認したリンク先は16GB版。
-2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,今回確認したリンク先は16GB版。
+2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pure-rx-9060-xt)
+2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4537694369909,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pure-rx-9060-xt)
+2026-10-07,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,今回確認したリンク先は16GB版。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pure-rx-9060-xt)
 2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アプライド,,販売ページ未確認,未確認,,店舗内検索・外部検索で一致する単品販売ページ未確認。取扱なしの断定ではありません。
 2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アーク,54780,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512601/,公式商品ページで型番・本体価格・在庫を確認。クーポン適用前。
 2026-10-07,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528939944/,公式ページ本文と構造化データを確認。税込商品単体価格。 在庫なしの参考掲載価格。
@@ -370,7 +370,7 @@
 2026-10-08,CPU,cpu-ryzen-9-9950x3d,Ryzen 9 9950X3D,Ryzen 9 9950X3D 100-100000719W,Ryzen 9,,パソコン工房,132800,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145159,
 2026-10-08,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0730143318327,既存商品ページを再取得できず。同じ店舗内を再検索しても当日の商品ページを確認できなかった。 前回価格は監査用CSVの別欄に保持。
 2026-10-08,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,100-100001978WOF,Ryzen 9,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1222461,
-2026-10-08,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,ドスパラ,96800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,
+2026-10-08,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,ドスパラ,96800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,容量は同じ商品URLの10/09調査で確定(旧ID gpu-asus-dual-rx-9060-xt)
 2026-10-08,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,TUF-RTX5080-O16G-GAMING,RTX 5080,,アーク,366800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107424/,
 2026-10-08,GPU,gpu-gigabyte-aorus-elite-rx-9070-xt,GIGABYTE AORUS Elite RX 9070 XT,GV-R9070XTAORUS E-16GD,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107517/,
 2026-10-08,GPU,gpu-msi-suprim-soc-rtx-5080,MSI SUPRIM SOC RTX 5080,,RTX 5080,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4711377292238/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
@@ -380,23 +380,23 @@
 2026-10-08,GPU,gpu-palit-gamerock-oc-rtx-5070-ti,Palit GameRock OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC519934.html,
 2026-10-08,GPU,gpu-palit-gamerock-oc-rtx-5090,Palit GameRock OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC594816.html,
 2026-10-08,GPU,gpu-palit-gamingpro-oc-rtx-5080,Palit GamingPro OC RTX 5080,,RTX 5080,,ドスパラ,269800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC594817.html,
-2026-10-08,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,RX9060XT 16G-L/OC,RX 9060 XT,,パソコン工房,129000,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,
-2026-10-08,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,RX9060XT 16G-A,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,
-2026-10-08,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,RX9060XT 16G-A,RX 9060 XT,,パソコン工房,92801,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,
+2026-10-08,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,パソコン工房,129000,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,容量は同じ商品URLの10/09調査で確定(旧ID gpu-powercolor-hellhound-rx-9060-xt)
+2026-10-08,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,容量は同じ商品URLの10/09調査で確定(旧ID gpu-powercolor-reaper-rx-9060-xt)
+2026-10-08,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,パソコン工房,92801,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,容量は同じ商品URLの10/09調査で確定(旧ID gpu-powercolor-reaper-rx-9060-xt)
 2026-10-08,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,RX9070XT 16G-E/OC,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107513/,
 2026-10-08,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4713436175735/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
 2026-10-08,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,RX9070XT 16G-E/OC,RX 9070 XT,,パソコン工房,159826,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?pre=radeon_rx9070xt&product_id=1137071,
-2026-10-08,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX9060XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,
-2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,PULSERX9060XT16GB/11350-03-20G VD9219,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,
-2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ツクモ,109800,在庫限り,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,
-2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,
+2026-10-08,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt-16gb,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT 16GB,RD-RX9060XT-E16GB/DF,RX9060XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,容量は同じ商品URLの10/09調査で確定(旧ID gpu-rd-rx9060xt-e16gb-df-rx-9060-xt)
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pulse-rx-9060-xt)
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,ツクモ,109800,在庫限り,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pulse-rx-9060-xt)
+2026-10-08,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pulse-rx-9060-xt)
 2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,PULSERX907016GB/11349-03-20G VD8988,RX 9070,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107527/,
 2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4895106295971/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
 2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522650.html,
 2026-10-08,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,PULSERX907016GB/11349-03-20G,RX 9070,,パソコン工房,143999,当日出荷 Image: 当日出荷対応商品?,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1133338,
-2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,PURERX9060XT16GB/11350-02-20G VD9221,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,
-2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4537694369909,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
-2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,
+2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pure-rx-9060-xt)
+2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/4537694369909,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。 容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pure-rx-9060-xt)
+2026-10-08,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,容量は同じ商品URLの10/09調査で確定(旧ID gpu-sapphire-pure-rx-9060-xt)
 2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アプライド,,,未確認,,既存URLなし。同じ店舗内を商品名・メーカー型番で再検索したが、一致する新品単体の商品ページを確認できなかった。取扱なしの断定ではない。 前回価格は監査用CSVの別欄に保持。
 2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アーク,54780,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512601/,
 2026-10-08,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ツクモ,,,未確認,https://shop.tsukumo.co.jp/goods/0649528939944/,取得できたページは当日より古いクロール結果。再取得・同店舗再検索で当日の掲載状況を確認できず、参考情報として別欄に保存。 前回価格は監査用CSVの別欄に保持。
@@ -761,7 +761,7 @@
 2026-10-09,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,アーク,115800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240273/,
 2026-10-09,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,ツクモ,,確認できず,未確認,https://shop.tsukumo.co.jp/goods/0409172469019/,商品ページは見つかったが、通販価格と在庫を確定できず
 2026-10-09,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,ドスパラ,115800,在庫あり,購入可,https://www.dospara.co.jp/SBR1881/IC522583.html?msockid=3c8ec637ba0368391da4d076bbbe69bf,
-2026-10-09,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,パソコン工房,115800,当日出荷 【18†Image: 当日出荷対応商品】【19†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145161,
+2026-10-09,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,パソコン工房,115800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145161,
 2026-10-09,CPU,cpu-ryzen-9-9950x,Ryzen 9 9950X,,Ryzen 9,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,CPU,cpu-ryzen-9-9950x,Ryzen 9 9950X,,Ryzen 9,,アーク,114800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240255/,
 2026-10-09,CPU,cpu-ryzen-9-9950x,Ryzen 9 9950X,,Ryzen 9,,ツクモ,,確認できず,未確認,https://shop.tsukumo.co.jp/goods/0409173469018/,商品ページは見つかったが、通販価格と在庫を確定できず
@@ -777,11 +777,16 @@
 2026-10-09,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,ツクモ,176800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0730143318327,
 2026-10-09,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,ドスパラ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,CPU,cpu-ryzen-9-9950x3d2-dual-edition,Ryzen 9 9950X3D2 Dual Edition,,Ryzen 9,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1222461,
-2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt,ASRock Challenger OC RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt,ASRock Challenger OC RX 9060 XT,,RX 9060 XT,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107662/,8GBモデル／取得元クロール: last month
-2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt,ASRock Challenger OC RX 9060 XT,,RX 9060 XT,,ツクモ,99800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711581491205/,16GBモデル
-2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt,ASRock Challenger OC RX 9060 XT,,RX 9060 XT,,ドスパラ,89800,在庫あり,購入可,https://www.dospara.co.jp/SBR1891/IC568028.html,16GBモデル
-2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt,ASRock Challenger OC RX 9060 XT,,RX 9060 XT,,パソコン工房,,確認できず,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1153448,商品候補のページ表示を取得できず、税込価格・通販在庫を確定できず
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107660/,
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,ツクモ,99800,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4711581491205/,
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC527175.html,通販の商品購入欄を確認。店頭在庫と区別。通常版CL 16Gの89800円はCL 16GOに流用しない
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,パソコン工房,,確認できず,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1153448,商品候補は確認したが現在ページ404。取扱終了とは断定せず
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,アーク,,取扱終了,購入不可,https://www.ark-pc.co.jp/i/20107662/,
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711581490864/,
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC527177.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asrock-challenger-rx-9070,ASRock Challenger RX 9070,,RX 9070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asrock-challenger-rx-9070,ASRock Challenger RX 9070,,RX 9070,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107534/,16GBモデル／取得元クロール: last week
 2026-10-09,GPU,gpu-asrock-challenger-rx-9070,ASRock Challenger RX 9070,,RX 9070,,ツクモ,125800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711581490475/,
@@ -811,22 +816,32 @@
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,,RTX 5060,,アーク,,確認できず,未確認,https://www.ark-pc.co.jp/i/20107641/,商品候補のページ表示を取得できず、税込価格・通販在庫を確定できず
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,,RTX 5060,,ツクモ,99800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0199291196964/,8GBモデル／ホワイトモデル
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,,RTX 5060,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527631.html,8GBモデル
-2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,,RTX 5060,,パソコン工房,97801,当日出荷 【28†Image: 当日出荷対応商品】【29†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1148776,8GBモデル
-2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti,ASUS DUAL OC RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti,ASUS DUAL OC RTX 5060 Ti,,RTX 5060 Ti,,アーク,,確認できず,未確認,https://www.ark-pc.co.jp/i/20107614/,商品候補のページ表示を取得できず、税込価格・通販在庫を確定できず
-2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti,ASUS DUAL OC RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,116800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994294/,8GBモデル
-2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti,ASUS DUAL OC RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,89800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC526339.html,8GBモデル
-2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti,ASUS DUAL OC RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,108999,当日出荷 【35†Image: 当日出荷対応商品】【36†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1191294,8GBモデル／ホワイトモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,,RTX 5060,,パソコン工房,97801,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1148776,8GBモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,159800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107592/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,159800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994300/,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,159800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC525633.html,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,149800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1177118,VRAM 16GBを商品名／型番で確認／16GBモデル／ホワイトモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-8gb,ASUS DUAL OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-8gb,ASUS DUAL OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,116800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107614/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-8gb,ASUS DUAL OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,116800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994294/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-8gb,ASUS DUAL OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,89800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC526339.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-dual-oc-rtx-5060-ti-8gb,ASUS DUAL OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,108999,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1191294,VRAM 8GBを商品名／型番で確認／8GBモデル／ホワイトモデル
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5070,ASUS DUAL OC RTX 5070,,RTX 5070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5070,ASUS DUAL OC RTX 5070,,RTX 5070,,アーク,179800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107655/,12GBモデル
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5070,ASUS DUAL OC RTX 5070,,RTX 5070,,ツクモ,179800,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0199291046214/,12GBモデル
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5070,ASUS DUAL OC RTX 5070,,RTX 5070,,ドスパラ,167980,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC528415.html,12GBモデル
 2026-10-09,GPU,gpu-asus-dual-oc-rtx-5070,ASUS DUAL OC RTX 5070,,RTX 5070,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,アーク,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,ツクモ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,ドスパラ,96800,在庫あり,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,16GBモデル
-2026-10-09,GPU,gpu-asus-dual-rx-9060-xt,ASUS DUAL RX 9060 XT,,RX 9060 XT,,パソコン工房,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107719/,
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,ツクモ,142980,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0199291196766/,
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,ドスパラ,96800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,アーク,101981,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107674/,
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0197105994263/,
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528412.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-low-profile-rtx-5060,ASUS Low Profile RTX 5060,,RTX 5060,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-low-profile-rtx-5060,ASUS Low Profile RTX 5060,,RTX 5060,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-low-profile-rtx-5060,ASUS Low Profile RTX 5060,,RTX 5060,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
@@ -837,11 +852,16 @@
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060,ASUS PRIME OC RTX 5060,,RTX 5060,,ツクモ,102800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0199291057852/,8GBモデル
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060,ASUS PRIME OC RTX 5060,,RTX 5060,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527630.html,8GBモデル
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060,ASUS PRIME OC RTX 5060,,RTX 5060,,パソコン工房,,最新在庫未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1148775,取得元クロール: 2 days ago。旧日付の検索取得ページのため最新価格・在庫は未確認
-2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti,ASUS PRIME OC RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti,ASUS PRIME OC RTX 5060 Ti,,RTX 5060 Ti,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107613/,取得元クロール: last month。旧日付の検索取得ページのため最新価格・在庫は未確認
-2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti,ASUS PRIME OC RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,119799,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994201/,8GBモデル
-2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti,ASUS PRIME OC RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525631.html,16GBモデル
-2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti,ASUS PRIME OC RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,98943,当日出荷 【21†Image: 当日出荷対応商品】【22†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141812,8GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,170800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107591/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0197105994058/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525631.html,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,169000,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141786,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107613/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,119799,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994201/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC526337.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,98943,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141812,VRAM 8GBを商品名／型番で確認／8GBモデル
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5070,ASUS PRIME OC RTX 5070,,RTX 5070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5070,ASUS PRIME OC RTX 5070,,RTX 5070,,アーク,186800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107503/,12GBモデル／取得元クロール: yesterday
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5070,ASUS PRIME OC RTX 5070,,RTX 5070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0197105837829/,12GBモデル
@@ -856,12 +876,17 @@
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107425/,16GBモデル
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,ツクモ,331800,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105837782/,16GBモデル
 2026-10-09,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC519236.html,16GBモデル
-2026-10-09,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,パソコン工房,331800,当日出荷 【28†Image: 当日出荷対応商品】【29†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1124240,16GBモデル
-2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt,ASUS PRIME OC RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt,ASUS PRIME OC RX 9060 XT,,RX 9060 XT,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107673/,取得元クロール: last month。旧日付の検索取得ページのため最新価格・在庫は未確認
-2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt,ASUS PRIME OC RX 9060 XT,,RX 9060 XT,,ツクモ,103980,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994188/,8GBモデル
-2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt,ASUS PRIME OC RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528410.html,16GBモデル
-2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt,ASUS PRIME OC RX 9060 XT,,RX 9060 XT,,パソコン工房,,確認できず,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1153444,商品候補のページ表示を取得できず、税込価格・通販在庫を確定できず
+2026-10-09,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,パソコン工房,331800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1124240,16GBモデル
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-16gb,ASUS PRIME OC RX 9060 XT 16GB,PRIME-RX9060XT-O16G,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-16gb,ASUS PRIME OC RX 9060 XT 16GB,PRIME-RX9060XT-O16G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107672/,
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-16gb,ASUS PRIME OC RX 9060 XT 16GB,PRIME-RX9060XT-O16G,RX 9060 XT,16GB,ツクモ,145979,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/0197105994218/,
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-16gb,ASUS PRIME OC RX 9060 XT 16GB,PRIME-RX9060XT-O16G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528410.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-16gb,ASUS PRIME OC RX 9060 XT 16GB,PRIME-RX9060XT-O16G,RX 9060 XT,16GB,パソコン工房,,確認できず,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1153444,商品候補は確認したが現在ページ404。取扱終了とは断定せず
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-8gb,ASUS PRIME OC RX 9060 XT 8GB,PRIME-RX9060XT-O8G,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-8gb,ASUS PRIME OC RX 9060 XT 8GB,PRIME-RX9060XT-O8G,RX 9060 XT,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107673/,
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-8gb,ASUS PRIME OC RX 9060 XT 8GB,PRIME-RX9060XT-O8G,RX 9060 XT,8GB,ツクモ,103980,在庫わずか,購入可,https://shop.tsukumo.co.jp/goods/0197105994188/,
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-8gb,ASUS PRIME OC RX 9060 XT 8GB,PRIME-RX9060XT-O8G,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528411.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-asus-prime-oc-rx-9060-xt-8gb,ASUS PRIME OC RX 9060 XT 8GB,PRIME-RX9060XT-O8G,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-prime-oc-rx-9070,ASUS PRIME OC RX 9070,,RX 9070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-prime-oc-rx-9070,ASUS PRIME OC RX 9070,,RX 9070,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107542/,16GBモデル／取得元クロール: last month
 2026-10-09,GPU,gpu-asus-prime-oc-rx-9070,ASUS PRIME OC RX 9070,,RX 9070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0197105829596/,16GBモデル
@@ -897,21 +922,26 @@
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060,ASUS TUF Gaming OC RTX 5060,,RTX 5060,,ツクモ,107800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0199291058170/,8GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060,ASUS TUF Gaming OC RTX 5060,,RTX 5060,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527629.html,8GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060,ASUS TUF Gaming OC RTX 5060,,RTX 5060,,パソコン工房,,確認できず,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1148789,商品候補のページ表示を取得できず、税込価格・通販在庫を確定できず
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti,ASUS TUF Gaming OC RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti,ASUS TUF Gaming OC RTX 5060 Ti,,RTX 5060 Ti,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107612/,取得元クロール: 6 days ago。旧日付の検索取得ページのため最新価格・在庫は未確認
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti,ASUS TUF Gaming OC RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,126800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994379/,8GBモデル
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti,ASUS TUF Gaming OC RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC526336.html,8GBモデル
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti,ASUS TUF Gaming OC RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,175800,当日出荷 【21†Image: 当日出荷対応商品】【22†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141785,
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-16gb,ASUS TUF Gaming OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-16gb,ASUS TUF Gaming OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,175800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107590/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-16gb,ASUS TUF Gaming OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,175800,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994386/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-16gb,ASUS TUF Gaming OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525630.html,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-16gb,ASUS TUF Gaming OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,175800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141785,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-8gb,ASUS TUF Gaming OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-8gb,ASUS TUF Gaming OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107612/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-8gb,ASUS TUF Gaming OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,126800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105994379/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-8gb,ASUS TUF Gaming OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC526336.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5060-ti-8gb,ASUS TUF Gaming OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,,RTX 5070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,,RTX 5070,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107502/,取得元クロール: last week。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,,RTX 5070,,ツクモ,198800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105849075/,12GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,,RTX 5070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC522503.html,12GBモデル
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,,RTX 5070,,パソコン工房,195800,当日出荷 【28†Image: 当日出荷対応商品】【29†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130453,12GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,,RTX 5070,,パソコン工房,195800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130453,12GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,,RTX 5070 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107467/,取得元クロール: last week。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,,RTX 5070 Ti,,ツクモ,279800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105861459/,16GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC521844.html,16GBモデル
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,282800,当日出荷 【28†Image: 当日出荷対応商品】【29†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1151852,16GBモデル／ホワイトモデル／取得元クロール: yesterday
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,282800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1151852,16GBモデル／ホワイトモデル／取得元クロール: yesterday
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,,RTX 5080,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,,RTX 5080,,アーク,366800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107424/,16GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,,RTX 5080,,ツクモ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
@@ -931,17 +961,22 @@
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,アーク,227800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107539/,16GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,ツクモ,227800,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0197105829572/,16GBモデル
 2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,ドスパラ,191800,在庫あり,購入可,https://www.dospara.co.jp/SBR1891/IC518976.html,16GBモデル
-2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,パソコン工房,191800,当日出荷 【19†Image: 当日出荷対応商品】【20†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1137080,16GBモデル
+2026-10-09,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,パソコン工房,191800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1137080,16GBモデル
 2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,,RTX 5060,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,,RTX 5060,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,,RTX 5060,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,,RTX 5060,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,,RTX 5060,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti,,RTX 5060 Ti,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107599/,VRAM 16GBを商品名／型番で確認／16GBモデル／取得元クロール: last month
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755072045/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,ドスパラ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti-8gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti 8GB,GG-RTX5060Ti-E8GB/OC/DF,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti-8gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti 8GB,GG-RTX5060Ti-E8GB/OC/DF,RTX 5060 Ti,8GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107605/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti-8gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti 8GB,GG-RTX5060Ti-E8GB/OC/DF,RTX 5060 Ti,8GB,ツクモ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti-8gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti 8GB,GG-RTX5060Ti-E8GB/OC/DF,RTX 5060 Ti,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525615.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e8gb-oc-df-rtx-5060-ti-8gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E8GB/OC/DF RTX 5060 Ti 8GB,GG-RTX5060Ti-E8GB/OC/DF,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-gigabyte-aero-oc-rtx-5070,GIGABYTE AERO OC RTX 5070,,RTX 5070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-gigabyte-aero-oc-rtx-5070,GIGABYTE AERO OC RTX 5070,,RTX 5070,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107548/,取得元クロール: 3 weeks ago。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-gigabyte-aero-oc-rtx-5070,GIGABYTE AERO OC RTX 5070,,RTX 5070,,ツクモ,162800,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4988755071246/,
@@ -1012,11 +1047,16 @@
 2026-10-09,GPU,gpu-gigabyte-gaming-oc-rtx-5090,GIGABYTE GAMING OC RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755071147/,
 2026-10-09,GPU,gpu-gigabyte-gaming-oc-rtx-5090,GIGABYTE GAMING OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520442.html,32GBモデル
 2026-10-09,GPU,gpu-gigabyte-gaming-oc-rtx-5090,GIGABYTE GAMING OC RTX 5090,,RTX 5090,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt,GIGABYTE GAMING OC RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt,GIGABYTE GAMING OC RX 9060 XT,,RX 9060 XT,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107684/,取得元クロール: 2 weeks ago。旧日付の検索取得ページのため最新価格・在庫は未確認
-2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt,GIGABYTE GAMING OC RX 9060 XT,,RX 9060 XT,,ツクモ,76800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4988755072250/,
-2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt,GIGABYTE GAMING OC RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528537.html,16GBモデル
-2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt,GIGABYTE GAMING OC RX 9060 XT,,RX 9060 XT,,パソコン工房,,最新在庫未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1182772,取得元クロール: 3 weeks ago。旧日付の検索取得ページのため最新価格・在庫は未確認
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-16gb,GIGABYTE GAMING OC RX 9060 XT 16GB,GV-R9060XTGAMING OC-16GD,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-16gb,GIGABYTE GAMING OC RX 9060 XT 16GB,GV-R9060XTGAMING OC-16GD,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107683/,商品ページを優先。検索一覧の旧セール価格73800円・在庫ありは採用せず
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-16gb,GIGABYTE GAMING OC RX 9060 XT 16GB,GV-R9060XTGAMING OC-16GD,RX 9060 XT,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755072243/,
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-16gb,GIGABYTE GAMING OC RX 9060 XT 16GB,GV-R9060XTGAMING OC-16GD,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528537.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-16gb,GIGABYTE GAMING OC RX 9060 XT 16GB,GV-R9060XTGAMING OC-16GD,RX 9060 XT,16GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない。ICE版GV-R906XGAMINGOCICE-16GDは別型番のため参考表に分離
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-8gb,GIGABYTE GAMING OC RX 9060 XT 8GB,GV-R9060XTGAMING OC-8GD,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-8gb,GIGABYTE GAMING OC RX 9060 XT 8GB,GV-R9060XTGAMING OC-8GD,RX 9060 XT,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107684/,
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-8gb,GIGABYTE GAMING OC RX 9060 XT 8GB,GV-R9060XTGAMING OC-8GD,RX 9060 XT,8GB,ツクモ,76800,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4988755072250/,
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-8gb,GIGABYTE GAMING OC RX 9060 XT 8GB,GV-R9060XTGAMING OC-8GD,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528538.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9060-xt-8gb,GIGABYTE GAMING OC RX 9060 XT 8GB,GV-R9060XTGAMING OC-8GD,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9070,GIGABYTE GAMING OC RX 9070,,RX 9070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9070,GIGABYTE GAMING OC RX 9070,,RX 9070,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107519/,取得元クロール: last week。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-gigabyte-gaming-oc-rx-9070,GIGABYTE GAMING OC RX 9070,,RX 9070,,ツクモ,137100,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4988755070959/,
@@ -1037,16 +1077,21 @@
 2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060,GIGABYTE WINDFORCE MAX OC RTX 5060,,RTX 5060,,ツクモ,83800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4988755073851/,
 2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060,GIGABYTE WINDFORCE MAX OC RTX 5060,,RTX 5060,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060,GIGABYTE WINDFORCE MAX OC RTX 5060,,RTX 5060,,パソコン工房,,最新在庫未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1260165,取得元クロール: 6 days ago。旧日付の検索取得ページのため最新価格・在庫は未確認
-2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti,,RTX 5060 Ti,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107712/,16GBモデル／取得元クロール: yesterday
-2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,89800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4988755075657/,
-2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-16gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-16gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107712/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-16gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755073844/,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-16gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-16gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-8gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-8gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107800/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-8gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,89800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4988755075657/,VRAM 8GBを商品名／型番で確認
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-8gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-gigabyte-windforce-max-oc-rtx-5060-ti-8gb,GIGABYTE WINDFORCE MAX OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,アーク,,確認できず,未確認,https://www.ark-pc.co.jp/i/20107509/,商品一致候補だが税込価格・通販在庫を確定できず
 2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755071277/,
 2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,パソコン工房,154800,当日出荷 【27†Image: 当日出荷対応商品】【28†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1143440,
+2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,パソコン工房,154800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1143440,
 2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5090,GIGABYTE WINDFORCE OC RTX 5090,,RTX 5090,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5090,GIGABYTE WINDFORCE OC RTX 5090,,RTX 5090,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107630/,32GBモデル
 2026-10-09,GPU,gpu-gigabyte-windforce-oc-rtx-5090,GIGABYTE WINDFORCE OC RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755071420/,
@@ -1097,11 +1142,16 @@
 2026-10-09,GPU,gpu-inno3d-x3-rtx-5090,Inno3D X3 RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4524076042673/,
 2026-10-09,GPU,gpu-inno3d-x3-rtx-5090,Inno3D X3 RTX 5090,,RTX 5090,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-inno3d-x3-rtx-5090,Inno3D X3 RTX 5090,,RTX 5090,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti,MSI GAMING OC RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti,MSI GAMING OC RTX 5060 Ti,,RTX 5060 Ti,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107587/,8GBモデル／取得元クロール: last month
-2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti,MSI GAMING OC RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377336796/,
-2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti,MSI GAMING OC RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525605.html,16GBモデル
-2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti,MSI GAMING OC RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107585/,VRAM 16GBを商品名／型番で確認／16GBモデル／取得元クロール: 2 weeks ago
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377335720/,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525605.html,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-8gb,MSI GAMING OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-8gb,MSI GAMING OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107587/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-8gb,MSI GAMING OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377336796/,VRAM 8GBを商品名／型番で確認
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-8gb,MSI GAMING OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525608.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-msi-gaming-oc-rtx-5060-ti-8gb,MSI GAMING OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-msi-gaming-trio-oc-rtx-5070,MSI GAMING TRIO OC RTX 5070,,RTX 5070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-msi-gaming-trio-oc-rtx-5070,MSI GAMING TRIO OC RTX 5070,,RTX 5070,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107505/,取得元クロール: 2 weeks ago。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-msi-gaming-trio-oc-rtx-5070,MSI GAMING TRIO OC RTX 5070,,RTX 5070,,ツクモ,167800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711377303927/,
@@ -1122,11 +1172,16 @@
 2026-10-09,GPU,gpu-msi-gaming-trio-oc-rtx-5090,MSI GAMING TRIO OC RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377302456/,
 2026-10-09,GPU,gpu-msi-gaming-trio-oc-rtx-5090,MSI GAMING TRIO OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520167.html,32GBモデル
 2026-10-09,GPU,gpu-msi-gaming-trio-oc-rtx-5090,MSI GAMING TRIO OC RTX 5090,,RTX 5090,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti,MSI INSPIRE 2X OC RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti,MSI INSPIRE 2X OC RTX 5060 Ti,,RTX 5060 Ti,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107588/,8GBモデル／取得元クロール: last month
-2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti,MSI INSPIRE 2X OC RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,,販売終了,取扱終了,https://shop.tsukumo.co.jp/goods/4711377341417/,
-2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti,MSI INSPIRE 2X OC RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525609.html,8GBモデル
-2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti,MSI INSPIRE 2X OC RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-16gb,MSI INSPIRE 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-16gb,MSI INSPIRE 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107622/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-16gb,MSI INSPIRE 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,,販売終了,取扱終了,https://shop.tsukumo.co.jp/goods/4711377335768/,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-16gb,MSI INSPIRE 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527334.html,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-16gb,MSI INSPIRE 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-8gb,MSI INSPIRE 2X OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-8gb,MSI INSPIRE 2X OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107588/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-8gb,MSI INSPIRE 2X OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,,販売終了,取扱終了,https://shop.tsukumo.co.jp/goods/4711377341417/,VRAM 8GBを商品名／型番で確認
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-8gb,MSI INSPIRE 2X OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525609.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-msi-inspire-2x-oc-rtx-5060-ti-8gb,MSI INSPIRE 2X OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-msi-inspire-3x-oc-rtx-5070-ti,MSI INSPIRE 3X OC RTX 5070 Ti,,RTX 5070 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-msi-inspire-3x-oc-rtx-5070-ti,MSI INSPIRE 3X OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107555/,16GBモデル／取得元クロール: last month
 2026-10-09,GPU,gpu-msi-inspire-3x-oc-rtx-5070-ti,MSI INSPIRE 3X OC RTX 5070 Ti,,RTX 5070 Ti,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377317160/,
@@ -1167,11 +1222,16 @@
 2026-10-09,GPU,gpu-msi-vanguard-soc-rtx-5090,MSI VANGUARD SOC RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377302500/,
 2026-10-09,GPU,gpu-msi-vanguard-soc-rtx-5090,MSI VANGUARD SOC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520166.html,32GBモデル
 2026-10-09,GPU,gpu-msi-vanguard-soc-rtx-5090,MSI VANGUARD SOC RTX 5090,,RTX 5090,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti,MSI VENTUS 2X OC PLUS RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti,MSI VENTUS 2X OC PLUS RTX 5060 Ti,,RTX 5060 Ti,,アーク,139800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107586/,16GBモデル
-2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti,MSI VENTUS 2X OC PLUS RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,104800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711377338868/,
-2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti,MSI VENTUS 2X OC PLUS RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,104800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC526209.html,8GBモデル
-2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti,MSI VENTUS 2X OC PLUS RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,139800,当日出荷 【25†Image: 当日出荷対応商品】【26†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141798,
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,139800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107586/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,139800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711377334471/,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,139800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC525607.html,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,139800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141798,VRAM 16GBを商品名／型番で確認
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,104800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107610/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,104800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711377338868/,VRAM 8GBを商品名／型番で確認
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,104800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC526209.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-msi-ventus-2x-oc-rtx-5060,MSI VENTUS 2X OC RTX 5060,,RTX 5060,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-msi-ventus-2x-oc-rtx-5060,MSI VENTUS 2X OC RTX 5060,,RTX 5060,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107651/,取得元クロール: 2 weeks ago。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-msi-ventus-2x-oc-rtx-5060,MSI VENTUS 2X OC RTX 5060,,RTX 5060,,ツクモ,88800,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4711377344272/,
@@ -1186,12 +1246,12 @@
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,230800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107472/,16GBモデル
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,ツクモ,230800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711377301589/,
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,230800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC521850.html,16GBモデル
-2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,230800,当日出荷 【19†Image: 当日出荷対応商品】【20†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130141,
+2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,230800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130141,
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,アーク,295801,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107457/,16GBモデル
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,ツクモ,295799,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4711377309219/,
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,ドスパラ,295799,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC520176.html,16GBモデル
-2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,パソコン工房,295799,当日出荷 【30†Image: 当日出荷対応商品】【31†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1124264,
+2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,パソコン工房,295799,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1124264,
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5090,MSI VENTUS 3X OC RTX 5090,,RTX 5090,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5090,MSI VENTUS 3X OC RTX 5090,,RTX 5090,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107449/,取得元クロール: 2 days ago。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-msi-ventus-3x-oc-rtx-5090,MSI VENTUS 3X OC RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4711377301633/,
@@ -1217,11 +1277,16 @@
 2026-10-09,GPU,gpu-palit-dual-rtx-5060,Palit Dual RTX 5060,,RTX 5060,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-palit-dual-rtx-5060,Palit Dual RTX 5060,,RTX 5060,,ドスパラ,75980,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC525590.html,8GBモデル
 2026-10-09,GPU,gpu-palit-dual-rtx-5060,Palit Dual RTX 5060,,RTX 5060,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti,Palit Dual RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti,Palit Dual RTX 5060 Ti,,RTX 5060 Ti,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti,Palit Dual RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti,Palit Dual RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,79800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC523107.html,8GBモデル
-2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti,Palit Dual RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-16gb,Palit Dual RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,このシリーズの16GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-16gb,Palit Dual RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,確認できず,未確認,,このシリーズの16GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-16gb,Palit Dual RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,,確認できず,未確認,,このシリーズの16GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-16gb,Palit Dual RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,確認できず,未確認,,このシリーズの16GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-16gb,Palit Dual RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,確認できず,未確認,,このシリーズの16GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-8gb,Palit Dual RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-8gb,Palit Dual RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-8gb,Palit Dual RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-8gb,Palit Dual RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,79800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC523107.html,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-palit-dual-rtx-5060-ti-8gb,Palit Dual RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-palit-gamerock-oc-rtx-5070-ti,Palit GameRock OC RTX 5070 Ti,,RTX 5070 Ti,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,GPU,gpu-palit-gamerock-oc-rtx-5070-ti,Palit GameRock OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,GPU,gpu-palit-gamerock-oc-rtx-5070-ti,Palit GameRock OC RTX 5070 Ti,,RTX 5070 Ti,,ツクモ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
@@ -1247,11 +1312,16 @@
 2026-10-09,GPU,gpu-palit-gamingpro-oc-rtx-5080,Palit GamingPro OC RTX 5080,,RTX 5080,,ツクモ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,GPU,gpu-palit-gamingpro-oc-rtx-5080,Palit GamingPro OC RTX 5080,,RTX 5080,,ドスパラ,269800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC594817.html,16GBモデル
 2026-10-09,GPU,gpu-palit-gamingpro-oc-rtx-5080,Palit GamingPro OC RTX 5080,,RTX 5080,,パソコン工房,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti,Palit Infinity 3 OC RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti,Palit Infinity 3 OC RTX 5060 Ti,,RTX 5060 Ti,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti,Palit Infinity 3 OC RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti,Palit Infinity 3 OC RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,139800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC580817.html,16GBモデル
-2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti,Palit Infinity 3 OC RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-16gb,Palit Infinity 3 OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-16gb,Palit Infinity 3 OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-16gb,Palit Infinity 3 OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-16gb,Palit Infinity 3 OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,139800,在庫あり,購入可,https://www.dospara.co.jp/SBR1892/IC580817.html,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-16gb,Palit Infinity 3 OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-8gb,Palit Infinity 3 OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,このシリーズの8GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-8gb,Palit Infinity 3 OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,確認できず,未確認,,このシリーズの8GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-8gb,Palit Infinity 3 OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,,確認できず,未確認,,このシリーズの8GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-8gb,Palit Infinity 3 OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,,確認できず,未確認,,このシリーズの8GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
+2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5060-ti-8gb,Palit Infinity 3 OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,このシリーズの8GB製品の存在・5店舗の取扱いを確認できず。別容量の価格は流用していない
 2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5070,Palit Infinity 3 OC RTX 5070,,RTX 5070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5070,Palit Infinity 3 OC RTX 5070,,RTX 5070,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-palit-infinity-3-oc-rtx-5070,Palit Infinity 3 OC RTX 5070,,RTX 5070,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
@@ -1262,11 +1332,16 @@
 2026-10-09,GPU,gpu-pny-oc-slim-rtx-5070,PNY OC SLIM RTX 5070,,RTX 5070,,ツクモ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-pny-oc-slim-rtx-5070,PNY OC SLIM RTX 5070,,RTX 5070,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-pny-oc-slim-rtx-5070,PNY OC SLIM RTX 5070,,RTX 5070,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti,PNY Overclocked Dual Fan RTX 5060 Ti,,RTX 5060 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti,PNY Overclocked Dual Fan RTX 5060 Ti,,RTX 5060 Ti,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti,PNY Overclocked Dual Fan RTX 5060 Ti,,RTX 5060 Ti,,ツクモ,95800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0751492795652/,8GBモデル
-2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti,PNY Overclocked Dual Fan RTX 5060 Ti,,RTX 5060 Ti,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti,PNY Overclocked Dual Fan RTX 5060 Ti,,RTX 5060 Ti,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-16gb,PNY Overclocked Dual Fan RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-16gb,PNY Overclocked Dual Fan RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-16gb,PNY Overclocked Dual Fan RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0751492795072/,VRAM 16GBを商品名／型番で確認／16GBモデル
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-16gb,PNY Overclocked Dual Fan RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-16gb,PNY Overclocked Dual Fan RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-8gb,PNY Overclocked Dual Fan RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アプライド,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-8gb,PNY Overclocked Dual Fan RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-8gb,PNY Overclocked Dual Fan RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ツクモ,95800,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/0751492795652/,VRAM 8GBを商品名／型番で確認／8GBモデル
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-8gb,PNY Overclocked Dual Fan RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
+2026-10-09,GPU,gpu-pny-overclocked-dual-fan-rtx-5060-ti-8gb,PNY Overclocked Dual Fan RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,,確認できず,未確認,,容量別に検索したが該当新品の商品ページ・価格・在庫を確定できず
 2026-10-09,GPU,gpu-pny-overclocked-triple-fan-rtx-5070-ti,PNY Overclocked Triple Fan RTX 5070 Ti,,RTX 5070 Ti,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-pny-overclocked-triple-fan-rtx-5070-ti,PNY Overclocked Triple Fan RTX 5070 Ti,,RTX 5070 Ti,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-pny-overclocked-triple-fan-rtx-5070-ti,PNY Overclocked Triple Fan RTX 5070 Ti,,RTX 5070 Ti,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0751492794594/,
@@ -1282,31 +1357,46 @@
 2026-10-09,GPU,gpu-pny-overclocked-triple-fan-rtx-5090,PNY Overclocked Triple Fan RTX 5090,,RTX 5090,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0751492794228/,32GBモデル
 2026-10-09,GPU,gpu-pny-overclocked-triple-fan-rtx-5090,PNY Overclocked Triple Fan RTX 5090,,RTX 5090,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-pny-overclocked-triple-fan-rtx-5090,PNY Overclocked Triple Fan RTX 5090,,RTX 5090,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,,RX 9060 XT,,アーク,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,,RX 9060 XT,,ツクモ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,,RX 9060 XT,,ドスパラ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt,PowerColor Hellhound RX 9060 XT,,RX 9060 XT,,パソコン工房,129000,当日出荷 【25†Image: 当日出荷対応商品】【26†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,16GBモデル
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107675/,
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4713436175957/,
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528539.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,パソコン工房,129000,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-8gb,PowerColor Hellhound RX 9060 XT 8GB,RX9060XT 8G-L/OC,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-8gb,PowerColor Hellhound RX 9060 XT 8GB,RX9060XT 8G-L/OC,RX 9060 XT,8GB,アーク,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-8gb,PowerColor Hellhound RX 9060 XT 8GB,RX9060XT 8G-L/OC,RX 9060 XT,8GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4713436175971/,
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-8gb,PowerColor Hellhound RX 9060 XT 8GB,RX9060XT 8G-L/OC,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528541.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-powercolor-hellhound-rx-9060-xt-8gb,PowerColor Hellhound RX 9060 XT 8GB,RX9060XT 8G-L/OC,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107516/,16GBモデル／取得元クロール: last week
 2026-10-09,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4713436175773/,16GBモデル
 2026-10-09,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,ドスパラ,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,パソコン工房,,最新在庫未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1236255,取得元クロール: last week。旧日付の検索取得ページのため最新価格・在庫は未確認
-2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,16GBモデル
-2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,ツクモ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,ドスパラ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt,PowerColor Reaper RX 9060 XT,,RX 9060 XT,,パソコン工房,92801,当日出荷 【21†Image: 当日出荷対応商品】【22†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,16GBモデル
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4713436175964/,
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528540.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,パソコン工房,92801,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-8gb,PowerColor Reaper RX 9060 XT 8GB,RX9060XT 8G-A,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-8gb,PowerColor Reaper RX 9060 XT 8GB,RX9060XT 8G-A,RX 9060 XT,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107678/,
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-8gb,PowerColor Reaper RX 9060 XT 8GB,RX9060XT 8G-A,RX 9060 XT,8GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4713436175988/,
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-8gb,PowerColor Reaper RX 9060 XT 8GB,RX9060XT 8G-A,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528542.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-powercolor-reaper-rx-9060-xt-8gb,PowerColor Reaper RX 9060 XT 8GB,RX9060XT 8G-A,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107513/,16GBモデル
 2026-10-09,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,ツクモ,190000,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4713436175735/,16GBモデル
 2026-10-09,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,ドスパラ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,GPU,gpu-powercolor-red-devil-rx-9070-xt,PowerColor Red Devil RX 9070 XT,,RX 9070 XT,,パソコン工房,159826,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?pre=radeon_rx9070xt&product_id=1137071,16GBモデル
-2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX 9060 XT,,アーク,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX 9060 XT,,ツクモ,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,16GBモデル
-2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT,,RX 9060 XT,,パソコン工房,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
+2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt-16gb,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT 16GB,RD-RX9060XT-E16GB/DF,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt-16gb,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT 16GB,RD-RX9060XT-E16GB/DF,RX 9060 XT,16GB,アーク,,取扱終了,購入不可,https://www.ark-pc.co.jp/i/20107681/,
+2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt-16gb,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT 16GB,RD-RX9060XT-E16GB/DF,RX 9060 XT,16GB,ツクモ,,完売,購入不可,https://shop.tsukumo.co.jp/goods/4988755073080/,
+2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt-16gb,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT 16GB,RD-RX9060XT-E16GB/DF,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528535.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-rd-rx9060xt-e16gb-df-rx-9060-xt-16gb,玄人志向 RD-RX9060XT-E16GB/DF RX 9060 XT 16GB,RD-RX9060XT-E16GB/DF,RX 9060 XT,16GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-rd-rx9060xt-e8gb-df-rx-9060-xt-8gb,玄人志向 RD-RX9060XT-E8GB/DF RX 9060 XT 8GB,RD-RX9060XT-E8GB/DF,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-rd-rx9060xt-e8gb-df-rx-9060-xt-8gb,玄人志向 RD-RX9060XT-E8GB/DF RX 9060 XT 8GB,RD-RX9060XT-E8GB/DF,RX 9060 XT,8GB,アーク,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-rd-rx9060xt-e8gb-df-rx-9060-xt-8gb,玄人志向 RD-RX9060XT-E8GB/DF RX 9060 XT 8GB,RD-RX9060XT-E8GB/DF,RX 9060 XT,8GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755073073/,
+2026-10-09,GPU,gpu-rd-rx9060xt-e8gb-df-rx-9060-xt-8gb,玄人志向 RD-RX9060XT-E8GB/DF RX 9060 XT 8GB,RD-RX9060XT-E8GB/DF,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528536.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-rd-rx9060xt-e8gb-df-rx-9060-xt-8gb,玄人志向 RD-RX9060XT-E8GB/DF RX 9060 XT 8GB,RD-RX9060XT-E8GB/DF,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-rd-rx9070-e16gb-tp-rx-9070,玄人志向 RD-RX9070-E16GB/TP RX 9070,,RX 9070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-rd-rx9070-e16gb-tp-rx-9070,玄人志向 RD-RX9070-E16GB/TP RX 9070,,RX 9070,,アーク,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-rd-rx9070-e16gb-tp-rx-9070,玄人志向 RD-RX9070-E16GB/TP RX 9070,,RX 9070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4988755070966/,16GBモデル
@@ -1327,21 +1417,31 @@
 2026-10-09,GPU,gpu-sapphire-nitro-rx-9070-xt,Sapphire NITRO+ RX 9070 XT,,RX 9070 XT,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4895106295872/,16GBモデル
 2026-10-09,GPU,gpu-sapphire-nitro-rx-9070-xt,Sapphire NITRO+ RX 9070 XT,,RX 9070 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522645.html,16GBモデル
 2026-10-09,GPU,gpu-sapphire-nitro-rx-9070-xt,Sapphire NITRO+ RX 9070 XT,,RX 9070 XT,,パソコン工房,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
-2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,16GBモデル
-2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ツクモ,109800,在庫わずか,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,16GBモデル
-2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,16GBモデル
-2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt,Sapphire PULSE RX 9060 XT,,RX 9060 XT,,パソコン工房,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,ツクモ,109800,在庫限り,購入可,https://shop.tsukumo.co.jp/goods/4537694369879/,
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-8gb,Sapphire PULSE RX 9060 XT 8GB,11350-04-20G,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-8gb,Sapphire PULSE RX 9060 XT 8GB,11350-04-20G,RX 9060 XT,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107666/,
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-8gb,Sapphire PULSE RX 9060 XT 8GB,11350-04-20G,RX 9060 XT,8GB,ツクモ,90800,在庫あり,購入可,https://shop.tsukumo.co.jp/goods/4537694369916/,
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-8gb,Sapphire PULSE RX 9060 XT 8GB,11350-04-20G,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528548.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9060-xt-8gb,Sapphire PULSE RX 9060 XT 8GB,11350-04-20G,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107527/,16GBモデル
 2026-10-09,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4895106295971/,16GBモデル
 2026-10-09,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522650.html,16GBモデル
-2026-10-09,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,パソコン工房,143999,当日出荷 【19†Image: 当日出荷対応商品】【20†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1133338,
-2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
-2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,16GBモデル
-2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4537694369909,16GBモデル
-2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,16GBモデル
-2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt,Sapphire PURE RX 9060 XT,,RX 9060 XT,,パソコン工房,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
+2026-10-09,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,パソコン工房,143999,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1133338,
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,アプライド,,確認できず,未確認,,公式Radeon9000シリーズ内のRX9060XT掲載0件を確認。各型番の取扱終了・店頭在庫は未確認
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107664/,
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4537694369909/,
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528545.html,通販の商品購入欄を確認。店頭在庫と区別
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-16gb,Sapphire PURE RX 9060 XT 16GB,11350-02-20G,RX 9060 XT,16GB,パソコン工房,,確認できず,未確認,,店舗通販検索・追加検索で容量と型番が一致する新品の商品URLを特定できず。取扱なし・販売終了とは断定していない
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-8gb,Sapphire PURE RX 9060 XT 8GB,,RX 9060 XT,8GB,アプライド,,確認できず,未確認,,PURE 8GBの公式製品・型番・対象5店舗の販売を確認できず。調査区分として保持し16GB価格は流用しない
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-8gb,Sapphire PURE RX 9060 XT 8GB,,RX 9060 XT,8GB,アーク,,確認できず,未確認,,PURE 8GBの公式製品・型番・対象5店舗の販売を確認できず。調査区分として保持し16GB価格は流用しない
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-8gb,Sapphire PURE RX 9060 XT 8GB,,RX 9060 XT,8GB,ツクモ,,確認できず,未確認,,PURE 8GBの公式製品・型番・対象5店舗の販売を確認できず。調査区分として保持し16GB価格は流用しない
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-8gb,Sapphire PURE RX 9060 XT 8GB,,RX 9060 XT,8GB,ドスパラ,,確認できず,未確認,,PURE 8GBの公式製品・型番・対象5店舗の販売を確認できず。調査区分として保持し16GB価格は流用しない
+2026-10-09,GPU,gpu-sapphire-pure-rx-9060-xt-8gb,Sapphire PURE RX 9060 XT 8GB,,RX 9060 XT,8GB,パソコン工房,,確認できず,未確認,,PURE 8GBの公式製品・型番・対象5店舗の販売を確認できず。調査区分として保持し16GB価格は流用しない
 2026-10-09,GPU,gpu-sapphire-pure-rx-9070,Sapphire PURE RX 9070,,RX 9070,,アプライド,,確認できず,未確認,,指定店舗の検索と追加検索で一致商品URLを特定できず。取扱なし・販売終了とは断定していない
 2026-10-09,GPU,gpu-sapphire-pure-rx-9070,Sapphire PURE RX 9070,,RX 9070,,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107526/,16GBモデル／取得元クロール: last month
 2026-10-09,GPU,gpu-sapphire-pure-rx-9070,Sapphire PURE RX 9070,,RX 9070,,ツクモ,135800,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4895106295957/,16GBモデル
@@ -1401,7 +1501,7 @@
 2026-10-09,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,アーク,,最新在庫未確認,未確認,https://www.ark-pc.co.jp/i/20107623/,取得元クロール: 3 weeks ago。旧日付の検索取得ページのため最新価格・在庫は未確認
 2026-10-09,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,ツクモ,179800,在庫わずか／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4537694369619/,12GBモデル
 2026-10-09,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527340.html,12GBモデル
-2026-10-09,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,パソコン工房,179800,当日出荷 【25†Image: 当日出荷対応商品】【26†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1148219,取得元クロール: yesterday
+2026-10-09,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,パソコン工房,179800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1148219,取得元クロール: yesterday
 2026-10-09,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アーク,54780,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512601/,
 2026-10-09,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0649528939944/,
@@ -1446,12 +1546,12 @@
 2026-10-09,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,アーク,45980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512836/,
 2026-10-09,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/4560441099828/,
 2026-10-09,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,ドスパラ,45980,在庫あり,購入可,https://www.dospara.co.jp/SBR1144/IC523800.html,
-2026-10-09,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,パソコン工房,45980,当日出荷 【21†Image: 当日出荷対応商品】【22†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136902,
+2026-10-09,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,パソコン工房,45980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136902,
 2026-10-09,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,アプライド,102980,在庫有 1～3営業日で出荷予定 休業日除く,購入可,https://shop.applied-net.co.jp/view/item/000000449188,
 2026-10-09,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,アーク,102980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512837/,
 2026-10-09,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,ツクモ,102980,在庫あり／24時間以内に出荷,購入可,https://shop.tsukumo.co.jp/goods/4560441099835/,
 2026-10-09,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,ドスパラ,102980,在庫あり,購入可,https://www.dospara.co.jp/SBR1144/IC523801.html,
-2026-10-09,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,パソコン工房,102980,当日出荷 【21†Image: 当日出荷対応商品】【22†?】,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136903,
+2026-10-09,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,パソコン工房,102980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1136903,
 2026-10-09,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,アプライド,,確認できず,未確認,,対象5店舗の製品検索で一致する商品URLを特定できず。取扱なし・販売終了とは判定していない
 2026-10-09,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,アーク,55490,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512466/,
 2026-10-09,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,ツクモ,,在庫なし,購入不可,https://shop.tsukumo.co.jp/goods/0718037891392/,
