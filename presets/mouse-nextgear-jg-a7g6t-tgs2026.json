@@ -8,8 +8,8 @@
   "sample": false,
   "state": {
     "title": "マウスコンピューター NEXTGEAR JG-A7G6T",
-    "price": "¥181,200",
-    "note": "TGS2026出展記念モデル・JGA7G6TB5BBDW101DECTGST",
+    "price": "¥288,800",
+    "note": "TGS2026出展記念モデル・JGA7G6TB5BBDW101DECTGST / 通常299,800円からクーポンNXG26で11,000円引き。2026-10-14 11:00（日本時間）まで / 計算の目安：標準ファン構成・水冷位置は未確認。前面120mm吸気×3・背面120mm排気×1・天面240mm水冷排気という既存の仮定による2026-10-09の結果です。実際の搭載構成を示すものではありません。",
     "specs": [
       {
         "label": "CPU",
@@ -18,73 +18,73 @@
       },
       {
         "label": "クーラー",
-        "name": "水冷CPUクーラー、240mmラジエーター",
-        "detail": "型番不明"
+        "name": "240mm水冷（実装位置・型番不明）",
+        "detail": "計算形状は既存の近似モデル"
       },
       {
         "label": "GPU",
         "name": "GeForce RTX 5060 Ti",
-        "detail": "VRAM 16GB"
+        "detail": "GeForce RTX 5060 Ti 16GB / 不明（メーカー・型番・長さ・ファン数）。計算形状は仮定"
       },
       {
         "label": "メモリ",
-        "name": "DDR4-3200 32GB",
-        "detail": "16GB × 2"
+        "name": "DDR4-3200 32GB（16GB×2）",
+        "detail": ""
       },
       {
         "label": "SSD",
-        "name": "NVMe Gen4×4 1TB",
+        "name": "1TB NVMe Gen4×4（メーカー・型番不明）",
         "detail": ""
       },
       {
         "label": "マザボ",
-        "name": "B550 Micro-ATX",
+        "name": "AMD B550（メーカー・型番不明）",
         "detail": ""
       },
       {
         "label": "電源",
-        "name": "650W",
-        "detail": "80PLUS Bronze"
+        "name": "650W、80PLUS Bronze（メーカー・型番不明）",
+        "detail": ""
       },
       {
         "label": "ケース",
         "name": "マウス NEXTGEAR ミニタワー(JG)",
-        "detail": "ミニタワー・前面/天面メッシュ(BTO専用)"
+        "detail": "220×418×410mm（突起部含む）。突起部除外：220×405×390mm（幅×奥行×高さ）。計算内部寸法は既存モデル"
       },
       {
         "label": "前面ファン",
         "name": "マウス NEXTGEAR 付属 120mm RGBファン ×3",
-        "detail": "吸気",
+        "detail": "吸気 / 計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "マウス NEXTGEAR 付属 120mm RGBファン ×3",
-          "detail": "吸気"
+          "detail": "吸気 / 計算用の仮定。実際の標準搭載構成は未確認"
         }
       },
       {
         "label": "天面ファン",
         "name": "ラジエーターのファン ×2",
-        "detail": "排気・240mmラジエーター",
+        "detail": "排気・240mmラジエーター / 計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "ラジエーターのファン ×2",
-          "detail": "排気・240mmラジエーター"
+          "detail": "排気・240mmラジエーター / 計算用の仮定。実際の標準搭載構成は未確認"
         }
       },
       {
         "label": "背面ファン",
         "name": "マウス NEXTGEAR 付属 120mm RGBファン ×1",
-        "detail": "排気",
+        "detail": "排気 / 計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "マウス NEXTGEAR 付属 120mm RGBファン ×1",
-          "detail": "排気"
+          "detail": "排気 / 計算用の仮定。実際の標準搭載構成は未確認"
         }
       },
       {
         "label": "底面ファン",
         "name": "なし",
-        "detail": "",
+        "detail": "計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "なし",
-          "detail": ""
+          "detail": "計算用の仮定。実際の標準搭載構成は未確認"
         }
       }
     ],
@@ -334,5 +334,57 @@
     "cFanQ": 0,
     "cFanP": 0,
     "radThick": 27
+  },
+  "verifiedHardware": {
+    "date": "2026-10-10",
+    "providedBy": "user",
+    "url": "https://www.mouse-jp.co.jp/store/g/gngear-jga7g6tb5bbdw101dectgst/",
+    "parts": {
+      "cpu": "Ryzen 7 5700X",
+      "cooler": "240mm水冷（実装位置・型番不明）",
+      "gpu": "GeForce RTX 5060 Ti 16GB",
+      "gpuCard": "不明（メーカー・型番・長さ・ファン数）",
+      "memory": "DDR4-3200 32GB（16GB×2）。メーカー・型番不明",
+      "ssd": "1TB NVMe Gen4×4（メーカー・型番不明）",
+      "board": "AMD B550（メーカー・型番不明）",
+      "psu": "650W、80PLUS Bronze（メーカー・型番不明）"
+    },
+    "case": {
+      "name": "マウス NEXTGEAR ミニタワー(JG)",
+      "size": "220×418×410mm（突起部含む）。突起部除外：220×405×390mm（幅×奥行×高さ）",
+      "fans": [],
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "bottom": "不明"
+      },
+      "psu": "不明",
+      "radiator": {
+        "pos": "不明",
+        "size": 240
+      }
+    },
+    "unknown": [
+      "水冷メーカー・型番",
+      "水冷位置",
+      "標準ファンの位置・サイズ・基数・吸排気方向",
+      "水冷ファンのサイズ・基数・吸排気方向",
+      "GPUカードのメーカー・型番・長さ・ファン数",
+      "メモリ/SSD/マザーボード/電源のメーカー・型番",
+      "電源配置",
+      "底面パネル"
+    ],
+    "sources": [
+      "https://www.mouse-jp.co.jp/store/g/gngear-jga7g6tb5bbdw101dectgst/",
+      "https://www.mouse-jp.co.jp/store/r/ra3063011/"
+    ],
+    "price": 288800,
+    "priceDate": "2026-10-10",
+    "priceNote": "通常299,800円からクーポンNXG26で11,000円引き。2026-10-14 11:00（日本時間）まで"
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "計算の目安：標準ファン構成・水冷位置は未確認。前面120mm吸気×3・背面120mm排気×1・天面240mm水冷排気という既存の仮定による2026-10-09の結果です。実際の搭載構成を示すものではありません。",
+    "computedAt": "2026-10-09T03:04:54.086Z"
   }
 }
