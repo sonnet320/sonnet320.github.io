@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "id": "ark-ag-ar8c2tb55ard6x-oa6",
+  "shop": "アーク",
+  "model": "arkhive Gaming Custom GC-A7R96R",
+  "grade": "AG-AR8C2TB55ARD6X-OA6 / 標準構成",
+  "case": "Okinos Aqua 6 Infinity",
+  "sample": false,
+  "state": {
+    "title": "アーク GC-A7R96R / 標準構成",
+    "price": "¥219,800",
+    "note": "通常249,800円から30,000円引き・週替わり限定5台、2026-10-14まで（終了時刻不明）。取得時送料0円、保証1年、決済・注文確定後7～10日ほど。元の保存済みカスタマイズの復元は未確認、表示された標準構成 / 仮定による参考計算（2026-10-10）：汎用ケース寸法470×480×225mm、側面120mm吸気×2・背面120mm排気×1、汎用ファン、上面メッシュ・底面ファン開口・下部電源、汎用4本ヒートパイプ空冷（高さ155mm）、汎用GPU形状。実機の方向・性能・内部形状は未確認。ケース外寸は計算寸法に使用していません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 5700X",
+        "detail": "8コア16スレッド・TDP 65W / 発熱はシート内のゲーム負荷モデル"
+      },
+      {
+        "label": "クーラー",
+        "name": "CPS RZ400V2-BK",
+        "detail": "120mm×1・ヒートパイプ4本 / 計算は汎用空冷・高さ155mmの仮定"
+      },
+      {
+        "label": "GPU",
+        "name": "Radeon RX 9060 XT",
+        "detail": "16GB GDDR6 / カード型番不明・計算形状は仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "SanMax DDR4-3200 32GB（16GB×2）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "Kingston NV3 2TB",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "GIGABYTE B550 GAMING X V2 / AMD B550 / AM4 / ATX / リビジョン不明",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "Cooler Master Elite Gold 850 / 850W / 80 PLUS GOLD / 製品共通仕様：ATX 3.1、フルモジュラー、120mmライフルベアリングファン、奥行140mm / 搭載品の型番末尾不明",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "Okinos Aqua 6 Infinity",
+        "detail": "幅222×奥行462×高さ471mm（ケース製品の公式寸法。突起物を含むかは不明） / 計算は汎用ケース"
+      },
+      {
+        "label": "前面ファン",
+        "name": "なし",
+        "detail": "",
+        "auto": {
+          "name": "なし",
+          "detail": ""
+        }
+      },
+      {
+        "label": "天面ファン",
+        "name": "なし",
+        "detail": "",
+        "auto": {
+          "name": "なし",
+          "detail": ""
+        }
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mmファン ×1",
+        "detail": "排気",
+        "auto": {
+          "name": "120mmファン ×1",
+          "detail": "排気"
+        }
+      },
+      {
+        "label": "底面ファン",
+        "name": "なし",
+        "detail": "",
+        "auto": {
+          "name": "なし",
+          "detail": ""
+        }
+      },
+      {
+        "label": "側面ファン",
+        "name": "120mmファン ×2",
+        "detail": "吸気",
+        "auto": {
+          "name": "120mmファン ×2",
+          "detail": "吸気"
+        }
+      }
+    ],
+    "board": "atx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 205,
+    "gpuSlots": 2,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-single",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "clearance": 25,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 219800,
+        "parts": 213700
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "mid",
+      "d": 470,
+      "h": 480,
+      "w": 225
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "ib7b3as",
+        "x": 115,
+        "y": 212.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "side": true,
+        "dir": "in"
+      },
+      {
+        "id": "rr1f86k",
+        "x": 115,
+        "y": 337.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "side": true,
+        "dir": "in"
+      },
+      {
+        "id": "oyx5hdg",
+        "x": 487.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      }
+    ],
+    "gpuT": 40,
+    "gpuH": 120,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0
+  },
+  "verifiedHardware": {
+    "date": "2026-10-10",
+    "providedBy": "user",
+    "url": "https://www.ark-pc.co.jp/bto/customizer/?pc_id=3756&custom_id=01b7aa8edf699d3ca7f29de93fa74886",
+    "parts": {
+      "cpu": "AMD Ryzen 7 5700X / Zen 3 / 8コア16スレッド / ベース3.4GHz・最大ブースト4.6GHz / AM4 / TDP 65W",
+      "cooler": "PC COOLER CPS RZ400V2-BK / ブラック / サイドフロー空冷 / 120mmファン搭載 / ヒートパイプ4本",
+      "gpu": "AMD Radeon RX 9060 XT / 16GB GDDR6 / AMD公表の標準TBP 160W。ただし搭載カード固有の電力設定は不明",
+      "gpuCard": "不明（メーカー指定不可）",
+      "memory": "SanMax DDR4-3200 / 32GB（16GB×2） / 1.2V / Samsungチップ / 販売ページ表記：Samsung (48S) / モジュール型番不明",
+      "ssd": "Kingston NV3シリーズ / 2TB / M.2 NVMe PCIe 4.0×4 / 搭載品の正確な型番不明",
+      "board": "GIGABYTE B550 GAMING X V2 / AMD B550 / AM4 / ATX / リビジョン不明",
+      "psu": "Cooler Master Elite Gold 850 / 850W / 80 PLUS GOLD / 製品共通仕様：ATX 3.1、フルモジュラー、120mmライフルベアリングファン、奥行140mm / 搭載品の型番末尾不明"
+    },
+    "case": {
+      "name": "Okinos Aqua 6 Infinity",
+      "size": "幅222×奥行462×高さ471mm（ケース製品の公式寸法。突起物を含むかは不明）",
+      "fans": [
+        {
+          "pos": "side",
+          "size": 120,
+          "count": 2,
+          "dir": "不明"
+        },
+        {
+          "pos": "rear",
+          "size": 120,
+          "count": 1,
+          "dir": "不明"
+        }
+      ],
+      "panels": {
+        "front": "glass",
+        "top": "不明",
+        "bottom": "不明"
+      },
+      "psu": "不明"
+    },
+    "unknown": [
+      "元URLの保存済みカスタマイズ内容が復元されたか。アクセス時にcustom_idが変更され、表示構成はすべて標準構成だった",
+      "BTO出荷時のケースファン配置がケース製品の標準配置と同一であることの個別確認",
+      "サイドおよびリアファンの出荷時の吸気・排気方向",
+      "ケースファンV12・V12Rの回転数、最大風量、最大静圧、騒音値、P/Q曲線",
+      "出荷時のファン制御設定、分岐配線、ハブの有無",
+      "CPUクーラーファンの具体的な型番、回転数、風量、静圧、騒音値、設置方向",
+      "CPUの出荷時PPT・PBO設定と実負荷時消費電力",
+      "GPUのメーカー、カード型番、カード長、厚さ、ファン数、補助電源端子、映像出力端子数、電力設定",
+      "マザーボードのリビジョン",
+      "メモリの正確な型番、タイミング、ランク構成",
+      "SSDの正確な型番、フォームファクター、使用M.2スロット、ヒートシンクの有無",
+      "電源の正確な型番末尾",
+      "ケース上面・底面パネルの開口構造と、底面開口がケース内部へ通じる範囲",
+      "BTOでの電源取り付け位置と電源ファンの向き",
+      "ケース寸法の突起物の扱い",
+      "ケース前面Type-Cの出荷時接続状態と実動作速度",
+      "実機の温度、騒音、通過風量、ケース通風抵抗、CPUクーラー熱抵抗"
+    ],
+    "sources": [
+      "https://www.ark-pc.co.jp/bto/customizer/?pc_id=3756&custom_id=01b7aa8edf699d3ca7f29de93fa74886",
+      "https://www.ark-pc.co.jp/bto/customizer/?pc_id=3756&custom_id=a2c94dd62e9d8e062a8fb473f3361cd0",
+      "https://www.links.co.jp/item/okinos-aqua-6-infinity/",
+      "https://www.gigabyte.com/jp/Motherboard/B550-GAMING-X-V2-rev-14/sp",
+      "https://www.kingston.com/datasheets/snv3s_jp.pdf",
+      "https://www.coolermaster.com/ja-jp/products/elite-gold-850.html",
+      "https://ir.amd.com/news-events/press-releases/detail/1053/amd-launches-the-ultimate-gaming-processor-brings-enthusiast-performance-to-an-expanded-lineup-of-ryzen-desktop-processors",
+      "https://www.amd.com/ja/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9060xt.html"
+    ],
+    "price": 219800,
+    "priceDate": "2026-10-10",
+    "priceNote": "通常249,800円から30,000円引き・週替わり限定5台、2026-10-14まで（終了時刻不明）。取得時送料0円、保証1年、決済・注文確定後7～10日ほど。元の保存済みカスタマイズの復元は未確認、表示された標準構成",
+    "specText": "販売構成：Ryzen 7 5700X、RX 9060 XT 16GB、DDR4-3200 32GB、Kingston NV3 2TB、850W GOLD電源。\nOS：Windows 11 Home 64bit DSP版。\nCPUクーラー：CPS RZ400V2-BK、120mmファン搭載サイドフロー空冷、ヒートパイプ4本。水冷ラジエーターは搭載構成に含まれない。\nケース：Okinos Aqua 6 Infinity、ATX対応ミドルタワー、前面および左側面に強化ガラスを採用したピラーレス構造。\n販売ページはケースのARGBファン3基標準搭載を明記。位置と型番はケース公式資料による補足で、サイドに120mmリバースファンV12R PWM ARGB×2、リアに120mm通常ファンV12 PWM ARGB×1。ファン寸法は120×120×25mm。吸排気方向は未確認。\nケース公式の増設対応：サイド120mm×2、上面120mm×3または140mm×2、PSUシュラウド120mm×3、リア120mm×1。最大120mmファン9基。増設可能数は実搭載数に含めていない。\nケース公式のラジエーター対応：上面120・240・360mm、サイド120・240mm、リア120mm。前面とPSUシュラウドは非対応。上面とサイドのラジエーター同時搭載は干渉するため不可。2026年2月の訂正後仕様を採用。\nケース公式の搭載制限：GPU長最大435mm、サイドに240mmラジエーターを設置した場合は最大280mm。CPUクーラー高最大175mm。電源長最大270mm。\nケース公式の外寸：幅222×奥行462×高さ471mm、ケース重量約7.03kg。素材はスチール、4mm厚強化ガラス、ロゴパネル部分の木材。\nダストフィルター：上面、底面、サイド。フィルターの存在だけから底面のケース吸気量やパネル分類は確定していない。\nケース前面端子：USB Type-A×2（USB 3.0）、USB Type-C×1（ケース仕様はUSB 3.2 Gen 2）、Audio in/out×1、電源スイッチ、リセットスイッチ。\nマザーボード参考仕様：Rev.1.4ではDDR4 DIMM×4、最大128GB、M.2×2、SATA 6Gb/s×4、1GbE LAN。M.2はCPU側PCIe 4.0×4とチップセット側PCIe 3.0×4。搭載リビジョンは不明。\nマザーボード参考仕様：Rev.1.4のケース前面Type-C用ヘッダーはUSB 3.2 Gen 1。同仕様のボードに接続した場合、ケース端子側がGen 2対応でも速度上限は5Gbpsとなる。\nマザーボード参考仕様：Rev.1.4にはCPUファン端子×1、水冷CPUファン端子×1、システムファン端子×3。出荷時の接続方法は不明。\nSSD参考仕様：NV3 2TBの公称連続読込は最大6000MB/s、書込は最大5000MB/s、耐久性は640TBW。実搭載品の型番および実測性能は不明。\n電源製品共通仕様：850W、80 PLUS GOLD、ATX 3.1、フルモジュラー、140×150×86mm、120mmライフルベアリングファン。\n通常価格249800円、表示値引き30000円、セール価格219800円。週替わり限定5台セール、表示期限2026年10月14日。\n取得時の送料表示0円、通常保証1年間、出荷目安は決済・注文確定後7～10日ほど。主要パーツは在庫あり表示。\n販売ページの構成電力モニタはシステム消費電力278Wと表示。ただし販売店の計算値であり実測値ではない。CPUのTDP 65WおよびGPUの標準TBP 160Wも、当該PCの実負荷時発熱測定値ではない。",
+    "note": "ユーザー提供の2026-10-10調査結果を反映。今回の取り込みでは再調査していない。custom_idが変更されており表示された標準構成。sources[1]が取得時の表示URL。ケースファン位置と台数は製品共通仕様で、BTOの個別配置確認ではない。マザーボードはRev.1.4の参考仕様で搭載リビジョンは不明。GPUは16GB版。電源メーカー資料の保証年数には不一致があるためPCの保証1年のみ採用。"
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-10）：汎用ケース寸法470×480×225mm、側面120mm吸気×2・背面120mm排気×1、汎用ファン、上面メッシュ・底面ファン開口・下部電源、汎用4本ヒートパイプ空冷（高さ155mm）、汎用GPU形状。実機の方向・性能・内部形状は未確認。ケース外寸は計算寸法に使用していません。",
+    "computedAt": "2026-10-10T14:59:03.291Z",
+    "assumptions": {
+      "caseDim": {
+        "preset": "mid",
+        "d": 470,
+        "h": 480,
+        "w": 225
+      },
+      "caseType": "standard",
+      "panels": {
+        "front": "glass",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "fans": [
+        {
+          "id": "ib7b3as",
+          "x": 115,
+          "y": 212.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "side": true,
+          "dir": "in"
+        },
+        {
+          "id": "rr1f86k",
+          "x": 115,
+          "y": 337.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "side": true,
+          "dir": "in"
+        },
+        {
+          "id": "oyx5hdg",
+          "x": 487.5,
+          "y": 174,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120"
+        }
+      ],
+      "cooler": {
+        "model": "gen-single",
+        "custom": {
+          "type": "air",
+          "pipes": 4,
+          "fans": 1,
+          "fs": 120,
+          "h": 155,
+          "rad": 360,
+          "thick": 27,
+          "tdp": null
+        }
+      },
+      "gpu": {
+        "model": "c3",
+        "length": 304,
+        "height": 120,
+        "thickness": 40,
+        "fans": 3
+      },
+      "powerModel": "既存PC構成シートのCPUゲーム負荷・GPU90%モデル。TDP/TBP/販売店278Wを実測値として使用していない"
+    }
+  }
+}
