@@ -3,13 +3,13 @@
   "id": "frontier-frghlmb650-ws1006-ntk",
   "shop": "FRONTIER",
   "model": "FRGHLMB650/WS1006/NTK",
-  "grade": "限界チャレンジセール",
+  "grade": "限界チャレンジセール・標準構成",
   "case": "FRONTIER GHLシリーズ（OEM元メーカー・型番は不明）",
   "sample": false,
   "state": {
     "title": "FRONTIER FRGHLMB650/WS1006/NTK",
-    "price": "¥495,050",
-    "note": "限界チャレンジセール",
+    "price": "¥489,800",
+    "note": "限界チャレンジセール・標準構成 / セールは2026-10-16 15:00（日本時間）まで。送料無料表示と共通注意書きの送料3,300円が併存するため、最終注文画面で確認 / 計算の目安：前面×3・背面×1は確認済みですが、サイズ・方向は未確認。140mm前面吸気×3・背面排気×1とパネル・GPU形状の既存の仮定による2026-10-09の結果です。メモリ枚数は冷却モデルの計算対象外です。",
     "specs": [
       {
         "label": "CPU",
@@ -18,73 +18,73 @@
       },
       {
         "label": "クーラー",
-        "name": "PCCOOLER CPS RT400",
-        "detail": "シングルタワー・ヒートパイプ4本・120mm×1・高さ148mm"
+        "name": "CPS RT400-BK（空冷）",
+        "detail": "計算形状は既存の近似モデル"
       },
       {
         "label": "GPU",
         "name": "MSI製 GeForce RTX 5080",
-        "detail": "VRAM 16GB"
+        "detail": "GeForce RTX 5080 16GB / MSI製（型番・長さ・ファン数不明）。計算形状は仮定"
       },
       {
         "label": "メモリ",
-        "name": "DDR5 32GB",
-        "detail": "16GB × 2"
+        "name": "DDR5 32GB（32GB×1）",
+        "detail": ""
       },
       {
         "label": "SSD",
-        "name": "NVMe Gen4 1TB",
+        "name": "1TB NVMe Gen4（メーカー・型番不明）",
         "detail": ""
       },
       {
         "label": "マザボ",
-        "name": "MSI製 AMD B650",
-        "detail": "型番不明"
+        "name": "MSI製、AMD B650（製品型番不明）",
+        "detail": ""
       },
       {
         "label": "電源",
-        "name": "1000W",
-        "detail": "80PLUS Platinum"
+        "name": "1000W、80PLUS Platinum、日本製コンデンサ仕様（メーカー・型番不明）",
+        "detail": ""
       },
       {
         "label": "ケース",
         "name": "FRONTIER GHL シリーズ",
-        "detail": "ミドルタワー・前面/天面メッシュ(BTO専用)"
+        "detail": "約230×465×500mm（幅×奥行×高さ、突起部含む）。計算内部寸法は既存モデル"
       },
       {
         "label": "前面ファン",
         "name": "FRONTIER GHL 付属 140mm ARGBファン ×3",
-        "detail": "吸気",
+        "detail": "吸気 / 計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "FRONTIER GHL 付属 140mm ARGBファン ×3",
-          "detail": "吸気"
+          "detail": "吸気 / 計算用の仮定。実際の標準搭載構成は未確認"
         }
       },
       {
         "label": "天面ファン",
         "name": "なし",
-        "detail": "",
+        "detail": "計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "なし",
-          "detail": ""
+          "detail": "計算用の仮定。実際の標準搭載構成は未確認"
         }
       },
       {
         "label": "背面ファン",
         "name": "FRONTIER GHL 付属 140mm ARGBファン ×1",
-        "detail": "排気",
+        "detail": "排気 / 計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "FRONTIER GHL 付属 140mm ARGBファン ×1",
-          "detail": "排気"
+          "detail": "排気 / 計算用の仮定。実際の標準搭載構成は未確認"
         }
       },
       {
         "label": "底面ファン",
         "name": "なし",
-        "detail": "",
+        "detail": "計算用の仮定。実際の標準搭載構成は未確認",
         "auto": {
           "name": "なし",
-          "detail": ""
+          "detail": "計算用の仮定。実際の標準搭載構成は未確認"
         }
       }
     ],
@@ -313,5 +313,65 @@
     "cFanSize": 120,
     "cFanQ": 0,
     "cFanP": 0
+  },
+  "verifiedHardware": {
+    "date": "2026-10-10",
+    "providedBy": "user",
+    "url": "https://www.frontier-direct.jp/direct/g/g124436-Oct2/",
+    "parts": {
+      "cpu": "Ryzen 7 9800X3D",
+      "cooler": "CPS RT400-BK（空冷）",
+      "gpu": "GeForce RTX 5080 16GB",
+      "gpuCard": "MSI製（型番・長さ・ファン数不明）",
+      "memory": "DDR5 32GB（32GB×1）。メーカー・型番不明、動作速度不明",
+      "ssd": "1TB NVMe Gen4（メーカー・型番不明）",
+      "board": "MSI製、AMD B650（製品型番不明）",
+      "psu": "1000W、80PLUS Platinum、日本製コンデンサ仕様（メーカー・型番不明）"
+    },
+    "case": {
+      "name": "FRONTIER GHL シリーズ",
+      "size": "約230×465×500mm（幅×奥行×高さ、突起部含む）",
+      "fans": [
+        {
+          "pos": "front",
+          "size": "不明",
+          "count": 3,
+          "dir": "不明"
+        },
+        {
+          "pos": "rear",
+          "size": "不明",
+          "count": 1,
+          "dir": "不明"
+        }
+      ],
+      "panels": {
+        "front": "mesh",
+        "top": "不明",
+        "bottom": "不明"
+      },
+      "psu": "不明"
+    },
+    "unknown": [
+      "標準ファンのサイズ・吸排気方向",
+      "上面・底面パネル",
+      "電源のメーカー・型番・配置",
+      "GPUカード型番・長さ・ファン数",
+      "メモリのメーカー・型番・動作速度",
+      "SSDのメーカー・型番",
+      "マザーボード型番"
+    ],
+    "sources": [
+      "https://www.frontier-direct.jp/direct/g/g124436-Oct2/",
+      "https://www.frontier-direct.jp/direct/e/ejGhlB6m/"
+    ],
+    "price": 489800,
+    "priceDate": "2026-10-10",
+    "priceNote": "セールは2026-10-16 15:00（日本時間）まで。送料無料表示と共通注意書きの送料3,300円が併存するため、最終注文画面で確認"
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "計算の目安：前面×3・背面×1は確認済みですが、サイズ・方向は未確認。140mm前面吸気×3・背面排気×1とパネル・GPU形状の既存の仮定による2026-10-09の結果です。メモリ枚数は冷却モデルの計算対象外です。",
+    "computedAt": "2026-10-09T02:58:43.260Z"
   }
 }
