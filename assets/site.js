@@ -37,7 +37,7 @@ function renderCards(){
     const top=node('div','card-top');top.append(node('span','tier-badge tier-'+tierOf(p),tiers[tierOf(p)]||'価格未登録'),node('span','sample-label',p.sample?p.model:p.pr?'PR':''));b.append(top,node('h3','',p.name),node('p','card-shop',p.shop+(p.sample?'':' · '+p.model)));
     const dl=node('dl','card-specs');for(const [k,v]of [['CPU',p.cpu],['GPU',p.gpu],['RAM',p.memory],['SSD',p.ssd]])dl.append(node('dt','',k),node('dd','',v));b.append(dl);
     const bottom=node('div','card-bottom');bottom.append(node('span','price',p.price?'¥'+p.price.toLocaleString('ja-JP'):'価格未登録'),node('span','select-label',selected?.id===p.id?'選択中':'結果を見る'));b.append(bottom);
-    if(p.price&&p.priceDate)b.append(node('p','price-date',p.priceDate+'時点・税込'));
+    if(p.price&&p.priceDate)b.append(node('p','price-date',p.priceDate+'時点・税込'+(p.priceNote?' · '+p.priceNote:'')));
     if(p.genericCase)b.append(node('p','generic-note','目安（汎用ケースで計算）'));
     b.addEventListener('click',()=>selectProduct(p));list.append(b);
   }
@@ -50,7 +50,7 @@ async function selectProduct(p){
   $('result-error').hidden=true;$('result-image').hidden=true;$('result-placeholder').hidden=false;$('result-placeholder').textContent='計算結果を読み込み中';
   ['temp-cpu','temp-gpu','temp-vrm','result-grade'].forEach(id=>$(id).textContent='—');$('result-conditions').replaceChildren();
   $('load-build').disabled=!sheetReady||loadingBuild;$('load-status').textContent='';
-  $('case-note').textContent=p.genericCase?'目安（汎用ケースで計算）':'ケース：'+p.case;
+  $('case-note').textContent=(p.genericCase?'目安（汎用ケースで計算）':'ケース：'+p.case)+(p.simulationNote?' / '+p.simulationNote:'');
   // an affiliate link is marked PR (rel sponsored); without one, the product page itself is linked without the mark
   const aff=!!p.affiliateUrl, shop=safeURL(p.affiliateUrl||p.url||''), sl=$('shop-link');
   sl.hidden=!shop||p.sample;if(shop)sl.href=shop.href;sl.rel=aff?'noopener noreferrer sponsored':'noopener noreferrer';$('shop-pr').hidden=!aff;
