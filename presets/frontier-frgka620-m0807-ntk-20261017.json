@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-frgka620-m0807-ntk-20261017",
+  "shop": "FRONTIER",
+  "model": "FRGKA620/M0807/NTK",
+  "grade": "標準構成",
+  "case": "GK-A620Aシリーズ用ミニタワー（ケース単体メーカー・型番記載なし）。約30L。外寸：幅215×高さ347×奥行401mm（約・突起部含む）。底面吸気・上面/背面排気の垂直エアフロー構造。上面/底面に着脱式防塵フィルター。側面パネルはツールレス着脱",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "FRONTIER FRGKA620/M0807/NTK",
+    "price": "¥249,800",
+    "note": "ケース確認元：https://www.frontier-direct.jp/direct/e/ejGkA62m/ （商品ページのGKシリーズ詳細リンク）。シリーズ共通仕様を参照し外寸一致を確認。ケース色はシリーズで2色選択可と記載されるが当該商品の標準色は未確認。内部ベイ：3.5インチ×1・2.5インチ×1。上面I/O：USB Type-A 3.2 Gen1×2・USB Type-C 3.2 Gen1×1・CTIA4極ヘッドセット端子×1。パネル材質・メッシュ開口面積・電源搭載位置/吸排気方向・GPU長上限・CPUクーラー高上限・ファン取付可能位置/数/径・ラジエータ対応サイズ・標準ファン構成は記載なし。写真からの推定なし。受注生産・具体的納期未確認。送料無料と送料3300円の表示が併存し送料未確定。価格は前回採用価格を維持。冷却結果やケースファン仕様が不足しても確認済み構成・価格をBTO読込対象に残す。\n冷却結果は未計算。標準ファンの数・径・配置・風向・性能、GPUカード型番・形状、電源位置、パネル材質などは未確認。ケースはGK-A620Aシリーズの寸法と通風構造を参照。シートの冷却設定・ケース内部モデルは計算用仮設定で製品の確認値ではありません。fans空配列は配置未確認を示し、ファン非搭載を意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 5 7500F",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "CPS RT400-BK（空冷）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "ASRock製 AMD Radeon RX 9060 XT 専用VRAM 16GB",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（32GB×1）DDR5",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe Gen4 SSD",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "600W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "GK-A620Aシリーズ用ミニタワー（ケース単体メーカー・型番記載なし）。約30L。外寸：幅215×高さ347×奥行401mm（約・突起部含む）。底面吸気・上面/背面排気の垂直エアフロー構造。上面/底面に着脱式防塵フィルター。側面パネルはツールレス着脱",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "記載なし（標準搭載数・搭載位置・径・厚さ・型番・回転数・風量・静圧・PWM/ARGB仕様）。ケース構造の通風方向と搭載ファン構成は区別する",
+        "detail": ""
+      },
+      {
+        "label": "マザーボード",
+        "name": "AMD A620A MicroATX（メーカー・型番はCSVに記載なし）",
+        "detail": ""
+      },
+      {
+        "label": "OS",
+        "name": "Windows 11 Home 64bit",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "board": "matx",
+    "caseDim": {
+      "preset": "gka620",
+      "d": 401,
+      "h": 347,
+      "w": 215
+    },
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 249800,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "frontier-frgka620-m0807-ntk-20261017",
+    "shop": "FRONTIER",
+    "model": "FRGKA620/M0807/NTK",
+    "url": "https://www.frontier-direct.jp/direct/g/g124210-Sep/",
+    "price": 249800,
+    "priceDate": "2026-10-17",
+    "parts": {
+      "CPU": "AMD Ryzen 5 7500F",
+      "CPUクーラー": "CPS RT400-BK（空冷）",
+      "GPU": "ASRock製 AMD Radeon RX 9060 XT 専用VRAM 16GB",
+      "メモリ": "32GB（32GB×1）DDR5",
+      "SSD": "1TB M.2 NVMe Gen4 SSD",
+      "電源": "600W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+      "ケース": "GK-A620Aシリーズ用ミニタワー（ケース単体メーカー・型番記載なし）。約30L。外寸：幅215×高さ347×奥行401mm（約・突起部含む）。底面吸気・上面/背面排気の垂直エアフロー構造。上面/底面に着脱式防塵フィルター。側面パネルはツールレス着脱",
+      "ケースファン": "記載なし（標準搭載数・搭載位置・径・厚さ・型番・回転数・風量・静圧・PWM/ARGB仕様）。ケース構造の通風方向と搭載ファン構成は区別する",
+      "マザーボード": "AMD A620A MicroATX（メーカー・型番はCSVに記載なし）",
+      "OS": "Windows 11 Home 64bit"
+    },
+    "sale": "パソコン秋穫祭掲載。2026年10月21日15:00まで（日本時間）。電源アップグレード特価は未適用",
+    "note": "ケース確認元：https://www.frontier-direct.jp/direct/e/ejGkA62m/ （商品ページのGKシリーズ詳細リンク）。シリーズ共通仕様を参照し外寸一致を確認。ケース色はシリーズで2色選択可と記載されるが当該商品の標準色は未確認。内部ベイ：3.5インチ×1・2.5インチ×1。上面I/O：USB Type-A 3.2 Gen1×2・USB Type-C 3.2 Gen1×1・CTIA4極ヘッドセット端子×1。パネル材質・メッシュ開口面積・電源搭載位置/吸排気方向・GPU長上限・CPUクーラー高上限・ファン取付可能位置/数/径・ラジエータ対応サイズ・標準ファン構成は記載なし。写真からの推定なし。受注生産・具体的納期未確認。送料無料と送料3300円の表示が併存し送料未確定。価格は前回採用価格を維持。冷却結果やケースファン仕様が不足しても確認済み構成・価格をBTO読込対象に残す。",
+    "informationSource": "依頼者提供CSV（2026-10-17調査・公式商品ページ／GKシリーズ詳細）",
+    "date": "2026-10-17",
+    "sources": [
+      "https://www.frontier-direct.jp/direct/g/g124210-Sep/",
+      "https://www.frontier-direct.jp/direct/e/ejGkA62m/"
+    ]
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算。標準ファンの数・径・配置・風向・性能、GPUカード型番・形状、電源位置、パネル材質などは未確認。ケースはGK-A620Aシリーズの寸法と通風構造を参照。シートの冷却設定・ケース内部モデルは計算用仮設定で製品の確認値ではありません。fans空配列は配置未確認を示し、ファン非搭載を意味しません。",
+    "assumptions": {},
+    "unknown": [
+      "標準ケースファンの構成・性能",
+      "ケースパネル材質・電源位置",
+      "GPUカード型番・寸法",
+      "CPUクーラーの実搭載条件"
+    ]
+  }
+}

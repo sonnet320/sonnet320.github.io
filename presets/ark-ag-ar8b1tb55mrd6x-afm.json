@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "id": "ark-ag-ar8b1tb55mrd6x-afm",
+  "shop": "アーク",
+  "model": "arkhive Gaming Custom GC-A7R96M / AG-AR8B1TB55MRD6X-AFM",
+  "grade": "標準構成",
+  "case": "Antec FLUX M",
+  "sample": false,
+  "state": {
+    "title": "アーク GC-A7R96M / AG-AR8B1TB55MRD6X-AFM",
+    "price": "¥219,800",
+    "note": "2026-10-12確認：税込219,800円（通常259,800円）、ハロウィンフェア・残り8台表示。単体注文時送料無料。即納パーツ構成7～10日、取り寄せ含む18～28日で出荷目安。保証1年センドバック。セール終了日時未確認 / 冷却結果は未計算：水冷位置・方向、ファン性能、GPU形状が未確認。シート読込はケース「Antec FLUX M」（外寸459×247×365mm、電源は前方上部のマザーボード裏に付くため二室構造で計算）、前面120mm×2吸気・底面120mm×3吸気（リバース）・背面120mm×1排気（レビューで確認）、天面360mm水冷排気（仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、汎用GPU長300mm・高さ125mm・厚40.64mm・3ファンの仮設定です。前面ファンは天面の水冷と重ならないよう下寄りに置いています。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 5700X（8コア／16スレッド、3.4～4.6GHz、AM4、TDP 65W）",
+        "detail": ""
+      },
+      {
+        "label": "クーラー",
+        "name": "Antec Skeleton 360 ARGB（360mm簡易水冷、120×120×25mm ARGB PWMファン3基、ラジエーター397×120×27mm。実装位置・風向不明）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "AMD Radeon RX 9060 XT 16GB GDDR6",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "Ark Selection Memory ARD4-U16G48HB-26V-D：16GB（8GB×2）、DDR4-2666 CL19、1.2V、SK hynixチップ",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "Kingston NV3 1TB／SNV3S/1000G（PCIe 4.0×4 NVMe、最大読込6000MB/s・書込4000MB/s）",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "ASUS PRIME B550M-A WIFI II（Micro-ATX、AMD B550、AM4、Wi-Fi 6）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "COUGAR GR 850／CGR GDN-850（850W、80 PLUS Gold、ATX 3.1、PCIe 5.1、フルモジュラー。販売ページの一部に860W表記あり）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "Antec FLUX M",
+        "detail": "幅247×奥行459×高さ365mm（メーカー公称値）／シートのケース「Antec FLUX M」で計算（電源は裏側の別室）"
+      },
+      {
+        "label": "前面ファン",
+        "name": "120mm×2",
+        "detail": "吸気。性能は一般的な付属ファンの値、天面水冷と重ならない下寄りに配置"
+      },
+      {
+        "label": "底面ファン",
+        "name": "120mm×3 リバース",
+        "detail": "GPUへの吸気。性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mm×1",
+        "detail": "排気（レビューで確認）。性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "天面ファン",
+        "name": "計算用：360mm水冷の120mm×3",
+        "detail": "天面排気は仮定、実装位置・方向不明"
+      }
+    ],
+    "board": "matx",
+    "cooler": "aio",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 260,
+    "gpuSlots": 2,
+    "gpuLen": 300,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio360",
+    "coolerCustom": {
+      "type": "aio",
+      "pipes": 4,
+      "fans": 3,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 40.64,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "mesh"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "dual",
+    "clearance": 25,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 219800,
+        "parts": null
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": 70,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "fluxm",
+      "d": 459,
+      "h": 365,
+      "w": 247
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-front-1",
+        "x": 52.5,
+        "y": 200,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "afm120"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-front-2",
+        "x": 52.5,
+        "y": 325,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "afm120"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-bottom-1",
+        "x": 140,
+        "y": 382.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "afm120r"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-bottom-2",
+        "x": 265,
+        "y": 382.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "afm120r"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-bottom-3",
+        "x": 390,
+        "y": 382.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "afm120r"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-rear-1",
+        "x": 477.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "afm120"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-rad-1",
+        "x": 130,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-rad-2",
+        "x": 255,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "ark-ag-ar8b1tb55mrd6x-afm-rad-3",
+        "x": 380,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 40.64,
+    "gpuH": 125,
+    "gpuFans": 3,
+    "cFans": 3,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "date": "2026-10-12",
+    "providedBy": "chat_research",
+    "url": "https://www.ark-pc.co.jp/i/72003493/",
+    "parts": {
+      "cpu": "AMD Ryzen 7 5700X（8コア／16スレッド、3.4～4.6GHz、AM4、TDP 65W）",
+      "cooler": "Antec Skeleton 360 ARGB（360mm簡易水冷、120×120×25mm ARGB PWMファン3基、ラジエーター397×120×27mm。実装位置・風向不明）",
+      "gpu": "AMD Radeon RX 9060 XT 16GB GDDR6",
+      "gpuCard": "不明（メーカー指定不可。型番・長さ・厚さ・ファン数不明）",
+      "memory": "Ark Selection Memory ARD4-U16G48HB-26V-D：16GB（8GB×2）、DDR4-2666 CL19、1.2V、SK hynixチップ",
+      "ssd": "Kingston NV3 1TB／SNV3S/1000G（PCIe 4.0×4 NVMe、最大読込6000MB/s・書込4000MB/s）",
+      "board": "ASUS PRIME B550M-A WIFI II（Micro-ATX、AMD B550、AM4、Wi-Fi 6）",
+      "psu": "COUGAR GR 850／CGR GDN-850（850W、80 PLUS Gold、ATX 3.1、PCIe 5.1、フルモジュラー。販売ページの一部に860W表記あり）"
+    },
+    "case": {
+      "name": "Antec FLUX M",
+      "size": "幅247×奥行459×高さ365mm（メーカー公称値、突起物を含むか不明）",
+      "fans": [
+        {
+          "pos": "front",
+          "size": 120,
+          "count": 2,
+          "dir": "in"
+        },
+        {
+          "pos": "bottom",
+          "size": 120,
+          "count": 3,
+          "dir": "in"
+        },
+        {
+          "pos": "rear",
+          "size": 120,
+          "count": 1,
+          "dir": "不明"
+        }
+      ],
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "bottom": "mesh"
+      },
+      "psu": "不明",
+      "radiator": {
+        "pos": "不明",
+        "size": 360
+      }
+    },
+    "unknown": [
+      "水冷ラジエーターの実装位置・ファン方向",
+      "背面ケースファンの実機での吸排気方向",
+      "ケース付属ファンの型番・性能・制御設定",
+      "GPUカードのメーカー・型番・寸法・ファン数",
+      "ケース内部寸法・突起物の寸法への包含",
+      "完成品の電源吸気方向",
+      "セール終了日時"
+    ],
+    "sources": [
+      "https://www.ark-pc.co.jp/i/72003493/",
+      "https://www.ark-pc.co.jp/bto/customizer/?pc_id=3493",
+      "https://www.antec.com/product/case/flux-m",
+      "https://www.antec.com/product/cooling/skeleton360-argb",
+      "https://cougargaming.com/ja/products/psus/gr-650-750-850/"
+    ],
+    "price": 219800,
+    "priceDate": "2026-10-12",
+    "priceNote": "2026-10-12確認：税込219,800円（通常259,800円）、ハロウィンフェア・残り8台表示。単体注文時送料無料。即納パーツ構成7～10日、取り寄せ含む18～28日で出荷目安。保証1年センドバック。セール終了日時未確認",
+    "specText": "OS：Windows 11 Home 64bit DSP版。\nケースファン6基：前面120mm ARGB PWM×2、底面120mm PWMリバース×3、背面120mm ARGB PWM×1。前面・底面吸気はケース共通資料。背面風向は完成品未確認。\n水冷ファン3基は独立ケースファン6基に含めない。天面360mm対応は搭載可能位置であり、完成品の実装位置は未確認。\nケース共通仕様：左側面3mm強化ガラス、前面・天面・底面通気開口、天面・底面防塵フィルター。前方専用電源区画。底面3基はGPUへのケース吸気。\n前面USB Type-A×1、Type-C×1、ヘッドホン／マイク兼用端子。標準構成では前面Type-C使用不可。",
+    "note": "sources[0]は対象商品価格・標準構成・ファン台数・保証・Type-C制限、[1]はCPU・メモリ・SSD・電源の型番。[2]はケース共通の寸法・パネル・吸気経路・前方電源区画。[3]はクーラー共通のファン・ラジエーター寸法。[4]は定格850W。販売ページの860W表示と公式850Wを区別。case.psuの規定値に前方配置がないため不明とし、構造はspecTextに記載。完成品での水冷位置・背面風向・GPU形状は未確定。"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "computedAt": null,
+    "note": "冷却結果は未計算：水冷位置・方向、ファン性能、GPU形状が未確認。シート読込はケース「Antec FLUX M」（外寸459×247×365mm、電源は前方上部のマザーボード裏に付くため二室構造で計算）、前面120mm×2吸気・底面120mm×3吸気（リバース）・背面120mm×1排気（レビューで確認）、天面360mm水冷排気（仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、汎用GPU長300mm・高さ125mm・厚40.64mm・3ファンの仮設定です。前面ファンは天面の水冷と重ならないよう下寄りに置いています。",
+    "assumptions": {
+      "caseDim": {
+        "preset": "fluxm",
+        "d": 459,
+        "h": 365,
+        "w": 247
+      },
+      "caseType": "dual",
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "mesh"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "fans": [
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-front-1",
+          "x": 52.5,
+          "y": 200,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "afm120"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-front-2",
+          "x": 52.5,
+          "y": 325,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "afm120"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-bottom-1",
+          "x": 140,
+          "y": 382.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "afm120r"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-bottom-2",
+          "x": 265,
+          "y": 382.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "afm120r"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-bottom-3",
+          "x": 390,
+          "y": 382.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "afm120r"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-rear-1",
+          "x": 477.5,
+          "y": 174,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "afm120"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-rad-1",
+          "x": 130,
+          "y": 81.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "auto": "rad"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-rad-2",
+          "x": 255,
+          "y": 81.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "auto": "rad"
+        },
+        {
+          "id": "ark-ag-ar8b1tb55mrd6x-afm-rad-3",
+          "x": 380,
+          "y": 81.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "auto": "rad"
+        }
+      ],
+      "radSize": 360,
+      "radPos": "top",
+      "radThick": 27,
+      "radFan": {
+        "model": null,
+        "rpm": 70,
+        "for": null
+      },
+      "coolerBrand": "generic",
+      "coolerModel": "gen-aio360",
+      "gpuBrand": "generic",
+      "gpuModel": "c3",
+      "gpuCustom": {
+        "L": 300,
+        "H": 125,
+        "T": 40.64,
+        "fans": 3,
+        "type": "flow",
+        "power": null,
+        "vc": false
+      },
+      "gpuLen": 300,
+      "gpuH": 125,
+      "gpuT": 40.64,
+      "gpuFans": 3,
+      "room": 25,
+      "cpuMode": "game",
+      "cpuLoad": 60,
+      "gpuLoad": 90,
+      "fanRpm": 70
+    }
+  }
+}

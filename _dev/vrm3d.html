@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VRM の 2D・3D 比較</title>
+<style>
+:root{--bg:#F4F6F9;--panel:#fff;--line:#CDD5DF;--ink:#18202C;--muted:#5A6576;--accent:#2E7CE6;--warn:#C8283F}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1218;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--accent:#4E9BFF;--warn:#FF6B6B}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",system-ui,sans-serif;font-size:14px;line-height:1.6;padding:16px}
+main{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+h1{font-size:20px;margin:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.status{font-weight:700}
+.status.warn{color:var(--warn)}
+.hint{color:var(--muted);margin:4px 0 0;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-size:12px}
+.tw{overflow-x:auto}
+textarea{width:100%;min-height:140px;font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px}
+button{font:inherit;font-weight:700;padding:7px 14px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+button.primary{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+#frame{width:100%;height:720px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+</style>
+</head>
+<body>
+<main>
+  <h1>VRM の 2D・3D 比較(作者のPC)</h1>
+  <div class="card">
+    <div class="status" id="status" role="status">準備中…</div>
+    <p class="hint">このページを開くと自動で計算が始まります。終わるまで、このタブを表示したままにしてください(隠れると計算が止まります)。全部で数分かかります。シートの保存データは計算の前に退避し、終わったら元に戻します。</p>
+  </div>
+  <div class="card tw">
+    <table id="table">
+      <thead><tr><th>条件</th><th>実測 VRM</th><th>2D VRM</th><th>3D VRM</th><th>2D 風速</th><th>3D 風速</th><th>2D 周りの空気</th><th>3D 周りの空気</th><th>ソケットの熱</th><th>2D CPU</th><th>3D CPU</th><th>実測 CPU</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="hint">温度は°C、風速は VRM に当たる風(m/s)、周りの空気は室温からの上昇分。「ソケットの熱」は VRM の温度に含まれている、CPU から基板を伝わる熱の分です。</p>
+  </div>
+  <div class="card">
+    <b>結果(Claude に貼り付けてください)</b>
+    <textarea id="out" readonly placeholder="計算が終わると、ここに結果が入ります"></textarea>
+    <div class="btns"><button class="primary" id="copy" type="button" disabled>結果をコピー</button><button id="save" type="button" disabled>ファイルに保存</button></div>
+  </div>
+  <iframe id="frame" title="計算中のPC構成シート"></iframe>
+</main>
+<script>
+(async()=>{
+const $=id=>document.getElementById(id);
+const status=(t,warn)=>{$('status').textContent=t;$('status').classList.toggle('warn',!!warn);};
+
+/* the author's PC: _dev/validation/user_pc_calibration_20261002.md and user_pc_cinebench_20261014.md */
+const PARTS=`CPU: Ryzen 7 9700X
+CPUクーラー: Corsair NAUTILUS 240 RS
+グラフィック: Palit GeForce RTX 5080 GamingPro OC
+マザーボード: ASRock X870 Taichi Creator
+ケース: NZXT H5 Flow (2024)
+前面ファン: Sudokoo MACH140 ×2 吸気
+背面ファン: Sudokoo MACH120 ×1 排気`;
+const SETUP=`
+state.fans.forEach(f=>{if(f.x<100&&!f.auto){f.model='mach140';f.size=140;}});
+{const g=newFan({x:150,y:380});g.model='p12pro';g.size=120;placeFan(g,150,380,null);g.a=270;state.fans.push(g);}
+state.card={...state.card,model:'kuro4k1c1',off:5};
+state.vrmHs='xl';state.vrmPh=18;`;
+/* conditions; cpuW: measured package power (manual), gpuW: measured GPU power (turned into the usage) */
+const CONDS=[
+  {k:'occt',t:'OCCT Power',room:23,cpuW:88,gpuW:323,fan:65,gfan:65,vrm:44.7,cpu:54.6},
+  {k:'cine',t:'Cinebench',room:24,cpuW:87.8,gpuW:22,fan:35,gfan:30,vrm:null,cpu:60.5},
+  {k:'zzz',t:'ゼンレスゾーンゼロ',room:24,cpuW:81.3,gpuW:211,fan:35,gfan:null,vrm:null,cpu:63.5},
+];
+const OPT={settle:6,avg:2};
+
+/* keep the sheet's own saved data */
+const backup={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);backup[k]=localStorage.getItem(k);}
+let restored=false;
+const restore=()=>{if(restored)return;restored=true;try{for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(!(k in backup))localStorage.removeItem(k);}for(const k in backup)if(localStorage.getItem(k)!==backup[k])localStorage.setItem(k,backup[k]);}catch(e){}};
+window.addEventListener('pagehide',restore);
+
+const results={page:'vrm3d',at:new Date().toISOString(),ua:navigator.userAgent,rows:[]};
+try{
+  status('シートを読み込み中…');
+  const base=new URL('../pc-sheet/',location.href).href;
+  const r=await fetch(base+'index.html',{cache:'no-cache'});if(!r.ok)throw new Error('シート(pc-sheet/index.html)を開けませんでした。リポジトリのフォルダでローカルサーバーを起動してください。');
+  let html=await r.text();
+  const cut=html.lastIndexOf('})();');if(cut<0)throw new Error('シートの形が想定と違います。');
+  html=html.slice(0,cut)+'window.__dbg=s=>eval(s);'+html.slice(cut);
+  html=html.replace('<head>','<head><base href="'+base+'">');
+  html=html.replace('if(window.parent!==window)window.parent.postMessage(','if(false)window.parent.postMessage(');   // not inside the website: no messages to this page
+  const fr=$('frame');
+  await new Promise(res=>{fr.onload=res;fr.srcdoc=html;});
+  const W=fr.contentWindow, D=fr.contentDocument;
+  for(let i=0;i<100&&!W.__dbg;i++)await new Promise(r=>setTimeout(r,100));
+  if(!W.__dbg)throw new Error('シートの準備ができませんでした。');
+  const ev=s=>W.__dbg(s);
+  results.model=ev('DIAG_VER');
+  if(!/^sheet-v6[4-9]|^sheet-v[7-9]/.test(results.model))throw new Error(`シートの版が ${results.model} です。ブランチ vrm-hs-20261026 に切り替えてから開いてください。`);
+  const has3d=await ev('(async()=>{if(gpu3===null||gpu3===undefined)gpu3=await Air3D.probe();return !!gpu3;})()');
+  results.gpu=has3d?ev('Air3D.gpuName()'):null;
+  if(!has3d)status('このブラウザでは WebGPU が使えないため、2D だけ計算します(PCの Chrome・Edge で開くと 3D も計算します)。',true);
+
+  /* the parts, then the fans and the board as in the records */
+  D.getElementById('json').value=PARTS;D.getElementById('load-json').click();
+  await new Promise(r=>setTimeout(r,800));
+  ev(SETUP+'syncControls();needRebuild=true;rebuild();');
+  results.config=JSON.parse(ev('JSON.stringify({specs:state.specs.map(s=>s.label+": "+s.name),fans:state.fans.map(f=>[f.model,Math.round(f.x),Math.round(f.y),f.a,f.auto||""]),case:state.caseDim.preset,vrm:mbInfo()})'));
+  ev('diagRun=true;running=false;');
+  if(has3d)ev("Air3D.attach($('v3box'))");
+
+  for(let i=0;i<CONDS.length;i++){
+    const c=CONDS[i];
+    status(`${i+1}/${CONDS.length}:${c.t}(2D)を計算中…`);
+    ev(`state.room=${c.room};state.cpuMode='manual';state.cpuManualW=${c.cpuW};
+      {const gw=gpuW();state.gpuLoad=clamp(Math.round((${c.gpuW}/gw-0.06)/0.94*100),0,100);}
+      state.gpuFan=${c.gfan==null?"{mode:'auto',pct:60}":`{mode:'manual',pct:${c.gfan}}`};
+      state.fans.forEach(f=>f.rpm=${c.fan});state.fanRpm=${c.fan};
+      syncControls();needRebuild=true;rebuild();dim3=false;syncDim();fit();`);
+    await new Promise(r=>W.requestAnimationFrame(r));
+    const e2=JSON.parse(await ev(`(async()=>{const r=await diag2d(${JSON.stringify(OPT)});const e=diagEval(r.m,r.fq,r.coolQ,r.gpuQ);return JSON.stringify({e,P:{cpu:P.cpu,gpu:P.gpu,vrm:P.vrm,gpuLoad:state.gpuLoad},sock:VRM_SOCK*P.cpu});})()`));
+    let e3=null;
+    if(has3d){
+      status(`${i+1}/${CONDS.length}:${c.t}(3D)を計算中…`);
+      e3=JSON.parse(await ev(`(async()=>{dim3=true;syncDim();if(!Air3D.active)await Air3D.start(input3d());
+        const r=await Air3D.diag(input3d(),{settle:${OPT.settle},avg:${OPT.avg},room:state.room,conf:state.view.conf,panel:'real'});
+        if(!r.m)return JSON.stringify({error:r.error||'3Dの計算に失敗しました'});
+        return JSON.stringify({e:diagEval(r.m,r.byId||{},r.coolQ,r.gpuQ,true),vmax:r.vmax,sock:VRM_SOCK*P.cpu});})()`));
+    }
+    const row={k:c.k,t:c.t,meas:{vrm:c.vrm,cpu:c.cpu},cond:{room:c.room,cpuW:c.cpuW,gpuW:c.gpuW,fan:c.fan,gfan:c.gfan},P:e2.P,sock:+e2.sock.toFixed(2),
+      d2:{vrm:e2.e.vrm,cpu:e2.e.cpu,gpu:e2.e.gpu,vrmV:e2.e.air.vrmV,vrmT:e2.e.air.vrmT,tIn:e2.e.air.tIn},
+      d3:e3?(e3.error?{error:e3.error}:{vrm:e3.e.vrm,cpu:e3.e.cpu,gpu:e3.e.gpu,vrmV:e3.e.air.vrmV,vrmT:e3.e.air.vrmT,tIn:e3.e.air.tIn,vmax:e3.vmax}):null};
+    results.rows.push(row);
+    const f=v=>v==null?'—':(+v).toFixed(1), f3=v=>v==null?'—':(+v).toFixed(2), d3=row.d3||{};
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${c.t}</td><td>${f(c.vrm)}</td><td>${f(row.d2.vrm)}</td><td>${d3.error?'失敗':f(d3.vrm)}</td><td>${f3(row.d2.vrmV)}</td><td>${f3(d3.vrmV)}</td><td>${f(row.d2.vrmT)}</td><td>${f(d3.vrmT)}</td><td>${f(row.sock)}</td><td>${f(row.d2.cpu)}</td><td>${f(d3.cpu)}</td><td>${f(c.cpu)}</td>`;
+    $('table').tBodies[0].appendChild(tr);
+  }
+  status(has3d?'終わりました。結果をコピーして Claude に貼り付けてください。':'2D だけ終わりました(このブラウザでは 3D を計算できません)。',!has3d);
+}catch(e){
+  results.error=String(e&&e.message||e);
+  status('止まりました:'+results.error,true);
+}finally{
+  try{const W=$('frame').contentWindow;if(W&&W.__dbg)W.__dbg('try{Air3D.stop()}catch(e){}');}catch(e){}
+  $('frame').remove();
+  restore();
+  const text=JSON.stringify(results,null,1);
+  $('out').value=text;$('copy').disabled=false;$('save').disabled=false;
+  $('copy').onclick=async()=>{try{await navigator.clipboard.writeText(text);$('copy').textContent='コピーしました';}catch(e){$('out').select();document.execCommand('copy');$('copy').textContent='コピーしました';}};
+  $('save').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'application/json'}));a.download='vrm3d-'+results.at.slice(0,16).replace(/[-:T]/g,'')+'.json';a.click();};
+}
+})();
+</script>
+</body>
+</html>

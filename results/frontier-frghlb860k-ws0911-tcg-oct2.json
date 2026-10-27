@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "presetId": "frontier-frghlb860k-ws0911-tcg-oct2",
+  "status": "not_computed",
+  "computedAt": null,
+  "evaluation": null,
+  "image": null,
+  "note": "冷却結果は未計算：CPS RZ620Pro TC BKの専用モデル、ケース内部寸法、ファンサイズ・方向・性能、GPU形状は未確認。シート読込は既存GHLの計算内部寸法465×485×230mm、140mm前面吸気×3／背面排気×1・70%、汎用シングルタワー空冷（4ヒートパイプ・120mmファン×1・高さ155mm）、汎用3ファンGPU、ATX基板、パネル・電源区画の仮設定です。クーラーの仮設定は実機の仕様を示しません。外寸は内部寸法に使用していません"
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ケースファンを同じ騒音での風量で、空冷・水冷CPUクーラーを推定の冷却能力で順位付け。選んだファンはPC構成シートに配置できます。">
+  <meta name="theme-color" content="#1F6B57">
+  <meta property="og:title" content="ファン・クーラーランキング | そねっとの趣味部屋">
+  <meta property="og:description" content="ケースファンを同じ騒音での風量で、空冷・水冷CPUクーラーを推定の冷却能力で順位付け。選んだファンはPC構成シートに配置できます。">
+  <meta property="og:type" content="website">
+  <title>ファン・クーラーランキング | そねっとの趣味部屋</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F6B57'/%3E%3Crect x='7' y='6' width='18' height='20' rx='2' fill='none' stroke='%23FFFDF8' stroke-width='2'/%3E%3Cpath d='M11 12h10M11 17h10M11 22h5' stroke='%23FFFDF8' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#tool">ファン・クーラーランキングへ進む</a>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="そねっとの趣味部屋 トップ">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></span>
+      <span id="site-name">そねっとの趣味部屋</span>
+    </a>
+    <nav aria-label="メインメニュー"><a href="../#sheet">PC構成シート</a><a href="../#recommendations">おすすめBTO</a><a href="../prices/">パーツ価格</a><a href="../ranking/" aria-current="page">ファン・クーラー</a></nav>
+  </header>
+  <main id="top" class="container">
+    <section id="tool" aria-labelledby="page-title">
+      <div class="section-heading sheet-heading">
+        <div><p class="eyebrow">FANS & COOLERS</p><h1 id="page-title">ファン・クーラーランキング</h1><p class="lead">ケースファンは同じ騒音での風量、CPUクーラーは推定の冷却能力で比較。</p></div>
+        <a class="text-link" href="../fan-ranking/" target="_blank" rel="noopener">シートだけで開く</a>
+      </div>
+      <div class="sheet-frame sub-frame">
+        <iframe id="tool-frame" src="../fan-ranking/" title="ファン・クーラーランキング" allow="clipboard-write" loading="eager"></iframe>
+      </div>
+      <p class="sub-note">ファンを「構成に入れる」で選んで「PC構成シートで見る」を押すと、トップページのPC構成シートにファンが配置されます。</p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© 2026 <span>そねっとの趣味部屋</span></span><div><a href="../pc-sheet/#about" target="_blank" rel="noopener">ご利用について</a><a href="#top">ページの上へ</a></div></footer>
+  <script>
+  /* the embedded sheet tells its height; 「PC構成シートで見る」 opens the top page with the parts / fans in its sheet */
+  (()=>{const f=document.getElementById('tool-frame');
+    addEventListener('message',e=>{
+      if(e.origin!==location.origin||e.source!==f.contentWindow)return;
+      const d=e.data;if(!d||d.channel!=='fan-ranking'||d.version!==1)return;
+      if(d.type==='height'&&Number.isFinite(d.height)&&d.height>0)f.style.height=Math.min(20000,Math.ceil(d.height))+'px';
+      if(d.type==='open-build'&&Array.isArray(d.parts)&&d.parts.every(x=>/^[a-z0-9-]{1,100}$/.test(x)))location.href='../?parts='+d.parts.join(',')+'#sheet';
+    });
+    f.addEventListener('load',()=>f.contentWindow.postMessage({channel:'fan-ranking',version:1,type:'request-height'},location.origin));
+  })();
+  </script>
+</body>
+</html>

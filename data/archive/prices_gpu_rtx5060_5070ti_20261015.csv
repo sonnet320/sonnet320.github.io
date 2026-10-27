@@ -1,0 +1,67 @@
+﻿日付,カテゴリ,製品ID,製品名,型番,区分,容量,店舗,購入可能価格(税込),在庫状況,購入可否,商品URL,備考
+2026-10-15,GPU,gpu-palit-dual-rtx-5060,Palit Dual RTX 5060,,RTX 5060,,アーク,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-15,GPU,gpu-palit-dual-rtx-5060,Palit Dual RTX 5060,,RTX 5060,,ドスパラ,,未確認,未確認,https://www.dospara.co.jp/SBR1892/IC525590.html,個別ページ。取得範囲に価格・通販在庫が表示されず（再試行なし）
+2026-10-15,GPU,gpu-palit-dual-rtx-5060,Palit Dual RTX 5060,,RTX 5060,,パソコン工房,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-rtx-5060,MSI VENTUS 2X OC RTX 5060,G5060-8V2C,RTX 5060,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107651/,個別ページ
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-rtx-5060,MSI VENTUS 2X OC RTX 5060,,RTX 5060,,ドスパラ,,未確認,未確認,https://www.dospara.co.jp/SBR1892/IC667049.html,個別ページ。リンク先はV1版、リストとの同一性未確認
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-rtx-5060,MSI VENTUS 2X OC RTX 5060,,RTX 5060,,パソコン工房,,未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1263192,個別ページ。リンク先はV1版、リストとの同一性未確認
+2026-10-13,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,,RTX 5060,,アーク,97801,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107641/,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,DUAL-RTX5060-O8G,RTX 5060,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527631.html,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-asus-dual-oc-rtx-5060,ASUS DUAL OC RTX 5060,DUAL-RTX5060-O8G,RTX 5060,,パソコン工房,87150,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1148776,個別ページ。単品価格
+2026-10-13,GPU,gpu-gigabyte-gaming-oc-rtx-5060,GIGABYTE GAMING OC RTX 5060,,RTX 5060,,アーク,87800,在庫あり（残り1点）,購入可,https://www.ark-pc.co.jp/i/20107644/,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5060,GIGABYTE GAMING OC RTX 5060,GV-N5060GAMING OC-8GD,RTX 5060,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527635.html,個別ページ
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5060,GIGABYTE GAMING OC RTX 5060,,RTX 5060,,パソコン工房,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-12,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,,RTX 5060,,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/20107642/,個別ページ。価格・購入可否を確認できず（再試行なし）。取得日：3日前
+2026-10-15,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,GG-RTX5060-E8GB/LE/DF,RTX 5060,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527640.html,個別ページ
+2026-10-15,GPU,gpu-galakuro-gaming-gg-rtx5060-e8gb-le-df-rtx-5060,玄人志向 GALAKURO GAMING GG-RTX5060-E8GB/LE/DF RTX 5060,,RTX 5060,,パソコン工房,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,G506T-16V2CP,RTX 5060 Ti,16GB,アーク,148800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107586/,個別ページ。単品価格
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,139800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC525607.html,個別ページ。単品価格
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,148800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141798,個別ページ。単品価格
+2026-10-15,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,DUAL-RTX5060TI-O16G,RTX 5060 Ti,16GB,アーク,159800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107592/,個別ページ。単品価格
+2026-10-14,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,DUAL-RTX5060TI-O16G,RTX 5060 Ti,16GB,ドスパラ,159800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC525633.html,個別ページ。閲覧ツール取得日：前日
+2026-10-15,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1177118,個別ページ。リンク先はWHITE版、色違いのため採用せず
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,PRIME-RTX5060TI-O16G,RTX 5060 Ti,16GB,アーク,170800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107591/,個別ページ。閲覧ツール取得日：2日前
+2026-10-14,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,PRIME-RTX5060TI-O16G,RTX 5060 Ti,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525631.html,個別ページ。閲覧ツール取得日：前日
+2026-10-15,GPU,gpu-asus-prime-oc-rtx-5060-ti-16gb,ASUS PRIME OC RTX 5060 Ti 16GB,PRIME-RTX5060TI-O16G,RTX 5060 Ti,16GB,パソコン工房,164800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141786,個別ページ。単品価格
+2026-10-13,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,G506T-16GC,RTX 5060 Ti,16GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107585/,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC525605.html,個別ページ。単品価格
+2026-10-15,GPU,gpu-msi-gaming-oc-rtx-5060-ti-16gb,MSI GAMING OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-13,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,アーク,,取扱終了,取扱終了,https://www.ark-pc.co.jp/i/20107599/,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,ドスパラ,,未確認,未確認,https://www.dospara.co.jp/SBR1892/IC581822.html,個別ページ。リンク先は型番末尾/V2付きの別型番
+2026-10-15,GPU,gpu-galakuro-gaming-gg-rtx5060ti-e16gb-oc-df-rtx-5060-ti-16gb,玄人志向 GALAKURO GAMING GG-RTX5060Ti-E16GB/OC/DF RTX 5060 Ti 16GB,GG-RTX5060Ti-E16GB/OC/DF,RTX 5060 Ti,16GB,パソコン工房,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,G506T-8V2CP,RTX 5060 Ti,8GB,アーク,104800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107610/,個別ページ。単品価格
+2026-10-13,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,ドスパラ,104800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC526209.html,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-8gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,パソコン工房,104800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141808,個別ページ。単品価格。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,,RTX 5060 Ti,8GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107613/,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,PRIME-RTX5060TI-O8G,RTX 5060 Ti,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC526337.html,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5060-ti-8gb,ASUS PRIME OC RTX 5060 Ti 8GB,PRIME-RTX5060TI-O8G,RTX 5060 Ti,8GB,パソコン工房,98943,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141812,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-msi-ventus-2x-oc-rtx-5070,MSI VENTUS 2X OC RTX 5070,G5070-12V2C,RTX 5070,,アーク,160800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107550/,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-rtx-5070,MSI VENTUS 2X OC RTX 5070,,RTX 5070,,ドスパラ,149475,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC522757.html,個別ページ
+2026-10-15,GPU,gpu-msi-ventus-2x-oc-rtx-5070,MSI VENTUS 2X OC RTX 5070,,RTX 5070,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1268145,閲覧ツールのInternal Error（1回のみ試行）
+2026-10-13,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107727/,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,,RTX 5070,,ドスパラ,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-13,GPU,gpu-gigabyte-windforce-oc-rtx-5070,GIGABYTE WINDFORCE OC RTX 5070,GV-N5070WF3OC-12GD,RTX 5070,,パソコン工房,154800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1143440,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,アーク,179800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107623/,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,ZT-B50700H-10P,RTX 5070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC527340.html,個別ページ
+2026-10-13,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,ZT-5070-12G-TWOC/ZT-B50700H-10P,RTX 5070,,パソコン工房,179800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1148219,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5070,ASUS PRIME OC RTX 5070,,RTX 5070,,アーク,186800,在庫あり（残り2点）,購入可,https://www.ark-pc.co.jp/i/20107503/,個別ページ。閲覧ツール取得日：2日前
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5070,ASUS PRIME OC RTX 5070,,RTX 5070,,ドスパラ,,未確認,未確認,https://www.dospara.co.jp/SBR1892/IC528414.html,個別ページ。リンク先はWHITE版、色違いのため採用せず。取得日：2日前
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5070,ASUS PRIME OC RTX 5070,,RTX 5070,,パソコン工房,,未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1155392,個別ページ。リンク先はWHITE版、色違いのため採用せず。取得日：2日前
+2026-10-15,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,,RTX 5070,,アーク,198800,在庫あり（残り1点）,購入可,https://www.ark-pc.co.jp/i/20107502/,個別ページ
+2026-10-13,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,TUF-RTX5070-O12G-GAMING,RTX 5070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC522503.html,個別ページ。閲覧ツール取得日：2日前
+2026-10-15,GPU,gpu-asus-tuf-gaming-oc-rtx-5070,ASUS TUF Gaming OC RTX 5070,TUF-RTX5070-O12G-GAMING,RTX 5070,,パソコン工房,165800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130453,個別ページ
+2026-10-15,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,230800,在庫あり（残り2点）,購入可,https://www.ark-pc.co.jp/i/20107472/,個別ページ。単品価格
+2026-10-15,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,230800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC521850.html,個別ページ。単品価格
+2026-10-15,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,230800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130141,個別ページ。単品価格
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5070-ti,GIGABYTE GAMING OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,234800,在庫あり（残り2点）,購入可,https://www.ark-pc.co.jp/i/20107479/,個別ページ。単品価格
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5070-ti,GIGABYTE GAMING OC RTX 5070 Ti,GV-N507TGAMING OC-16GD,RTX 5070 Ti,,ドスパラ,234800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC521880.html,個別ページ。単品価格
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5070-ti,GIGABYTE GAMING OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1128493,閲覧ツールのInternal Error（1回のみ試行）
+2026-10-14,GPU,gpu-msi-gaming-trio-oc-rtx-5070-ti,MSI GAMING TRIO OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,236800,在庫あり（残り5点）,購入可,https://www.ark-pc.co.jp/i/20107609/,個別ページ。閲覧ツール取得日：前日
+2026-10-15,GPU,gpu-msi-gaming-trio-oc-rtx-5070-ti,MSI GAMING TRIO OC RTX 5070 Ti,,RTX 5070 Ti,,ドスパラ,236800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC526196.html,個別ページ
+2026-10-15,GPU,gpu-msi-gaming-trio-oc-rtx-5070-ti,MSI GAMING TRIO OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-14,GPU,gpu-asus-prime-oc-rtx-5070-ti,ASUS PRIME OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,259800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107468/,個別ページ。閲覧ツール取得日：前日
+2026-10-15,GPU,gpu-asus-prime-oc-rtx-5070-ti,ASUS PRIME OC RTX 5070 Ti,PRIME-RTX5070TI-O16G,RTX 5070 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC521845.html,個別ページ
+2026-10-15,GPU,gpu-asus-prime-oc-rtx-5070-ti,ASUS PRIME OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,,未確認,未確認,,URL未登録。追加アクセス抑制のため店舗内検索は次回
+2026-10-14,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,279800,在庫あり（残り1点）,購入可,https://www.ark-pc.co.jp/i/20107467/,個別ページ。閲覧ツール取得日：前日
+2026-10-14,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,TUF-RTX5070TI-O16G-GAMING,RTX 5070 Ti,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC521844.html,個別ページ。閲覧ツール取得日：前日
+2026-10-13,GPU,gpu-asus-tuf-gaming-oc-rtx-5070-ti,ASUS TUF Gaming OC RTX 5070 Ti,TUF-RTX5070TI-O16G-GAMING,RTX 5070 Ti,,パソコン工房,279800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130138,個別ページ。閲覧ツール取得日：2日前

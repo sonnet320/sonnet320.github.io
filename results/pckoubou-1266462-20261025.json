@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:44:25.114Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 54,
+    "grade": "要改善",
+    "cap": null,
+    "cpu": 72.6,
+    "gpu": 78.2,
+    "vrm": 70.9,
+    "intake": 8.61,
+    "stag": 21.8,
+    "press": -29.5,
+    "rows": {
+      "cpu": "並",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "並",
+      "stag": "要改善",
+      "press": "並"
+    },
+    "air": {
+      "tIn": 8.39,
+      "cpuT": 6.9,
+      "gpuT": 8.61,
+      "vrmT": 18.5,
+      "vrmV": 0.296,
+      "exT": 11.6,
+      "pIn": 0.08,
+      "stag": 0.218,
+      "fanIn": 41.5,
+      "fanOut": 62.5,
+      "leakIn": 30,
+      "leakOut": 8.9
+    },
+    "coolQ": null,
+    "gpuQ": 44.7
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 82.6,
+    "gpuPower": 326.15999999999997
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/pckoubou-1266462-20261025.jpg",
+  "presetId": "pckoubou-1266462-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースは名称が分からないため、汎用の「ミドルタワー」（470×225×480mm。実機は約220×493×465mm）で計算。標準のケースファンは販売ページに記載がない（最大6基）ため、前面120mm×2吸気・背面120mm×1排気（一般的な付属ファンの値）を仮に置いた。240mm水冷は天面排気、GPUは汎用3ファン形状と仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

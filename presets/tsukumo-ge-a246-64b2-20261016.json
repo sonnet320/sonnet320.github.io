@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tsukumo-ge-a246-64b2-20261016",
+  "shop": "ツクモ",
+  "model": "G-GEAR（BTO_SET_CODE=GE-A246・TYPE=64B2）",
+  "grade": "提供構成（選択状態未確認）",
+  "case": "G-GEAR プレミアムミドルタワーケース 66JD",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "ツクモ G-GEAR（BTO_SET_CODE=GE-A246・TYPE=64B2）",
+    "price": "¥359,800",
+    "note": "依頼者提供価格359800円（税込表示/選択構成の内訳は未確認）。依頼者提供情報（2026-10-16）・店舗ページ未取得。OS:Windows 11 Home 64bit。MB:ASUS TUF GAMING B850-PLUS WIFI（ATX）。在庫/受注可否/納期/送料は未確認。クーラー選択肢：G-GEAR 240mm水冷（Cooler Masterカスタム）+15400円、ID-COOLING SE-610-XT BASIC +7700円、DeepCool R-AK400-BKNNMN-G-1 +1100円。追加料金は合算していない。カスタマイズ操作未実施。\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 9800X3D",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "ID-COOLING FROZN-A410（120mm PWM静音ファン・追加料金記載なし・選択状態未確認）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "Radeon RX 9070 XT 専用VRAM 16GB（HDMI×1・DisplayPort×3）",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2）DDR5-4800",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "2TB KIOXIA EXCERIA BASIC M.2 NVMe Gen4（読込最大7300MB/s・書込最大6800MB/s）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "CWT GPW750SB 750W・ATX 3.1・80PLUS GOLD",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "G-GEAR プレミアムミドルタワーケース 66JD",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "標準構成は未確認（フロント120mm×3は+6600円の選択肢）",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 359800,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "tsukumo-ge-a246-64b2-20261016",
+    "shop": "ツクモ",
+    "model": "G-GEAR（BTO_SET_CODE=GE-A246・TYPE=64B2）",
+    "url": "https://shop.tsukumo.co.jp/bto/bto.php?BTO_SET_CODE=GE-A246&TYPE=64B2",
+    "price": 359800,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "AMD Ryzen 7 9800X3D",
+      "CPUクーラー": "ID-COOLING FROZN-A410（120mm PWM静音ファン・追加料金記載なし・選択状態未確認）",
+      "GPU": "Radeon RX 9070 XT 専用VRAM 16GB（HDMI×1・DisplayPort×3）",
+      "メモリ": "32GB（16GB×2）DDR5-4800",
+      "SSD": "2TB KIOXIA EXCERIA BASIC M.2 NVMe Gen4（読込最大7300MB/s・書込最大6800MB/s）",
+      "電源": "CWT GPW750SB 750W・ATX 3.1・80PLUS GOLD",
+      "ケース": "G-GEAR プレミアムミドルタワーケース 66JD",
+      "ケースファン": "標準構成は未確認（フロント120mm×3は+6600円の選択肢）"
+    },
+    "sale": "セール対象/期限は未確認",
+    "note": "依頼者提供価格359800円（税込表示/選択構成の内訳は未確認）。依頼者提供情報（2026-10-16）・店舗ページ未取得。OS:Windows 11 Home 64bit。MB:ASUS TUF GAMING B850-PLUS WIFI（ATX）。在庫/受注可否/納期/送料は未確認。クーラー選択肢：G-GEAR 240mm水冷（Cooler Masterカスタム）+15400円、ID-COOLING SE-610-XT BASIC +7700円、DeepCool R-AK400-BKNNMN-G-1 +1100円。追加料金は合算していない。カスタマイズ操作未実施。",
+    "informationSource": "依頼者提供（店舗ページ未取得）",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。未確認：CPUクーラー・ケースファン。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

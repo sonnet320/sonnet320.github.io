@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "presetId": "ark-72003756-20261016",
+  "status": "not_computed",
+  "computedAt": null,
+  "evaluation": null,
+  "image": null,
+  "note": "冷却結果は未計算です。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。"
+}

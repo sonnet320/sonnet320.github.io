@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "id": "ark-72003498-20261025",
+  "shop": "アーク",
+  "model": "AG-AR8D2TB55MRD6X-ZT3",
+  "grade": "標準構成（DDR4 64GB）",
+  "case": "ZALMAN T3 PLUS",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "アーク AG-AR8D2TB55MRD6X-ZT3",
+    "price": "¥289,800",
+    "note": "単体注文送料無料・取り寄せ",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 5700X",
+        "detail": "8コア／16スレッド・AM4"
+      },
+      {
+        "label": "クーラー",
+        "name": "PC COOLER CPS RZ400V2-BK（サイドフロー空冷）",
+        "detail": "シートに未登録のため、一般的なシングルタワーで計算"
+      },
+      {
+        "label": "GPU",
+        "name": "Radeon RX 9060 XT 16GB GDDR6",
+        "detail": "メーカー指定不可。奥行355mmのケースのため、計算は汎用の2連ファン・コンパクト形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "SanMax DDR4-3200 64GB（32GB×2）",
+        "detail": "SK hynixチップ。入荷待ち表示"
+      },
+      {
+        "label": "SSD",
+        "name": "Kingston NV3 2TB（M.2 NVMe PCIe 4.0×4）",
+        "detail": ""
+      },
+      {
+        "label": "マザーボード",
+        "name": "ASUS PRIME B550M-A WIFI II（MicroATX）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "Antec CSK750 DC（750W、80PLUS BRONZE、ATX）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "ZALMAN T3 PLUS",
+        "detail": "206×355×422mm（幅×奥行×高さ）。前面は両脇のスリットから吸気"
+      },
+      {
+        "label": "ケースファン",
+        "name": "未確認",
+        "detail": "搭載数・配置・風向・性能は未確認"
+      }
+    ],
+    "board": "matx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 205,
+    "gpuSlots": 2.3,
+    "gpuLen": 240,
+    "gpuCooler": "open",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-single",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 148,
+      "rad": 360,
+      "thick": 27,
+      "tdp": 235
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c2",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 289800,
+        "parts": 230200,
+        "pv": "2026-10-16"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "t3plus",
+      "d": 355,
+      "h": 422,
+      "w": 206
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "ytegss0",
+        "x": 52.5,
+        "y": 230,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "t3p120"
+      },
+      {
+        "id": "1o7otcp",
+        "x": 372.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "t3p120"
+      }
+    ],
+    "gpuT": 46.1,
+    "gpuH": 124,
+    "gpuFans": 2,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "gpuFanD": null
+  },
+  "verifiedHardware": {
+    "id": "ark-72003498-20261025",
+    "shop": "アーク",
+    "model": "arkhive Gaming Custom GC-A7R96M / AG-AR8D2TB55MRD6X-ZT3",
+    "url": "https://www.ark-pc.co.jp/i/72003498/",
+    "price": 289800,
+    "priceDate": "2026-10-25",
+    "parts": {
+      "CPU": "AMD Ryzen 7 5700X",
+      "CPUクーラー": "PC COOLER CPS RZ400V2-BK サイドフロー空冷",
+      "GPU": "Radeon RX 9060 XT 専用VRAM 16GB GDDR6（メーカー指定不可）",
+      "メモリ": "64GB（32GB×2）SanMax DDR4-3200 1.2V SK hynix(88H)（入荷待ち）",
+      "SSD": "Kingston NV3 2TB M.2 NVMe PCIe4.0×4",
+      "マザーボード": "ASUS PRIME B550M-A WIFI II（MicroATX）",
+      "電源": "Antec CSK750 DC 750W 80PLUS BRONZE",
+      "ケース": "ZALMAN T3 PLUS（206×355×422mm）",
+      "ケースファン": "前面120mm×1・背面120mm×1（ケースの付属ファン、そねっとさんの確認）"
+    },
+    "sale": "通常販売（セール表示なし）。期限記載なし",
+    "note": "取り寄せ表示・メモリ入荷待ち。受注可否・確定在庫・納期は未確認。出荷目安10～14日／取り寄せ含む18～28日。単体注文送料無料。コンビニ・代引不可。Windows 11 Home。1年センドバック保証。",
+    "informationSource": "2026-10-25 GPTの調査（アークの販売ページ）＋ケースの仕様はそねっとさんの確認",
+    "date": "2026-10-25",
+    "unknown": [
+      "ケースの天面・電源カバー・クリアランス",
+      "付属ファンの向き・性能",
+      "GPUの製品・寸法",
+      "CPUクーラーの仕様（シート未登録）",
+      "受注可否・納期"
+    ],
+    "sources": [
+      "https://www.ark-pc.co.jp/i/72003498/"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-25）：ケースは新しく登録したZALMAN T3 PLUS（外寸206×355×422mm・前面は両脇のスリットから吸気・付属ファン前面120mm×1/背面120mm×1は、そねっとさんの確認）。ファンの向き（前面吸気・背面排気）と性能、天面・電源カバーは仮定。電源はATX（Antec CSK750）として計算。CPUクーラーRZ400V2はシートに未登録のため一般的なシングルタワー、GPUはメーカー指定不可のため汎用の2連ファン・コンパクト形状（約240mm）と仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-10-25T10:40:40.941Z",
+    "assumptions": {
+      "caseDim": {
+        "preset": "t3plus",
+        "d": 355,
+        "h": 422,
+        "w": 206
+      },
+      "panels": {
+        "front": "glass",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "cooler": {
+        "cooler": "air",
+        "coolerBrand": "generic",
+        "coolerModel": "gen-single"
+      },
+      "gpuShape": "汎用2連ファン・コンパクト（約240mm）",
+      "caseFans": "前面120mm×1吸気・背面120mm×1排気（向き・性能は仮定）"
+    }
+  }
+}

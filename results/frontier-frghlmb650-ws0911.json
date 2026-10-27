@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v63-src",
+  "mode": "2d",
+  "computedAt": "2026-10-14T11:44:33.147Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 67,
+    "grade": "並",
+    "cap": null,
+    "cpu": 77.3,
+    "gpu": 77.2,
+    "vrm": 58.8,
+    "intake": 9.46,
+    "stag": 1.9,
+    "press": 44.4,
+    "rows": {
+      "cpu": "並",
+      "gpu": "並",
+      "vrm": "良",
+      "intake": "並",
+      "stag": "優",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 5.66,
+      "cpuT": 9.46,
+      "gpuT": 1.26,
+      "vrmT": 9.98,
+      "vrmV": 0.325,
+      "exT": 7.18,
+      "pIn": 0.088,
+      "stag": 0.019,
+      "fanIn": 79.6,
+      "fanOut": 34.9,
+      "leakIn": 21.2,
+      "leakOut": 66
+    },
+    "coolQ": 26.2,
+    "gpuQ": 42
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 82.6,
+    "gpuPower": 271.79999999999995
+  },
+  "image": "results/frontier-frghlmb650-ws0911.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "frontier-frghlmb650-ws0911",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-14）：前面3基・背面1基は公式シリーズ情報で確認。サイズ・方向・性能は未確認のため既存GHLモデルの140mm前面吸気×3／背面排気×1を使用。計算内部寸法465×485×230mm、上面・底面・電源区画のパネル、GPUの3ファン形状と寸法も既存の仮定。実機の温度を保証しません"
+}

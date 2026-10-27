@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:42:20.774Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 78,
+    "grade": "良",
+    "cap": null,
+    "cpu": 57.8,
+    "gpu": 66.3,
+    "vrm": 50.9,
+    "intake": 6.02,
+    "stag": 9.3,
+    "press": -25.1,
+    "rows": {
+      "cpu": "優",
+      "gpu": "良",
+      "vrm": "良",
+      "intake": "良",
+      "stag": "並",
+      "press": "並"
+    },
+    "air": {
+      "tIn": 4.8,
+      "cpuT": 6.02,
+      "gpuT": 2.64,
+      "vrmT": 5.98,
+      "vrmV": 0.297,
+      "exT": 9.7,
+      "pIn": 0.001,
+      "stag": 0.093,
+      "fanIn": 15.7,
+      "fanOut": 26,
+      "leakIn": 25.4,
+      "leakOut": 15.1
+    },
+    "coolQ": 26,
+    "gpuQ": 32.7
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 57.024,
+    "gpuPower": 144.95999999999998
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/ark-72003498-20261025.jpg",
+  "presetId": "ark-72003498-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースは新しく登録したZALMAN T3 PLUS（外寸206×355×422mm・前面は両脇のスリットから吸気・付属ファン前面120mm×1/背面120mm×1は、そねっとさんの確認）。ファンの向き（前面吸気・背面排気）と性能、天面・電源カバーは仮定。電源はATX（Antec CSK750）として計算。CPUクーラーRZ400V2はシートに未登録のため一般的なシングルタワー、GPUはメーカー指定不可のため汎用の2連ファン・コンパクト形状（約240mm）と仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

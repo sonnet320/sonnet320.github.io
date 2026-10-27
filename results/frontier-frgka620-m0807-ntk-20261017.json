@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "presetId": "frontier-frgka620-m0807-ntk-20261017",
+  "status": "not_computed",
+  "computedAt": null,
+  "evaluation": null,
+  "image": null,
+  "note": "冷却結果は未計算。標準ファンの数・径・配置・風向・性能、GPUカード型番・形状、電源位置、パネル材質などは未確認。ケースはGK-A620Aシリーズの寸法と通風構造を参照。シートの冷却設定・ケース内部モデルは計算用仮設定で製品の確認値ではありません。fans空配列は配置未確認を示し、ファン非搭載を意味しません。"
+}

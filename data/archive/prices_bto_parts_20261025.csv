@@ -1,0 +1,55 @@
+日付,カテゴリ,製品ID,製品名,型番,区分,容量,店舗,購入可能価格(税込),在庫状況,購入可否,商品URL,備考
+2026-10-25,CPU,cpu-ryzen-7-7700,Ryzen 7 7700,,Ryzen 7,,アーク,,取り扱い終了,取扱終了,https://www.ark-pc.co.jp/i/10240222/,商品ページで確認。型番100-100000592BOX
+2026-10-25,CPU,cpu-ryzen-7-7700,Ryzen 7 7700,,Ryzen 7,,ドスパラ,37800,最短10/27お届け,購入可,https://www.dospara.co.jp/SBR1882/IC583837.html,一覧ページ(SBR1882)で確認。最短10/27お届け表示。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-7-7700,Ryzen 7 7700,,Ryzen 7,,パソコン工房,39800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1181244,商品ページで確認。型番100-100000592SBX（Wraith Stealth付属）。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-7-5700x,Ryzen 7 5700X,,Ryzen 7,,アーク,37640,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240205/,商品ページで確認。型番100-100000926WOF
+2026-10-25,CPU,cpu-ryzen-7-5700x,Ryzen 7 5700X,,Ryzen 7,,ドスパラ,37640,最短10/27お届け,購入可,https://www.dospara.co.jp/SBR1882/IC479652.html,一覧ページ(SBR1882)で確認。最短10/27お届け表示。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-7-5700x,Ryzen 7 5700X,,Ryzen 7,,パソコン工房,37640,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=891096,商品ページで確認。型番100-100000926WOF。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,アーク,47800,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240257/,商品ページで確認
+2026-10-25,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,ドスパラ,47800,最短10/27お届け,購入可,https://www.dospara.co.jp/SBR1882/IC509913.html,一覧ページ(SBR1882)で確認。最短10/27お届け表示。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,パソコン工房,47800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083340,商品ページで確認。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,アーク,71208,在庫あり,購入可,https://www.ark-pc.co.jp/i/10240267/,商品ページで確認
+2026-10-25,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,ドスパラ,71208,最短10/27お届け,購入可,https://www.dospara.co.jp/SBR1882/IC516296.html,一覧ページ(SBR1882)で確認。最短10/27お届け表示。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,パソコン工房,71208,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1158746,商品ページで確認。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,アーク,45480,在庫あり（残り4点）,購入可,https://www.ark-pc.co.jp/i/10240258/,商品ページで確認
+2026-10-25,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,ドスパラ,45480,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1883/IC509914.html,商品ページで確認。通販は24時間以内出荷（店舗在庫は多くがなし）。税込の明記なし
+2026-10-25,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,パソコン工房,45480,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083339,商品ページで確認。税込の明記なし
+2026-10-25,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,,Core Ultra 7,,アーク,63980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10150688/,商品ページで確認
+2026-10-25,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,,Core Ultra 7,,ドスパラ,63980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1886/IC518585.html,商品ページで確認。通販は24時間以内出荷（店舗在庫なし）。税込の明記なし
+2026-10-25,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,,Core Ultra 7,,パソコン工房,63980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1118980,商品ページで確認。税込の明記なし
+2026-10-25,GPU,gpu-msi-shadow-2x-oc-rtx-5060-ti-16gb,MSI SHADOW 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,未確認,未確認,,新品の商品ページが見つからず（検索では中古のみ）
+2026-10-25,GPU,gpu-msi-shadow-2x-oc-rtx-5060-ti-16gb,MSI SHADOW 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,,未確認,未確認,,新品の商品ページが見つからず（検索では中古のみ）
+2026-10-25,GPU,gpu-msi-shadow-2x-oc-rtx-5060-ti-16gb,MSI SHADOW 2X OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,未確認,未確認,,新品の商品ページが見つからず（検索では中古のみ）
+2026-10-25,メモリ,mem-kingston-kf556c40bbak2-32,Kingston FURY Beast DDR5 RGB DDR5-5600 32GB (16GB×2),KF556C40BBAK2-32,DDR5,32GB,アーク,101640,在庫あり,購入可,https://www.ark-pc.co.jp/i/11717108/,商品ページで確認。型番KF556C40BBAK2-32（黒・RGB）
+2026-10-25,メモリ,mem-kingston-kf556c40bbak2-32,Kingston FURY Beast DDR5 RGB DDR5-5600 32GB (16GB×2),KF556C40BBAK2-32,DDR5,32GB,ドスパラ,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,メモリ,mem-kingston-kf556c40bbak2-32,Kingston FURY Beast DDR5 RGB DDR5-5600 32GB (16GB×2),KF556C40BBAK2-32,DDR5,32GB,パソコン工房,90981,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=962266,商品ページで確認。税込の明記なし
+2026-10-25,SSD,ssd-snv3s-1000g,Kingston NV3 1TB,SNV3S/1000G,Gen4,1TB,アーク,29480,在庫あり（お一人様2個限り）,購入可,https://www.ark-pc.co.jp/i/13512783/,商品ページで確認
+2026-10-25,SSD,ssd-snv3s-1000g,Kingston NV3 1TB,SNV3S/1000G,Gen4,1TB,ドスパラ,27980,最短10/27お届け,購入可,https://www.dospara.co.jp/SBR1144/IC650855.html,一覧ページ(SBR1144)で確認。税込の明記なし
+2026-10-25,SSD,ssd-snv3s-1000g,Kingston NV3 1TB,SNV3S/1000G,Gen4,1TB,パソコン工房,27980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1104661,商品ページで確認。税込の明記なし
+2026-10-25,SSD,ssd-msi-spatium-m461-2tb,MSI SPATIUM M461 2TB,,Gen4,2TB,アーク,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,SSD,ssd-msi-spatium-m461-2tb,MSI SPATIUM M461 2TB,,Gen4,2TB,ドスパラ,,未確認,未確認,https://www.dospara.co.jp/SBR1144,一覧(96件中20件表示)に見当たらず。追加表示はしていない
+2026-10-25,SSD,ssd-msi-spatium-m461-2tb,MSI SPATIUM M461 2TB,,Gen4,2TB,パソコン工房,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,SSD,ssd-biwin-nv7200-1tb,BIWIN NV7200 1TB,,Gen4,1TB,アーク,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,SSD,ssd-biwin-nv7200-1tb,BIWIN NV7200 1TB,,Gen4,1TB,ドスパラ,,未確認,未確認,https://www.dospara.co.jp/SBR1144,一覧(96件中20件表示)に見当たらず。追加表示はしていない
+2026-10-25,SSD,ssd-biwin-nv7200-1tb,BIWIN NV7200 1TB,,Gen4,1TB,パソコン工房,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,CPUクーラー,cooler-pccooler-cps-rt400,PCCOOLER CPS RT400,,空冷(シングルタワー),,アーク,,取り扱い終了,取扱終了,https://www.ark-pc.co.jp/i/10401577/,商品ページで確認（RT400-BK）
+2026-10-25,CPUクーラー,cooler-pccooler-cps-rt400,PCCOOLER CPS RT400,,空冷(シングルタワー),,ドスパラ,,アクセス不可,未確認,https://dospara.co.jp/SBR282/IC549860.html,robots.txtで拒否（検索で出たwwwなしのURL。1回のみ試行、別URLで開き直さず）
+2026-10-25,CPUクーラー,cooler-pccooler-cps-rt400,PCCOOLER CPS RT400,,空冷(シングルタワー),,パソコン工房,2234,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1103098,商品ページで確認（RT400-BK）。税込の明記なし
+2026-10-25,CPUクーラー,cooler-deepcool-ak400,DeepCool AK400,,空冷(シングルタワー),,アーク,,取り扱い終了,取扱終了,https://www.ark-pc.co.jp/i/10401239/,商品ページで確認（R-AK400-BKNNMN-G-1）
+2026-10-25,CPUクーラー,cooler-deepcool-ak400,DeepCool AK400,,空冷(シングルタワー),,ドスパラ,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,CPUクーラー,cooler-deepcool-ak400,DeepCool AK400,,空冷(シングルタワー),,パソコン工房,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,CPUクーラー,cooler-jonsbo-cr-1000-evo,JONSBO CR-1000 EVO,,空冷(シングルタワー),,アーク,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,CPUクーラー,cooler-jonsbo-cr-1000-evo,JONSBO CR-1000 EVO,,空冷(シングルタワー),,ドスパラ,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,CPUクーラー,cooler-jonsbo-cr-1000-evo,JONSBO CR-1000 EVO,,空冷(シングルタワー),,パソコン工房,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,CPUクーラー,cooler-msi-mag-coreliquid-i240,MSI MAG CORELIQUID I240,,簡易水冷 240mm,,アーク,,在庫なし（取り寄せ・要納期確認）,購入不可,https://www.ark-pc.co.jp/i/10401699/,商品ページで確認。表示価格19980円
+2026-10-25,CPUクーラー,cooler-msi-mag-coreliquid-i240,MSI MAG CORELIQUID I240,,簡易水冷 240mm,,ドスパラ,16480,最短10/27お届け,購入可,https://www.dospara.co.jp/SBR321/IC560382.html,一覧ページ(SBR321・MSI絞り込み)で確認。最短10/27お届け表示。税込の明記なし
+2026-10-25,CPUクーラー,cooler-msi-mag-coreliquid-i240,MSI MAG CORELIQUID I240,,簡易水冷 240mm,,パソコン工房,,在庫切れです,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=1145131,商品ページで確認。表示価格16480円
+2026-10-25,CPUクーラー,cooler-msi-mag-coreliquid-a13-360,MSI MAG CORELIQUID A13 360,,簡易水冷 360mm,,アーク,10980,在庫あり,購入可,https://www.ark-pc.co.jp/i/10401723/,商品ページで確認
+2026-10-25,CPUクーラー,cooler-msi-mag-coreliquid-a13-360,MSI MAG CORELIQUID A13 360,,簡易水冷 360mm,,ドスパラ,10980,最短10/27お届け,購入可,https://www.dospara.co.jp/SBR321/IC560388.html,一覧ページ(SBR321・MSI絞り込み)で確認。最短10/27お届け表示。税込の明記なし
+2026-10-25,CPUクーラー,cooler-msi-mag-coreliquid-a13-360,MSI MAG CORELIQUID A13 360,,簡易水冷 360mm,,パソコン工房,10980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1151798,商品ページで確認（ブラック）。税込の明記なし
+2026-10-25,ケース,case-msi-mpg-gungnir-300r-airflow,MSI MPG GUNGNIR 300R AIRFLOW,,,,アーク,,SOLD OUT（在庫なし）,購入不可,https://www.ark-pc.co.jp/i/15201850/,商品ページで確認（ブラック、17:15に開いた内容を使用）。表示価格23980円
+2026-10-25,ケース,case-msi-mpg-gungnir-300r-airflow,MSI MPG GUNGNIR 300R AIRFLOW,,,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1959/IC521441.html,商品ページで確認（ブラック）。表示価格23980円
+2026-10-25,ケース,case-msi-mpg-gungnir-300r-airflow,MSI MPG GUNGNIR 300R AIRFLOW,,,,パソコン工房,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,ケース,case-segotep-lux-s,Segotep LUX S,,,,アーク,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,ケース,case-segotep-lux-s,Segotep LUX S,,,,ドスパラ,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
+2026-10-25,ケース,case-segotep-lux-s,Segotep LUX S,,,,パソコン工房,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）

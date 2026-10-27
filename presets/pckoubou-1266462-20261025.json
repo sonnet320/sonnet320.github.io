@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "id": "pckoubou-1266462-20261025",
+  "shop": "パソコン工房",
+  "model": "LEVEL-R785-LCR98D-VK2X（ILeDEs-R785-LR98D-VK2XB）",
+  "grade": "標準構成",
+  "case": "ミドルタワー（名称記載なし。約220×493×465mm）",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "パソコン工房 LEVEL-R785-LCR98D-VK2X",
+    "price": "¥581,700",
+    "note": "送料別（会員は無料）",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 9800X3D",
+        "detail": "8コア／16スレッド・TDP 120W"
+      },
+      {
+        "label": "クーラー",
+        "name": "240mm水冷CPUクーラー（メーカー・型番記載なし）",
+        "detail": "計算は一般的な240mm簡易水冷・天面排気の仮定"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5080 16GB GDDR7",
+        "detail": "メーカー・型番記載なし。計算は汎用3ファン形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 64GB（32GB×2）",
+        "detail": "スロット4"
+      },
+      {
+        "label": "SSD",
+        "name": "2TB NVMe対応 M.2 SSD",
+        "detail": "メーカー・型番記載なし"
+      },
+      {
+        "label": "マザーボード",
+        "name": "AMD B850（ATX、型番記載なし）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "1000W 80PLUS PLATINUM ATX",
+        "detail": "メーカー・型番記載なし"
+      },
+      {
+        "label": "ケース",
+        "name": "ミドルタワー（名称記載なし。約220×493×465mm）",
+        "detail": "汎用の「ミドルタワー」で計算（外寸は近い値）"
+      },
+      {
+        "label": "ケースファン",
+        "name": "未確認",
+        "detail": "搭載数・配置・風向・性能は未確認"
+      }
+    ],
+    "board": "atx",
+    "cooler": "aio",
+    "radSize": 240,
+    "radPos": "top",
+    "coolerTdp": 250,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio240",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 148,
+      "rad": 360,
+      "thick": 27,
+      "tdp": 235
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 581700,
+        "parts": 573000,
+        "pv": "2026-10-16"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": "gen-aio240"
+    },
+    "caseDim": {
+      "preset": "mid",
+      "d": 470,
+      "h": 480,
+      "w": 225
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "f1",
+        "x": 52.5,
+        "y": 142.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "case120"
+      },
+      {
+        "id": "f2",
+        "x": 52.5,
+        "y": 267.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "case120"
+      },
+      {
+        "id": "r1",
+        "x": 488.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "case120"
+      },
+      {
+        "id": "okm3slv",
+        "x": 197.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "xhpfqa3",
+        "x": 322.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 126,
+    "gpuFans": 3,
+    "cFans": 2,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "gpuFanD": null,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "id": "pckoubou-1266462-20261025",
+    "shop": "パソコン工房",
+    "model": "LEVEL-R785-LCR98D-VK2X（ILeDEs-R785-LR98D-VK2XB）",
+    "url": "https://www.pc-koubou.jp/products/detail.php?product_id=1266462",
+    "price": 581700,
+    "priceDate": "2026-10-25",
+    "parts": {
+      "CPU": "AMD Ryzen 7 9800X3D",
+      "CPUクーラー": "240mm水冷（メーカー・型番記載なし）",
+      "GPU": "GeForce RTX 5080 16GB GDDR7",
+      "メモリ": "64GB（32GB×2）DDR5",
+      "SSD": "2TB NVMe M.2 SSD",
+      "マザーボード": "AMD B850（ATX）",
+      "電源": "1000W 80PLUS PLATINUM ATX",
+      "ケース": "ミドルタワー（名称記載なし。約220×493×465mm）",
+      "ケースファン": "記載なし（最大6基：前面・天面・背面）"
+    },
+    "sale": "値引き表示なし。ハイエンドPC購入還元（8,000円分相当）・乗換応援フェアのポイント還元表示あり（差し引かず）",
+    "note": "出荷5～10日後。会員限定送料無料。無線非搭載。Windows 11 Home。1年保証。価格は「581,700円～」表示で税込の明記なし",
+    "informationSource": "2026-10-25 パソコン工房の販売ページ",
+    "date": "2026-10-25",
+    "unknown": [
+      "ケース名・標準のケースファン",
+      "水冷の型番・位置",
+      "GPUの製品型番・寸法",
+      "マザーボード・電源の型番"
+    ],
+    "sources": [
+      "https://www.pc-koubou.jp/products/detail.php?product_id=1266462"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-25）：ケースは名称が分からないため、汎用の「ミドルタワー」（470×225×480mm。実機は約220×493×465mm）で計算。標準のケースファンは販売ページに記載がない（最大6基）ため、前面120mm×2吸気・背面120mm×1排気（一般的な付属ファンの値）を仮に置いた。240mm水冷は天面排気、GPUは汎用3ファン形状と仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-10-25T10:29:45.298Z",
+    "assumptions": {
+      "caseDim": {
+        "preset": "mid",
+        "d": 470,
+        "h": 480,
+        "w": 225
+      },
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "mesh",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "cooler": {
+        "cooler": "aio",
+        "coolerBrand": "generic",
+        "coolerModel": "gen-aio240",
+        "radSize": 240,
+        "radPos": "top"
+      },
+      "gpuShape": "汎用3ファン形状",
+      "caseFans": "前面120mm×2吸気・背面120mm×1排気（仮定）＋240mm水冷のファン2基（天面排気と仮定）"
+    }
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-frghlmb650-ws0911",
+  "shop": "FRONTIER",
+  "model": "FRGHLMB650/WS0911",
+  "grade": "限界チャレンジセール・標準構成・受注生産",
+  "case": "FRONTIER GHLシリーズ（OEM元メーカー・型番は不明）",
+  "sample": false,
+  "state": {
+    "title": "FRONTIER FRGHLMB650/WS0911",
+    "price": "¥409,800",
+    "note": "受注生産・1年間センドバック保証。セールは2026-10-16 15:00（日本時間）まで。送料無料表示と共通注意書きの送料3,300円が併存するため最終注文画面で確認。個別出荷日は未確認 / 仮定による参考計算（2026-10-14）：前面3基・背面1基は公式シリーズ情報で確認。サイズ・方向・性能は未確認のため既存GHLモデルの140mm前面吸気×3／背面排気×1を使用。計算内部寸法465×485×230mm、上面・底面・電源区画のパネル、GPUの3ファン形状と寸法も既存の仮定。実機の温度を保証しません",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 9800X3D",
+        "detail": "8コア / 16スレッド・TDP 120W"
+      },
+      {
+        "label": "クーラー",
+        "name": "CPS RT400-BK（空冷）",
+        "detail": "公式型番の既存RT400モデル（全高148mm・4ヒートパイプ・120mmファン）で計算"
+      },
+      {
+        "label": "GPU",
+        "name": "ASUS製 GeForce RTX 5070 Ti 16GB",
+        "detail": "ASUS製（製品型番・寸法・ファン数不明。HDMI×1／DisplayPort×3）。計算は汎用3ファン形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 32GB（32GB×1）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "2TB M.2 NVMe SSD Gen4（メーカー・型番不明）",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "MSI B650 GAMING PLUS WIFI（ATX、AMD B650）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "850W ATX 3.1、80PLUS PLATINUM、日本製コンデンサ仕様（メーカー・型番不明）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "FRONTIER GHL シリーズ",
+        "detail": "約230×465×500mm（幅×奥行×高さ、突起部含む）。計算内部寸法は既存モデル"
+      },
+      {
+        "label": "前面ファン",
+        "name": "FRONTIER GHL 付属 140mm ARGBファン ×3",
+        "detail": "吸気 / 計算用の仮定。実際の標準搭載構成は未確認",
+        "auto": {
+          "name": "FRONTIER GHL 付属 140mm ARGBファン ×3",
+          "detail": "吸気 / 計算用の仮定。実際の標準搭載構成は未確認"
+        }
+      },
+      {
+        "label": "天面ファン",
+        "name": "なし",
+        "detail": "計算用の仮定。実際の標準搭載構成は未確認",
+        "auto": {
+          "name": "なし",
+          "detail": "計算用の仮定。実際の標準搭載構成は未確認"
+        }
+      },
+      {
+        "label": "背面ファン",
+        "name": "FRONTIER GHL 付属 140mm ARGBファン ×1",
+        "detail": "排気 / 計算用の仮定。実際の標準搭載構成は未確認",
+        "auto": {
+          "name": "FRONTIER GHL 付属 140mm ARGBファン ×1",
+          "detail": "排気 / 計算用の仮定。実際の標準搭載構成は未確認"
+        }
+      },
+      {
+        "label": "底面ファン",
+        "name": "なし",
+        "detail": "計算用の仮定。実際の標準搭載構成は未確認",
+        "auto": {
+          "name": "なし",
+          "detail": "計算用の仮定。実際の標準搭載構成は未確認"
+        }
+      }
+    ],
+    "board": "atx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 216,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "PCCOOLER",
+    "coolerModel": "pc-rt400",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 148,
+      "rad": 360,
+      "thick": 27,
+      "tdp": 235
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "clearance": 25,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 409800,
+        "parts": null
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "ghl",
+      "d": 465,
+      "h": 485,
+      "w": 230
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "90rumie",
+        "x": 52.5,
+        "y": 117.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "xtb1o8o",
+        "x": 52.5,
+        "y": 262.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "cdp62m3",
+        "x": 52.5,
+        "y": 407.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "9xqe3fe",
+        "x": 482.5,
+        "y": 174,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 126,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0
+  },
+  "verifiedHardware": {
+    "id": "frontier-frghlmb650-ws0911",
+    "shop": "FRONTIER",
+    "model": "FRGHLMB650/WS0911",
+    "grade": "限界チャレンジセール・標準構成・受注生産",
+    "url": "https://www.frontier-direct.jp/direct/g/g124349-Oct2/",
+    "price": 409800,
+    "priceDate": "2026-10-12",
+    "band": "40万以上",
+    "use": [
+      "ゲーム"
+    ],
+    "parts": {
+      "cpu": "AMD Ryzen 7 9800X3D（8コア／16スレッド、4.7～5.2GHz、TDP 120W）",
+      "cooler": "CPS RT400-BK（120mmサイドフロー空冷、6mm径ヒートパイプ4本、全高148mm）。市販製品仕様：ファン120×120×25mm、500～2200±10%rpm、最大73.32CFM／3.28mmH2O／34.9dB(A)。BTOのファン差し替え・BIOS制御設定は未確認",
+      "gpu": "GeForce RTX 5070 Ti 16GB",
+      "gpuCard": "ASUS製（製品型番・寸法・ファン数不明。HDMI×1／DisplayPort×3）",
+      "memory": "DDR5 32GB（32GB×1、4スロット中3空き、最大128GB。メーカー・型番・実動作速度不明）",
+      "ssd": "2TB M.2 NVMe SSD Gen4（メーカー・型番不明）",
+      "board": "MSI B650 GAMING PLUS WIFI（ATX、AMD B650）",
+      "psu": "850W ATX 3.1、80PLUS PLATINUM、日本製コンデンサ仕様（メーカー・型番不明）"
+    },
+    "case": {
+      "name": "FRONTIER GHLシリーズ（OEM元・ケース型番不明）",
+      "size": "約230×465×500mm（幅×奥行×高さ、突起部含む）",
+      "fans": [
+        {
+          "pos": "front",
+          "count": 3,
+          "size": "不明",
+          "dir": "不明",
+          "model": "不明",
+          "note": "LEDファン。シリーズ公式情報"
+        },
+        {
+          "pos": "rear",
+          "count": 1,
+          "size": "不明",
+          "dir": "不明",
+          "model": "不明",
+          "note": "LEDファン。シリーズ公式情報"
+        }
+      ],
+      "panels": {
+        "front": "取り外し可能な微細メッシュ",
+        "top": "不明",
+        "bottom": "不明",
+        "left": "強化ガラス"
+      },
+      "psu": "裏面配線と電源を区分け配置する構造。電源位置の詳細・区画開口は不明"
+    },
+    "unknown": [
+      "ケースファンの型番・サイズ・厚さ・吸排気方向・回転数・P/Q・騒音",
+      "上面・底面の標準ファン有無とパネル構造",
+      "ケース内部寸法・電源配置詳細・区画の開口率",
+      "GPUカード製品型番・寸法・ファン数・形状",
+      "メモリ型番・実動作速度",
+      "SSD型番",
+      "電源メーカー・型番",
+      "BTO搭載CPUクーラーファンの市販品との同一性・実際の制御設定",
+      "個別出荷予定日",
+      "送料の最終適用額"
+    ],
+    "sources": [
+      "https://www.frontier-direct.jp/direct/g/g124349-Oct2/",
+      "https://www.frontier-direct.jp/direct/u/g124349-Oct2/",
+      "https://www.frontier-direct.jp/direct/e/ejGhlB6m/",
+      "https://www.scythe.co.jp/category/product/cpu-cooler/air-cooling/middle-range/rt400-bk/",
+      "https://www.frontier-direct.jp/direct/e/ej-sale",
+      "https://www.frontier-direct.jp/direct/guide/delivery_day.aspx"
+    ],
+    "specText": "cpu：AMD Ryzen 7 9800X3D（8コア／16スレッド、4.7～5.2GHz、TDP 120W）\ncooler：CPS RT400-BK（120mmサイドフロー空冷、6mm径ヒートパイプ4本、全高148mm）。市販製品仕様：ファン120×120×25mm、500～2200±10%rpm、最大73.32CFM／3.28mmH2O／34.9dB(A)。BTOのファン差し替え・BIOS制御設定は未確認\ngpu：GeForce RTX 5070 Ti 16GB\ngpuCard：ASUS製（製品型番・寸法・ファン数不明。HDMI×1／DisplayPort×3）\nmemory：DDR5 32GB（32GB×1、4スロット中3空き、最大128GB。メーカー・型番・実動作速度不明）\nssd：2TB M.2 NVMe SSD Gen4（メーカー・型番不明）\nboard：MSI B650 GAMING PLUS WIFI（ATX、AMD B650）\npsu：850W ATX 3.1、80PLUS PLATINUM、日本製コンデンサ仕様（メーカー・型番不明）",
+    "note": "受注生産・1年間センドバック保証。セールは2026-10-16 15:00（日本時間）まで。送料無料表示と共通注意書きの送料3,300円が併存するため最終注文画面で確認。個別出荷日は未確認",
+    "os": "Windows 11 Home 64bit",
+    "warranty": "1年間センドバック保証",
+    "availability": "○ 受注生産。個別出荷日は未確認",
+    "saleEndsAt": "2026-10-16T15:00:00+09:00",
+    "connectivity": "2.5GbE LAN、AMD RZ616 Wi-Fi 6E（2×2、最大2.4Gbps）、Bluetooth 5.3。上面USB-A Gen1×1／USB-C Gen1×1／CTIA4極端子×1。背面USB-A Gen1×4／Gen2×3／USB-C Gen2×2対応×1",
+    "coolerRetailSpec": {
+      "widthMm": 120,
+      "depthMm": 70,
+      "heightMm": 148,
+      "weightG": 552,
+      "fanSizeMm": [
+        120,
+        120,
+        25
+      ],
+      "fanRpm": [
+        500,
+        2200
+      ],
+      "maxCfm": 73.32,
+      "maxStaticPressureMmH2O": 3.28,
+      "maxNoiseDba": 34.9,
+      "heatpipeCount": 4,
+      "heatpipeDiameterMm": 6,
+      "tdpClaimW": 235,
+      "note": "正規代理店の市販RT400-BK仕様。235Wは製品公称値で実機温度保証ではない。最大風量・静圧は同時動作点や実測P/Q曲線を示さない"
+    },
+    "date": "2026-10-12",
+    "providedBy": "official_research",
+    "priceNote": "受注生産・1年間センドバック保証。セールは2026-10-16 15:00（日本時間）まで。送料無料表示と共通注意書きの送料3,300円が併存するため最終注文画面で確認。個別出荷日は未確認"
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-14）：前面3基・背面1基は公式シリーズ情報で確認。サイズ・方向・性能は未確認のため既存GHLモデルの140mm前面吸気×3／背面排気×1を使用。計算内部寸法465×485×230mm、上面・底面・電源区画のパネル、GPUの3ファン形状と寸法も既存の仮定。実機の温度を保証しません",
+    "computedAt": "2026-10-12T06:49:51.601+09:00",
+    "assumptions": {
+      "sourcePresetId": "frontier-frghlmb650-ws1006-ntk",
+      "caseDim": {
+        "preset": "ghl",
+        "d": 465,
+        "h": 485,
+        "w": 230
+      },
+      "caseFans": "140mm前面吸気×3・背面排気×1。型番・P/Qは既存モデルの仮定",
+      "gpuShape": "汎用3ファン形状・既存寸法",
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "mesh",
+        "side": "closed",
+        "bottom": "mesh"
+      }
+    }
+  }
+}

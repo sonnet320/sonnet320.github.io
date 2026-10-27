@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:41:47.880Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 86,
+    "grade": "良",
+    "cap": null,
+    "cpu": 57.1,
+    "gpu": 58.9,
+    "vrm": 51.5,
+    "intake": 5.92,
+    "stag": 5.9,
+    "press": 43.8,
+    "rows": {
+      "cpu": "優",
+      "gpu": "優",
+      "vrm": "良",
+      "intake": "良",
+      "stag": "良",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 3.32,
+      "cpuT": 5.92,
+      "gpuT": 1.1,
+      "vrmT": 6.56,
+      "vrmV": 0.343,
+      "exT": 4.13,
+      "pIn": 0.082,
+      "stag": 0.059,
+      "fanIn": 80.2,
+      "fanOut": 35.7,
+      "leakIn": 21.4,
+      "leakOut": 65.9
+    },
+    "coolQ": 28.8,
+    "gpuQ": 43.8
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 57.024,
+    "gpuPower": 144.95999999999998
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/frontier-frghlb550-gbf-2x16-20261025.jpg",
+  "presetId": "frontier-frghlb550-gbf-2x16-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースは外寸が一致するGHLシリーズ（230×500×465mm）。前面3基・背面1基はシリーズ情報、ファンのサイズ・方向・性能は既存GHLモデルの仮定（140mm前面吸気×3／背面排気×1）。CPUクーラーは一般的なシングルタワー、GPUは汎用3ファン形状と仮定。メモリは依頼者指定の16GB×2で計算。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

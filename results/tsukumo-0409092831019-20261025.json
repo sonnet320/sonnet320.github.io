@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:44:38.209Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 69,
+    "grade": "並",
+    "cap": null,
+    "cpu": 72.5,
+    "gpu": 75.5,
+    "vrm": 74.6,
+    "intake": 7.05,
+    "stag": 7.3,
+    "press": -6.7,
+    "rows": {
+      "cpu": "並",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "良",
+      "stag": "並",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 7.87,
+      "cpuT": 7.05,
+      "gpuT": 3.23,
+      "vrmT": 16.46,
+      "vrmV": 0.3,
+      "exT": 10.51,
+      "pIn": 0.141,
+      "stag": 0.073,
+      "fanIn": 58.6,
+      "fanOut": 64.2,
+      "leakIn": 24.3,
+      "leakOut": 18.7
+    },
+    "coolQ": null,
+    "gpuQ": 43.1
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 104,
+    "gpuPower": 326.15999999999997
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/tsukumo-0409092831019-20261025.jpg",
+  "presetId": "tsukumo-0409092831019-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースはG-GEAR プレミアムミドルタワー（66JD）。ファンは前面×3・背面×1（120mm、依頼者提供の仕様）で、前面吸気・背面排気、性能は一般的な付属ファンの値と仮定。240mm水冷は天面排気、RTX 5080は汎用3ファン形状と仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

@@ -1,0 +1,82 @@
+日付,カテゴリ,製品ID,製品名,型番,区分,容量,店舗,購入可能価格(税込),在庫状況,購入可否,商品URL,備考
+2026-10-15,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,アーク,295801,在庫あり（残り2点）,購入可,https://www.ark-pc.co.jp/i/20107457/,個別ページ；当日取得の内容
+2026-10-16,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,ドスパラ,295799,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC520176.html,個別ページ；当日取得の内容
+2026-10-15,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,パソコン工房,295799,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1124264,個別ページ；当日取得の内容
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5080,GIGABYTE GAMING OC RTX 5080,,RTX 5080,,アーク,305800,在庫あり（残り2点）,購入可,https://www.ark-pc.co.jp/i/20107440/,個別ページ；当日取得の内容
+2026-10-13,GPU,gpu-gigabyte-gaming-oc-rtx-5080,GIGABYTE GAMING OC RTX 5080,,RTX 5080,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520338.html,個別ページ；取得日2026-10-13の内容
+2026-10-16,GPU,gpu-gigabyte-gaming-oc-rtx-5080,GIGABYTE GAMING OC RTX 5080,,RTX 5080,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1128651,個別ページ；Internal Error（詳細404）、1回のみ試行
+2026-10-16,GPU,gpu-msi-gaming-trio-oc-rtx-5080,MSI GAMING TRIO OC RTX 5080,,RTX 5080,,アーク,305800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107455/,個別ページ；2026-10-16に再確認、当日取得の内容
+2026-10-16,GPU,gpu-msi-gaming-trio-oc-rtx-5080,MSI GAMING TRIO OC RTX 5080,,RTX 5080,,ドスパラ,305800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC520173.html,個別ページ；2026-10-16に再確認、当日取得の内容
+2026-10-16,GPU,gpu-msi-gaming-trio-oc-rtx-5080,MSI GAMING TRIO OC RTX 5080,,RTX 5080,,パソコン工房,,未確認,未確認,,店舗内検索（GeForce RTX 5080 16G GAMING TRIO OC）；検索結果0件；商品URL未確定
+2026-10-13,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107425/,個別ページ；取得日2026-10-13の内容
+2026-10-15,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC519236.html,個別ページ；当日取得の内容
+2026-10-15,GPU,gpu-asus-prime-oc-rtx-5080,ASUS PRIME OC RTX 5080,,RTX 5080,,パソコン工房,331800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1124240,個別ページ；当日取得の内容
+2026-10-16,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,,RTX 5080,,アーク,366800,在庫あり（残り2点）,購入可,https://www.ark-pc.co.jp/i/20107424/,個別ページ；2026-10-16に再確認、当日取得の内容
+2026-10-16,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,TUF-RTX5080-O16G-GAMING,RTX 5080,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/products/all-item?q=TUF-RTX5080-O16G-GAMING&lang=ja_JP&includeNotInventory=true,店舗内検索結果一覧で確認；個別商品URL https://www.dospara.co.jp/SBR1892/IC519235.html
+2026-10-16,GPU,gpu-asus-tuf-gaming-oc-rtx-5080,ASUS TUF Gaming OC RTX 5080,,RTX 5080,,パソコン工房,366800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130078,個別ページ；2026-10-16に再確認、当日取得の内容
+2026-10-14,GPU,gpu-msi-ventus-3x-oc-rtx-5090,MSI VENTUS 3X OC RTX 5090,GeForce RTX 5090 32G VENTUS 3X OC,RTX 5090,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107449/,個別ページ；取得日2026-10-14の内容
+2026-10-15,GPU,gpu-msi-ventus-3x-oc-rtx-5090,MSI VENTUS 3X OC RTX 5090,GeForce RTX 5090 32G VENTUS 3X OC,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520168.html,個別ページ；当日取得の内容
+2026-10-16,GPU,gpu-msi-ventus-3x-oc-rtx-5090,MSI VENTUS 3X OC RTX 5090,GeForce RTX 5090 32G VENTUS 3X OC,RTX 5090,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1124259,個別ページ；Internal Error（詳細404）、1回のみ試行
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5090,GIGABYTE GAMING OC RTX 5090,,RTX 5090,,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/20107630/,指定URLはWINDFORCE OCでGAMING OCと不一致；代替検索せず
+2026-10-15,GPU,gpu-gigabyte-gaming-oc-rtx-5090,GIGABYTE GAMING OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520442.html,個別ページ；当日取得の内容
+2026-10-16,GPU,gpu-gigabyte-gaming-oc-rtx-5090,GIGABYTE GAMING OC RTX 5090,,RTX 5090,,パソコン工房,,未確認,未確認,,店舗内検索（GV-N5090GAMING OC-32GD）；検索結果0件；商品URL未確定
+2026-10-15,GPU,gpu-msi-gaming-trio-oc-rtx-5090,MSI GAMING TRIO OC RTX 5090,,RTX 5090,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107448/,個別ページ；当日取得の内容
+2026-10-15,GPU,gpu-msi-gaming-trio-oc-rtx-5090,MSI GAMING TRIO OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520167.html,個別ページ；当日取得の内容
+2026-10-16,GPU,gpu-msi-gaming-trio-oc-rtx-5090,MSI GAMING TRIO OC RTX 5090,,RTX 5090,,パソコン工房,,未確認,未確認,,店舗内検索（GeForce RTX 5090 32G GAMING TRIO OC）；検索結果0件；商品URL未確定
+2026-10-15,GPU,gpu-asus-tuf-gaming-oc-rtx-5090,ASUS TUF Gaming OC RTX 5090,,RTX 5090,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107473/,個別ページ；当日取得の内容
+2026-10-15,GPU,gpu-asus-tuf-gaming-oc-rtx-5090,ASUS TUF Gaming OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC521875.html,個別ページ；当日取得の内容
+2026-10-16,GPU,gpu-asus-tuf-gaming-oc-rtx-5090,ASUS TUF Gaming OC RTX 5090,,RTX 5090,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1151822,個別ページ；Internal Error（詳細404）、1回のみ試行
+2026-10-15,GPU,gpu-asus-rog-astral-oc-rtx-5090,ASUS ROG Astral OC RTX 5090,,RTX 5090,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107461/,個別ページ；当日取得の内容
+2026-10-15,GPU,gpu-asus-rog-astral-oc-rtx-5090,ASUS ROG Astral OC RTX 5090,,RTX 5090,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1892/IC520316.html,個別ページ；当日取得の内容
+2026-10-16,GPU,gpu-asus-rog-astral-oc-rtx-5090,ASUS ROG Astral OC RTX 5090,,RTX 5090,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1151821,2026-10-16再実施；404（1回のみ試行、再検索なし）
+2026-10-13,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107676/,個別ページ；2026-10-16に閲覧、取得日2026-10-13の内容
+2026-10-16,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528540.html,個別ページ；2026-10-16に閲覧、取得日2026-10-16の内容
+2026-10-16,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,パソコン工房,92801,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,個別ページ；2026-10-16に閲覧、取得日2026-10-16の内容
+2026-10-14,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107719/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,ドスパラ,96800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC558789.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-asus-dual-rx-9060-xt-16gb,ASUS DUAL RX 9060 XT 16GB,DUAL-RX9060XT-16G,RX 9060 XT,16GB,パソコン工房,,未確認,未確認,,店舗内検索（DUAL-RX9060XT-16G）；検索結果0件；商品URL未確定
+2026-10-14,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107660/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC527175.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1153448,個別ページ；Internal Error（詳細404）、1回のみ試行
+2026-10-16,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107665/,個別ページ；2026-10-16に閲覧、取得日2026-10-16の内容
+2026-10-14,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528546.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-sapphire-pulse-rx-9060-xt-16gb,Sapphire PULSE RX 9060 XT 16GB,11350-03-20G,RX 9060 XT,16GB,パソコン工房,,未確認,未確認,,店舗内検索（11350-03-20G）；検索結果0件；商品URL未確定
+2026-10-14,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107675/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528539.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-15,GPU,gpu-powercolor-hellhound-rx-9060-xt-16gb,PowerColor Hellhound RX 9060 XT 16GB,RX9060XT 16G-L/OC,RX 9060 XT,16GB,パソコン工房,129000,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153437,個別ページ；2026-10-16に閲覧、取得日2026-10-15の内容
+2026-10-14,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,アーク,101981,在庫あり（残り2点）,購入可,https://www.ark-pc.co.jp/i/20107674/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC528412.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-asus-dual-rx-9060-xt-8gb,ASUS DUAL RX 9060 XT 8GB,DUAL-RX9060XT-8G,RX 9060 XT,8GB,パソコン工房,,未確認,未確認,,店舗内検索（DUAL-RX9060XT-8G）；新品0件・中古1件（除外）；商品URL未確定
+2026-10-14,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,アーク,,販売終了,取扱終了,https://www.ark-pc.co.jp/i/20107662/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC527177.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-asrock-challenger-oc-rx-9060-xt-8gb,ASRock Challenger OC RX 9060 XT 8GB,RX9060XT CL 8GO,RX 9060 XT,8GB,パソコン工房,,未確認,未確認,,店舗内検索（RX9060XT CL 8GO）；新品0件・中古1件（除外）；商品URL未確定
+2026-10-14,GPU,gpu-asus-prime-oc-rx-9070,ASUS PRIME OC RX 9070,,RX 9070,,アーク,,販売終了,取扱終了,https://www.ark-pc.co.jp/i/20107542/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-13,GPU,gpu-asus-prime-oc-rx-9070,ASUS PRIME OC RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC518979.html,個別ページ；2026-10-16に閲覧、取得日2026-10-13の内容
+2026-10-16,GPU,gpu-asus-prime-oc-rx-9070,ASUS PRIME OC RX 9070,,RX 9070,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1236251,個別ページ；Internal Error（詳細404）、1回のみ試行
+2026-10-16,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107527/,個別ページ；2026-10-16に閲覧、取得日2026-10-16の内容
+2026-10-14,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522650.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-sapphire-pulse-rx-9070,Sapphire PULSE RX 9070,,RX 9070,,パソコン工房,143999,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1133338,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-sapphire-pure-rx-9070,Sapphire PURE RX 9070,,RX 9070,,アーク,,販売終了,取扱終了,https://www.ark-pc.co.jp/i/20107526/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-sapphire-pure-rx-9070,Sapphire PURE RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522649.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-sapphire-pure-rx-9070,Sapphire PURE RX 9070,,RX 9070,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1133337,個別ページ；Internal Error（詳細404）、1回のみ試行
+2026-10-14,GPU,gpu-asrock-challenger-rx-9070,ASRock Challenger RX 9070,,RX 9070,,アーク,,販売終了,取扱終了,https://www.ark-pc.co.jp/i/20107534/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-15,GPU,gpu-asrock-challenger-rx-9070,ASRock Challenger RX 9070,,RX 9070,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC518909.html,個別ページ；2026-10-16に閲覧、取得日2026-10-15の内容
+2026-10-16,GPU,gpu-asrock-challenger-rx-9070,ASRock Challenger RX 9070,,RX 9070,,パソコン工房,,未確認,未確認,,店舗内検索（RX9070 CL 16G）；184件中の表示20件では対象一致を確認できず；追加閲覧なし；商品URL未確定
+2026-10-14,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,アーク,,販売終了,取扱終了,https://www.ark-pc.co.jp/i/20107516/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,ドスパラ,,未確認,未確認,,店舗内検索「Hellhound RX 9070」は該当商品なし。取扱終了とは断定せず；再検索なし
+2026-10-16,GPU,gpu-powercolor-hellhound-rx-9070,PowerColor Hellhound RX 9070,,RX 9070,,パソコン工房,,未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1236255,指定URLはRX 9070 GRE 12GB（RX9070GRE 12G-L/OC）。対象のRX 9070とは別製品のため不採用
+2026-10-14,GPU,gpu-asrock-challenger-rx-9070-xt,ASRock Challenger RX 9070 XT,,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107762/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-asrock-challenger-rx-9070-xt,ASRock Challenger RX 9070 XT,,RX 9070 XT,,ドスパラ,139800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC566229.html,個別ページ；2026-10-16に閲覧、取得日2026-10-16の内容
+2026-10-16,GPU,gpu-asrock-challenger-rx-9070-xt,ASRock Challenger RX 9070 XT,,RX 9070 XT,,パソコン工房,,未確認,未確認,,店舗内検索（RX9070XT CL 16G）；184件中の表示20件では対象一致を確認できず；追加閲覧なし；商品URL未確定
+2026-10-16,GPU,gpu-asrock-steel-legend-rx-9070-xt,ASRock Steel Legend RX 9070 XT,,RX 9070 XT,,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/20107564/,個別ページ；指定URLはSteel Legend Dark。元リストはDarkの記載がなく色・型番を確定できず
+2026-10-16,GPU,gpu-asrock-steel-legend-rx-9070-xt,ASRock Steel Legend RX 9070 XT,RX9070XT SL 16G,RX 9070 XT,,ドスパラ,148800,最短10/17お届け・カート投入可,購入可,https://www.dospara.co.jp/SBR1891,カテゴリ一覧で確認；新品Steel Legend（Dark・アウトレットを除外）
+2026-10-16,GPU,gpu-asrock-steel-legend-rx-9070-xt,ASRock Steel Legend RX 9070 XT,,RX 9070 XT,,パソコン工房,,未確認,未確認,,店舗内検索（RX9070XT SL 16G）；検索結果0件；商品URL未確定
+2026-10-14,GPU,gpu-gigabyte-gaming-oc-rx-9070-xt,GIGABYTE GAMING OC RX 9070 XT,,RX 9070 XT,,アーク,,在庫なし,購入不可,https://www.ark-pc.co.jp/i/20107518/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-gigabyte-gaming-oc-rx-9070-xt,GIGABYTE GAMING OC RX 9070 XT,,RX 9070 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522629.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-gigabyte-gaming-oc-rx-9070-xt,GIGABYTE GAMING OC RX 9070 XT,,RX 9070 XT,,パソコン工房,154800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1137078,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-sapphire-pure-rx-9070-xt,Sapphire PURE RX 9070 XT,,RX 9070 XT,,アーク,175800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107521/,個別ページ；2026-10-16に閲覧、取得日2026-10-16の内容
+2026-10-14,GPU,gpu-sapphire-pure-rx-9070-xt,Sapphire PURE RX 9070 XT,,RX 9070 XT,,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1891/IC522646.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-16,GPU,gpu-sapphire-pure-rx-9070-xt,Sapphire PURE RX 9070 XT,,RX 9070 XT,,パソコン工房,,未確認,未確認,,店舗内検索（11348-02-20G）；検索結果0件；商品URL未確定
+2026-10-14,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,アーク,227800,在庫あり,購入可,https://www.ark-pc.co.jp/i/20107539/,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-14,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,ドスパラ,191800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC518976.html,個別ページ；2026-10-16に閲覧、取得日2026-10-14の内容
+2026-10-15,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,パソコン工房,191800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1137080,個別ページ；2026-10-16に閲覧、取得日2026-10-15の内容

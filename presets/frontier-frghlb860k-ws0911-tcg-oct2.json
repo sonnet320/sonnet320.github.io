@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-frghlb860k-ws0911-tcg-oct2",
+  "shop": "FRONTIER",
+  "model": "FRGHLB860K/WS0911/TCG",
+  "grade": "標準構成・Oct2掲載モデル・受注生産",
+  "case": "FRONTIER GHLシリーズ筐体（ケース単体型番・OEM元は不明）",
+  "sample": false,
+  "state": {
+    "title": "FRONTIER FRGHLB860K/WS0911/TCG",
+    "price": "¥392,800",
+    "note": "2026-10-12確認：税込392,800円、受注生産、1年間センドバック保証。送料無料表示と共通注意書きの送料3,300円が併存するため最終注文画面で確認。個別出荷日・セール終了日時は未確認 / 冷却結果は未計算：CPS RZ620Pro TC BKの専用モデル、ケース内部寸法、ファンサイズ・方向・性能、GPU形状は未確認。シート読込は既存GHLの計算内部寸法465×485×230mm、140mm前面吸気×3／背面排気×1・70%、汎用シングルタワー空冷（4ヒートパイプ・120mmファン×1・高さ155mm）、汎用3ファンGPU、ATX基板、パネル・電源区画の仮設定です。クーラーの仮設定は実機の仕様を示しません。外寸は内部寸法に使用していません",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Intel Core Ultra 7 270K Plus（24コア／24スレッド、Pコア基本3.7GHz・最大5.5GHz、キャッシュ36MB）",
+        "detail": ""
+      },
+      {
+        "label": "クーラー",
+        "name": "CPS RZ620Pro TC BK［ブラック］（空冷）",
+        "detail": "読み込み時は汎用シングルタワー空冷の仮設定。実機のクーラー寸法・性能を示しません"
+      },
+      {
+        "label": "GPU",
+        "name": "NVIDIA GeForce RTX 5070 Ti 16GB",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 32GB（16GB×2、4スロット中2スロット空き、最大128GB。メーカー・型番・動作速度は不明）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe SSD（PCIe Gen4、OSインストール済み。メーカー・型番は不明）",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "MSI製・Intel B860チップセット（マザーボード型番は不明）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "850W ATX電源、80PLUS PLATINUM、日本製コンデンサ仕様（メーカー・型番は不明）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "FRONTIER GHLシリーズ筐体（ケース単体型番・OEM元は不明）",
+        "detail": "約230×465×500mm（幅×奥行×高さ、突起部を含む）。内部寸法は既存GHLの仮設定"
+      },
+      {
+        "label": "前面ファン",
+        "name": "計算用：140mm ×3",
+        "detail": "吸気・70%は仮設定。台数はシリーズ共通資料、実機のサイズ・方向・性能は不明"
+      },
+      {
+        "label": "背面ファン",
+        "name": "計算用：140mm ×1",
+        "detail": "排気・70%は仮設定。台数はシリーズ共通資料、実機のサイズ・方向・性能は不明"
+      },
+      {
+        "label": "天面ファン",
+        "name": "未確認（計算用は0基）",
+        "detail": "実機での搭載有無を示しません"
+      },
+      {
+        "label": "底面ファン",
+        "name": "未確認（計算用は0基）",
+        "detail": "実機での搭載有無を示しません"
+      }
+    ],
+    "board": "atx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": null,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-single",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "clearance": 25,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 392800,
+        "parts": null
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "ghl",
+      "d": 465,
+      "h": 485,
+      "w": 230
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "90rumie",
+        "x": 52.5,
+        "y": 117.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "xtb1o8o",
+        "x": 52.5,
+        "y": 262.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "cdp62m3",
+        "x": 52.5,
+        "y": 407.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "9xqe3fe",
+        "x": 482.5,
+        "y": 174,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 126,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0
+  },
+  "verifiedHardware": {
+    "id": "frontier-frghlb860k-ws0911-tcg-oct2",
+    "shop": "FRONTIER",
+    "model": "FRGHLB860K/WS0911/TCG",
+    "grade": "標準構成・Oct2掲載モデル・受注生産",
+    "url": "https://www.frontier-direct.jp/direct/g/g124352-Oct2/",
+    "price": 392800,
+    "priceDate": "2026-10-12",
+    "band": "40万以下",
+    "use": [
+      "ゲーム"
+    ],
+    "parts": {
+      "cpu": "Intel Core Ultra 7 270K Plus（24コア／24スレッド、Pコア基本3.7GHz・最大5.5GHz、キャッシュ36MB）",
+      "cooler": "CPS RZ620Pro TC BK［ブラック］（空冷）",
+      "gpu": "NVIDIA GeForce RTX 5070 Ti 16GB",
+      "gpuCard": "ASUS製（カード型番・長さ・ファン数は不明）",
+      "memory": "DDR5 32GB（16GB×2、4スロット中2スロット空き、最大128GB。メーカー・型番・動作速度は不明）",
+      "ssd": "1TB M.2 NVMe SSD（PCIe Gen4、OSインストール済み。メーカー・型番は不明）",
+      "board": "MSI製・Intel B860チップセット（マザーボード型番は不明）",
+      "psu": "850W ATX電源、80PLUS PLATINUM、日本製コンデンサ仕様（メーカー・型番は不明）"
+    },
+    "case": {
+      "name": "FRONTIER GHLシリーズ筐体（ケース単体型番・OEM元は不明）",
+      "size": "約230×465×500mm（幅×奥行×高さ、突起部を含む）",
+      "fans": [
+        {
+          "pos": "front",
+          "size": "不明",
+          "count": 3,
+          "dir": "不明"
+        },
+        {
+          "pos": "rear",
+          "size": "不明",
+          "count": 1,
+          "dir": "不明"
+        }
+      ],
+      "panels": {
+        "front": "不明",
+        "top": "不明",
+        "bottom": "不明"
+      },
+      "psu": "不明"
+    },
+    "unknown": [
+      "本モデル個別の標準ケースファン構成の明記（前面3基・背面1基はリンク先GHLシリーズ共通資料による）",
+      "ケースファンのメーカー・型番・サイズ・吸排気方向・回転数・風量・静圧",
+      "ケース単体型番・OEM元・標準ケースカラー",
+      "前面・天面・底面パネルの個別構造と吸気経路",
+      "電源の実装位置・電源シュラウドの詳細・底面開口の用途",
+      "GPUカード型番・長さ・ファン数",
+      "マザーボード型番・フォームファクター",
+      "メモリのメーカー・型番・動作速度",
+      "SSDのメーカー・型番",
+      "電源のメーカー・型番",
+      "具体的な出荷予定日",
+      "セール終了日時・クーポン条件",
+      "送料無料表示と送料3300円の共通注意書きの適用関係"
+    ],
+    "sources": [
+      "https://www.frontier-direct.jp/direct/g/g124352-Oct2/",
+      "https://www.frontier-direct.jp/direct/e/ejGhlB860/"
+    ],
+    "specText": "cpu：Intel Core Ultra 7 270K Plus（24コア／24スレッド、Pコア基本3.7GHz・最大5.5GHz、キャッシュ36MB）\ncooler：CPS RZ620Pro TC BK［ブラック］（空冷）\ngpu：NVIDIA GeForce RTX 5070 Ti 16GB\ngpuCard：ASUS製（カード型番・長さ・ファン数は不明）\nmemory：DDR5 32GB（16GB×2、4スロット中2スロット空き、最大128GB。メーカー・型番・動作速度は不明）\nssd：1TB M.2 NVMe SSD（PCIe Gen4、OSインストール済み。メーカー・型番は不明）\nboard：MSI製・Intel B860チップセット（マザーボード型番は不明）\npsu：850W ATX電源、80PLUS PLATINUM、日本製コンデンサ仕様（メーカー・型番は不明）\nOS：Windows 11 Home 64bit\n保証：1年間センドバック保証\n筐体共通資料：前面LEDファン3基・背面1基、左側面強化ガラス、取り外し可能な微細メッシュパネル、裏面配線と電源の区分け構造。水冷は搭載可能という説明のみで、本機は空冷。",
+    "note": "2026-10-12日本時間の本チャット調査結果を反映。価格と価格確認日は維持。sources[0]は当該Oct2モデルのCPU・空冷クーラー・ASUS製GPU・メモリ・SSD・MSI製B860・850W電源・外寸・OS・通信・保証・受注生産の出典。sources[1]は商品ページからリンクされたGHL-B860シリーズ共通資料で、ケースファンの前面3基／背面1基と左側面強化ガラス、微細メッシュ、配線・電源の区分け構造のみ適用。別モデルの水冷や個別パーツは転記せず、fansの未確認属性とpanels・psuは不明を維持。旧掲載分の750W電源・MSI製GPUとは区別。",
+    "date": "2026-10-12",
+    "providedBy": "chat_research",
+    "priceNote": "2026-10-12確認：税込392,800円、受注生産、1年間センドバック保証。送料無料表示と共通注意書きの送料3,300円が併存するため最終注文画面で確認。個別出荷日・セール終了日時は未確認",
+    "os": "Windows 11 Home 64bit",
+    "warranty": "1年間センドバック保証",
+    "availability": "○ 受注生産。個別出荷日は未確認",
+    "connectivity": "5Gbps有線LAN、Wi-Fi 6E（Azurewave AW-XB560NF、2×2、最大2.4Gbps）、Bluetooth 5.3。上面USB-A 5Gbps×1／USB-C 5Gbps×1／CTIAヘッドセット端子×1"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "computedAt": null,
+    "note": "冷却結果は未計算：CPS RZ620Pro TC BKの専用モデル、ケース内部寸法、ファンサイズ・方向・性能、GPU形状は未確認。シート読込は既存GHLの計算内部寸法465×485×230mm、140mm前面吸気×3／背面排気×1・70%、汎用シングルタワー空冷（4ヒートパイプ・120mmファン×1・高さ155mm）、汎用3ファンGPU、ATX基板、パネル・電源区画の仮設定です。クーラーの仮設定は実機の仕様を示しません。外寸は内部寸法に使用していません",
+    "assumptions": {
+      "caseDim": {
+        "preset": "ghl",
+        "d": 465,
+        "h": 485,
+        "w": 230
+      },
+      "caseType": "standard",
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "mesh",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "fans": [
+        {
+          "id": "90rumie",
+          "x": 52.5,
+          "y": 117.5,
+          "a": 0,
+          "size": 140,
+          "rpm": 70,
+          "model": "ghl140"
+        },
+        {
+          "id": "xtb1o8o",
+          "x": 52.5,
+          "y": 262.5,
+          "a": 0,
+          "size": 140,
+          "rpm": 70,
+          "model": "ghl140"
+        },
+        {
+          "id": "cdp62m3",
+          "x": 52.5,
+          "y": 407.5,
+          "a": 0,
+          "size": 140,
+          "rpm": 70,
+          "model": "ghl140"
+        },
+        {
+          "id": "9xqe3fe",
+          "x": 482.5,
+          "y": 174,
+          "a": 0,
+          "size": 140,
+          "rpm": 70,
+          "model": "ghl140"
+        }
+      ],
+      "board": "atx",
+      "coolerBrand": "generic",
+      "coolerModel": "gen-single",
+      "coolerCustom": {
+        "type": "air",
+        "pipes": 4,
+        "fans": 1,
+        "fs": 120,
+        "h": 155,
+        "rad": 360,
+        "thick": 27,
+        "tdp": null
+      },
+      "gpuBrand": "generic",
+      "gpuModel": "c3",
+      "gpuCustom": {
+        "L": 300,
+        "H": 125,
+        "T": 50,
+        "fans": 3,
+        "type": "flow",
+        "power": null,
+        "vc": false
+      },
+      "gpuLen": 304,
+      "gpuH": 126,
+      "gpuT": 50,
+      "gpuFans": 3,
+      "room": 25,
+      "cpuMode": "game",
+      "cpuLoad": 60,
+      "gpuLoad": 90,
+      "fanRpm": 70,
+      "sourcePresetId": "frontier-frghlmb650-ws0911"
+    }
+  }
+}

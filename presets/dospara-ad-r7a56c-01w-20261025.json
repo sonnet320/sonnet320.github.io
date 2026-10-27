@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "id": "dospara-ad-r7a56c-01w-20261025",
+  "shop": "ドスパラ",
+  "model": "THIRDWAVE AD-R7A56C-01W",
+  "grade": "標準構成",
+  "case": "ミニタワー（THIRDWAVEのX3-03と推定）",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "ドスパラ THIRDWAVE AD-R7A56C-01W",
+    "price": "¥249,980",
+    "note": "送料別（3,300円）",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 7700",
+        "detail": "8コア／16スレッド・AM5"
+      },
+      {
+        "label": "クーラー",
+        "name": "未確認",
+        "detail": "計算は一般的なシングルタワーの仮定"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5060 Ti 16GB",
+        "detail": "計算は汎用形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 16GB",
+        "detail": "枚数・速度未確認"
+      },
+      {
+        "label": "SSD",
+        "name": "500GB Gen4 SSD",
+        "detail": ""
+      },
+      {
+        "label": "マザーボード",
+        "name": "未確認",
+        "detail": "MicroATXと仮定"
+      },
+      {
+        "label": "電源",
+        "name": "未確認",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "ドスパラ X3-03 ミニタワー（推定）",
+        "detail": "販売ページは「ミニタワー」のみ。THIRDWAVE機はX3-03を当てはめる方針で計算"
+      },
+      {
+        "label": "ケースファン",
+        "name": "未確認",
+        "detail": "搭載数・配置・風向・性能は未確認"
+      }
+    ],
+    "board": "matx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 205,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-single",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 148,
+      "rad": 360,
+      "thick": 27,
+      "tdp": 235
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 249980,
+        "parts": 208100,
+        "pv": "2026-10-16"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "x3wh",
+      "d": 401,
+      "h": 422,
+      "w": 210
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "ab9t6tv",
+        "x": 356,
+        "y": 52.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "x3argb120"
+      },
+      {
+        "id": "6i65orp",
+        "x": 231,
+        "y": 52.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "x3argb120"
+      },
+      {
+        "id": "bev2er6",
+        "x": 417.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "x3argb120"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 120,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "gpuFanD": null
+  },
+  "verifiedHardware": {
+    "id": "dospara-ad-r7a56c-01w-20261025",
+    "shop": "ドスパラ",
+    "model": "THIRDWAVE AD-R7A56C-01W",
+    "grade": "標準構成",
+    "url": "https://www.dospara.co.jp/TC50/MC22375.html",
+    "price": 249980,
+    "priceDate": "2026-10-25",
+    "parts": {
+      "CPU": "Ryzen 7 7700",
+      "CPUクーラー": "未確認",
+      "GPU": "GeForce RTX 5060 Ti 16GB",
+      "メモリ": "16GB DDR5（枚数・速度未確認）",
+      "SSD": "500GB Gen4 SSD",
+      "マザーボード": "未確認",
+      "電源": "未確認",
+      "ケース": "ミニタワー（THIRDWAVEのX3-03と推定）",
+      "ケースファン": "未確認"
+    },
+    "sale": "通常販売として掲載。キャンペーン値引の表示はあるが金額・条件の記載なし（差し引かず）。期限記載なし",
+    "note": "翌日出荷表示（10/25時点で最短10/28到着表示）。送料3,300円・離島6,600円。Windows 11 Home。クーラー・電源・ケース・マザーボードは販売ページから取得できず未確認。",
+    "informationSource": "2026-10-25 公式販売ページで確認（一部はそねっとさんの確認）",
+    "date": "2026-10-25",
+    "unknown": [
+      "ケースの型番",
+      "CPUクーラー",
+      "電源",
+      "マザーボード",
+      "ケースファン",
+      "GPUカードの寸法"
+    ],
+    "sources": [
+      "https://www.dospara.co.jp/TC50/MC22375.html"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-25）：販売ページにケースの記載がないため、THIRDWAVE機に当てはめる方針でX3-03として計算。付属ファン（天面2基・背面1基）、CPUクーラー（一般的なシングルタワー）、電源、GPUの形状はすべて仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-10-25T08:43:01.542Z",
+    "assumptions": {
+      "caseDim": {
+        "preset": "x3wh",
+        "d": 401,
+        "h": 422,
+        "w": 210
+      },
+      "panels": {
+        "front": "glass",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "cooler": {
+        "cooler": "air",
+        "coolerBrand": "generic",
+        "coolerModel": "gen-single",
+        "radSize": 360,
+        "radPos": "top"
+      },
+      "gpuShape": "汎用3ファン形状・既存寸法",
+      "caseFans": "ケースの付属ファン（シートの登録値）を仮に配置"
+    }
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 1,
+  "id": "surugaya-sgvt-rx97-a7700s-black",
+  "shop": "駿河屋",
+  "model": "SURUGA VT 7000S / SGVT-RX97-A7700S",
+  "grade": "標準構成・ブラックカラーモデル・受注生産",
+  "case": "SURUGA VTケース（ブラック、OEM元・製品型番不明）",
+  "sample": false,
+  "state": {
+    "title": "駿河屋 SURUGA VT 7000S / ブラック・標準構成",
+    "price": "¥319,800",
+    "note": "ブラック・予約／受注生産。決済完了後14営業日（土日祝除く）で発送予定。提供資料では送料・通販手数料無料、決済手数料別。保証1年。セール期限・先着マウス特典残数は不明 / 冷却結果は未計算：ファン方向・性能、クーラー型番、GPU形状、内部構造・パネル・電源位置が未確認。シート読込はケース「駿河屋 SURUGA VTケース」（外寸479.4×295×388mm、二室構造・前面ガラスは仮定）、側面×2／底面×3吸気（公式のリバースファン）・天面×1／背面×1排気（仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、汎用空冷・GPU形状の仮設定です。前面は計算用に0基としており実搭載の有無は不明。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 7700（8コア／16スレッド、3.8～5.3GHz）",
+        "detail": ""
+      },
+      {
+        "label": "クーラー",
+        "name": "サイドフロー型空冷CPUクーラー（メーカー・型番・ファン仕様不明）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "AMD Radeon RX 9070 XT 16GB",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2、DDR5-5600、デュアルチャネル、4スロット中2スロット空き、最大256GBと公式記載。メーカー・型番不明）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB SSD（NVMe PCIe Gen4、メーカー・型番不明）",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "B650M Pro X3D WiFi",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "750W、80 PLUS Bronze以上（仕入状況により上位品へ変更の場合あり。メーカー・型番不明）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "SURUGA VTケース（ブラック、OEM元・製品型番不明）",
+        "detail": "約295×479.4×388mm（幅×奥行×高さ、突起物を含まない） / シートのケース「SURUGA VT」で計算（二室構造・前面ガラスは仮定）"
+      },
+      {
+        "label": "前面ファン",
+        "name": "未確認（計算用は0基）",
+        "detail": "公式の標準ファン一覧に記載なし。実機の有無は不明"
+      },
+      {
+        "label": "天面ファン",
+        "name": "120mmファン ×1",
+        "detail": "計算用の仮定：排気。性能は一般的な付属ファンの値、実機の方向・性能は不明"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mmファン ×1",
+        "detail": "計算用の仮定：排気。性能は一般的な付属ファンの値、実機の方向・性能は不明"
+      },
+      {
+        "label": "底面ファン",
+        "name": "120mmファン ×3",
+        "detail": "公式のリバースファン、計算用は吸気。性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "側面ファン",
+        "name": "120mmファン ×2",
+        "detail": "公式のリバースファン、計算用は吸気。性能は一般的な付属ファンの値"
+      }
+    ],
+    "board": "matx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 205,
+    "gpuSlots": 2,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-single",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "dual",
+    "clearance": 25,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 319800,
+        "parts": null
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "sgvt",
+      "d": 480,
+      "h": 388,
+      "w": 295
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "surugaya-sgvt-rx97-a7700s-black-side-1",
+        "x": 115,
+        "y": 167.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "sgvt120",
+        "side": true,
+        "dir": "in"
+      },
+      {
+        "id": "surugaya-sgvt-rx97-a7700s-black-side-2",
+        "x": 115,
+        "y": 292.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "sgvt120",
+        "side": true,
+        "dir": "in"
+      },
+      {
+        "id": "surugaya-sgvt-rx97-a7700s-black-bottom-1",
+        "x": 150,
+        "y": 407.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "sgvt120"
+      },
+      {
+        "id": "surugaya-sgvt-rx97-a7700s-black-bottom-2",
+        "x": 275,
+        "y": 407.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "sgvt120"
+      },
+      {
+        "id": "surugaya-sgvt-rx97-a7700s-black-bottom-3",
+        "x": 400,
+        "y": 407.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "sgvt120"
+      },
+      {
+        "id": "surugaya-sgvt-rx97-a7700s-black-top-1",
+        "x": 436,
+        "y": 52.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "sgvt120"
+      },
+      {
+        "id": "surugaya-sgvt-rx97-a7700s-black-rear-1",
+        "x": 497.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "sgvt120"
+      }
+    ],
+    "gpuT": 40,
+    "gpuH": 120,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0
+  },
+  "verifiedHardware": {
+    "date": "2026-10-11",
+    "providedBy": "user",
+    "url": "https://www.suruga-ya.jp/product/detail/145907080?branch_number=0184",
+    "parts": {
+      "cpu": "AMD Ryzen 7 7700（8コア／16スレッド、3.8～5.3GHz）",
+      "cooler": "サイドフロー型空冷CPUクーラー（メーカー・型番・ファン仕様不明）",
+      "gpu": "AMD Radeon RX 9070 XT 16GB",
+      "gpuCard": "不明",
+      "memory": "32GB（16GB×2、DDR5-5600、デュアルチャネル、4スロット中2スロット空き、最大256GBと公式記載。メーカー・型番不明）",
+      "ssd": "1TB SSD（NVMe PCIe Gen4、メーカー・型番不明）",
+      "board": "B650M Pro X3D WiFi",
+      "psu": "750W、80 PLUS Bronze以上（仕入状況により上位品へ変更の場合あり。メーカー・型番不明）"
+    },
+    "case": {
+      "name": "SURUGA VTケース（ブラック、OEM元・製品型番不明）",
+      "size": "約295×479.4×388mm（幅×奥行×高さ、突起物を含まない）",
+      "fans": [
+        {
+          "pos": "rear",
+          "size": 120,
+          "count": 1,
+          "dir": "不明"
+        },
+        {
+          "pos": "top",
+          "size": 120,
+          "count": 1,
+          "dir": "不明"
+        },
+        {
+          "pos": "side",
+          "size": 120,
+          "count": 2,
+          "dir": "不明"
+        },
+        {
+          "pos": "bottom",
+          "size": 120,
+          "count": 3,
+          "dir": "不明"
+        }
+      ],
+      "panels": {
+        "front": "不明",
+        "top": "不明",
+        "bottom": "不明"
+      },
+      "psu": "不明"
+    },
+    "unknown": [
+      "ケースファン各位置の吸気・排気方向",
+      "ケースファンのメーカー・型番・厚さ・回転数・風量・静圧・騒音値",
+      "前面ファンの有無（公式のケースファン一覧に記載なし）",
+      "CPUクーラーのメーカー・型番・寸法・ファンサイズ・台数・風向",
+      "ケースのOEM元・製品型番",
+      "前面・天面・底面パネルの材質と開口構造",
+      "側面パネルの材質と吸気開口・フィルター構造",
+      "電源の実装位置・シュラウド構造・専用吸気経路",
+      "GPUカードのメーカー・型番・長さ・厚さ・ファン数",
+      "メモリ・SSD・電源のメーカーと型番",
+      "セール価格の適用期限",
+      "先着特典のゲーミングマウスの残数"
+    ],
+    "sources": [
+      "https://www.suruga-ya.jp/product/detail/145907080?branch_number=0184"
+    ],
+    "price": 319800,
+    "priceDate": "2026-10-11",
+    "priceNote": "ブラック・予約／受注生産。決済完了後14営業日（土日祝除く）で発送予定。提供資料では送料・通販手数料無料、決済手数料別。保証1年。セール期限・先着マウス特典残数は不明",
+    "specText": "販売型番：SGVT-RX97-A7700S\nケース色：ブラック。内部パーツの色は指定不可\n税込価格：319,800円\n販売状態：予約・受注生産\n発送予定：決済完了後14営業日（土日祝日を除く）\nOS：Windows 11 Home 64ビット日本語版\nCPU：AMD Ryzen 7 7700、8コア／16スレッド、3.8～5.3GHz\nCPU冷却：サイドフロー型空冷。具体的な型番・ファン仕様は不明\nCPUグリス：純正グリスと公式記載\nGPU：AMD Radeon RX 9070 XT、VRAM 16GB。カードメーカー・型番は不明\nメモリ：DDR5-5600、32GB（16GB×2）、デュアルチャネル。4スロット中2スロット空き\nSSD：1TB、NVMe Gen4\nマザーボード：B650M Pro X3D WiFi\n電源：750W、80 PLUS Bronze以上。仕入状況により上位品へ変更される場合あり\nケース：SURUGA VTケース\n外寸：約幅295×奥行479.4×高さ388mm、突起物を含まない\n標準ケースファン：背面120mm×1、天面120mm×1、側面120mm×2、底面120mm×3、合計7基\n全ケースファンはARGB。側面2基・底面3基はリバースファンと公式記載\n各ファンの吸気・排気方向は不明\n有線LAN：2.5Gb対応\n無線LAN：Wi-Fi 6E\nBluetooth：5.2\n上面端子：USB 3.2 Gen2 Type-C×1、USB 3.0 Type-A×2、オーディオIN／OUT\n背面USB：USB 3.2 Gen2 Type-A×1、USB 3.2 Gen2 Type-C×1、USB 3.2 Gen1 Type-A×2、USB 2.0×4\n映像出力：HDMI×1、DisplayPort×3（グラフィックボード）\n光学ドライブ：非搭載\nキーボード・マウス：標準では付属なし\n保証：1年間センドバック無償修理保証",
+    "note": "2026-10-11（日本時間）に対象商品ページを確認。選択時の税込319,800円を維持。sources[0]はRyzen 7 7700＋RX 9070 XT 16GB搭載のブラックモデルそのものの公式商品ページで、構成、外寸、標準ファンの位置・サイズ・台数、納期、保証の出典。別構成や共通筐体資料からの仕様転記は行っていない。リバースファンという記載だけではケースに対する吸排気方向を確定できないため、dirは不明。空冷構成のためcase.radiatorは追加していない。ケースパネル構造と電源位置も未確認で、外観や一般的な配置から補完していない。上面・背面端子は使用部材により変更される場合あり。送料無料の公式一覧表示を確認済みで、この価格では掲載の通信販売手数料も無料条件を満たす。決済方法に伴う別途手数料は含まない。先着ゲーミングマウス特典は残数不明のため標準付属品として扱わない。",
+    "importNote": "ユーザー提供資料を取り込み。今回のWEB更新作業では商品ページの再調査を実施していない。"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "computedAt": null,
+    "note": "冷却結果は未計算：ファン方向・性能、クーラー型番、GPU形状、内部構造・パネル・電源位置が未確認。シート読込はケース「駿河屋 SURUGA VTケース」（外寸479.4×295×388mm、二室構造・前面ガラスは仮定）、側面×2／底面×3吸気（公式のリバースファン）・天面×1／背面×1排気（仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、汎用空冷・GPU形状の仮設定です。前面は計算用に0基としており実搭載の有無は不明。",
+    "assumptions": {
+      "caseDim": {
+        "preset": "sgvt",
+        "d": 480,
+        "h": 388,
+        "w": 295
+      },
+      "caseType": "dual",
+      "panels": {
+        "front": "glass",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "fans": [
+        {
+          "id": "surugaya-sgvt-rx97-a7700s-black-side-1",
+          "x": 115,
+          "y": 167.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "sgvt120",
+          "side": true,
+          "dir": "in"
+        },
+        {
+          "id": "surugaya-sgvt-rx97-a7700s-black-side-2",
+          "x": 115,
+          "y": 292.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "sgvt120",
+          "side": true,
+          "dir": "in"
+        },
+        {
+          "id": "surugaya-sgvt-rx97-a7700s-black-bottom-1",
+          "x": 150,
+          "y": 407.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "sgvt120"
+        },
+        {
+          "id": "surugaya-sgvt-rx97-a7700s-black-bottom-2",
+          "x": 275,
+          "y": 407.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "sgvt120"
+        },
+        {
+          "id": "surugaya-sgvt-rx97-a7700s-black-bottom-3",
+          "x": 400,
+          "y": 407.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "sgvt120"
+        },
+        {
+          "id": "surugaya-sgvt-rx97-a7700s-black-top-1",
+          "x": 436,
+          "y": 52.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "sgvt120"
+        },
+        {
+          "id": "surugaya-sgvt-rx97-a7700s-black-rear-1",
+          "x": 497.5,
+          "y": 174,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "sgvt120"
+        }
+      ],
+      "coolerBrand": "generic",
+      "coolerModel": "gen-single",
+      "coolerCustom": {
+        "type": "air",
+        "pipes": 4,
+        "fans": 1,
+        "fs": 120,
+        "h": 155,
+        "rad": 360,
+        "thick": 27,
+        "tdp": null
+      },
+      "gpuBrand": "generic",
+      "gpuModel": "c3",
+      "gpuCustom": {
+        "L": 300,
+        "H": 125,
+        "T": 50,
+        "fans": 3,
+        "type": "flow",
+        "power": null,
+        "vc": false
+      },
+      "gpuLen": 304,
+      "gpuH": 120,
+      "gpuT": 40,
+      "gpuFans": 3,
+      "room": 25,
+      "cpuMode": "game",
+      "cpuLoad": 60,
+      "gpuLoad": 90,
+      "fanRpm": 70
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:42:59.273Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 81,
+    "grade": "良",
+    "cap": null,
+    "cpu": 62.6,
+    "gpu": 67.7,
+    "vrm": 60.2,
+    "intake": 3.51,
+    "stag": 6.4,
+    "press": -23.7,
+    "rows": {
+      "cpu": "良",
+      "gpu": "良",
+      "vrm": "良",
+      "intake": "優",
+      "stag": "良",
+      "press": "並"
+    },
+    "air": {
+      "tIn": 3.42,
+      "cpuT": 3.51,
+      "gpuT": 1.58,
+      "vrmT": 6.74,
+      "vrmV": 0.317,
+      "exT": 5.48,
+      "pIn": 0.075,
+      "stag": 0.064,
+      "fanIn": 64.7,
+      "fanOut": 86.8,
+      "leakIn": 28.8,
+      "leakOut": 6.7
+    },
+    "coolQ": null,
+    "gpuQ": 48.5
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 86.7,
+    "gpuPower": 163.07999999999998
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/ark-72003667-20261025.jpg",
+  "presetId": "ark-72003667-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースは新しく登録したMSI MPG GUNGNIR 300R AIRFLOW（外寸・クリアランス・付属ファンはアークの販売ページ、前面・天面メッシュはそねっとさんの確認）。BTO表記の120mm ARGB×4を前面3基吸気／背面1基排気、水冷は天面で排気と仮定。ファンの性能、電源カバー、GPUの形状と寸法は仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

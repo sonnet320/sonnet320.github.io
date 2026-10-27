@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "ark-72003552-20261016",
+  "shop": "アーク",
+  "model": "AG-AG8C2TB85IRD6X-H2F",
+  "grade": "標準構成",
+  "case": "NZXT H2 Flow Black",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "アーク AG-AG8C2TB85IRD6X-H2F",
+    "price": "¥338,911",
+    "note": "CPUクーラー/マザーボードに入荷待ち表示。受注可否/確定納期は未確認。取り寄せを含む出荷目安18～28日。単体注文送料無料。コンビニ決済/代引/auPay不可。\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 9700X",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "Noctua NH-L9a-AM5（入荷待ち表示）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "Radeon RX 9060 XT 専用VRAM 16GB GDDR6（メーカー指定不可）",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2）Crucial Pro DDR5-5600",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "2TB Kingston NV3 NVMe PCIe 4.0 M.2",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "NZXT C850 SFX GOLD 850W 80PLUS GOLD",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "NZXT H2 Flow Black",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "記載なし",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 338911,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "ark-72003552-20261016",
+    "shop": "アーク",
+    "model": "AG-AG8C2TB85IRD6X-H2F",
+    "url": "https://www.ark-pc.co.jp/i/72003552/",
+    "price": 338911,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "AMD Ryzen 7 9700X",
+      "CPUクーラー": "Noctua NH-L9a-AM5（入荷待ち表示）",
+      "GPU": "Radeon RX 9060 XT 専用VRAM 16GB GDDR6（メーカー指定不可）",
+      "メモリ": "32GB（16GB×2）Crucial Pro DDR5-5600",
+      "SSD": "2TB Kingston NV3 NVMe PCIe 4.0 M.2",
+      "電源": "NZXT C850 SFX GOLD 850W 80PLUS GOLD",
+      "ケース": "NZXT H2 Flow Black",
+      "ケースファン": "記載なし"
+    },
+    "sale": "ハロウィンフェア2026・通常358911円から20000円引き・残り3台表示・期限記載なし",
+    "note": "CPUクーラー/マザーボードに入荷待ち表示。受注可否/確定納期は未確認。取り寄せを含む出荷目安18～28日。単体注文送料無料。コンビニ決済/代引/auPay不可。",
+    "informationSource": "構成・標準価格は公式ページで確認",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。未確認：ケースファン。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

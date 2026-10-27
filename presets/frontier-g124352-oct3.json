@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-g124352-oct3",
+  "shop": "FRONTIER",
+  "model": "FRGHLB860K/WS0911/TCG",
+  "grade": "標準構成",
+  "case": "記載なし",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "FRONTIER FRGHLB860K/WS0911/TCG",
+    "price": "¥389,980",
+    "note": "受注生産・納期未確認。送料無料表示と送料3300円の定型注意書きが併存。セール確認元 https://www.frontier-direct.jp/direct/e/ej-sale/\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Intel Core Ultra 7 270K Plus",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "ID-COOLING FROZN-A620-PRO-XE-BLACK（空冷）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "ASUS GeForce RTX 5070 Ti 専用VRAM 16GB",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2）DDR5",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe SSD Gen4",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "850W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "記載なし",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "記載なし",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 389980,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "frontier-g124352-oct3",
+    "shop": "FRONTIER",
+    "model": "FRGHLB860K/WS0911/TCG",
+    "url": "https://www.frontier-direct.jp/direct/g/g124352-Oct3/",
+    "price": 389980,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "Intel Core Ultra 7 270K Plus",
+      "CPUクーラー": "ID-COOLING FROZN-A620-PRO-XE-BLACK（空冷）",
+      "GPU": "ASUS GeForce RTX 5070 Ti 専用VRAM 16GB",
+      "メモリ": "32GB（16GB×2）DDR5",
+      "SSD": "1TB M.2 NVMe SSD Gen4",
+      "電源": "850W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+      "ケース": "記載なし",
+      "ケースファン": "記載なし"
+    },
+    "sale": "限界チャレンジセール掲載・2026-10-16 15:00～2026-10-23 15:00（日本時間）",
+    "note": "受注生産・納期未確認。送料無料表示と送料3300円の定型注意書きが併存。セール確認元 https://www.frontier-direct.jp/direct/e/ej-sale/",
+    "informationSource": "構成・標準価格は公式ページで確認",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。未確認：ケース・ケースファン。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

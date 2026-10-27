@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:42:31.016Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 68,
+    "grade": "並",
+    "cap": null,
+    "cpu": 76.5,
+    "gpu": 72.4,
+    "vrm": 74.8,
+    "intake": 8.81,
+    "stag": 3.7,
+    "press": 41.7,
+    "rows": {
+      "cpu": "並",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "並",
+      "stag": "良",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 5.89,
+      "cpuT": 8.81,
+      "gpuT": 0.5,
+      "vrmT": 12.44,
+      "vrmV": 0.37,
+      "exT": 8.73,
+      "pIn": 0.108,
+      "stag": 0.037,
+      "fanIn": 57.6,
+      "fanOut": 26.7,
+      "leakIn": 16.5,
+      "leakOut": 47.5
+    },
+    "coolQ": 26.9,
+    "gpuQ": 34.7
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 117.936,
+    "gpuPower": 226.49999999999997
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/applied-katamen-449134-20261025.jpg",
+  "presetId": "applied-katamen-449134-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースは新しく登録したSegotep LUX S（外寸と付属ファンはアプライドの販売ページ）。外寸の向き、パネルの種類、電源の位置、ファンの向き（前面吸気・背面排気と仮定）と性能、CPUクーラーの形（一般的なシングルタワー）、GPUの形状は仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません。奥行が400mm未満のため、シートの決まりで電源はSFXとして計算。"
+}

@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "id": "ark-gigabyte-ap3a5n6t-5103",
+  "shop": "アーク",
+  "model": "GIGABYTE AORUS PRIME 3 AP3A5N6T-5103",
+  "grade": "標準構成・ブラック・メーカー完成品",
+  "case": "AORUS PRIME 3独自設計ケース・ブラック",
+  "sample": false,
+  "state": {
+    "title": "アーク GIGABYTE AORUS PRIME 3 AP3A5N6T-5103",
+    "price": "¥299,800",
+    "note": "2026-10-13確認：税込299,800円・送料無料。在庫あり・残り1点表示。対象決済で15時までの注文は当日出荷。1年間保証。メーカー完成品。販売状況は変動 / 冷却結果は未計算：ファン性能・背面の風向・クーラー寸法・GPU形状・電源配置が未確認。シート読込はケース「GIGABYTE AORUS PRIME 3(専用ケース)」（外寸410×205×400mm・前面メッシュ、天面・底面・電源カバーは仮設定）、前面120mm吸気×2・背面120mm排気×1（台数・径は発売告知、背面の向きは仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、汎用シングルタワー空冷（4ヒートパイプ・120mm×1・高さ155mm）、GPU長300mm・高さ125mm・厚40.64mm・3ファンの仮設定です。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 5 9500F（AM5／Zen 5／6コア12スレッド／3.8～5.0GHz／TDP 65W）",
+        "detail": ""
+      },
+      {
+        "label": "クーラー",
+        "name": "GIGABYTE AORUS AirFlow 9025（ARGBタワー型空冷）",
+        "detail": "計算形状は汎用の仮設定"
+      },
+      {
+        "label": "GPU",
+        "name": "NVIDIA GeForce RTX 5060 Ti 16GB GDDR7",
+        "detail": "計算形状は汎用の仮設定"
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2）DDR5-5600 UDIMM／空きスロット2／メモリ製品型番不明",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "GIGABYTE AORUS Gen4 7300 SSD 1TB（PCIe 4.0 NVMe／代理店・公式ストア記載）",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "GIGABYTE製 AMD B850カスタムマザーボード（シリーズ紹介はB850M／正式基板型番不明）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "GIGABYTE P650G PG5系／650W／80PLUS GOLD（メーカー仕様表はP650G PG5 ES、代理店はP650G PG5）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "AORUS PRIME 3独自設計ケース・ブラック",
+        "detail": "外寸：幅205×奥行410×高さ400mm（突起部の扱い不明）。シートのケース「AORUS PRIME 3(専用ケース)」で計算（天面・底面・電源カバーは仮設定）"
+      },
+      {
+        "label": "前面ファン",
+        "name": "120mm ARGB ×2",
+        "detail": "前面吸気。性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mm ARGB ×1",
+        "detail": "実機の風向不明。計算用は排気の仮設定・性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "天面ファン",
+        "name": "未確認（計算用は0基）",
+        "detail": "搭載なしとは断定しない"
+      },
+      {
+        "label": "底面ファン",
+        "name": "未確認（計算用は0基）",
+        "detail": "電源専用吸気は独立ケースファンに含めない"
+      }
+    ],
+    "board": "matx",
+    "cooler": "air",
+    "radSize": 240,
+    "radPos": "top",
+    "coolerTdp": 200,
+    "gpuSlots": 2,
+    "gpuLen": 300,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-single",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 240,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 40.64,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "clearance": 25,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 299800,
+        "parts": null
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": 70,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "aorusp3",
+      "d": 410,
+      "h": 400,
+      "w": 205
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "ark-gigabyte-ap3a5n6t-5103-front-1",
+        "x": 52.5,
+        "y": 157.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ap3argb120"
+      },
+      {
+        "id": "ark-gigabyte-ap3a5n6t-5103-front-2",
+        "x": 52.5,
+        "y": 282.5,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ap3argb120"
+      },
+      {
+        "id": "ark-gigabyte-ap3a5n6t-5103-rear-1",
+        "x": 427.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ap3argb120"
+      }
+    ],
+    "gpuT": 40.64,
+    "gpuH": 125,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "url": "https://www.ark-pc.co.jp/i/31401251/",
+    "parts": {
+      "cpu": "AMD Ryzen 5 9500F（AM5／Zen 5／6コア12スレッド／3.8～5.0GHz／TDP 65W）",
+      "cooler": "GIGABYTE AORUS AirFlow 9025（ARGBタワー型空冷）",
+      "gpu": "NVIDIA GeForce RTX 5060 Ti 16GB GDDR7",
+      "gpuCard": "GIGABYTE GeForce RTX 5060 Ti WINDFORCE MAX OC 16G",
+      "memory": "32GB（16GB×2）DDR5-5600 UDIMM／空きスロット2／メモリ製品型番不明",
+      "ssd": "GIGABYTE AORUS Gen4 7300 SSD 1TB（PCIe 4.0 NVMe／代理店・公式ストア記載）",
+      "board": "GIGABYTE製 AMD B850カスタムマザーボード（シリーズ紹介はB850M／正式基板型番不明）",
+      "psu": "GIGABYTE P650G PG5系／650W／80PLUS GOLD（メーカー仕様表はP650G PG5 ES、代理店はP650G PG5）"
+    },
+    "case": {
+      "name": "AORUS PRIME 3独自設計ケース・ブラック",
+      "size": "外寸：幅205×奥行410×高さ400mm（突起部の扱い不明／内部寸法ではない）",
+      "fans": [
+        {
+          "pos": "front",
+          "size": 120,
+          "count": 2,
+          "dir": "in"
+        },
+        {
+          "pos": "rear",
+          "size": 120,
+          "count": 1,
+          "dir": "不明"
+        }
+      ],
+      "panels": {
+        "front": "mesh",
+        "top": "不明",
+        "bottom": "不明"
+      },
+      "psu": "不明"
+    },
+    "unknown": [
+      "CPUクーラーのファン径・厚さ・基数・回転数・P/Q・ヒートパイプ数・寸法・熱抵抗",
+      "ケースファン製品型番・厚さ・回転数・P/Q・PWM・背面ファンの実際の風向",
+      "ケース内部寸法・ファン座標・天面/底面構造・フィルター・搭載可能GPU長・クーラー高・電源位置",
+      "マザーボード正式型番・空きM.2スロット数・メモリ製品型番",
+      "電源ES版と市販P650G PG5の細部の同一性",
+      "資料間の食い違い：メモリ上限64GB/256GB、重量10.07kg/約12.5kg、前面USB 3.2 Type-A 1基/2基",
+      "冷却温度・騒音・FPS・実測消費電力・CPU電力制限は本調査では未確認"
+    ],
+    "sources": [
+      "https://www.ark-pc.co.jp/i/31401251/",
+      "https://www.gigabyte.com/jp/press/news/-483",
+      "https://www.ask-corp.jp/products/gigabyte/desktop-pc/aorus-prime-3.html",
+      "https://storejp.gigabyte.com/c/item-list/gamingdesktop/gigabyte-pc9127",
+      "https://www.gigabyte.com/jp/Gaming-PC/AORUS-PRIME-3-AP351",
+      "https://www.amd.com/ja/products/processors/desktops/ryzen/9000-series/amd-ryzen-5-9500f.html",
+      "https://www.gigabyte.com/jp/Power-Supply/GP-P650G-PG5/sp"
+    ],
+    "price": 299800,
+    "priceDate": "2026-10-13",
+    "specText": "CPU：AMD Ryzen 5 9500F（6コア12スレッド、AM5）\nCPUクーラー：AORUS AirFlow 9025・タワー型空冷\nGPU：GeForce RTX 5060 Ti 16GB／WINDFORCE MAX OC 16G\nメモリ：DDR5-5600 32GB（16GB×2）\nSSD：AORUS Gen4 7300 SSD 1TB\nマザーボード：GIGABYTE製B850カスタム基板\n電源：650W 80PLUS GOLD／P650G PG5系\nケースファン：120mm ARGB・前面2基＋背面1基\n外寸：幅205×奥行410×高さ400mm\n通信：2.5GbE、Wi-Fi 7、Bluetooth 5.4\nOS：Windows 11 Home\n保証：1年間",
+    "note": "2026-10-13確認：税込299,800円、送料無料、アーク表示は在庫あり・残り1点。15時までの対象決済は当日出荷の記載あり。メーカー完成品。公式発売告知の前面2基＋背面1基を採用（シリーズ紹介には前面3基との異なる記述）。電源は商品ページ・代理店・メーカー仕様表が一致する650Wを採用（発売告知本文のみ850W）。前面USB Type-Cあり。冷却計算未実施。価格・在庫は変動。 sources[0]は販売条件・主要構成・外寸・保証、sources[1]は発売告知のファン径/基数と電源仕様表、sources[2]/[3]はSSD・電源型番、sources[4]はシリーズ共通のタワー型空冷・前面吸気・メッシュ/側面ベント、sources[5]はCPU仕様、sources[6]は市販電源の仕様。共通資料の最大構成・別機種の部品は転記していない。",
+    "date": "2026-10-13",
+    "providedBy": "chat_research",
+    "priceNote": "2026-10-13確認：税込299,800円・送料無料。在庫あり・残り1点表示。対象決済で15時までの注文は当日出荷。1年間保証。メーカー完成品。販売状況は変動"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "computedAt": null,
+    "note": "冷却結果は未計算：ファン性能・背面の風向・クーラー寸法・GPU形状・電源配置が未確認。シート読込はケース「GIGABYTE AORUS PRIME 3(専用ケース)」（外寸410×205×400mm・前面メッシュ、天面・底面・電源カバーは仮設定）、前面120mm吸気×2・背面120mm排気×1（台数・径は発売告知、背面の向きは仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、汎用シングルタワー空冷（4ヒートパイプ・120mm×1・高さ155mm）、GPU長300mm・高さ125mm・厚40.64mm・3ファンの仮設定です。",
+    "assumptions": {
+      "caseDim": {
+        "preset": "aorusp3",
+        "d": 410,
+        "h": 400,
+        "w": 205
+      },
+      "caseType": "standard",
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "fans": [
+        {
+          "id": "ark-gigabyte-ap3a5n6t-5103-front-1",
+          "x": 52.5,
+          "y": 157.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "ap3argb120"
+        },
+        {
+          "id": "ark-gigabyte-ap3a5n6t-5103-front-2",
+          "x": 52.5,
+          "y": 282.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "ap3argb120"
+        },
+        {
+          "id": "ark-gigabyte-ap3a5n6t-5103-rear-1",
+          "x": 427.5,
+          "y": 174,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "ap3argb120"
+        }
+      ],
+      "coolerBrand": "generic",
+      "coolerModel": "gen-single",
+      "coolerCustom": {
+        "type": "air",
+        "pipes": 4,
+        "fans": 1,
+        "fs": 120,
+        "h": 155,
+        "rad": 240,
+        "thick": 27,
+        "tdp": null
+      },
+      "gpuBrand": "generic",
+      "gpuModel": "c3",
+      "gpuCustom": {
+        "L": 300,
+        "H": 125,
+        "T": 40.64,
+        "fans": 3,
+        "type": "flow",
+        "power": null,
+        "vc": false
+      },
+      "gpuLen": 300,
+      "gpuH": 125,
+      "gpuT": 40.64,
+      "gpuFans": 3,
+      "room": 25,
+      "cpuMode": "game",
+      "cpuLoad": 60,
+      "gpuLoad": 90,
+      "fanRpm": 70
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "dospara-mc25583-32gb-20261016",
+  "shop": "ドスパラ",
+  "model": "XPR7A-R58-GD",
+  "grade": "メモリ32GBへ変更（依頼者指定）",
+  "case": "未確認",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "ドスパラ GALLERIA XPR7A-R58-GD",
+    "price": "¥438,030",
+    "note": "依頼者指定：メモリ32GBへ変更後の税込価格438030円。既取得の標準16GB価格409980円とは構成が異なる。変更後の構成・価格は店舗ページで再確認していない。店舗での変更操作/注文は未実施。送料別。変更後の在庫/納期は未確認。\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 7700",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "未確認",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5080 専用VRAM 16GB",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB DDR5（16GBから変更・枚数/速度未確認）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB Gen4 SSD",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "未確認",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "未確認",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "LEDファン標準搭載（径/数量は未確認）",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 438030,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "dospara-mc25583-32gb-20261016",
+    "shop": "ドスパラ",
+    "model": "XPR7A-R58-GD",
+    "url": "https://www.dospara.co.jp/TC30/MC25583.html",
+    "price": 438030,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "AMD Ryzen 7 7700",
+      "CPUクーラー": "未確認",
+      "GPU": "GeForce RTX 5080 専用VRAM 16GB",
+      "メモリ": "32GB DDR5（16GBから変更・枚数/速度未確認）",
+      "SSD": "1TB Gen4 SSD",
+      "電源": "未確認",
+      "ケース": "未確認",
+      "ケースファン": "LEDファン標準搭載（径/数量は未確認）"
+    },
+    "sale": "32GBメモリ変更半額対象表示・終了日時未確認（予告なく変更/終了あり）",
+    "note": "依頼者指定：メモリ32GBへ変更後の税込価格438030円。既取得の標準16GB価格409980円とは構成が異なる。変更後の構成・価格は店舗ページで再確認していない。店舗での変更操作/注文は未実施。送料別。変更後の在庫/納期は未確認。",
+    "informationSource": "公式ページ取得情報＋依頼者指定の32GB変更・税込438030円",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。未確認：CPUクーラー・ケース・ケースファン。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

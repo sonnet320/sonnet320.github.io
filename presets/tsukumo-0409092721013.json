@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tsukumo-0409092721013",
+  "shop": "ツクモ",
+  "model": "G-GEAR（商品番号0409092721013）",
+  "grade": "提供構成",
+  "case": "G-GEAR プレミアムミドルタワーケース 66JD",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "ツクモ G-GEAR（商品番号0409092721013）",
+    "price": "¥379,980",
+    "note": "依頼者提供情報（2026-10-16）・店舗ページ未取得。OS:Windows 11 Home 64bit。MB:ASUS TUF GAMING B850-PLUS WIFI（ATX）。在庫/受注可否/納期/送料は未確認。製品型番は未確認。ケース外寸230×445×460mm（幅×奥行×高さ）。ファン風向/性能は未確認。依頼者指定の税込価格379980円。\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 9800X3D",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "ID-COOLING FROZN-A410（120mm PWM静音ファン・空冷）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5070 専用VRAM 12GB GDDR7（2スロット占有・GPUサポートホルダー付き）",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2）DDR5-5600動作",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB KIOXIA EXCERIA BASIC M.2 NVMe Gen4（読込最大7300MB/s・書込最大6800MB/s）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "CWT GPW750SB 750W・ATX 3.1・12V-2x6・80PLUS GOLD",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "G-GEAR プレミアムミドルタワーケース 66JD",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "フロント120mm×1・リア120mm×1",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 379980,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "tsukumo-0409092721013",
+    "shop": "ツクモ",
+    "model": "G-GEAR（商品番号0409092721013）",
+    "url": "https://shop.tsukumo.co.jp/goods/0409092721013/",
+    "price": 379980,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "AMD Ryzen 7 9800X3D",
+      "CPUクーラー": "ID-COOLING FROZN-A410（120mm PWM静音ファン・空冷）",
+      "GPU": "GeForce RTX 5070 専用VRAM 12GB GDDR7（2スロット占有・GPUサポートホルダー付き）",
+      "メモリ": "32GB（16GB×2）DDR5-5600動作",
+      "SSD": "1TB KIOXIA EXCERIA BASIC M.2 NVMe Gen4（読込最大7300MB/s・書込最大6800MB/s）",
+      "電源": "CWT GPW750SB 750W・ATX 3.1・12V-2x6・80PLUS GOLD",
+      "ケース": "G-GEAR プレミアムミドルタワーケース 66JD",
+      "ケースファン": "フロント120mm×1・リア120mm×1"
+    },
+    "sale": "セール対象/期限は未確認",
+    "note": "依頼者提供情報（2026-10-16）・店舗ページ未取得。OS:Windows 11 Home 64bit。MB:ASUS TUF GAMING B850-PLUS WIFI（ATX）。在庫/受注可否/納期/送料は未確認。製品型番は未確認。ケース外寸230×445×460mm（幅×奥行×高さ）。ファン風向/性能は未確認。依頼者指定の税込価格379980円。",
+    "informationSource": "依頼者提供（店舗ページ未取得）",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

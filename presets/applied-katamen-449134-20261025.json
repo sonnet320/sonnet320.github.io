@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "id": "applied-katamen-449134-20261025",
+  "shop": "アプライド",
+  "model": "Katamen-449134",
+  "grade": "標準構成・在庫品",
+  "case": "Segotep LUX S BLACK",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "アプライド Katamen-449134",
+    "price": "¥299,800",
+    "note": "送料無料表示・在庫残りわずか",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Core Ultra 7 265",
+        "detail": "20コア"
+      },
+      {
+        "label": "クーラー",
+        "name": "Jonsbo CR-1000 EVO BLACK（空冷）",
+        "detail": "シートに未登録のため、一般的なシングルタワーで計算"
+      },
+      {
+        "label": "GPU",
+        "name": "ZOTAC GeForce RTX 5070 12GB",
+        "detail": "製品型番・寸法は不明。計算は汎用形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "Acer DDR5-5600 16GB（16GB×1）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "Biwin NV7200 1TB（M.2 NVMe）",
+        "detail": ""
+      },
+      {
+        "label": "マザーボード",
+        "name": "ASRock B860M Pro RS WiFi（MicroATX）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "750W 80PLUS GOLD",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "ケース",
+        "name": "Segotep LUX S BLACK",
+        "detail": "360×210×405mm（向きの記載なし）。パネル・電源位置は仮定"
+      },
+      {
+        "label": "ケースファン",
+        "name": "未確認",
+        "detail": "搭載数・配置・風向・性能は未確認"
+      }
+    ],
+    "board": "matx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 205,
+    "gpuSlots": 2.5,
+    "gpuLen": 292,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-single",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 148,
+      "rad": 360,
+      "thick": 27,
+      "tdp": 235
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 299800,
+        "parts": 308880,
+        "pv": "2026-10-16"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "luxs",
+      "d": 360,
+      "h": 405,
+      "w": 210
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "5e7ycdt",
+        "x": 52.5,
+        "y": 100,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "luxs120"
+      },
+      {
+        "id": "wawzqvg",
+        "x": 52.5,
+        "y": 225,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "luxs120"
+      },
+      {
+        "id": "cn0a25m",
+        "x": 52.5,
+        "y": 350,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "luxs120"
+      },
+      {
+        "id": "t8qnlpz",
+        "x": 377.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "luxs120"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 120,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "gpuFanD": null
+  },
+  "verifiedHardware": {
+    "id": "applied-katamen-449134-20261025",
+    "shop": "アプライド",
+    "model": "Katamen-449134",
+    "grade": "標準構成・在庫品",
+    "url": "https://shop.applied-net.co.jp/view/item/000000449134",
+    "price": 299800,
+    "priceDate": "2026-10-25",
+    "parts": {
+      "CPU": "Core Ultra 7 265",
+      "CPUクーラー": "Jonsbo CR-1000 EVO BLACK（空冷）",
+      "GPU": "ZOTAC GeForce RTX 5070 12GB",
+      "メモリ": "16GB（16GB×1）Acer DDR5-5600",
+      "SSD": "1TB Biwin NV7200 M.2 NVMe",
+      "マザーボード": "ASRock B860M Pro RS WiFi（MicroATX）",
+      "電源": "750W 80PLUS GOLD",
+      "ケース": "Segotep LUX S BLACK",
+      "ケースファン": "120mm ARGB 前面×3・背面×1"
+    },
+    "sale": "ハッピーハロウィンCP 10,310円特別値引きの選択欄表示あり（適用条件・期限は未確認、選択操作をしていないため差し引かず）",
+    "note": "在庫あり（2026-10-25 17:28時点であと1個）。最短即日出荷。送料無料。代引不可。Wi-Fi 6E・Bluetooth 5.3。Windows 11 Home。1年センドバック保証。",
+    "informationSource": "2026-10-25 公式販売ページで確認（一部はそねっとさんの確認）",
+    "date": "2026-10-25",
+    "unknown": [
+      "ケースのパネル・電源位置・クリアランス",
+      "付属ファンの向き・性能",
+      "CPUクーラーの寸法（シート未登録）",
+      "電源のメーカーと型番",
+      "GPUカードの寸法"
+    ],
+    "sources": [
+      "https://shop.applied-net.co.jp/view/item/000000449134"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-25）：ケースは新しく登録したSegotep LUX S（外寸と付属ファンはアプライドの販売ページ）。外寸の向き、パネルの種類、電源の位置、ファンの向き（前面吸気・背面排気と仮定）と性能、CPUクーラーの形（一般的なシングルタワー）、GPUの形状は仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません。奥行が400mm未満のため、シートの決まりで電源はSFXとして計算。",
+    "computedAt": "2026-10-25T08:42:48.903Z",
+    "assumptions": {
+      "caseDim": {
+        "preset": "luxs",
+        "d": 360,
+        "h": 405,
+        "w": 210
+      },
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "cooler": {
+        "cooler": "air",
+        "coolerBrand": "generic",
+        "coolerModel": "gen-single",
+        "radSize": 360,
+        "radPos": "top"
+      },
+      "gpuShape": "汎用3ファン形状・既存寸法",
+      "caseFans": "ケースの付属ファン（シートの登録値）を仮に配置"
+    }
+  }
+}

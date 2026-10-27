@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>おすすめBTOの 2D・3D 比較</title>
+<style>
+:root{--bg:#F4F6F9;--panel:#fff;--line:#CDD5DF;--ink:#18202C;--muted:#5A6576;--accent:#2E7CE6;--warn:#C8283F}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1218;--panel:#1B2230;--line:#2C3646;--ink:#E7ECF2;--muted:#97A3B5;--accent:#4E9BFF;--warn:#FF6B6B}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",system-ui,sans-serif;font-size:14px;line-height:1.6;padding:16px}
+main{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+h1{font-size:20px;margin:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.status{font-weight:700}
+.status.warn{color:var(--warn)}
+.hint{color:var(--muted);margin:4px 0 0;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:5px 7px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:14em}
+th{color:var(--muted);font-size:11.5px}
+td.big{font-weight:700}
+td.far{color:var(--warn);font-weight:700}
+.tw{overflow-x:auto}
+textarea{width:100%;min-height:140px;font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px}
+button{font:inherit;font-weight:700;padding:7px 14px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+button.primary{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+#frame{width:100%;height:720px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+</style>
+</head>
+<body>
+<main>
+  <h1>おすすめBTOの 2D・3D 比較</h1>
+  <div class="card">
+    <div class="status" id="status" role="status">準備中…</div>
+    <p class="hint">このページを開くと、config.json に載っている構成(計算結果があるもの)を順番に 2D と 3D の両方で計算します。終わるまで、このタブを表示したままにしてください(隠れると計算が止まります)。1件あたり1分前後です。シートの保存データは計算の前に退避し、終わったら元に戻します。途中で止めたいときは、このタブを閉じてください。</p>
+  </div>
+  <div class="card tw">
+    <table id="table">
+      <thead><tr><th>構成</th><th>VRM 掲載中</th><th>VRM 2D</th><th>VRM 3D</th><th>3D−2D</th><th>風速 2D</th><th>風速 3D</th><th>周りの空気 2D</th><th>3D</th><th>CPU 2D</th><th>CPU 3D</th><th>GPU 2D</th><th>GPU 3D</th><th>評価 2D</th><th>評価 3D</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="hint">温度は°C、風速は VRM に当たる風(m/s)、周りの空気は VRM のまわりの空気の室温からの上昇分。「3D−2D」が5°C 以上の行は赤で示します。条件(室温・負荷・ファン)は各構成の保存データのままです。</p>
+  </div>
+  <div class="card">
+    <b>結果(Claude に貼り付けてください)</b>
+    <textarea id="out" readonly placeholder="計算が終わると、ここに結果が入ります"></textarea>
+    <div class="btns"><button class="primary" id="copy" type="button" disabled>結果をコピー</button><button id="save" type="button" disabled>ファイルに保存</button></div>
+  </div>
+  <iframe id="frame" title="計算中のPC構成シート"></iframe>
+</main>
+<script>
+(async()=>{
+const $=id=>document.getElementById(id);
+const status=(t,warn)=>{$('status').textContent=t;$('status').classList.toggle('warn',!!warn);};
+const OPT={settle:6,avg:2};
+const SAFE=/^presets\/[a-zA-Z0-9_-]{1,64}\.json$/, SAFE_R=/^results\/[a-zA-Z0-9_-]{1,64}\.json$/;
+
+/* keep the sheet's own saved data */
+const backup={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);backup[k]=localStorage.getItem(k);}
+let restored=false;
+const restore=()=>{if(restored)return;restored=true;try{for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(!(k in backup))localStorage.removeItem(k);}for(const k in backup)if(localStorage.getItem(k)!==backup[k])localStorage.setItem(k,backup[k]);}catch(e){}};
+window.addEventListener('pagehide',restore);
+
+const results={page:'bto3d',at:new Date().toISOString(),ua:navigator.userAgent,opts:OPT,rows:[]};
+const t0=performance.now();
+try{
+  status('構成の一覧とシートを読み込み中…');
+  const root=new URL('../',location.href).href, base=root+'pc-sheet/';
+  const cfg=await (await fetch(root+'config.json',{cache:'no-cache'})).json();
+  const list=[];
+  for(const p of (cfg.products||[])){
+    if(!p||typeof p.preset!=='string'||!SAFE.test(p.preset)||typeof p.result!=='string'||!SAFE_R.test(p.result))continue;
+    let saved=null;try{const r=await fetch(root+p.result,{cache:'no-cache'});if(r.ok)saved=await r.json();}catch(e){}
+    if(!saved||!saved.evaluation)continue;   // not computed yet
+    list.push({p,saved});
+  }
+  if(!list.length)throw new Error('計算結果がある構成が見つかりませんでした。');
+
+  const r=await fetch(base+'index.html',{cache:'no-cache'});if(!r.ok)throw new Error('シート(pc-sheet/index.html)を開けませんでした。リポジトリのフォルダでローカルサーバーを起動してください。');
+  let html=await r.text();
+  const cut=html.lastIndexOf('})();');if(cut<0)throw new Error('シートの形が想定と違います。');
+  html=html.slice(0,cut)+'window.__dbg=s=>eval(s);'+html.slice(cut);
+  html=html.replace('<head>','<head><base href="'+base+'">');
+  html=html.replace('if(window.parent!==window)window.parent.postMessage(','if(false)window.parent.postMessage(');   // not inside the website: no messages to this page
+  const fr=$('frame');
+  await new Promise(res=>{fr.onload=res;fr.srcdoc=html;});
+  const W=fr.contentWindow;
+  for(let i=0;i<100&&!W.__dbg;i++)await new Promise(r=>setTimeout(r,100));
+  if(!W.__dbg)throw new Error('シートの準備ができませんでした。');
+  const ev=s=>W.__dbg(s);
+  results.model=ev('DIAG_VER');
+  const has3d=await ev('(async()=>{if(gpu3===null||gpu3===undefined)gpu3=await Air3D.probe();return !!gpu3;})()');
+  results.gpu=has3d?ev('Air3D.gpuName()'):null;
+  if(!has3d)status('このブラウザでは WebGPU が使えないため、2D だけ計算します(PCの Chrome・Edge で開くと 3D も計算します)。',true);
+  ev('diagRun=true;running=false;');
+  if(has3d)ev("Air3D.attach($('v3box'))");
+
+  const f1=v=>v==null?'—':(+v).toFixed(1), f2=v=>v==null?'—':(+v).toFixed(2);
+  for(let i=0;i<list.length;i++){
+    const {p,saved}=list[i], label=`${p.shop||''} ${p.name||p.id}`.trim();
+    const el=()=>Math.round((performance.now()-t0)/1000);
+    status(`${i+1}/${list.length}:${label}(2D)を計算中…(${el()}秒)`);
+    const preset=await (await fetch(root+p.preset,{cache:'no-cache'})).json();
+    W.__preset=preset;
+    ev('websiteImport(window.__preset);diagRun=true;running=false;if(needRebuild)rebuild();dim3=false;syncDim();fit();');
+    await new Promise(r=>W.requestAnimationFrame(r));
+    const e2=JSON.parse(await ev(`(async()=>{const r=await diag2d(${JSON.stringify(OPT)});return JSON.stringify(diagEval(r.m,r.fq,r.coolQ,r.gpuQ));})()`));
+    let e3=null;
+    if(has3d){
+      status(`${i+1}/${list.length}:${label}(3D)を計算中…(${el()}秒)`);
+      e3=JSON.parse(await ev(`(async()=>{dim3=true;syncDim();if(!Air3D.active)await Air3D.start(input3d());
+        const r=await Air3D.diag(input3d(),{settle:${OPT.settle},avg:${OPT.avg},room:state.room,conf:state.view.conf,panel:'real'});
+        if(!r.m)return JSON.stringify({error:r.error||'3Dの計算に失敗しました'});
+        const e=diagEval(r.m,r.byId||{},r.coolQ,r.gpuQ,true);e.vmax=r.vmax;return JSON.stringify(e);})()`));
+    }
+    const pick=e=>e&&!e.error?{vrm:e.vrm,cpu:e.cpu,gpu:e.gpu,grade:e.grade,score:e.score,vrmV:e.air.vrmV,vrmT:e.air.vrmT,tIn:e.air.tIn,intake:e.intake,vmax:e.vmax}:e;
+    const row={id:p.id,name:label,saved:{vrm:saved.evaluation.vrm,cpu:saved.evaluation.cpu,gpu:saved.evaluation.gpu,grade:saved.evaluation.grade,model:saved.modelVersion},
+      cond:saved.conditions||null,d2:pick(e2),d3:pick(e3)};
+    results.rows.push(row);
+    const d2=row.d2||{}, d3=row.d3||{}, dv=d3.vrm!=null&&d2.vrm!=null?d3.vrm-d2.vrm:null;
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${label.replace(/[<>&]/g,'')}</td><td>${f1(row.saved.vrm)}</td><td>${f1(d2.vrm)}</td><td class="big">${d3.error?'失敗':f1(d3.vrm)}</td><td class="${dv!=null&&Math.abs(dv)>=5?'far':''}">${dv==null?'—':(dv>0?'+':'')+dv.toFixed(1)}</td><td>${f2(d2.vrmV)}</td><td>${f2(d3.vrmV)}</td><td>${f1(d2.vrmT)}</td><td>${f1(d3.vrmT)}</td><td>${f1(d2.cpu)}</td><td>${f1(d3.cpu)}</td><td>${f1(d2.gpu)}</td><td>${f1(d3.gpu)}</td><td>${d2.grade||'—'}</td><td>${d3.grade||'—'}</td>`;
+    $('table').tBodies[0].appendChild(tr);
+  }
+  results.sec=Math.round((performance.now()-t0)/1000);
+  status((has3d?'終わりました':'2D だけ終わりました')+`(${results.sec}秒)。結果をコピーして Claude に貼り付けてください。`,!has3d);
+}catch(e){
+  results.error=String(e&&e.message||e);
+  status('止まりました:'+results.error,true);
+}finally{
+  try{const W=$('frame').contentWindow;if(W&&W.__dbg)W.__dbg('try{Air3D.stop()}catch(e){}');}catch(e){}
+  $('frame').remove();
+  restore();
+  const text=JSON.stringify(results,null,1);
+  $('out').value=text;$('copy').disabled=false;$('save').disabled=false;
+  $('copy').onclick=async()=>{try{await navigator.clipboard.writeText(text);$('copy').textContent='コピーしました';}catch(e){$('out').select();document.execCommand('copy');$('copy').textContent='コピーしました';}};
+  $('save').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'application/json'}));a.download='bto3d-'+results.at.slice(0,16).replace(/[-:T]/g,'')+'.json';a.click();};
+}
+})();
+</script>
+</body>
+</html>

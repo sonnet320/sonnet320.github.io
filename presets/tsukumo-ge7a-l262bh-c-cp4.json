@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 1,
+  "id": "tsukumo-ge7a-l262bh-c-cp4",
+  "shop": "ツクモ",
+  "model": "G-GEAR GE7A-L262BH/C/CP4",
+  "grade": "標準構成・ブラック・完成品即納モデル・240mm簡易水冷仕様",
+  "case": "G-GEAR プレミアムミドルタワーケース（66JD）",
+  "sample": false,
+  "state": {
+    "title": "ツクモ G-GEAR GE7A-L262BH/C/CP4",
+    "price": "¥369,980",
+    "note": "2026-10-11確認：税込369,980円、送料無料、在庫あり、24時間以内に出荷表示。週末限定価格は2026-10-13 10:00（日本時間）まで。PC本体保証1年。キーボード・マウス・スピーカー別売 / 冷却結果は未計算：水冷位置・方向、ファン性能、GPU形状が未確認。シート読込はケース「ツクモ G-GEAR プレミアムミドルタワー(66JD)」（外寸445×230×460mm・前面/天面メッシュ、電源カバーの形は推定）、前面120mm×1吸気・背面120mm×1排気（公式）、天面240mm水冷排気（仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、GPU長300mm・高さ125mm・厚40.64mm・3ファンの仮設定です。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 9800X3D（8コア／16スレッド、定格4.7GHz、最大5.2GHz、L2 8MB＋L3 96MB）",
+        "detail": ""
+      },
+      {
+        "label": "クーラー",
+        "name": "玄人志向 KURO-AIOWC240/V2（240mm簡易水冷、LEDなし、実装位置・方向不明）。メーカー仕様：120×120×26mm PWMファン2基、FDB、2000rpm±10%、71.61CFM、最大32.4dB。ラジエーター120×274×27mm、ファン込み120×274×53mm",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "AMD Radeon RX 9070 XT 16GB GDDR6",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（32GB×1枚）DDR5-5600。4スロット中3本空き、最大256GB。メーカー・型番・タイミング不明",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "CFD CSSD-M2PE27TKB6T2000GB、2TB M.2 NVMe PCIe Gen4、M2_1搭載",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "ASUS TUF GAMING B850-PLUS WIFI（ATX／AMD B850）。2.5GbE、Wi-Fi 7（2×2・160MHz）、Bluetooth 5.4",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "ASUS Prime 750W Gold（定格750W、80PLUS GOLD、ATX 3.1、12V-2x6対応）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "G-GEAR プレミアムミドルタワーケース（66JD）",
+        "detail": "幅230×奥行445×高さ460mm（本体のみ、突起物含まず）、約14kg / シートのケース「66JD」で計算（電源カバーの形は推定）"
+      },
+      {
+        "label": "前面ファン",
+        "name": "120mm ×1",
+        "detail": "吸気（公式66JD共通説明）、性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mm ×1",
+        "detail": "排気（公式66JD共通説明）、性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "天面ファン",
+        "name": "計算用：240mm水冷の120mmファン ×2",
+        "detail": "天面排気は仮設定、実機の実装位置・方向は不明"
+      },
+      {
+        "label": "底面ファン",
+        "name": "未確認（計算用は0基）",
+        "detail": "電源専用吸気はケースファンに数えない"
+      }
+    ],
+    "board": "atx",
+    "cooler": "aio",
+    "radSize": 240,
+    "radPos": "top",
+    "coolerTdp": 260,
+    "gpuSlots": 2,
+    "gpuLen": 300,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio240",
+    "coolerCustom": {
+      "type": "aio",
+      "pipes": 4,
+      "fans": 2,
+      "fs": 120,
+      "h": 155,
+      "rad": 240,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 40.64,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false
+    },
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "clearance": 25,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 369980,
+        "parts": null
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": 70,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "gg66jd",
+      "d": 445,
+      "h": 460,
+      "w": 230
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "tsukumo-ge7a-l262bh-c-cp4-front-1",
+        "x": 52.5,
+        "y": 250,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      },
+      {
+        "id": "tsukumo-ge7a-l262bh-c-cp4-rear-1",
+        "x": 462.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      },
+      {
+        "id": "tsukumo-ge7a-l262bh-c-cp4-rad-1",
+        "x": 185,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "tsukumo-ge7a-l262bh-c-cp4-rad-2",
+        "x": 310,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 40.64,
+    "gpuH": 125,
+    "gpuFans": 3,
+    "cFans": 2,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "date": "2026-10-11",
+    "providedBy": "chat_research",
+    "url": "https://shop.tsukumo.co.jp/goods/0409092730015/",
+    "parts": {
+      "cpu": "AMD Ryzen 7 9800X3D（8コア／16スレッド、定格4.7GHz、最大5.2GHz、L2 8MB＋L3 96MB）",
+      "cooler": "玄人志向 KURO-AIOWC240/V2（240mm簡易水冷、LEDなし、実装位置・方向不明）。メーカー仕様：120×120×26mm PWMファン2基、FDB、2000rpm±10%、71.61CFM、最大32.4dB。ラジエーター120×274×27mm、ファン込み120×274×53mm",
+      "gpu": "AMD Radeon RX 9070 XT 16GB GDDR6",
+      "gpuCard": "メーカー・型番・長さ・ファン数不明。商品仕様：2スロット厚、GPUサポートホルダー付き",
+      "memory": "32GB（32GB×1枚）DDR5-5600。4スロット中3本空き、最大256GB。メーカー・型番・タイミング不明",
+      "ssd": "CFD CSSD-M2PE27TKB6T2000GB、2TB M.2 NVMe PCIe Gen4、M2_1搭載",
+      "board": "ASUS TUF GAMING B850-PLUS WIFI（ATX／AMD B850）。2.5GbE、Wi-Fi 7（2×2・160MHz）、Bluetooth 5.4",
+      "psu": "ASUS Prime 750W Gold（定格750W、80PLUS GOLD、ATX 3.1、12V-2x6対応）"
+    },
+    "case": {
+      "name": "G-GEAR プレミアムミドルタワーケース（66JD）",
+      "size": "幅230×奥行445×高さ460mm（本体のみ、突起物含まず）、約14kg",
+      "fans": [
+        {
+          "pos": "front",
+          "size": 120,
+          "count": 1,
+          "dir": "in"
+        },
+        {
+          "pos": "rear",
+          "size": 120,
+          "count": 1,
+          "dir": "out"
+        }
+      ],
+      "panels": {
+        "front": "mesh",
+        "top": "不明",
+        "bottom": "不明"
+      },
+      "psu": "bottom",
+      "radiator": {
+        "pos": "不明",
+        "size": 240
+      }
+    },
+    "unknown": [
+      "水冷ラジエーターの実装位置",
+      "ラジエーターファンの実機での吸排気方向・搭載状態",
+      "独立ケースファンのメーカー・型番・厚さ・回転数・風量・静圧・騒音値",
+      "追加ファンの有無",
+      "天面・底面の詳細な開口構造と底面の電源専用吸気範囲",
+      "電源シュラウドの詳細構造",
+      "GPUカードのメーカー・型番・長さ・ファン数",
+      "メモリのメーカー・型番・タイミング",
+      "出荷時電力制限・ファン制御設定",
+      "実機の負荷時温度・騒音・消費電力"
+    ],
+    "sources": [
+      "https://shop.tsukumo.co.jp/goods/0409092730015/",
+      "https://www.tsukumo.co.jp/bto/help/pc-case.html",
+      "https://www.tsukumo.co.jp/bto/pc/game/suisyo/ff7r.html",
+      "https://www.tsukumo.co.jp/bto/pdf/G-GEAR_66JD_QuickSetupGuide_202402a.pdf",
+      "https://news.tsukumo.co.jp/20240222_ggear/",
+      "https://www.kuroutoshikou.com/product/release/kuro-aiowc240-v2.html",
+      "https://www.tsukumo.co.jp/bto/pc/game/2026/GE7A-L261BH.html"
+    ],
+    "price": 369980,
+    "priceDate": "2026-10-11",
+    "priceNote": "2026-10-11確認：税込369,980円、送料無料、在庫あり、24時間以内に出荷表示。週末限定価格は2026-10-13 10:00（日本時間）まで。PC本体保証1年。キーボード・マウス・スピーカー別売",
+    "specText": "cpu：AMD Ryzen 7 9800X3D（8コア／16スレッド、定格4.7GHz、最大5.2GHz、L2 8MB＋L3 96MB）\ncooler：玄人志向 KURO-AIOWC240/V2（240mm簡易水冷、LEDなし、実装位置・方向不明）。メーカー仕様：120×120×26mm PWMファン2基、FDB、2000rpm±10%、71.61CFM、最大32.4dB。ラジエーター120×274×27mm、ファン込み120×274×53mm\ngpu：AMD Radeon RX 9070 XT 16GB GDDR6\ngpuCard：メーカー・型番・長さ・ファン数不明。商品仕様：2スロット厚、GPUサポートホルダー付き\nmemory：32GB（32GB×1枚）DDR5-5600。4スロット中3本空き、最大256GB。メーカー・型番・タイミング不明\nssd：CFD CSSD-M2PE27TKB6T2000GB、2TB M.2 NVMe PCIe Gen4、M2_1搭載\nboard：ASUS TUF GAMING B850-PLUS WIFI（ATX／AMD B850）。2.5GbE、Wi-Fi 7（2×2・160MHz）、Bluetooth 5.4\npsu：ASUS Prime 750W Gold（定格750W、80PLUS GOLD、ATX 3.1、12V-2x6対応）\nOS：Windows 11 Home 64ビット。\n前面：USB 3.2 Gen2 Type-C×1、Type-A×2、マイク入力・ヘッドホン出力。\nGPU出力：HDMI×1、DisplayPort×3。\nM.2：3本、M2_2・M2_3空き。M2_3とPCI_E3は排他利用。SATA×4。\n3.5インチベイ×2、2.5インチベイ×2、空き。光学ドライブなし。\n独立ファン：前面120mm×1、背面120mm×1。水冷の実装位置不明。",
+    "note": "2026-10-11の本チャット調査結果を取り込み、価格と確認日は維持。sources[0]は指定機種の部品・独立ファン2基・寸法・販売条件・保証の出典。sources[1]は66JD共通のサイズ・ファン・ベイ・フィルター仕様。sources[2]は66JD共通の前面吸気・背面排気説明のみ参照し、別機種の部品は転記していない。sources[3]は66JDの底部電源配置。sources[4]は前面メッシュ・開口約155×395mm・フィルター構造。sources[5]は搭載クーラー製品の仕様で、ファン2基や寸法・風量・騒音はメーカー値、PC実測値ではない。sources[6]に対象型番と週末特価期限が掲載。16GB×2枚のGE7A-L261BH/C/CP4とは区別。水冷ファンは実装位置不明のためcase.fansに含めず、2基は独立ケースファンのみ。天面・前面・底面に防塵フィルター、前面二重フィルター。購入後増設はツクモのサポート対象外との商品注記あり。"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "computedAt": null,
+    "note": "冷却結果は未計算：水冷位置・方向、ファン性能、GPU形状が未確認。シート読込はケース「ツクモ G-GEAR プレミアムミドルタワー(66JD)」（外寸445×230×460mm・前面/天面メッシュ、電源カバーの形は推定）、前面120mm×1吸気・背面120mm×1排気（公式）、天面240mm水冷排気（仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、GPU長300mm・高さ125mm・厚40.64mm・3ファンの仮設定です。",
+    "assumptions": {
+      "caseDim": {
+        "preset": "gg66jd",
+        "d": 445,
+        "h": 460,
+        "w": 230
+      },
+      "caseType": "standard",
+      "panels": {
+        "front": "mesh",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "mesh",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "fans": [
+        {
+          "id": "tsukumo-ge7a-l262bh-c-cp4-front-1",
+          "x": 52.5,
+          "y": 250,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gg120"
+        },
+        {
+          "id": "tsukumo-ge7a-l262bh-c-cp4-rear-1",
+          "x": 462.5,
+          "y": 174,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gg120"
+        },
+        {
+          "id": "tsukumo-ge7a-l262bh-c-cp4-rad-1",
+          "x": 185,
+          "y": 81.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "auto": "rad"
+        },
+        {
+          "id": "tsukumo-ge7a-l262bh-c-cp4-rad-2",
+          "x": 310,
+          "y": 81.5,
+          "a": 270,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "auto": "rad"
+        }
+      ],
+      "radSize": 240,
+      "radPos": "top",
+      "radThick": 27,
+      "radFan": {
+        "model": null,
+        "rpm": 70,
+        "for": null
+      },
+      "coolerBrand": "generic",
+      "coolerModel": "gen-aio240",
+      "gpuBrand": "generic",
+      "gpuModel": "c3",
+      "gpuCustom": {
+        "L": 300,
+        "H": 125,
+        "T": 40.64,
+        "fans": 3,
+        "type": "flow",
+        "power": null,
+        "vc": false
+      },
+      "gpuLen": 300,
+      "gpuH": 125,
+      "gpuT": 40.64,
+      "gpuFans": 3,
+      "room": 25,
+      "cpuMode": "game",
+      "cpuLoad": 60,
+      "gpuLoad": 90,
+      "fanRpm": 70
+    }
+  }
+}

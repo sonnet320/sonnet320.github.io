@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v60-gpu3d",
+  "mode": "2d",
+  "computedAt": "2026-10-13T09:29:24.778Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 74,
+    "grade": "並",
+    "cap": "空気のよどみ",
+    "cpu": 56.5,
+    "gpu": 58.4,
+    "vrm": 55.5,
+    "intake": 5.01,
+    "stag": 13.5,
+    "press": 38.7,
+    "rows": {
+      "cpu": "優",
+      "gpu": "優",
+      "vrm": "良",
+      "intake": "優",
+      "stag": "要改善",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 3.23,
+      "cpuT": 5.01,
+      "gpuT": 0.93,
+      "vrmT": 9.5,
+      "vrmV": 0.25,
+      "exT": 4.94,
+      "pIn": -0.015,
+      "stag": 0.135,
+      "fanIn": 63.2,
+      "fanOut": 31.3,
+      "leakIn": 19.1,
+      "leakOut": 51
+    },
+    "coolQ": 27.3,
+    "gpuQ": 48.9
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 57.024,
+    "gpuPower": 144.95999999999998
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "ark-ag-ar8c2tb55ard6x-oa6",
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-10）：汎用ケース寸法470×480×225mm、側面120mm吸気×2・背面120mm排気×1、汎用ファン、上面メッシュ・底面ファン開口・下部電源、汎用4本ヒートパイプ空冷（高さ155mm）、汎用GPU形状。実機の方向・性能・内部形状は未確認。ケース外寸は計算寸法に使用していません。",
+    "computedAt": "2026-10-10T14:59:03.291Z",
+    "assumptions": {
+      "caseDim": {
+        "preset": "mid",
+        "d": 470,
+        "h": 480,
+        "w": 225
+      },
+      "caseType": "standard",
+      "panels": {
+        "front": "glass",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "fanonly"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "fans": [
+        {
+          "id": "ib7b3as",
+          "x": 115,
+          "y": 212.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "side": true,
+          "dir": "in"
+        },
+        {
+          "id": "rr1f86k",
+          "x": 115,
+          "y": 337.5,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120",
+          "side": true,
+          "dir": "in"
+        },
+        {
+          "id": "oyx5hdg",
+          "x": 487.5,
+          "y": 174,
+          "a": 0,
+          "size": 120,
+          "rpm": 70,
+          "model": "gen120"
+        }
+      ],
+      "cooler": {
+        "model": "gen-single",
+        "custom": {
+          "type": "air",
+          "pipes": 4,
+          "fans": 1,
+          "fs": 120,
+          "h": 155,
+          "rad": 360,
+          "thick": 27,
+          "tdp": null
+        }
+      },
+      "gpu": {
+        "model": "c3",
+        "length": 304,
+        "height": 120,
+        "thickness": 40,
+        "fans": 3
+      },
+      "powerModel": "既存PC構成シートのCPUゲーム負荷・GPU90%モデル。TDP/TBP/販売店278Wを実測値として使用していない"
+    }
+  },
+  "image": "results/ark-ag-ar8c2tb55ard6x-oa6.jpg"
+}

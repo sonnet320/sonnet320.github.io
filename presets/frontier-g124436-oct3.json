@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-g124436-oct3",
+  "shop": "FRONTIER",
+  "model": "FRGHLMB650/WS1006/NTK",
+  "grade": "標準構成",
+  "case": "記載なし",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "FRONTIER FRGHLMB650/WS1006/NTK",
+    "price": "¥489,800",
+    "note": "受注生産・納期未確認。送料無料表示と送料3300円の定型注意書きが併存。セール確認元 https://www.frontier-direct.jp/direct/e/ej-sale/\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 9800X3D",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "CPS RT400-BK（空冷・ブラック）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "MSI GeForce RTX 5080 専用VRAM 16GB",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（32GB×1）DDR5",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB Samsung 9100 PRO M.2 NVMe（ページ表記Gen4・規格は未照合）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "1000W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "記載なし",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "記載なし",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 489800,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "frontier-g124436-oct3",
+    "shop": "FRONTIER",
+    "model": "FRGHLMB650/WS1006/NTK",
+    "url": "https://www.frontier-direct.jp/direct/g/g124436-Oct3/",
+    "price": 489800,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "AMD Ryzen 7 9800X3D",
+      "CPUクーラー": "CPS RT400-BK（空冷・ブラック）",
+      "GPU": "MSI GeForce RTX 5080 専用VRAM 16GB",
+      "メモリ": "32GB（32GB×1）DDR5",
+      "SSD": "1TB Samsung 9100 PRO M.2 NVMe（ページ表記Gen4・規格は未照合）",
+      "電源": "1000W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+      "ケース": "記載なし",
+      "ケースファン": "記載なし"
+    },
+    "sale": "限界チャレンジセール掲載・2026-10-16 15:00～2026-10-23 15:00（日本時間）",
+    "note": "受注生産・納期未確認。送料無料表示と送料3300円の定型注意書きが併存。セール確認元 https://www.frontier-direct.jp/direct/e/ej-sale/",
+    "informationSource": "構成・標準価格は公式ページで確認",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。未確認：ケース・ケースファン。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "ark-72003756-20261016",
+  "shop": "アーク",
+  "model": "AG-AR8C2TB55ARD6X-OA6",
+  "grade": "標準構成",
+  "case": "Okinos Aqua 6 Infinity",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "アーク AG-AR8C2TB55ARD6X-OA6",
+    "price": "¥249,800",
+    "note": "取り寄せ表示。出荷目安10～14日/取り寄せ含む18～28日。確定在庫未確認。単体注文送料無料・代引不可。電源容量はページ内で不一致。\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 5700X",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "PC COOLER CPS RZ400V2-BK（空冷）",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "Radeon RX 9060 XT 専用VRAM 16GB GDDR6（メーカー指定不可）",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2）SanMax DDR4-3200 1.2V Samsung (48S)",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "2TB Kingston NV3 NVMe PCIe 4.0 M.2",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "COUGAR GR 850 80PLUS GOLD（仕様欄860W・概要850Wで不一致）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "Okinos Aqua 6 Infinity",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "ARGB×3",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 249800,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "ark-72003756-20261016",
+    "shop": "アーク",
+    "model": "AG-AR8C2TB55ARD6X-OA6",
+    "url": "https://www.ark-pc.co.jp/i/72003756/",
+    "price": 249800,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "AMD Ryzen 7 5700X",
+      "CPUクーラー": "PC COOLER CPS RZ400V2-BK（空冷）",
+      "GPU": "Radeon RX 9060 XT 専用VRAM 16GB GDDR6（メーカー指定不可）",
+      "メモリ": "32GB（16GB×2）SanMax DDR4-3200 1.2V Samsung (48S)",
+      "SSD": "2TB Kingston NV3 NVMe PCIe 4.0 M.2",
+      "電源": "COUGAR GR 850 80PLUS GOLD（仕様欄860W・概要850Wで不一致）",
+      "ケース": "Okinos Aqua 6 Infinity",
+      "ケースファン": "ARGB×3"
+    },
+    "sale": "通常販売（セール表示未確認）・期限記載なし",
+    "note": "取り寄せ表示。出荷目安10～14日/取り寄せ含む18～28日。確定在庫未確認。単体注文送料無料・代引不可。電源容量はページ内で不一致。",
+    "informationSource": "構成・標準価格は公式ページで確認",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

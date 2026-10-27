@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:44:01.979Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 67,
+    "grade": "並",
+    "cap": null,
+    "cpu": 72,
+    "gpu": 56.1,
+    "vrm": 61.3,
+    "intake": 3.43,
+    "stag": 19.1,
+    "press": -89.8,
+    "rows": {
+      "cpu": "並",
+      "gpu": "優",
+      "vrm": "並",
+      "intake": "優",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 2.13,
+      "cpuT": 3.43,
+      "gpuT": 2.89,
+      "vrmT": 4.22,
+      "vrmV": 0.231,
+      "exT": 6.73,
+      "pIn": -0.184,
+      "stag": 0.191,
+      "fanIn": 3,
+      "fanOut": 42.3,
+      "leakIn": 40.7,
+      "leakOut": 1.4
+    },
+    "coolQ": null,
+    "gpuQ": 7.9
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 82.6,
+    "gpuPower": 63.419999999999995
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/pckoubou-1189898-20261025.jpg",
+  "presetId": "pckoubou-1189898-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースは外寸が同じFRONTIER GK-A620（215×401×347mm・30L）として計算（同じ筐体かは未確認）。ケースファンは背面120mm×1（そねっとさんの確認）。向きはGKシリーズの構造（底面吸気・上面/背面排気）に合わせて排気と仮定し、性能は一般的な付属ファンの値。240mm水冷は天面排気と仮定（型番・位置は未確認）。GPUはアークの販売ページの70W・169×69×40mmで、ブロワー型1ファンと仮定。チップの面積（GB203・378mm²）は出典未確認。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

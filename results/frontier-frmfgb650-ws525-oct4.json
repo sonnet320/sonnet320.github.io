@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:43:51.727Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 68,
+    "grade": "並",
+    "cap": null,
+    "cpu": 70,
+    "gpu": 76.9,
+    "vrm": 67.9,
+    "intake": 6.51,
+    "stag": 9.1,
+    "press": -22.4,
+    "rows": {
+      "cpu": "良",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "良",
+      "stag": "並",
+      "press": "並"
+    },
+    "air": {
+      "tIn": 6.35,
+      "cpuT": 6.51,
+      "gpuT": 2.17,
+      "vrmT": 15.57,
+      "vrmV": 0.311,
+      "exT": 8.94,
+      "pIn": 0.027,
+      "stag": 0.091,
+      "fanIn": 53.9,
+      "fanOut": 71.2,
+      "leakIn": 23.3,
+      "leakOut": 6
+    },
+    "coolQ": null,
+    "gpuQ": 45.9
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 82.6,
+    "gpuPower": 271.79999999999995
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/frontier-frmfgb650-ws525-oct4.jpg",
+  "presetId": "frontier-frmfgb650-ws525-oct4",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースは新しく登録したMSI MPG VELOX 100R（外寸はFRONTIERの販売ページ、前面ガラス・側面スリット吸気・天面メッシュ・ファン120mm・天面360mm水冷対応はそねっとさんの確認）。付属ファン前面3基吸気／背面1基排気の向きと性能、電源カバー、GPUの3ファン形状と寸法は仮定。水冷は天面で排気と仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

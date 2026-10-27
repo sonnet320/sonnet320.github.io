@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "id": "pckoubou-1189901-20261025",
+  "shop": "パソコン工房",
+  "model": "SENSE-M3AM-LCR99D-BRX（ISeDEs-M3AM-LR99D-BRSXB）",
+  "grade": "クリエイター向け・超 ハロウィンセール・標準構成",
+  "case": "ミニタワー（GK-A620相当として計算）",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "パソコン工房 SENSE-M3AM-LCR99D-BRX",
+    "price": "¥569,800",
+    "note": "送料別（会員は無料）・セール10/30 11:59まで",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 9 9900X3D",
+        "detail": "12コア／24スレッド"
+      },
+      {
+        "label": "クーラー",
+        "name": "240mm水冷CPUクーラー（メーカー・型番記載なし）",
+        "detail": "計算は一般的な240mm簡易水冷・天面排気の仮定"
+      },
+      {
+        "label": "GPU",
+        "name": "NVIDIA RTX PRO 4000 Blackwell SFF Edition",
+        "detail": "VRAM 24GB GDDR7・70W・169×69×40mm（アークの販売ページ）。ブロワー型1ファンと仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 16GB（8GB×2）",
+        "detail": "スロット2"
+      },
+      {
+        "label": "SSD",
+        "name": "1TB NVMe対応 M.2 SSD",
+        "detail": "メーカー・型番記載なし"
+      },
+      {
+        "label": "マザーボード",
+        "name": "AMD A620（MicroATX、型番記載なし）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "750W 80PLUS BRONZE ATX",
+        "detail": "メーカー・型番記載なし"
+      },
+      {
+        "label": "ケース",
+        "name": "FRONTIER GK-A620 ミニタワー相当（名称記載なし。約215×401×347mm・30L）",
+        "detail": "外寸が同じFRONTIER GK-A620として計算（同じ筐体かは未確認）"
+      },
+      {
+        "label": "ケースファン",
+        "name": "未確認",
+        "detail": "搭載数・配置・風向・性能は未確認"
+      }
+    ],
+    "board": "matx",
+    "cooler": "aio",
+    "radSize": 240,
+    "radPos": "top",
+    "coolerTdp": 250,
+    "gpuSlots": 2,
+    "gpuLen": 169,
+    "gpuCooler": "blower",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio240",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 148,
+      "rad": 360,
+      "thick": 27,
+      "tdp": 235
+    },
+    "gpuBrand": "NVIDIA",
+    "gpuModel": "nvidia-rtx-pro-4000-blackwell-sff-edition-rtxpro4000sff",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "closed",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "mesh"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "dual",
+    "openFrame": false,
+    "clearance": 25,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 569800,
+        "parts": 819500,
+        "pv": "2026-10-16"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": "gen-aio240"
+    },
+    "caseDim": {
+      "preset": "gka620",
+      "d": 401,
+      "h": 347,
+      "w": 215
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "rear120",
+        "x": 419.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "case120"
+      },
+      {
+        "id": "3gea4qm",
+        "x": 162.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "vmwflld",
+        "x": 287.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 40,
+    "gpuH": 69,
+    "gpuFans": 1,
+    "cFans": 2,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "gpuFanD": null,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "id": "pckoubou-1189901-20261025",
+    "shop": "パソコン工房",
+    "model": "SENSE-M3AM-LCR99D-BRX（ISeDEs-M3AM-LR99D-BRSXB）",
+    "url": "https://www.pc-koubou.jp/products/detail.php?product_id=1189901",
+    "price": 569800,
+    "priceDate": "2026-10-25",
+    "parts": {
+      "CPU": "AMD Ryzen 9 9900X3D",
+      "CPUクーラー": "240mm水冷（メーカー・型番記載なし）",
+      "GPU": "NVIDIA RTX PRO 4000 Blackwell SFF Edition 24GB GDDR7",
+      "メモリ": "16GB（8GB×2）DDR5",
+      "SSD": "1TB NVMe M.2 SSD",
+      "マザーボード": "AMD A620（MicroATX）",
+      "電源": "750W 80PLUS BRONZE ATX",
+      "ケース": "ミニタワー（名称記載なし。約215×401×347mm・30L）",
+      "ケースファン": "背面120mm×1（そねっとさんの確認、2026-10-25。向きは記載なし）"
+    },
+    "sale": "超 ハロウィンセール：50,000円引き。10/30(金)11:59まで",
+    "note": "出荷5～10日後。会員限定送料無料。無線非搭載。Windows 11 Home。1年保証。価格は「～」表示で税込の明記なし",
+    "informationSource": "2026-10-25 パソコン工房の販売ページ（GPUの仕様はアークの販売ページ）",
+    "date": "2026-10-25",
+    "unknown": [
+      "ケース名",
+      "背面ファンの向き・性能",
+      "水冷の型番・取り付け位置",
+      "GPUの冷却方式（ブロワー型は仮定）・チップ面積",
+      "電源・マザーボードの型番"
+    ],
+    "sources": [
+      "https://www.pc-koubou.jp/products/detail.php?product_id=1189901",
+      "https://www.ark-pc.co.jp/i/20107760/"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-25）：ケースは外寸が同じFRONTIER GK-A620（215×401×347mm・30L）として計算（同じ筐体かは未確認）。ケースファンは背面120mm×1（そねっとさんの確認）。向きはGKシリーズの構造（底面吸気・上面/背面排気）に合わせて排気と仮定し、性能は一般的な付属ファンの値。240mm水冷は天面排気と仮定（型番・位置は未確認）。GPUはアークの販売ページの70W・169×69×40mmで、ブロワー型1ファンと仮定。チップの面積（GB203・378mm²）は出典未確認。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-10-25T10:22:01.860Z",
+    "assumptions": {
+      "caseDim": {
+        "preset": "gka620",
+        "d": 401,
+        "h": 347,
+        "w": 215
+      },
+      "caseType": "dual",
+      "panels": {
+        "front": "closed",
+        "top": "mesh",
+        "rear": "vent",
+        "bottom": "mesh"
+      },
+      "psuArea": {
+        "shroud": "solid",
+        "side": "closed",
+        "bottom": "mesh"
+      },
+      "cooler": {
+        "cooler": "aio",
+        "coolerBrand": "generic",
+        "coolerModel": "gen-aio240",
+        "radSize": 240,
+        "radPos": "top"
+      },
+      "gpuShape": "169×69×40mm・ブロワー型1ファン（仮定）",
+      "caseFans": "背面120mm×1（排気と仮定・一般的な付属ファンの値）＋240mm水冷のファン2基（天面排気と仮定）"
+    }
+  }
+}

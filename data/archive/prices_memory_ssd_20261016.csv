@@ -1,0 +1,85 @@
+日付,カテゴリ,製品ID,製品名,型番,区分,容量,店舗,購入可能価格(税込),在庫状況,購入可否,商品URL,備考
+2026-10-16,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/13512601/,個別ページを1回閲覧。取得日の確認情報不足のため価格不採用
+2026-10-16,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,ドスパラ,,未確認,未確認,https://www.dospara.co.jp/SBR1144/IC497397.html,個別ページを1回閲覧。取得内容から価格・通販在庫を確定できず
+2026-10-16,SSD,ssd-ct1000t500ssd8jp,Crucial T500 1TB,CT1000T500SSD8JP,Gen4,1TB,パソコン工房,,未確認,未確認,,取得情報が3日より古いため不採用（1回のみ閲覧）
+2026-10-16,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,アーク,99800,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512602/,個別ページで確認（当日取得）
+2026-10-16,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC497398.html,個別ページの通販在庫で確認（当日取得）
+2026-10-16,SSD,ssd-ct2000t500ssd8jp,Crucial T500 2TB,CT2000T500SSD8JP,Gen4,2TB,パソコン工房,,未確認,未確認,,取得情報が3日より古いため不採用（1回のみ閲覧）
+2026-10-16,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,アーク,34980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512528/,個別ページで確認（当日取得）
+2026-10-16,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,ドスパラ,34980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC484404.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,SSD,ssd-mz-v9p1t0b-it,Samsung 990 PRO 1TB,MZ-V9P1T0B-IT,Gen4,1TB,パソコン工房,,未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=951371,個別ページを1回閲覧。当日出荷表示あり。税込価格を確定できず
+2026-10-16,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,アーク,89980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512529/,個別ページで確認（当日取得）
+2026-10-16,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,ドスパラ,89980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC484405.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,SSD,ssd-mz-v9p2t0b-it,Samsung 990 PRO 2TB,MZ-V9P2T0B-IT,Gen4,2TB,パソコン工房,,当日出荷,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=951372,個別ページで出荷表示を確認。税込価格の明示を取得内容から確認できず
+2026-10-16,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,アーク,45080,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512808/,個別ページで確認（当日取得）
+2026-10-15,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC520427.html,個別ページの通販欄で確認（昨日取得）
+2026-10-16,SSD,ssd-wds100t4x0e,WD_BLACK SN7100 1TB,WDS100T4X0E,Gen4,1TB,パソコン工房,,未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1122998,個別ページ：税込価格の明示を取得内容から確認できず
+2026-10-16,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,アーク,86760,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512809/,個別ページで確認（当日取得）
+2026-10-16,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC520428.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,SSD,ssd-wds200t4x0e,WD_BLACK SN7100 2TB,WDS200T4X0E,Gen4,2TB,パソコン工房,,未確認,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1122999,個別ページ：税込価格の明示を取得内容から確認できず
+2026-10-14,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,アーク,55490,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512466/,個別ページで確認（2日前取得）
+2026-10-16,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC482024.html,個別ページの通販欄で確認（当日取得）
+2026-10-14,SSD,ssd-wds100t2x0e,WD_BLACK SN850X 1TB,WDS100T2X0E,Gen4,1TB,パソコン工房,,在庫切れ,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=920503,個別ページ：在庫切れを確認（取得日を日付欄に記録）
+2026-10-16,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,アーク,109530,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512467/,個別ページで確認（当日取得）
+2026-10-16,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC482025.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,SSD,ssd-wds200t2x0e,WD_BLACK SN850X 2TB,WDS200T2X0E,Gen4,2TB,パソコン工房,,在庫切れ,購入不可,https://www.pc-koubou.jp/products/detail.php?product_id=920504,個別ページ：在庫切れを確認（取得日を日付欄に記録）
+2026-10-14,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/13512720/,個別ページ：対象商品の価格・販売状態を確定できず（2日前取得）
+2026-10-14,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC504199.html,個別ページの通販欄で確認（2日前取得）
+2026-10-16,SSD,ssd-ct1000t705ssd3-jp,Crucial T705 1TB,CT1000T705SSD3-JP,Gen5,1TB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-14,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/13512721/,個別ページ：対象商品の価格・販売状態を確定できず（2日前取得）
+2026-10-16,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC504200.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,SSD,ssd-ct2000t705ssd3-jp,Crucial T705 2TB,CT2000T705SSD3-JP,Gen5,2TB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-14,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/13512878/,個別ページ：対象商品の価格・販売状態を確定できず（2日前取得）
+2026-10-14,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC529730.html,個別ページの通販欄で確認（2日前取得）
+2026-10-16,SSD,ssd-ct1000t710ssd8-jp,Crucial T710 1TB,CT1000T710SSD8-JP,Gen5,1TB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-14,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,アーク,99800,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512879/,個別ページで確認（2日前取得）
+2026-10-16,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1144/IC529731.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,SSD,ssd-ct2000t710ssd8-jp,Crucial T710 2TB,CT2000T710SSD8-JP,Gen5,2TB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-14,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,アーク,45980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512836/,個別ページで確認（2日前取得）
+2026-10-16,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,ドスパラ,45980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC523800.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,SSD,ssd-mz-vap1t0b-it,Samsung 9100 PRO 1TB,MZ-VAP1T0B-IT,Gen5,1TB,パソコン工房,,当日出荷,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1136902,個別ページ：税込価格の明示を取得内容から確認できず
+2026-10-14,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,アーク,102980,在庫あり,購入可,https://www.ark-pc.co.jp/i/13512837/,個別ページで確認（2日前取得）
+2026-10-16,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,ドスパラ,102980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1144/IC523801.html,個別ページの通販欄で確認（当日取得）
+2026-10-14,SSD,ssd-mz-vap2t0b-it,Samsung 9100 PRO 2TB,MZ-VAP2T0B-IT,Gen5,2TB,パソコン工房,,当日出荷,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1136903,個別ページ：税込価格の明示を取得内容から確認できず
+2026-10-16,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,SSD,ssd-zp1000gm3a004,Seagate FireCuda 540 1TB,ZP1000GM3A004,Gen5,1TB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-16,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,SSD,ssd-zp2000gm3a004,Seagate FireCuda 540 2TB,ZP2000GM3A004,Gen5,2TB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-16,メモリ,mem-corsair-cmk16gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 16GB (8GB×2),CMK16GX4M2E3200C16,DDR4,16GB,アーク,19980,在庫あり,購入可,https://www.ark-pc.co.jp/i/11758905/,個別ページで確認。閲覧ツール取得日：当日
+2026-10-16,メモリ,mem-corsair-cmk16gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 16GB (8GB×2),CMK16GX4M2E3200C16,DDR4,16GB,ドスパラ,19980,最短10/17お届け・カート投入可,購入可,https://www.dospara.co.jp/SBR1017,当日取得の一覧検索結果で型番・16GB（8GB×2）・価格・納期を確認
+2026-10-16,メモリ,mem-corsair-cmk16gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 16GB (8GB×2),CMK16GX4M2E3200C16,DDR4,16GB,パソコン工房,,未確認,未確認,,店舗ドメイン限定検索で一致する商品URLを特定できず。次回対象
+2026-10-16,メモリ,mem-corsair-cmk32gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 32GB (16GB×2),CMK32GX4M2E3200C16,DDR4,32GB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk32gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 32GB (16GB×2),CMK32GX4M2E3200C16,DDR4,32GB,ドスパラ,37480,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1017/IC472600.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,メモリ,mem-corsair-cmk32gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 32GB (16GB×2),CMK32GX4M2E3200C16,DDR4,32GB,パソコン工房,,アクセス不可,未確認,,店舗内検索がInternal Error（1回のみ試行・再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk64gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 64GB (32GB×2),CMK64GX4M2E3200C16,DDR4,64GB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk64gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 64GB (32GB×2),CMK64GX4M2E3200C16,DDR4,64GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1017/IC464227.html,個別ページの通販欄で確認（当日取得）
+2026-10-16,メモリ,mem-corsair-cmk64gx4m2e3200c16,CORSAIR VENGEANCE LPX DDR4-3200 64GB (32GB×2),CMK64GX4M2E3200C16,DDR4,64GB,パソコン工房,,アクセス不可,未確認,,店舗内検索がInternal Error（1回のみ試行・再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk16gx5m2b5200c40,CORSAIR VENGEANCE DDR5-5200 16GB (8GB×2),CMK16GX5M2B5200C40,DDR5,16GB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk16gx5m2b5200c40,CORSAIR VENGEANCE DDR5-5200 16GB (8GB×2),CMK16GX5M2B5200C40,DDR5,16GB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk16gx5m2b5200c40,CORSAIR VENGEANCE DDR5-5200 16GB (8GB×2),CMK16GX5M2B5200C40,DDR5,16GB,パソコン工房,,アクセス不可,未確認,,店舗内検索がInternal Error（1回のみ試行・再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk32gx5m2b5600c36,CORSAIR VENGEANCE DDR5-5600 32GB (16GB×2),CMK32GX5M2B5600C36,DDR5,32GB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk32gx5m2b5600c36,CORSAIR VENGEANCE DDR5-5600 32GB (16GB×2),CMK32GX5M2B5600C36,DDR5,32GB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk32gx5m2b5600c36,CORSAIR VENGEANCE DDR5-5600 32GB (16GB×2),CMK32GX5M2B5600C36,DDR5,32GB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-16,メモリ,mem-corsair-cmk64gx5m2b5600c40,CORSAIR VENGEANCE DDR5-5600 64GB (32GB×2),CMK64GX5M2B5600C40,DDR5,64GB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk64gx5m2b5600c40,CORSAIR VENGEANCE DDR5-5600 64GB (32GB×2),CMK64GX5M2B5600C40,DDR5,64GB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-corsair-cmk64gx5m2b5600c40,CORSAIR VENGEANCE DDR5-5600 64GB (32GB×2),CMK64GX5M2B5600C40,DDR5,64GB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-16,メモリ,mem-cfd-w4u3200cs-8g,CFD Standard DDR4-3200 16GB (8GB×2),W4U3200CS-8G,DDR4,16GB,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/11640316/,取得情報が3日より古いため不採用（1回のみ閲覧）
+2026-10-14,メモリ,mem-cfd-w4u3200cs-8g,CFD Standard DDR4-3200 16GB (8GB×2),W4U3200CS-8G,DDR4,16GB,ドスパラ,,在庫なし,購入不可,https://www.dospara.co.jp/SBR1017/IC482007.html,個別ページの通販欄で確認（2日前取得）
+2026-10-16,メモリ,mem-cfd-w4u3200cs-8g,CFD Standard DDR4-3200 16GB (8GB×2),W4U3200CS-8G,DDR4,16GB,パソコン工房,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-w4u3200cs-16g,CFD Standard DDR4-3200 32GB (16GB×2),W4U3200CS-16G,DDR4,32GB,アーク,44800,在庫あり,購入可,https://www.ark-pc.co.jp/i/11640317/,個別ページで確認（当日取得）
+2026-10-16,メモリ,mem-cfd-w4u3200cs-16g,CFD Standard DDR4-3200 32GB (16GB×2),W4U3200CS-16G,DDR4,32GB,ドスパラ,32680,最短10/17お届け・カート投入可,購入可,https://www.dospara.co.jp/SBR1017,当日取得の一覧検索結果で型番・32GB（16GB×2）・価格・納期を確認
+2026-10-16,メモリ,mem-cfd-w4u3200cs-16g,CFD Standard DDR4-3200 32GB (16GB×2),W4U3200CS-16G,DDR4,32GB,パソコン工房,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-w4u3200cm-32g,CFD Selection DDR4-3200 64GB (32GB×2),W4U3200CM-32G,DDR4,64GB,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/11640292/,取得情報が3日より古いため不採用（1回のみ閲覧）
+2026-10-16,メモリ,mem-cfd-w4u3200cm-32g,CFD Selection DDR4-3200 64GB (32GB×2),W4U3200CM-32G,DDR4,64GB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-w4u3200cm-32g,CFD Selection DDR4-3200 64GB (32GB×2),W4U3200CM-32G,DDR4,64GB,パソコン工房,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-ddr5-16gb,CFD DDR5 16GB (8GB×2),,DDR5,16GB,アーク,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-ddr5-16gb,CFD DDR5 16GB (8GB×2),,DDR5,16GB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-ddr5-16gb,CFD DDR5 16GB (8GB×2),,DDR5,16GB,パソコン工房,,未確認,未確認,,未調査：店舗内検索の取得情報が古く、追加アクセスを控え次回
+2026-10-16,メモリ,mem-cfd-w5u5600cs-16g,CFD Standard DDR5-5600 32GB (16GB×2),W5U5600CS-16G,DDR5,32GB,アーク,86680,在庫あり,購入可,https://www.ark-pc.co.jp/i/11650089/,個別ページで確認（当日取得）
+2026-10-16,メモリ,mem-cfd-w5u5600cs-16g,CFD Standard DDR5-5600 32GB (16GB×2),W5U5600CS-16G,DDR5,32GB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-w5u5600cs-16g,CFD Standard DDR5-5600 32GB (16GB×2),W5U5600CS-16G,DDR5,32GB,パソコン工房,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-w5u5600cs-32g,CFD Standard DDR5-5600 64GB (32GB×2),W5U5600CS-32G,DDR5,64GB,アーク,,未確認,未確認,https://www.ark-pc.co.jp/i/11650098/,取得情報が3日より古いため不採用（1回のみ閲覧）
+2026-10-16,メモリ,mem-cfd-w5u5600cs-32g,CFD Standard DDR5-5600 64GB (32GB×2),W5U5600CS-32G,DDR5,64GB,ドスパラ,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）
+2026-10-16,メモリ,mem-cfd-w5u5600cs-32g,CFD Standard DDR5-5600 64GB (32GB×2),W5U5600CS-32G,DDR5,64GB,パソコン工房,,未確認,未確認,,店舗限定検索で一致する商品URLを特定できず（再検索なし）

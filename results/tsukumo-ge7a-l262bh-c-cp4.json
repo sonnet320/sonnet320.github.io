@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "presetId": "tsukumo-ge7a-l262bh-c-cp4",
+  "status": "not_computed",
+  "computedAt": null,
+  "evaluation": null,
+  "image": null,
+  "note": "冷却結果は未計算：水冷位置・方向、ファン性能、GPU形状が未確認。シート読込はケース「ツクモ G-GEAR プレミアムミドルタワー(66JD)」（外寸445×230×460mm・前面/天面メッシュ、電源カバーの形は推定）、前面120mm×1吸気・背面120mm×1排気（公式）、天面240mm水冷排気（仮定）、付属ファンは性能非公表のため一般的な付属ファンの値で70%、GPU長300mm・高さ125mm・厚40.64mm・3ファンの仮設定です。"
+}

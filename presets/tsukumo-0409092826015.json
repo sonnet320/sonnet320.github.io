@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tsukumo-0409092826015",
+  "shop": "ツクモ",
+  "model": "GV7A-H261B/R/CP1",
+  "grade": "提供構成",
+  "case": "G-GEAR GCS-ATM499-B ピラーレスミドルタワー",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "ツクモ GV7A-H261B/R/CP1",
+    "price": "¥499,980",
+    "note": "依頼者提供情報（2026-10-16）・店舗ページ未取得。OS:Windows 11 Home 64bit。MB:ASUS TUF GAMING B850-PLUS WIFI（ATX）。在庫/受注可否/納期/送料は未確認。ケース外寸235×430×434mm（幅×奥行×高さ）。天面ファンと水冷ラジエーターファンの兼用関係/風向/性能は未確認。依頼者指定の税込価格499980円。\n構成表の読み込み用データ。冷却設定は製品の確認値ではなくシートの初期値です。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 9800X3D",
+        "detail": ""
+      },
+      {
+        "label": "CPUクーラー",
+        "name": "G-GEARオリジナル 360mm LED水冷",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5080 専用VRAM 16GB GDDR7（2.5スロット厚・GPUサポートホルダー付き）",
+        "detail": ""
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB（16GB×2）DDR5-5600",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB Crucial M.2 NVMe Gen4（製品型番未確認）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "CWT GPX850S/Gen5/V2 850W・ATX 3.1・12V-2x6・80PLUS GOLD",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "G-GEAR GCS-ATM499-B ピラーレスミドルタワー",
+        "detail": ""
+      },
+      {
+        "label": "ケースファン",
+        "name": "天面120mm×3・底面120mm×3・背面120mm×1（ARGB）",
+        "detail": ""
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 499980,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "tsukumo-0409092826015",
+    "shop": "ツクモ",
+    "model": "GV7A-H261B/R/CP1",
+    "url": "https://shop.tsukumo.co.jp/goods/0409092826015/",
+    "price": 499980,
+    "priceDate": "2026-10-16",
+    "parts": {
+      "CPU": "AMD Ryzen 7 9800X3D",
+      "CPUクーラー": "G-GEARオリジナル 360mm LED水冷",
+      "GPU": "GeForce RTX 5080 専用VRAM 16GB GDDR7（2.5スロット厚・GPUサポートホルダー付き）",
+      "メモリ": "32GB（16GB×2）DDR5-5600",
+      "SSD": "1TB Crucial M.2 NVMe Gen4（製品型番未確認）",
+      "電源": "CWT GPX850S/Gen5/V2 850W・ATX 3.1・12V-2x6・80PLUS GOLD",
+      "ケース": "G-GEAR GCS-ATM499-B ピラーレスミドルタワー",
+      "ケースファン": "天面120mm×3・底面120mm×3・背面120mm×1（ARGB）"
+    },
+    "sale": "セール対象/期限は未確認",
+    "note": "依頼者提供情報（2026-10-16）・店舗ページ未取得。OS:Windows 11 Home 64bit。MB:ASUS TUF GAMING B850-PLUS WIFI（ATX）。在庫/受注可否/納期/送料は未確認。ケース外寸235×430×434mm（幅×奥行×高さ）。天面ファンと水冷ラジエーターファンの兼用関係/風向/性能は未確認。依頼者指定の税込価格499980円。",
+    "informationSource": "依頼者提供（店舗ページ未取得）",
+    "date": "2026-10-16"
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は未計算です。ファンの風向・性能、ケース内部形状、GPUカードの寸法など、計算に必要な条件の確認後に計算します。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算用のファン配置・風向・性能は未確認"
+    ]
+  }
+}

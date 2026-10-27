@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:41:34.836Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 62,
+    "grade": "並",
+    "cap": null,
+    "cpu": 69.4,
+    "gpu": 61.7,
+    "vrm": 64.9,
+    "intake": 7.3,
+    "stag": 14.9,
+    "press": -88.9,
+    "rows": {
+      "cpu": "良",
+      "gpu": "良",
+      "vrm": "並",
+      "intake": "良",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 5.62,
+      "cpuT": 7.3,
+      "gpuT": 3.55,
+      "vrmT": 7.2,
+      "vrmV": 0.397,
+      "exT": 7.89,
+      "pIn": -0.113,
+      "stag": 0.149,
+      "fanIn": 3,
+      "fanOut": 61.1,
+      "leakIn": 62.5,
+      "leakOut": 4.3
+    },
+    "coolQ": 34.7,
+    "gpuQ": 44.9
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 84.2,
+    "gpuPower": 144.95999999999998
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/pckoubou-1209163-20261025.jpg",
+  "presetId": "pckoubou-1209163-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：ケースはLEVELθ（S100 TG）として計算し、付属ファンはシートのLEVELθの初期配置（天面2基・背面1基）を仮に置いた。実際のファン数・位置・性能、CPUクーラーの形（一般的なシングルタワーと仮定）、GPUの形状は未確認。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

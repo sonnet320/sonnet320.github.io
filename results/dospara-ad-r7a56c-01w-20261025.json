@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v65-vrm2d",
+  "mode": "2d",
+  "computedAt": "2026-10-26T12:42:09.100Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 64,
+    "grade": "並",
+    "cap": null,
+    "cpu": 68.8,
+    "gpu": 72.7,
+    "vrm": 59.1,
+    "intake": 6.78,
+    "stag": 7,
+    "press": -87.3,
+    "rows": {
+      "cpu": "良",
+      "gpu": "並",
+      "vrm": "良",
+      "intake": "良",
+      "stag": "並",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 5.48,
+      "cpuT": 6.78,
+      "gpuT": 3.49,
+      "vrmT": 6.3,
+      "vrmV": 0.407,
+      "exT": 7.67,
+      "pIn": -0.138,
+      "stag": 0.07,
+      "fanIn": 3.6,
+      "fanOut": 58.5,
+      "leakIn": 59.5,
+      "leakOut": 4.5
+    },
+    "coolQ": 34.8,
+    "gpuQ": 39.3
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 84.2,
+    "gpuPower": 163.07999999999998
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/dospara-ad-r7a56c-01w-20261025.jpg",
+  "presetId": "dospara-ad-r7a56c-01w-20261025",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-25）：販売ページにケースの記載がないため、THIRDWAVE機に当てはめる方針でX3-03として計算。付属ファン（天面2基・背面1基）、CPUクーラー（一般的なシングルタワー）、電源、GPUの形状はすべて仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}
