@@ -336,6 +336,8 @@ body.present .controls,body.present .del,body.present .add-row,body.present #vie
 body.present .f{border-bottom-color:transparent;pointer-events:none}
 body.present .stage .specs,body.present .stage .case-top,body.present .stage .metrics,body.present .stage .stage-note{zoom:var(--fz,1)}
 .recbar{display:none}
+.rec-only{display:none}
+body.present .rec-only{display:block;margin-top:6px;font-weight:700;color:var(--ink)}
 /* larger text needs more room: the stage keeps at least 16:9 and grows taller instead of covering the drawing */
 body.present .stage-inner{aspect-ratio:auto;min-height:calc(100cqw * 9 / 16)}
 body.present .recbar{display:flex;flex-direction:column;gap:12px;zoom:var(--fz,1)}
@@ -414,8 +416,10 @@ body.present .row{grid-template-columns:clamp(66px,7.4cqw,100px) minmax(0,1fr) a
     </div>
     <p class="msg" id="rec-msg" role="status"></p>
     <div class="rec-grid">
-      <div class="card" id="rec-load"><h2>負荷</h2></div>
+      <div class="card" id="rec-load"><h2>負荷と室温</h2></div>
       <div class="card" id="rec-fan"><h2>ファン</h2></div>
+      <div class="card" id="rec-sim"><h2>表示と再生</h2></div>
+      <div class="card" id="rec-case"><h2>ケースと水冷</h2></div>
     </div>
   </section>
 
@@ -624,6 +628,7 @@ body.present .row{grid-template-columns:clamp(66px,7.4cqw,100px) minmax(0,1fr) a
       <p class="msg" id="g-est"></p>
       <label class="inline" id="g-rpmbox">ファンの最大回転数(100%時) <input class="numin" type="number" id="g-rpm" min="500" max="6000" step="10"> rpm</label>
       <p class="hint" id="g-rpmnote"></p>
+      <span class="hint rec-only" id="gfan-head">グラボのファン</span>
       <label class="inline">ファンの速度 <select id="gfan-mode"><option value="auto">自動(使用率に合わせる)</option><option value="manual">手動</option></select></label>
       <label class="inline">回転数 <input type="range" id="gfan" min="0" max="100" step="5"> <b class="num" id="gfanv"></b></label>
       <label class="inline" id="gfan-rpmbox" hidden>回転数で指定 <input class="numin" type="number" id="gfan-rpm" min="0" max="6000" step="50"> rpm</label>
@@ -5437,8 +5442,11 @@ let rec={fz:1.3,lay:'wide'};
 try{const o=JSON.parse(localStorage.getItem(REC_KEY)||'null');if(o){if([1,1.3,1.6,2].includes(+o.fz))rec.fz=+o.fz;if(o.lay==='tall'||o.lay==='wide')rec.lay=o.lay;}}catch(e){}
 const recSave=()=>{try{localStorage.setItem(REC_KEY,JSON.stringify(rec));}catch(e){}};
 const REC_MOVE=[
-  ['rec-load',()=>[$('cpumode').closest('label'),$('cpuloadbox'),$('cpuwbox'),$('gpuload').closest('label')]],
+  ['rec-load',()=>[$('room').closest('label'),$('cpumode').closest('label'),$('cpuloadbox'),$('cpuwbox'),$('gpuload').closest('label'),
+    $('gfan-head'),$('gfan-mode').closest('label'),$('gfan').closest('label'),$('gfan-rpmbox'),$('gfan-note')]],
   ['rec-fan',()=>[$('addfan').parentElement,document.querySelector('.insp'),$('allmodel').closest('label'),$('allrpm').closest('label'),$('fanmsg'),$('p-show').closest('label')]],
+  ['rec-sim',()=>[$('overlay').closest('label'),$('v-part').closest('.checks'),$('v-count').closest('label'),$('v-speed').closest('label'),$('run').parentElement,$('s3box')]],
+  ['rec-case',()=>[$('openframe').closest('label'),$('openframe-note'),$('p-front').closest('.grid2'),$('radposbox'),$('coolwarn')]],
 ];
 let recMoved=[];
 function recApply(){
