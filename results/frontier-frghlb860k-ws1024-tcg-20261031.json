@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T12:38:24.386Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 68,
+    "grade": "並",
+    "cap": null,
+    "cpu": 75.3,
+    "gpu": 78.4,
+    "vrm": 68.9,
+    "intake": 8.39,
+    "stag": 2,
+    "press": 46.4,
+    "rows": {
+      "cpu": "並",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "並",
+      "stag": "優",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 6.19,
+      "cpuT": 8.39,
+      "gpuT": 1.36,
+      "vrmT": 10.79,
+      "vrmV": 0.331,
+      "exT": 7.57,
+      "pIn": 0.087,
+      "stag": 0.02,
+      "fanIn": 79.9,
+      "fanOut": 33.3,
+      "leakIn": 20.6,
+      "leakOut": 67.2
+    },
+    "coolQ": 23.2,
+    "gpuQ": 40
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 104,
+    "gpuPower": 271.79999999999995
+  },
+  "image": "results/frontier-frghlb860k-ws1024-tcg-20261031.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "frontier-frghlb860k-ws1024-tcg-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースはGHLシリーズ（230×500×465mm）。ファンはGHLシリーズと同じ前面140mm吸気×3／背面排気×1（型番・回転数は仮定）。CPUクーラーはID-COOLING FROZN A620 PRO XE。GPUはMSI製（カード型番・寸法は不明）のため汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}
