@@ -5932,9 +5932,14 @@ function memGB(s){   // total capacity: "32GB", or "16GB × 2" when that is all 
   if(!gb&&mod)gb=mod[1]*mod[2];
   return gb;
 }
+/* memory kits (two modules) by generation and total size, e.g. 'DDR5-32': the lowest in-stock price in data/prices.json,
+   filled by the live loader below (data/price_map.json "mem"); sizes the data has no price for keep the estimate */
+const MEM_PRICE={};
+const memKey=t=>{const s=tidy(t), gb=memGB(s);return gb?(/ddr4/i.test(s)?'DDR4':'DDR5')+'-'+gb:null;};
 function memPrice(t){
   const s=tidy(t), ddr4=/ddr4/i.test(s), gb=memGB(s);
   if(!gb)return null;
+  const k=memKey(s);if(MEM_PRICE[k]!=null)return MEM_PRICE[k];
   return r100(ddr4?interp({16:13990,32:29980},gb):Math.max(gb*1600,interp({16:39800,32:52990,64:97980},gb)));
 }
 function ssdPrice(t){
@@ -6001,6 +6006,7 @@ function refSource(r){
   }
   if(cat==='cooler'){if(r!==state.specs.find(s=>catOf(s.label)==='cooler')||state.coolerBrand==='custom')return null;return PRICE_SRC['cooler:'+state.coolerModel]||null;}
   if(cat==='mb'){const t=tidy(n);for(const [re,,src] of MB_MODEL_PRICE)if(re.test(t))return src||null;return null;}
+  if(cat==='mem'){const k=memKey(n+' '+(r.detail||''));return k?PRICE_SRC['mem:'+k]||null:null;}
   if(cat==='case'){let k=null;for(const [re,kk] of CASE_WORDS)if(re.test(n)){k=kk;break;}return PRICE_SRC['case:'+(k||state.caseDim.preset)]||null;}
   return null;
 }
@@ -6375,7 +6381,7 @@ pricesReady=true;
         const l=last[id];if(!l)continue;const k=cat+'\u0000'+key;if(low[k]==null||l.p<low[k].p)low[k]={p:l.p,d:l.d,s:l.s};}
       return low;
     };
-    const tabs={cpu:CPU_PRICE,gpuChip:GPU_CHIP_PRICE,gpuCard:GPU_CARD_PRICE,cooler:COOLER_PRICE,fan:FAN_PRICE,case:CASE_PRICE};
+    const tabs={cpu:CPU_PRICE,gpuChip:GPU_CHIP_PRICE,gpuCard:GPU_CARD_PRICE,cooler:COOLER_PRICE,fan:FAN_PRICE,case:CASE_PRICE,mem:MEM_PRICE};
     const keep={};for(const [c,t] of Object.entries(tabs))keep[c]={...t};
     const use=low=>{let n=0;for(const [c,t] of Object.entries(tabs)){for(const k of Object.keys(t))delete t[k];Object.assign(t,keep[c]);}
       for(const k of Object.keys(PRICE_SRC))delete PRICE_SRC[k];
@@ -6392,7 +6398,7 @@ pricesReady=true;
     PRICE_LIVE={date:pd.updated,n};
     if(before!=null){b.parts+=partsTotal()-before;b.pv=pd.updated;save();}
     const d=pd.updated, jd=`${+d.slice(0,4)}年${+d.slice(5,7)}月${+d.slice(8,10)}日`, shops=(pd.stores||[]).join('・')||'通販3店';
-    const basis=`CPU・グラフィックボード・CPUクーラー・ケースファン・一部のケースは、価格シートの最新データ(${jd}更新)の通販${(pd.stores||[]).length||3}店(${shops})の在庫ありの最安値(その日に在庫がなかったものは、直前に在庫があった日の値)`;
+    const basis=`CPU・グラフィックボード・CPUクーラー・ケースファン・一部のケース・メモリ(2枚組の容量ごと)は、価格シートの最新データ(${jd}更新)の通販${(pd.stores||[]).length||3}店(${shops})の在庫ありの最安値(その日に在庫がなかったものは、直前に在庫があった日の値)`;
     const b1=$('price-basis'), b2=$('price-basis2');
     if(b1)b1.textContent=`目安は、${basis}、そのほかは2026年9月下旬の秋葉原の最安値・実売価格をもとにしています。`;
     if(b2)b2.textContent=`目安の価格は、${basis}、そのほかは2026年9月下旬時点の秋葉原の最安値・実売価格をもとにしており、現在の販売価格とは異なる場合があります。`;

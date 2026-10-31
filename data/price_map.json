@@ -480,5 +480,24 @@
   "case-h500g2-kgnn-s00": "haf2500",
   "case-cc-h52fb-01": "h5flow24",
   "case-ca-1q9-00s1wn-00": "s100tg"
+ },
+ "mem": {
+  "mem-cfd-w4u3200cm-32g": "DDR4-64",
+  "mem-cfd-w4u3200cs-8g": "DDR4-16",
+  "mem-cfd-w4u3200cs-16g": "DDR4-32",
+  "mem-corsair-cmk16gx4m2e3200c16": "DDR4-16",
+  "mem-corsair-cmk32gx4m2e3200c16": "DDR4-32",
+  "mem-corsair-cmk64gx4m2e3200c16": "DDR4-64",
+  "mem-dospara-d4d3200-8g2a2": "DDR4-16",
+  "mem-adata-ax5u5600c468g-dtlabrbk": "DDR5-16",
+  "mem-cfd-ddr5-16gb": "DDR5-16",
+  "mem-cfd-w5u5600cs-16g": "DDR5-32",
+  "mem-cfd-w5u5600cs-32g": "DDR5-64",
+  "mem-corsair-cmk16gx5m2b5200c40": "DDR5-16",
+  "mem-corsair-cmk32gx5m2b5600c36": "DDR5-32",
+  "mem-corsair-cmk64gx5m2b5600c40": "DDR5-64",
+  "mem-gskill-f5-5600j3636c8gh2-fx5": "DDR5-16",
+  "mem-kingston-kf556c40bbak2-32": "DDR5-32",
+  "mem-dospara-d5d4800-16g2a": "DDR5-32"
  }
 }

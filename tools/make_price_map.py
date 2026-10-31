@@ -4,7 +4,7 @@
 使い方(リポジトリの直下で):
   python tools/make_price_map.py
 
-- シート(pc-sheet/index.html)に登録されたCPU・グラボ・CPUクーラー・ファン・ケースと、
+- シート(pc-sheet/index.html)に登録されたCPU・グラボ・CPUクーラー・ファン・ケースと、メモリ(2枚組を規格・合計容量で)と、
   価格データの製品名を照らし合わせます。名前が完全に一致したものだけを結びつけます(推測で結びつけない)。
 - シートは開いたときに prices.json と price_map.json を読み、最新の「在庫ありの最安値」を目安の価格に使います。
 - 価格データやシートのパーツを増やしたら、このスクリプトを実行し直します(価格の自動更新でも実行されます)。
@@ -55,7 +55,7 @@ def main():
     for b, se, ch in re.findall(r"\['([^']*)','([^']*)','([a-z0-9]+)',[\d.]+,[\d.]+,[\d.]+,\d,\d+,'[^']*'\]", s):
         cards[(words(f'{b} {se} {CHIP_TEXT.get(ch, ch)}'), ch)] = f"{slug(b) or 'kuro'}-{slug(se)}-{ch}"
 
-    out = {'source': 'data/prices.json', 'cpu': {}, 'gpuChip': {}, 'gpuCard': {}, 'cooler': {}, 'fan': {}, 'case': {}}
+    out = {'source': 'data/prices.json', 'cpu': {}, 'gpuChip': {}, 'gpuCard': {}, 'cooler': {}, 'fan': {}, 'case': {}, 'mem': {}}
     miss = {}
     for p in data['products']:
         cat, name, pid = p['category'], p['name'], p['id']
@@ -88,6 +88,12 @@ def main():
             key = CASE_MODELS.get(p.get('model', ''))
             if key:
                 out['case'][pid] = key
+        elif cat == 'メモリ':
+            # 2枚組だけを、規格と合計容量で結びつける(例:DDR5-32)。シートは同じ規格・容量の最安値を目安にする
+            g, cap = p.get('group', ''), gb(p.get('capacity', '') or '')
+            if g in ('DDR4', 'DDR5') and cap and re.search(r'[x×]\s*2\)', name):
+                key = f'{g}-{cap}'
+                out['mem'][pid] = key
         if key is None and cat not in ('SSD', 'メモリ'):
             miss.setdefault(cat, []).append(name)
 
