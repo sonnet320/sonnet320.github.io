@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T05:06:45.132Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 58,
+    "grade": "並",
+    "cap": null,
+    "cpu": 86.5,
+    "gpu": 74.3,
+    "vrm": 77.5,
+    "intake": 11.2,
+    "stag": 2.9,
+    "press": 44,
+    "rows": {
+      "cpu": "要改善",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "要改善",
+      "stag": "優",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 6.79,
+      "cpuT": 11.2,
+      "gpuT": 1.6,
+      "vrmT": 11.69,
+      "vrmV": 0.349,
+      "exT": 8.92,
+      "pIn": 0.085,
+      "stag": 0.029,
+      "fanIn": 79.9,
+      "fanOut": 35.1,
+      "leakIn": 22,
+      "leakOut": 66.8
+    },
+    "coolQ": 29.4,
+    "gpuQ": 42.3
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 129,
+    "gpuPower": 326.15999999999997
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/frontier-frghlmb650-ws0902-ntk-20261031.jpg",
+  "presetId": "frontier-frghlmb650-ws0902-ntk-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースはGHLシリーズ。ファンはGHLシリーズの前面140mm吸気×3／背面排気×1(型番・回転数は仮定)。構成はカスタマイズ画面で0円の選択肢から読み取ったもの。GPUは汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

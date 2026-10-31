@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "id": "mouse-gtune-fg-a7g7t-20261031",
+  "shop": "マウスコンピューター",
+  "model": "G TUNE FG-A7G7T",
+  "grade": "標準構成",
+  "case": "G TUNE FG ケース",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "G TUNE FG-A7G7T",
+    "price": "¥471,320",
+    "note": "",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 9700X",
+        "detail": "8コア／16スレッド"
+      },
+      {
+        "label": "クーラー",
+        "name": "一般的な360mm簡易水冷",
+        "detail": "360mm簡易水冷・ラジエーター厚27mm・120mmファン×3"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5070 Ti 16GB",
+        "detail": "メーカー・型番・寸法は不明。計算は汎用形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5-5600 32GB（16GB×2）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe Gen4",
+        "detail": ""
+      },
+      {
+        "label": "マザーボード",
+        "name": "AMD B650",
+        "detail": "Wi-Fi 6E・Bluetooth 5"
+      },
+      {
+        "label": "電源",
+        "name": "850W",
+        "detail": "そねっとさんの確認"
+      },
+      {
+        "label": "ケース",
+        "name": "G TUNE FG ケース",
+        "detail": "外寸 約240×500×479mm。前面は縦格子・片側ガラス・もう片側は前寄り1/4にスリット"
+      },
+      {
+        "label": "前面ファン",
+        "name": "120mmファン ×3",
+        "detail": "吸気",
+        "auto": {
+          "name": "120mmファン ×3",
+          "detail": "吸気"
+        }
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mmファン ×1",
+        "detail": "排気",
+        "auto": {
+          "name": "120mmファン ×1",
+          "detail": "排気"
+        }
+      }
+    ],
+    "board": "atx",
+    "cooler": "aio",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 320,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio360",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly",
+      "side": "frontslit"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 454800,
+        "parts": 385680,
+        "pv": "2026-10-25"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": "gen-aio360"
+    },
+    "caseDim": {
+      "preset": "mid",
+      "d": 479,
+      "h": 500,
+      "w": 240
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "akicnbw",
+        "x": 52.5,
+        "y": 145,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      },
+      {
+        "id": "ngkrsnb",
+        "x": 52.5,
+        "y": 270,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      },
+      {
+        "id": "nev34d3",
+        "x": 52.5,
+        "y": 395,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      },
+      {
+        "id": "5ewqn1r",
+        "x": 497.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      },
+      {
+        "id": "fjzkvv3",
+        "x": 140,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "us6k9l5",
+        "x": 265,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "j5jxmzw",
+        "x": 390,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 126,
+    "gpuFans": 3,
+    "gpuFanD": null,
+    "cFans": 3,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "id": "mouse-gtune-fg-a7g7t-20261031",
+    "shop": "マウスコンピューター",
+    "model": "G TUNE FG-A7G7T",
+    "url": "https://www.mouse-jp.co.jp/store/g/ggtune-fga7g7tg8bfdw103dec/",
+    "price": 454800,
+    "priceDate": "2026-10-31",
+    "parts": {
+      "CPU": "Ryzen 7 9700X",
+      "クーラー": "360mm水冷",
+      "GPU": "GeForce RTX 5070 Ti 16GB",
+      "メモリ": "DDR5-5600 32GB（16GB×2）",
+      "SSD": "1TB M.2 NVMe Gen4",
+      "マザーボード": "AMD B650",
+      "電源": "850W",
+      "ケース": "G TUNE FG ケース",
+      "前面ファン": "120mmファン ×3 吸気",
+      "背面ファン": "120mmファン ×1 排気"
+    },
+    "sale": "セールの記載なし",
+    "note": "Windows 11 Home、3年間センドバック修理保証・24時間×365日電話サポート。DVDスーパーマルチドライブ。Wi-Fi 6E・Bluetooth 5。",
+    "informationSource": "2026-10-31 そねっとさんの確認（販売ページ）",
+    "date": "2026-10-31",
+    "sources": [
+      "https://www.mouse-jp.co.jp/store/g/ggtune-fga7g7tg8bfdw103dec/"
+    ]
+  }
+}

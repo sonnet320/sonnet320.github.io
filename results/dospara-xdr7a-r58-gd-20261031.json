@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T05:07:08.551Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 41,
+    "grade": "要改善",
+    "cap": null,
+    "cpu": 88.3,
+    "gpu": 77.9,
+    "vrm": 82,
+    "intake": 9.57,
+    "stag": 19.4,
+    "press": -58.1,
+    "rows": {
+      "cpu": "要改善",
+      "gpu": "並",
+      "vrm": "要改善",
+      "intake": "要改善",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 7.73,
+      "cpuT": 9.57,
+      "gpuT": 4.61,
+      "vrmT": 19.75,
+      "vrmV": 0.221,
+      "exT": 14.11,
+      "pIn": -0.01,
+      "stag": 0.194,
+      "fanIn": 22.3,
+      "fanOut": 58.3,
+      "leakIn": 39.8,
+      "leakOut": 3.7
+    },
+    "coolQ": null,
+    "gpuQ": 43.5
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 117,
+    "gpuPower": 326.15999999999997
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/dospara-xdr7a-r58-gd-20261031.jpg",
+  "presetId": "dospara-xdr7a-r58-gd-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースはGALLERIA GE-G。ファンは前面140mm吸気×1・背面120mm排気×1(販売ページの記載)。水冷は一般的な240mm簡易水冷を天面に置いた(ラジエーターの位置は仮定)。GPUは汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

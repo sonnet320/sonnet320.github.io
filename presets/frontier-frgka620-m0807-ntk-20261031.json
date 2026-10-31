@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-frgka620-m0807-ntk-20261031",
+  "shop": "FRONTIER",
+  "model": "FRGKA620/M0807/NTK",
+  "grade": "厳選！蔵出しセール・標準構成・受注生産",
+  "case": "FRONTIER GK シリーズ（ミニタワー）",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "FRONTIER FRGKA620/M0807/NTK",
+    "price": "¥253,554",
+    "note": "送料別(3,300円)",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 5 7500F",
+        "detail": "6コア／12スレッド"
+      },
+      {
+        "label": "クーラー",
+        "name": "PCCOOLER CPS RT400",
+        "detail": "シングルタワー・ヒートパイプ4本・120mm×1・高さ148mm"
+      },
+      {
+        "label": "GPU",
+        "name": "ASRock製 Radeon RX 9060 XT 16GB",
+        "detail": "カード型番・寸法は不明。計算は汎用形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 32GB（32GB×1）",
+        "detail": "2スロット中1空き・最大64GB"
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe SSD Gen4",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "マザーボード",
+        "name": "AMD A620A（Micro-ATX） Micro-ATX",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "電源",
+        "name": "600W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "ケース",
+        "name": "FRONTIER GK シリーズ（GK-A620 ミニタワー）",
+        "detail": "外寸 約215×347×401mm"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mmファン ×1",
+        "detail": "排気",
+        "auto": {
+          "name": "120mmファン ×1",
+          "detail": "排気"
+        }
+      }
+    ],
+    "board": "matx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 216,
+    "gpuSlots": 2,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "PCCOOLER",
+    "coolerModel": "pc-rt400",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "closed",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "mesh",
+      "side": "closed"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "dual",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 253800,
+        "parts": 228360,
+        "pv": "2026-10-25"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "gka620",
+      "d": 401,
+      "h": 347,
+      "w": 215
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "fcvu9o0",
+        "x": 417.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      }
+    ],
+    "gpuT": 40,
+    "gpuH": 120,
+    "gpuFans": 3,
+    "gpuFanD": null,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0
+  },
+  "verifiedHardware": {
+    "id": "frontier-frgka620-m0807-ntk-20261031",
+    "shop": "FRONTIER",
+    "model": "FRGKA620/M0807/NTK",
+    "url": "https://www.frontier-direct.jp/direct/g/g124210-Oct/",
+    "price": 253800,
+    "priceDate": "2026-10-31",
+    "parts": {
+      "CPU": "Ryzen 5 7500F",
+      "クーラー": "PCCOOLER CPS RT400-BK",
+      "GPU": "ASRock製 Radeon RX 9060 XT 16GB",
+      "メモリ": "DDR5 32GB（32GB×1）",
+      "SSD": "1TB M.2 NVMe SSD Gen4",
+      "マザーボード": "AMD A620A（Micro-ATX）",
+      "電源": "600W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+      "ケース": "FRONTIER GK シリーズ（GK-A620 ミニタワー）",
+      "背面ファン": "120mmファン ×1 排気"
+    },
+    "sale": "厳選！蔵出しセールの厳選モデルに掲載（本体値引き額の明記なし）。期限記載なし。確認元 https://www.frontier-direct.jp/direct/e/ej-month/",
+    "note": "受注生産・確定納期未確認。Windows 11 Home、1年センドバック保証。A620A Micro ATX、メモリ2スロット・空き1、最大64GB。",
+    "informationSource": "2026-10-31 GPTの調査（販売ページ）＋そねっとさんの確認",
+    "date": "2026-10-31",
+    "sources": [
+      "https://www.frontier-direct.jp/direct/g/g124210-Oct/"
+    ]
+  }
+}
