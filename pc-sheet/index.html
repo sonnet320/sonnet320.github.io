@@ -5932,8 +5932,8 @@ function memGB(s){   // total capacity: "32GB", or "16GB × 2" when that is all 
   if(!gb&&mod)gb=mod[1]*mod[2];
   return gb;
 }
-/* memory kits (two modules) by generation and total size, e.g. 'DDR5-32': the lowest in-stock price in data/prices.json,
-   filled by the live loader below (data/price_map.json "mem"); sizes the data has no price for keep the estimate */
+/* memory kits (two modules) by generation and total size, e.g. 'DDR5-32': the lowest in-stock price on the newest day checked
+   in data/prices.json (older days are not used when a newer one exists), filled by the live loader below (data/price_map.json "mem"); sizes the data has no price for keep the estimate */
 const MEM_PRICE={};
 const memKey=t=>{const s=tidy(t), gb=memGB(s);return gb?(/ddr4/i.test(s)?'DDR4':'DDR5')+'-'+gb:null;};
 function memPrice(t){
@@ -6378,7 +6378,10 @@ pricesReady=true;
         const c=last[o.id];if(!c||o.date>c.d)last[o.id]={d:o.date,p:o.price,s:[o.store]};else if(o.date===c.d&&o.price<c.p){c.p=o.price;c.s=[o.store];}else if(o.date===c.d&&o.price===c.p&&!c.s.includes(o.store))c.s.push(o.store);
       }
       for(const [cat,m] of Object.entries(pm||{}))if(m&&typeof m==='object')for(const [id,key] of Object.entries(m)){
-        const l=last[id];if(!l)continue;const k=cat+'\u0000'+key;if(low[k]==null||l.p<low[k].p)low[k]={p:l.p,d:l.d,s:l.s};}
+        const l=last[id];if(!l)continue;const k=cat+'\u0000'+key, o=low[k];
+        // memory (by size): only the newest day checked counts, then the lowest price on that day
+        if(cat==='mem'?(o==null||l.d>o.d||(l.d===o.d&&l.p<o.p)):(o==null||l.p<o.p))low[k]={p:l.p,d:l.d,s:[...l.s]};
+        else if(cat==='mem'&&l.d===o.d&&l.p===o.p)for(const s of l.s)if(!o.s.includes(s))o.s.push(s);}
       return low;
     };
     const tabs={cpu:CPU_PRICE,gpuChip:GPU_CHIP_PRICE,gpuCard:GPU_CARD_PRICE,cooler:COOLER_PRICE,fan:FAN_PRICE,case:CASE_PRICE,mem:MEM_PRICE};
