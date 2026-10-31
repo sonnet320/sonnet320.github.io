@@ -3410,3 +3410,59 @@
 2026-10-25,メモリ,mem-kingston-kf556c40bbak2-32,Kingston FURY Beast DDR5 RGB DDR5-5600 32GB (16GB×2),KF556C40BBAK2-32,DDR5,32GB,アーク,101640,在庫あり,購入可,https://www.ark-pc.co.jp/i/11717108/,商品ページで確認。型番KF556C40BBAK2-32（黒・RGB）
 2026-10-25,メモリ,mem-kingston-kf556c40bbak2-32,Kingston FURY Beast DDR5 RGB DDR5-5600 32GB (16GB×2),KF556C40BBAK2-32,DDR5,32GB,ドスパラ,,未確認,未確認,,商品ページが見つからず（外部検索で確認、店のページは開いていない）
 2026-10-25,メモリ,mem-kingston-kf556c40bbak2-32,Kingston FURY Beast DDR5 RGB DDR5-5600 32GB (16GB×2),KF556C40BBAK2-32,DDR5,32GB,パソコン工房,90981,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=962266,商品ページで確認。税込の明記なし
+2026-10-31,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,,Core Ultra 7,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10150688/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,,Core Ultra 7,,ドスパラ,63980,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1886/IC518585.html,個別ページで確認。税込の明記なし。Intel Core Ultra 7 265 BOX
+2026-10-31,CPU,cpu-core-ultra-7-265,Core Ultra 7 265,,Core Ultra 7,,パソコン工房,63980,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1118980,個別ページで確認。税込の明記なし。BX80768265
+2026-10-31,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10150697/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,ドスパラ,56480,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1886/IC615465.html,個別ページで確認。税込の明記なし。数量限定表示あり
+2026-10-31,CPU,cpu-core-ultra-7-270k-plus,Core Ultra 7 270K Plus,,Core Ultra 7,,パソコン工房,59480,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1217284,個別ページで確認。税込の明記なし。BX80768270K。ページに「バルク品」の説明文あり(この商品のものか不明)
+2026-10-31,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10240258/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,ドスパラ,45480,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1883/IC509914.html,個別ページで確認。税込の明記なし
+2026-10-31,CPU,cpu-ryzen-5-9600x,Ryzen 5 9600X,,Ryzen 5,,パソコン工房,45480,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083339,個別ページで確認。税込の明記なし。100-100001405WOF
+2026-10-31,CPU,cpu-ryzen-7-5700x,Ryzen 7 5700X,,Ryzen 7,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10240205/,WebFetchがclient_errorで失敗(1回のみ試行)。2回続けて失敗したためアークは中断
+2026-10-31,CPU,cpu-ryzen-7-5700x,Ryzen 7 5700X,,Ryzen 7,,ドスパラ,37640,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1882/IC479652.html,個別ページで確認。税込の明記なし。AMD Ryzen 7 5700X BOX
+2026-10-31,CPU,cpu-ryzen-7-5700x,Ryzen 7 5700X,,Ryzen 7,,パソコン工房,37640,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=891096,個別ページで確認。税込の明記なし。100-100000926WOF
+2026-10-31,CPU,cpu-ryzen-7-7700,Ryzen 7 7700,,Ryzen 7,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10240222/,WebFetchがclient_errorで失敗(1回のみ試行)
+2026-10-31,CPU,cpu-ryzen-7-7700,Ryzen 7 7700,,Ryzen 7,,ドスパラ,37800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1882/IC583837.html,個別ページで確認。税込の明記なし。AMD Ryzen 7 7700 BOX
+2026-10-31,CPU,cpu-ryzen-7-7700,Ryzen 7 7700,,Ryzen 7,,パソコン工房,37800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1181244,個別ページで確認。税込の明記なし。Wraith Stealth付属(100-100000592SBX)
+2026-10-31,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10240257/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,ドスパラ,47800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1882/IC509913.html,個別ページで確認。税込の明記なし。数量限定表示あり
+2026-10-31,CPU,cpu-ryzen-7-9700x,Ryzen 7 9700X,,Ryzen 7,,パソコン工房,47800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1083340,個別ページで確認。税込の明記なし。100-100001404WOF
+2026-10-31,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10240267/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,ドスパラ,71208,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1882/IC516296.html,個別ページで確認。税込の明記なし。数量限定表示あり
+2026-10-31,CPU,cpu-ryzen-7-9800x3d,Ryzen 7 9800X3D,,Ryzen 7,,パソコン工房,71208,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1158746,個別ページで確認。税込の明記なし。100-100001084W
+2026-10-31,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/10240273/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,ドスパラ,112800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1881/IC522583.html,個別ページで確認。税込の明記なし。リストのURL末尾の追跡パラメータ(msockid)は外して開いた
+2026-10-31,CPU,cpu-ryzen-9-9900x3d,Ryzen 9 9900X3D,,Ryzen 9,,パソコン工房,112800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1145161,個別ページで確認。税込の明記なし。100-100001368W
+2026-10-31,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107660/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-asrock-challenger-oc-rx-9060-xt-16gb,ASRock Challenger OC RX 9060 XT 16GB,RX9060XT CL 16GO,RX 9060 XT,16GB,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1153448,WebFetchがclient_errorで失敗(1回のみ試行)
+2026-10-31,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107592/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,159800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC525633.html,個別ページで確認。税込の明記なし。型番DUAL-RTX5060TI-O16G
+2026-10-31,GPU,gpu-asus-dual-oc-rtx-5060-ti-16gb,ASUS DUAL OC RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,,当日出荷,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1177118,個別ページは開けたがWHITE版(DUAL-RTX5060TI-O16G-WHITE)で別色の製品のため取り違え防止で未確認。参考:168800円・当日出荷
+2026-10-31,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107539/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,ドスパラ,191800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1891/IC518976.html,個別ページで確認。税込の明記なし。TUF-RX9070XT-O16G-GAMING
+2026-10-31,GPU,gpu-asus-tuf-gaming-oc-rx-9070-xt,ASUS TUF Gaming OC RX 9070 XT,,RX 9070 XT,,パソコン工房,191800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1137080,個別ページで確認。税込の明記なし
+2026-10-31,GPU,gpu-gigabyte-gaming-oc-rtx-5070-ti,GIGABYTE GAMING OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107479/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-gigabyte-gaming-oc-rtx-5070-ti,GIGABYTE GAMING OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1128493,WebFetchがclient_errorで失敗(1回のみ試行)
+2026-10-31,GPU,gpu-gigabyte-gaming-oc-rtx-5080,GIGABYTE GAMING OC RTX 5080,,RTX 5080,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107440/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-gigabyte-gaming-oc-rtx-5080,GIGABYTE GAMING OC RTX 5080,,RTX 5080,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1128651,パソコン工房は2回続けてclient_errorになったため中断(開いていない)
+2026-10-31,GPU,gpu-gigabyte-gaming-oc-rx-9070-xt,GIGABYTE GAMING OC RX 9070 XT,,RX 9070 XT,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107518/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-gigabyte-gaming-oc-rx-9070-xt,GIGABYTE GAMING OC RX 9070 XT,,RX 9070 XT,,パソコン工房,199800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1137078,個別ページで確認。税込の明記なし。ドスパラ(114800円・在庫なし)との差が大きいので撮影前に自分で要確認
+2026-10-31,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107586/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,ドスパラ,148800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC525607.html,個別ページで確認。税込の明記なし。お一人様1個まで
+2026-10-31,GPU,gpu-msi-ventus-2x-oc-plus-rtx-5060-ti-16gb,MSI VENTUS 2X OC PLUS RTX 5060 Ti 16GB,,RTX 5060 Ti,16GB,パソコン工房,148800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1141798,個別ページで確認。税込の明記なし
+2026-10-31,GPU,gpu-msi-ventus-2x-oc-rtx-5070,MSI VENTUS 2X OC RTX 5070,,RTX 5070,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107550/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-msi-ventus-2x-oc-rtx-5070,MSI VENTUS 2X OC RTX 5070,,RTX 5070,,ドスパラ,160800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC522757.html,個別ページで確認。税込の明記なし。お一人様1個まで
+2026-10-31,GPU,gpu-msi-ventus-2x-oc-rtx-5070,MSI VENTUS 2X OC RTX 5070,,RTX 5070,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1268145,WebFetchがclient_errorで失敗(1回のみ試行)
+2026-10-31,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107472/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-msi-ventus-3x-oc-rtx-5070-ti,MSI VENTUS 3X OC RTX 5070 Ti,,RTX 5070 Ti,,パソコン工房,230800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1130141,個別ページで確認。税込の明記なし
+2026-10-31,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107457/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,ドスパラ,359800,24時間以内に出荷,購入可,https://www.dospara.co.jp/SBR1892/IC520176.html,個別ページで確認。税込の明記なし
+2026-10-31,GPU,gpu-msi-ventus-3x-oc-rtx-5080,MSI VENTUS 3X OC RTX 5080,,RTX 5080,,パソコン工房,,アクセス不可,未確認,https://www.pc-koubou.jp/products/detail.php?product_id=1124264,WebFetchがclient_errorで失敗(1回のみ試行)。2回続けて失敗したためパソコン工房は中断
+2026-10-31,GPU,gpu-nvidia-rtx-pro-4000-blackwell-sff,NVIDIA RTX PRO 4000 Blackwell SFF Edition,900-5G195-2501-000,RTX PRO 4000 SFF,24GB,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107760/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-nvidia-rtx-pro-4000-blackwell-sff,NVIDIA RTX PRO 4000 Blackwell SFF Edition,900-5G195-2501-000,RTX PRO 4000 SFF,24GB,ドスパラ,,アクセス不可,未確認,https://www.dospara.co.jp/SBR1808/IC610411.html,WebFetchがclient_errorで失敗(1回のみ試行)
+2026-10-31,GPU,gpu-nvidia-rtx-pro-4000-blackwell-sff,NVIDIA RTX PRO 4000 Blackwell SFF Edition,900-5G195-2501-000,RTX PRO 4000 SFF,24GB,パソコン工房,,アクセス不可,未確認,,商品ページのURLが不明(前回も見つからず)。検索はせず
+2026-10-31,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107676/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-powercolor-reaper-rx-9060-xt-16gb,PowerColor Reaper RX 9060 XT 16GB,RX9060XT 16G-A,RX 9060 XT,16GB,パソコン工房,134800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1153438,個別ページで確認。税込の明記なし。ドスパラ(81800円・在庫なし)との差が大きいので、撮影前に自分で要確認
+2026-10-31,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,アーク,,アクセス不可,未確認,https://www.ark-pc.co.jp/i/20107623/,client_errorが2回続いたため中断(開いていない)
+2026-10-31,GPU,gpu-zotac-twin-edge-oc-rtx-5070,ZOTAC Twin Edge OC RTX 5070,,RTX 5070,,パソコン工房,179800,当日出荷,購入可,https://www.pc-koubou.jp/products/detail.php?product_id=1148219,個別ページで確認。税込の明記なし。型番ZT-5070-12G-TWOC/ZT-B50700H-10P。ドスパラ(102800円・在庫なし)との差が大きいので撮影前に自分で要確認
