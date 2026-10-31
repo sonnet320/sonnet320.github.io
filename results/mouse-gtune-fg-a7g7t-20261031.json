@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T05:07:50.821Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 77,
+    "grade": "良",
+    "cap": null,
+    "cpu": 62.9,
+    "gpu": 74.7,
+    "vrm": 64,
+    "intake": 4.6,
+    "stag": 8.3,
+    "press": -3.6,
+    "rows": {
+      "cpu": "良",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "優",
+      "stag": "並",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 4.25,
+      "cpuT": 4.6,
+      "gpuT": 0.71,
+      "vrmT": 10.72,
+      "vrmV": 0.381,
+      "exT": 6.86,
+      "pIn": 0.141,
+      "stag": 0.083,
+      "fanIn": 81.1,
+      "fanOut": 84.9,
+      "leakIn": 24.2,
+      "leakOut": 20.4
+    },
+    "coolQ": null,
+    "gpuQ": 47.5
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 86,
+    "gpuPower": 271.79999999999995
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/mouse-gtune-fg-a7g7t-20261031.jpg",
+  "presetId": "mouse-gtune-fg-a7g7t-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースはG TUNE FG(外寸240×500×479mm)。前面は縦格子(メッシュ扱い)、片側ガラス・もう片側の前寄り1/4にスリット(そねっとさんの確認)。ファンは前面120mm吸気×3(大きさは仮定)・背面排気×1、360mm水冷は天面。GPUは汎用形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

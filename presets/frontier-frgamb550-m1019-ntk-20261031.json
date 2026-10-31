@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-frgamb550-m1019-ntk-20261031",
+  "shop": "FRONTIER",
+  "model": "FRGAMB550/M1019/NTK",
+  "grade": "厳選！蔵出しセール・標準構成・受注生産",
+  "case": "FRONTIER ミニタワー（両側面メッシュ）",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "FRONTIER FRGAMB550/M1019/NTK",
+    "price": "¥281,320",
+    "note": "送料別(3,300円)",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 5700X",
+        "detail": "8コア／16スレッド"
+      },
+      {
+        "label": "クーラー",
+        "name": "リテールクーラー(ヒートパイプなし)",
+        "detail": "トップフロー・92mm×1・高さ55mm"
+      },
+      {
+        "label": "GPU",
+        "name": "MSI製 GeForce RTX 5070 12GB",
+        "detail": "カード型番・寸法は不明。計算は汎用形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR4 32GB（16GB×2）",
+        "detail": "2スロット・空き0"
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe SSD Gen4",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "マザーボード",
+        "name": "ASRock B550M-HDV（Micro-ATX）",
+        "detail": "そねっとさんの確認"
+      },
+      {
+        "label": "電源",
+        "name": "750W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "ケース",
+        "name": "FRONTIER ミニタワー（製品名不明）",
+        "detail": "外寸 約210×457×465mm。前面カバー(左右スリット)・両側面メッシュ・天面メッシュ・底面閉"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mmファン ×1",
+        "detail": "排気",
+        "auto": {
+          "name": "120mmファン ×1",
+          "detail": "排気"
+        }
+      }
+    ],
+    "board": "matx",
+    "cooler": "top",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 65,
+    "gpuSlots": 2.5,
+    "gpuLen": 292,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-retail",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "closed",
+      "side": "mesh"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "closed"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 283800,
+        "parts": 272520,
+        "pv": "2026-10-25"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "micro",
+      "d": 465,
+      "h": 457,
+      "w": 210
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "p1t2u4v",
+        "x": 482.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 120,
+    "gpuFans": 3,
+    "gpuFanD": null,
+    "cFans": 1,
+    "cFanSize": 92,
+    "cFanQ": 0,
+    "cFanP": 0
+  },
+  "verifiedHardware": {
+    "id": "frontier-frgamb550-m1019-ntk-20261031",
+    "shop": "FRONTIER",
+    "model": "FRGAMB550/M1019/NTK",
+    "url": "https://www.frontier-direct.jp/direct/g/g124531-Oct/",
+    "price": 283800,
+    "priceDate": "2026-10-31",
+    "parts": {
+      "CPU": "Ryzen 7 5700X",
+      "クーラー": "AMD リテールクーラー",
+      "GPU": "MSI製 GeForce RTX 5070 12GB",
+      "メモリ": "DDR4 32GB（16GB×2）",
+      "SSD": "1TB M.2 NVMe SSD Gen4",
+      "マザーボード": "ASRock B550M-HDV（Micro-ATX）",
+      "電源": "750W ATX 80PLUS PLATINUM（日本製コンデンサ仕様）",
+      "ケース": "FRONTIER ミニタワー（製品名不明）",
+      "背面ファン": "120mmファン ×1 排気"
+    },
+    "sale": "厳選！蔵出しセールの厳選モデルに掲載（本体値引き額の明記なし）。期限記載なし。確認元 https://www.frontier-direct.jp/direct/e/ej-month/",
+    "note": "受注生産・確定納期未確認。送料無料の見出しと送料3,300円の注記が併存。Windows 11 Home、1年センドバック保証。メモリ2スロット・空き0、最大64GB。",
+    "informationSource": "2026-10-31 GPTの調査（販売ページ）＋そねっとさんの確認",
+    "date": "2026-10-31",
+    "sources": [
+      "https://www.frontier-direct.jp/direct/g/g124531-Oct/"
+    ]
+  }
+}

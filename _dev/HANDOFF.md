@@ -51,7 +51,7 @@
 - 使わない出典(利用条件のため。値も出典も入れない、GPT の調査資料に入っていても取り込まない):
   - AI による取得・利用の禁止:hrdwreblog
   - 自動取得の禁止:TechPowerUp、Tom's Hardware、The FPS Review、Tweakers、PowerColor(公式サイト)、MSI(公式サイト。利用規約の禁止行為にロボット・データ収集手段の使用、2026-10-25 確認)
-  - robots.txt で Claude の取得を拒否:アユート(aiuto-jp.co.jp)
+  - robots.txt で Claude の取得を拒否:アユート(aiuto-jp.co.jp)、Fractal Design 公式(fractal-design.com。ClaudeBot・anthropic-ai・GPTBot・ChatGPT-User を拒否、2026-10-31 そねっとさんが確認)
   - 規約で複製・データマイニングを禁止、または許可のない使用・非商用に限定:PCGH(pcgameshardware.de)、Profesional Review、LanOC、SkatterBencher、TweakTown、Modders-Inc、FrostyTech、Hardware-Helden、Basic Tutorials
   - 利用条件が確認できていない:KitGuru など。確認できるまで使わない
   - 出典ごとの確認の結果は `_dev/validation/source_terms_20261014.md`
@@ -222,3 +222,11 @@ config.json に載せているBTOのケースは、すべてシートの「ケ�
 - FRONTIER FRGHLB860K/WS1029(270K Plus・RTX 5070、359,800円、BLACK FRIDAYセール 11/6 15:00まで)を追加。ケース・ファンはGHLシリーズ同様(そねっとさんの確認)
 - CPUクーラー ID-COOLING FROZN A620 PRO XE をシートに登録(6mmヒートパイプ6本・120mm×2・2000rpm・58CFM・1.94mmH2O・TDP 260W・高さ157mm、そねっとさんの確認)
 - GPTの調査CSV(bto_sale_20261031)の残りは、ケース・クーラー・ファンの情報待ち
+- 2026-10-31(まとめて入れ替え):掲載は販売中の商品だけにした。セールが終わったFRONTIER 6台・アーク2台・パソコン工房3台・ツクモ1台(売り切れ)を掲載から外した(構成データ・計算結果のファイルとシートのケース定義は残している)
+- 値上がりした2台(パソコン工房 LEVEL-M1AM-R77-RRXB、ドスパラ XPR7A-R58-GD)は掲載価格のまま残し、`priceNote` に「【値上がり】」と今の価格を書いた
+- 新しく追加:FRONTIER FRGKA620/M0807/NTK・FRGKB860M/M1015/NTK(GKシリーズ、背面ファン1基のみ)・FRGAMB550/M1019/NTK(両側面メッシュ)・FRGHLMB650/WS0902/NTK、ドスパラ XDR7A-R57-GD・R58-GD、アーク GC-A7G57M、マウス G TUNE DG-I7G7T(65W動作・汎用ミニタワー)・FG-A7G7T(前寄り1/4の側面スリット)
+- シートに「側面」パネル(閉じている/両側面メッシュ/片側の前寄り1/4がスリット、`state.panels.side`・`SIDE_PANEL`)を追加し、`DIAG_VER` を sheet-v66-side にした。2Dの係数は電源カバー横の通気穴からの見積もりで、3Dとの比べ合わせは未実施(作者のPCの内蔵ブラウザで確認する)
+- クーラー PCCOOLER CPS RZ400 V2 を登録(ヒートパイプ4本・高さ155mm・ファン86.73CFM/3.2mmH2O、TDPは公表値なしのため見積もり)
+- ツクモの2機種(0409092342010・0409092745019)は、そねっとさんから情報をもらってから追加する。ツクモのページは開かない
+- アプライド Katamen-449134 は売り切れ(2026-10-31 そねっとさんの確認)のため掲載から外した
+- パソコン工房 SOLUTION-M0AM-R97X-BRX(549,800円、RTX PRO 4000 Blackwell SFF)を「未計算」で追加(エアフローは計算しない、そねっとさんの指定)

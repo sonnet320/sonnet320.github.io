@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T05:07:39.444Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 38,
+    "grade": "要改善",
+    "cap": null,
+    "cpu": 59,
+    "gpu": 79.6,
+    "vrm": 60.5,
+    "intake": 12.43,
+    "stag": 16.7,
+    "press": -87.9,
+    "rows": {
+      "cpu": "優",
+      "gpu": "要改善",
+      "vrm": "並",
+      "intake": "要改善",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 7.41,
+      "cpuT": 12.43,
+      "gpuT": 3.68,
+      "vrmT": 13.55,
+      "vrmV": 0.251,
+      "exT": 11.09,
+      "pIn": -0.098,
+      "stag": 0.167,
+      "fanIn": 0.8,
+      "fanOut": 56.3,
+      "leakIn": 62.4,
+      "leakOut": 6.9
+    },
+    "coolQ": null,
+    "gpuQ": 43.9
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "manual",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 65,
+    "gpuPower": 271.79999999999995
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/mouse-gtune-dg-i7g7t-20261031.jpg",
+  "presetId": "mouse-gtune-dg-i7g7t-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースは寸法不明のため汎用ミニタワー(410×420×210mm)の仮定。前面閉・底面吸気・背面排気、天面に240mm水冷(2連ファン)、ケースファンは背面120mm×1(そねっとさんの確認)。CPUは65W動作のため消費電力65Wで計算。GPUは汎用形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

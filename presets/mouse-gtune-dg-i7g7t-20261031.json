@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "id": "mouse-gtune-dg-i7g7t-20261031",
+  "shop": "マウスコンピューター",
+  "model": "G TUNE DG-I7G7T",
+  "grade": "標準構成",
+  "case": "G TUNE ミニタワー",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "G TUNE DG-I7G7T",
+    "price": "¥474,320",
+    "note": "",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Core Ultra 7 270K Plus",
+        "detail": "65W動作"
+      },
+      {
+        "label": "クーラー",
+        "name": "一般的な240mm簡易水冷",
+        "detail": "240mm簡易水冷・ラジエーター厚27mm・120mmファン×2"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5070 Ti 16GB",
+        "detail": "メーカー・型番・寸法は不明。計算は汎用形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 32GB（16GB×2）",
+        "detail": ""
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe Gen4",
+        "detail": ""
+      },
+      {
+        "label": "マザーボード",
+        "name": "記載なし（Micro-ATX） Micro-ATX",
+        "detail": "Wi-Fi 6E・Bluetooth 5"
+      },
+      {
+        "label": "電源",
+        "name": "記載なし",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "G TUNE ミニタワー",
+        "detail": "寸法不明のため汎用ミニタワーで計算。前面閉・底面吸気・背面排気"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mmファン ×1",
+        "detail": "排気",
+        "auto": {
+          "name": "120mmファン ×1",
+          "detail": "排気"
+        }
+      }
+    ],
+    "board": "matx",
+    "cooler": "aio",
+    "radSize": 240,
+    "radPos": "top",
+    "coolerTdp": 250,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio240",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "mesh",
+      "side": "closed"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 464800,
+        "parts": 364780,
+        "pv": "2026-10-25"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": "gen-aio240"
+    },
+    "caseDim": {
+      "preset": "micro",
+      "d": 410,
+      "h": 420,
+      "w": 210
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "manual",
+    "cpuManualW": 65,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "cqlr6jr",
+        "x": 427.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120"
+      },
+      {
+        "id": "07ir874",
+        "x": 167.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "hd8d5t2",
+        "x": 292.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 126,
+    "gpuFans": 3,
+    "gpuFanD": null,
+    "cFans": 2,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "id": "mouse-gtune-dg-i7g7t-20261031",
+    "shop": "マウスコンピューター",
+    "model": "G TUNE DG-I7G7T",
+    "url": "https://www.mouse-jp.co.jp/store/g/ggtune-dgi7g7tb8bgdw101dec/",
+    "price": 464800,
+    "priceDate": "2026-10-31",
+    "parts": {
+      "CPU": "Core Ultra 7 270K Plus",
+      "クーラー": "240mm水冷（2連ファン）",
+      "GPU": "GeForce RTX 5070 Ti 16GB",
+      "メモリ": "DDR5 32GB（16GB×2）",
+      "SSD": "1TB M.2 NVMe Gen4",
+      "マザーボード": "記載なし（Micro-ATX）",
+      "電源": "記載なし",
+      "ケース": "G TUNE ミニタワー",
+      "背面ファン": "120mmファン ×1 排気"
+    },
+    "sale": "セールの記載なし",
+    "note": "Windows 11 Home、3年間センドバック修理保証・24時間×365日電話サポート。Wi-Fi 6E・Bluetooth 5。",
+    "informationSource": "2026-10-31 そねっとさんの確認（販売ページ）",
+    "date": "2026-10-31",
+    "sources": [
+      "https://www.mouse-jp.co.jp/store/g/ggtune-dgi7g7tb8bgdw101dec/"
+    ]
+  }
+}

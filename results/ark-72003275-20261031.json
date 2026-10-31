@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T05:07:29.545Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 46,
+    "grade": "要改善",
+    "cap": null,
+    "cpu": 69.7,
+    "gpu": 78.4,
+    "vrm": 56,
+    "intake": 10.65,
+    "stag": 20.2,
+    "press": -51.7,
+    "rows": {
+      "cpu": "良",
+      "gpu": "並",
+      "vrm": "良",
+      "intake": "要改善",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 7.18,
+      "cpuT": 10.65,
+      "gpuT": 6.85,
+      "vrmT": 2.87,
+      "vrmV": 0.517,
+      "exT": 14.09,
+      "pIn": -0.007,
+      "stag": 0.202,
+      "fanIn": 0,
+      "fanOut": 25,
+      "leakIn": 48.4,
+      "leakOut": 23.4
+    },
+    "coolQ": 44.8,
+    "gpuQ": 34.6
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 86,
+    "gpuPower": 226.49999999999997
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/ark-72003275-20261031.jpg",
+  "presetId": "ark-72003275-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースはThermaltake S100 TG、ファンはケースの付属ファン(販売ページに記載なし、型番・回転数は仮定)。クーラーのTDPは公表値がないため、ヒートパイプ・高さ・ファン性能からの見積もり。GPUは汎用形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

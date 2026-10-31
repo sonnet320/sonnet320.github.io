@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T05:07:19.368Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 38,
+    "grade": "要改善",
+    "cap": null,
+    "cpu": 80.7,
+    "gpu": 70.5,
+    "vrm": 67.7,
+    "intake": 13.31,
+    "stag": 32.8,
+    "press": -45.9,
+    "rows": {
+      "cpu": "並",
+      "gpu": "並",
+      "vrm": "並",
+      "intake": "要改善",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 6.33,
+      "cpuT": 13.31,
+      "gpuT": 2.23,
+      "vrmT": 24.99,
+      "vrmV": 0.059,
+      "exT": 9.7,
+      "pIn": -0.049,
+      "stag": 0.328,
+      "fanIn": 0.8,
+      "fanOut": 28.9,
+      "leakIn": 60.3,
+      "leakOut": 32.2
+    },
+    "coolQ": null,
+    "gpuQ": 42.5
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 57.024,
+    "gpuPower": 226.49999999999997
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/frontier-frgamb550-m1019-ntk-20261031.jpg",
+  "presetId": "frontier-frgamb550-m1019-ntk-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースは製品名不明のミニタワー(外寸210×457×465mm)。前面カバー(左右スリット)・両側面メッシュ・天面メッシュ・底面閉はそねっとさんの確認と推定。ファンは不明のため背面120mm排気×1を仮定。クーラーは標準のリテールクーラー。GPUは汎用形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

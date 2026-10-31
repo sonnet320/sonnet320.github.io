@@ -555,6 +555,7 @@ body.present .row{grid-template-columns:clamp(66px,7.4cqw,100px) minmax(0,1fr) a
         <label class="stack">前面パネル<select id="p-front"><option value="mesh">メッシュ</option><option value="glass">ガラス(側面スリット)</option></select></label>
         <label class="stack">上面<select id="p-top"><option value="mesh">メッシュ</option><option value="closed">閉じている</option></select></label>
         <label class="stack">背面<select id="p-rear"><option value="vent">通気穴あり</option><option value="closed">閉じている</option></select></label>
+        <label class="stack">側面<select id="p-side"><option value="closed">閉じている(ガラスなど)</option><option value="mesh">両側面メッシュ</option><option value="frontslit">片側の前寄り1/4がスリット</option></select></label>
         <label class="stack">底面<select id="p-bottom"><option value="fanonly">ファン部だけ開口(フィルター)</option><option value="mesh">全面メッシュ</option><option value="closed">閉じている</option></select></label>
       </div>
       <div class="sub" id="psubox">
@@ -1783,6 +1784,12 @@ function fanSpec(f){
   return fanModel(f.model)||fanModel(f.size===140?'gen140':'gen120');
 }
 const PANEL_K={front:{mesh:2.2,glass:28},top:{mesh:1.8,closed:null},rear:{vent:4,closed:null},bottom:{fanonly:null,mesh:2.5,closed:null}};
+/* side panels (2026-10-31): closed (glass or solid, as before), mesh on both sides, or slits over the front quarter of one side.
+   3D: the panel itself gets the mesh K (2.2, as the front mesh) / the slit strip K 4 (as the perforated PSU-cover side).
+   2D has no depth, so a side vent is an exchange with the room air over the area it covers (as the PSU-cover vent, a = 2 for K 4);
+   a scales with 1/√K, and the tray-side panel counts half (its air reaches the case only through the gaps around the tray):
+   mesh 2.7 + 1.35 ≈ 4; the slit strip is in front of the tray, so it counts fully (2). Estimated, not measured. */
+const SIDE_PANEL={closed:null,mesh:{a:4,K:2.2},frontslit:{a:2,K:4,frac:0.25}};
 
 function radInfo(s){
   let len={240:275,280:315,360:395,420:458}[s.radSize]||395;
@@ -1945,7 +1952,9 @@ function makeScene(s,G,P){
   zones.gpu=blower?{x0:q.x0+10,x1:q.x0+80,y0:q.y1+2,y1:q.y1+16}:{x0:q.x0+10,x1:q.x1-10,y0:q.y1+2,y1:q.y1+16};
   // (a card right under the GPU: the 3D measurement leaves out its solid PCB and its heated parts, so only the air in the gap counts)
 
-  const sideVents=!dual&&pa.side==='vent'?[{r:{x0:SHROUD.x0+5,y0:SHROUD.y0+5,x1:C.x1,y1:C.y1},a:2}]:[];   // ~100 cm² of perforation in the side panel
+  const sp=SIDE_PANEL[s.panels.side]||null;
+  const sideVents=!dual&&pa.side==='vent'&&!(sp&&!sp.frac)?[{r:{x0:SHROUD.x0+5,y0:SHROUD.y0+5,x1:C.x1,y1:C.y1},a:2}]:[];   // ~100 cm² of perforation in the side panel
+  if(sp)sideVents.push({r:{x0:C.x0+5,y0:C.y0+5,x1:sp.frac?C.x0+(C.x1-C.x0)*sp.frac:C.x1-5,y1:C.y1-5},a:sp.a});   // mesh / slit side panels (SIDE_PANEL)
   const cm=CASE_MODEL?{id:s.caseDim.preset,cable:CASE_MODEL.cable,sideVent:CASE_MODEL.sideVent||'glass',shroudFrontVent:shroudFrontVent(s)}:null;
   return {box:C,walls,openings,fanK,solids,porous,heat,fans,sideFans,lateral,sideVents,chamber:dual?null:SHROUD,zones,caseModel:cm};
 }
@@ -2135,6 +2144,7 @@ const COOLERS=[
   {id:'id-a620xe',brand:'ID-COOLING',name:'FROZN A620 PRO XE',type:'air2',pipes:6,fans:2,fs:120,h:157,tdp:260,fq:58,fp:1.94,fanNote:'120mm×2(300〜2000rpm)'},   // 129×142×157mm, 6mm pipes ×6 (spec sheet values given by the user, 2026-10-31)
   {id:'id-is55',brand:'ID-COOLING',name:'IS-55 BLACK',type:'top',pipes:5,fans:1,fs:120,h:55,tdp:125},
   {id:'pc-rt400',brand:'PCCOOLER',name:'CPS RT400',type:'air',pipes:4,fans:1,fs:120,h:148,tdp:235},
+  {id:'pc-rz400v2',brand:'PCCOOLER',name:'CPS RZ400 V2',type:'air',pipes:4,fans:1,fs:120,h:155,tdp:null,fq:86.73,fp:3.2,fanNote:'120mm×1(500〜2200rpm)'},   // 130×155×80 mm, fan 86.73 CFM / 3.2 mmH2O / 32 dBA (spec values given by the user, 2026-10-31); no published TDP, the sheet estimates it
   {id:'pc-rt620pro',brand:'PCCOOLER',name:'CPS RT620 PRO',type:'air2',pipes:6,fans:2,fs:120,h:153,tdp:265},
   {id:'pc-ds360',brand:'PCCOOLER',name:'CPS DS360',type:'aio',rad:360,thick:27,fans:3,fs:120,tdp:310,rf:'pcf5r120'},
   {id:'nz-kp360',brand:'NZXT',name:'Kraken Plus 360',type:'aio',rad:360,thick:27,fans:3,fs:120,tdp:null,rf:'nzf120p'},
@@ -3015,7 +3025,7 @@ function make3D(d,opt){
     if(cm&&cm.shroudFrontVent)porous.push({r:{x0:SH.x0,y0:SH.y0+5,x1:SH.x0+5,y1:SH.y1,z0:B.z0,z1:B.z1},c:[R.psuMesh,3000,3000]});   // vented front face
     else solids.push({x0:SH.x0,y0:SH.y0,x1:SH.x0+5,y1:SH.y1,z0:B.z0,z1:B.z1});
     part('電源カバー','shroud',{x0:SH.x0,y0:SH.y0,x1:SH.x1,y1:SH.y1,z0:B.z0,z1:B.z1});
-    if(pa.side==='vent')openings.push({side:cm&&cm.sideVent==='tray'?'tray':'glass',a0:SH.x0+5,a1:B.x1,b0:SH.y0+5,b1:B.y1,K:4,cat:0});   // perforated side panel over the cover (glass side, or the right panel in a case that vents there)
+    if(pa.side==='vent'&&!(s.panels&&s.panels.side==='mesh'))openings.push({side:cm&&cm.sideVent==='tray'?'tray':'glass',a0:SH.x0+5,a1:B.x1,b0:SH.y0+5,b1:B.y1,K:4,cat:0});   // perforated side panel over the cover (glass side, or the right panel in a case that vents there)
     for(const o of sc.openings){
       if(o.cat!==2)continue;
       if(o.side==='rear')openings.push({side:'rear',a0:o.from,a1:o.to,b0:psuB.z0,b1:psuB.z1,K:o.K,closed:o.closed,cat:2});
@@ -3050,6 +3060,9 @@ function make3D(d,opt){
 
   // ---- panels: same K as the 2D sheet; the side panels are closed ----
   const panels=Object.assign({},sc.walls,{tray:null,glass:null});
+  const sideP=s.panels?SIDE_PANEL[s.panels.side]:null;
+  if(sideP&&!sideP.frac){panels.tray=sideP.K;panels.glass=sideP.K;}   // mesh on both sides
+  else if(sideP)openings.push({side:'tray',a0:B.x0,a1:B.x0+(B.x1-B.x0)*sideP.frac,b0:B.y0,b1:B.y1,K:sideP.K,cat:0});   // slits over the front quarter of the non-glass side
   if(opt.panels==='real'){
     // closer to a real case: the top mesh covers only the fan rail, the rear is solid except the
     // expansion-slot covers and the fan grille (from the fan check); the front keeps its full panel
@@ -4261,7 +4274,7 @@ function sample(){
     gpuSlots:3, gpuLen:300, gpuCooler:'open',
     coolerBrand:'DeepCool', coolerModel:'dc-ak400', coolerCustom:{type:'air',pipes:4,fans:1,fs:120,h:155,rad:360,thick:27,tdp:null},
     gpuBrand:'generic', gpuModel:'c3', gpuCustom:{L:300,H:125,T:50,fans:3,type:'flow',power:null,vc:false,rpm:null}, gpuRpm:{},
-    panels:{front:'mesh',top:'mesh',rear:'vent',bottom:'fanonly'},
+    panels:{front:'mesh',top:'mesh',rear:'vent',bottom:'fanonly',side:'closed'},
     psuArea:{shroud:'solid',side:'closed',bottom:'mesh'},
     caseType:'standard', openFrame:false, clearance:25, vrmHs:'auto', vrmPh:null, vrmAmp:null, fanModel:'gen120', ver:5,
     pricing:{other:0,base:null,show:true,track:{cats:{cpu:'daily',gpu:'daily',gpucard:'weekly',mem:'daily',ssd:'daily',mb:'weekly',cooler:'weekly',psu:'weekly',fan:'weekly'},shops:3}},
@@ -4304,6 +4317,7 @@ function normalize(raw){
   if(Array.isArray(raw.specs))raw.specs=raw.specs.filter(r=>r&&typeof r==='object'&&!Array.isArray(r));
   const d=sample(), s=Object.assign(d,migrate(raw));
   s.panels=Object.assign(sample().panels,raw.panels||{});
+  if(!(s.panels.side in SIDE_PANEL))s.panels.side='closed';
   s.view=Object.assign(sample().view,raw.view||{});
   s.view.stage=s.view.stage==='eval'?'eval':'spec';
   const numIn=(v,lo,hi,def,step)=>{const n=+v;return v!=null&&v!==''&&isFinite(n)?clamp(step?Math.round(n/step)*step:n,lo,hi):def;};
@@ -4839,7 +4853,7 @@ function applyCaseChoice(k,opt){
   const wasPillar=state.caseDim.preset==='wide'&&state.caseType==='dual', pillar=k==='wide', notes=[], md=caseModelOf(k);
   if(md){   // its panels and PSU area first, so the fans are remapped onto its real mounts
     state.caseType=md.caseType||'standard';
-    Object.assign(state.panels,md.panels);state.psuArea=Object.assign({},md.psuArea);
+    Object.assign(state.panels,md.panels);state.panels.side=md.panels.side||'closed';state.psuArea=Object.assign({},md.psuArea);
   }
   changeCase({preset:k,d:pr.d,h:pr.h,w:pr.w});
   if(pillar&&!wasPillar){
@@ -5098,7 +5112,7 @@ function selFan(){return state.fans.find(f=>f.id===selId)||null;}
 function syncControls(){
   if(typeof syncOpenFrame==='function'&&$('openframe'))syncOpenFrame();
   $('board').value=state.board;$('radpos').value=state.radPos;syncVrmNote();
-  for(const s of ['front','top','rear','bottom'])$('p-'+s).value=state.panels[s];
+  for(const s of ['front','top','rear','bottom','side'])$('p-'+s).value=state.panels[s]||'closed';
   $('room').value=state.room;$('roomv').textContent=state.room+'°C';
   $('cpuload').value=state.cpuLoad;$('cpuloadv').textContent=state.cpuLoad+'%';syncCpuLoad();$('gpuload').value=state.gpuLoad;$('gpuloadv').textContent=state.gpuLoad+'%';syncGpuFan();
   $('mirror').checked=state.mirror;
@@ -5117,7 +5131,7 @@ $('vrmhs').onchange=e=>{state.vrmHs=VRM_HS[e.target.value]?e.target.value:'auto'
 $('vrmph').onchange=e=>{const v=e.target.value;state.vrmPh=v===''||!isFinite(+v)?null:clamp(Math.round(+v),3,30);e.target.value=state.vrmPh?String(state.vrmPh):'';P=powers();syncVrmNote();dirty();};
 $('vrmamp').onchange=e=>{state.vrmAmp=VRM_AMPS.includes(+e.target.value)?+e.target.value:null;P=powers();syncVrmNote();dirty();};
 $('radpos').onchange=e=>{state.radPos=e.target.value;syncRadFans();selId=null;renderInspector();dirty();};
-for(const s of ['front','top','rear','bottom'])$('p-'+s).onchange=e=>{state.panels[s]=e.target.value;dirty();};
+for(const s of ['front','top','rear','bottom','side'])$('p-'+s).onchange=e=>{state.panels[s]=e.target.value;dirty();};
 $('room').oninput=e=>{state.room=+e.target.value;$('roomv').textContent=state.room+'°C';Sim.setRoom(state.room);save();};
 $('cpuload').oninput=e=>{state.cpuLoad=+e.target.value;$('cpuloadv').textContent=state.cpuLoad+'%';renderPartsUI();dirty();};
 $('cpumode').onchange=e=>{state.cpuMode=e.target.value;if(state.cpuMode==='manual'&&!(state.cpuManualW>0)){state.cpuManualW=Math.round(cpuInfo().max);}syncCpuLoad();renderPartsUI();dirty();};
@@ -7328,7 +7342,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v65-vrm2d';
+const DIAG_VER='sheet-v66-side';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},

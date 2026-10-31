@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T05:06:33.860Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 60,
+    "grade": "並",
+    "cap": null,
+    "cpu": 69.3,
+    "gpu": 63.9,
+    "vrm": 71,
+    "intake": 5.99,
+    "stag": 28.1,
+    "press": -74.6,
+    "rows": {
+      "cpu": "良",
+      "gpu": "良",
+      "vrm": "並",
+      "intake": "良",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 7.25,
+      "cpuT": 5.99,
+      "gpuT": 5.79,
+      "vrmT": 13.16,
+      "vrmV": 0.258,
+      "exT": 11.2,
+      "pIn": -0.077,
+      "stag": 0.281,
+      "fanIn": 0.3,
+      "fanOut": 31.1,
+      "leakIn": 41,
+      "leakOut": 10.2
+    },
+    "coolQ": 24.8,
+    "gpuQ": 48.3
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 103.03200000000001,
+    "gpuPower": 144.95999999999998
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/frontier-frgkb860m-m1015-ntk-20261031.jpg",
+  "presetId": "frontier-frgkb860m-m1015-ntk-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースはGKシリーズ(GK-A620 ミニタワー、底面吸気・上面/背面排気の構造)。ファンは背面120mm排気×1のみ(そねっとさんの確認、型番・回転数は仮定)。GPUは汎用形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}
