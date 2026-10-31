@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "pckoubou-1189902-20261031",
+  "shop": "パソコン工房",
+  "model": "SOLUTION-M0AM-R97X-BRX（ISoDEs-M0AM-AR97X-BRSXB）",
+  "grade": "超 先取りボーナスセール・標準構成",
+  "case": "SOLUTION ミニタワー（名称記載なし）",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "iiyama PC SOLUTION-M0AM-R97X-BRX",
+    "price": "¥549,800",
+    "note": "セール価格549,800円～（通常584,800円）。超 先取りボーナスセール 11/20 11:59まで。会員限定送料無料。Windows 11 Pro。3年間センドバック。\n構成表の読み込み用データ。冷却は計算していません。fansの空配列はファン配置未確認を示し、ファンなしを意味しません。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 9700X",
+        "detail": "8コア／16スレッド"
+      },
+      {
+        "label": "クーラー",
+        "name": "空冷CPUクーラー",
+        "detail": "メーカー・型番は記載なし"
+      },
+      {
+        "label": "GPU",
+        "name": "NVIDIA RTX PRO 4000 Blackwell SFF Edition",
+        "detail": "VRAM 24GB GDDR7"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 32GB（16GB×2）",
+        "detail": "2スロット"
+      },
+      {
+        "label": "SSD",
+        "name": "1TB NVMe M.2 SSD",
+        "detail": "メーカー・型番は記載なし"
+      },
+      {
+        "label": "マザーボード",
+        "name": "AMD A620",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "550W ATX 80PLUS BRONZE",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "SOLUTION ミニタワー（名称記載なし）",
+        "detail": "外寸 約190×415×357mm（幅×奥行×高さ、最大突起物除く）"
+      },
+      {
+        "label": "ケースファン",
+        "name": "記載なし",
+        "detail": "搭載数・配置・風向・性能は未確認"
+      }
+    ],
+    "fans": [],
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 549800,
+        "parts": null,
+        "pending": true
+      },
+      "show": true
+    }
+  },
+  "verifiedHardware": {
+    "id": "pckoubou-1189902-20261031",
+    "shop": "パソコン工房",
+    "model": "SOLUTION-M0AM-R97X-BRX",
+    "url": "https://www.pc-koubou.jp/products/detail.php?product_id=1189902",
+    "price": 549800,
+    "priceDate": "2026-10-31",
+    "parts": {
+      "CPU": "Ryzen 7 9700X",
+      "クーラー": "空冷CPUクーラー",
+      "GPU": "NVIDIA RTX PRO 4000 Blackwell SFF Edition",
+      "メモリ": "DDR5 32GB（16GB×2）",
+      "SSD": "1TB NVMe M.2 SSD",
+      "マザーボード": "AMD A620（Micro-ATX）",
+      "電源": "550W ATX 80PLUS BRONZE",
+      "ケース": "SOLUTION ミニタワー（名称記載なし）",
+      "ケースファン": "記載なし"
+    },
+    "sale": "超 先取りボーナスセール：通常584,800円から35,000円引き。11/20(金)11:59まで",
+    "note": "549,800円～の基本構成価格。出荷1～2週間（最大2週間）。会員限定送料無料。Windows 11 Pro DSP、3年間センドバック。",
+    "informationSource": "2026-10-31 パソコン工房の商品ページ（Claudeが1回取得）",
+    "date": "2026-10-31",
+    "unknown": [
+      "ケースの名前・ファン構成",
+      "CPUクーラーの型番",
+      "SSDのメーカー・型番"
+    ],
+    "sources": [
+      "https://www.pc-koubou.jp/products/detail.php?product_id=1189902"
+    ]
+  },
+  "simulation": {
+    "status": "not_computed",
+    "note": "冷却結果は計算していません(そねっとさんの指定)。ケースの名前・ファンの数と位置・CPUクーラーの型番は販売ページに記載なし。",
+    "assumptions": {},
+    "unknown": [
+      "冷却計算は行わない(そねっとさんの指定)"
+    ]
+  }
+}
