@@ -9,8 +9,8 @@
   "buildReady": true,
   "state": {
     "title": "FRONTIER FRGHLB550/GBF",
-    "price": "¥285,700",
-    "note": "受注生産・価格未登録（そねっとさんの提供情報、2026-11-01）",
+    "price": "¥219,980",
+    "note": "受注生産・税込219,980円（そねっとさんの提供情報、2026-11-01）",
     "specs": [
       {
         "label": "CPU",
@@ -113,7 +113,11 @@
     "ver": 5,
     "pricing": {
       "other": 0,
-      "base": null,
+      "base": {
+        "price": 219980,
+        "parts": null,
+        "pending": true
+      },
       "show": true,
       "track": {
         "cats": {
@@ -297,8 +301,8 @@
     "shop": "FRONTIER",
     "model": "FRGHLB550/GBF",
     "url": "https://www.frontier-direct.jp/direct/g/g123953/",
-    "price": null,
-    "priceDate": null,
+    "price": 219980,
+    "priceDate": "2026-11-01",
     "parts": {
       "CPU": "Ryzen 7 5700X",
       "CPUクーラー": "空冷（標準品の型番記載なし）",
@@ -310,11 +314,10 @@
       "ケース": "GHLシリーズ",
       "OS": "Windows 11 Home 64bit"
     },
-    "note": "受注生産・価格未登録（そねっとさんの提供情報、2026-11-01）",
+    "note": "受注生産・税込219,980円（そねっとさんの提供情報、2026-11-01）",
     "informationSource": "2026-11-01 そねっとさんが提供した販売ページの内容（Claudeはページを開いていない）",
     "date": "2026-11-01",
     "unknown": [
-      "価格",
       "CPUクーラーの型番",
       "ケースファンの数・型番",
       "GPUのカード型番・寸法",

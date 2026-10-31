@@ -9,8 +9,8 @@
   "buildReady": true,
   "state": {
     "title": "FRONTIER FRGHLMB650/WS0924",
-    "price": "¥348,714",
-    "note": "受注生産・価格未登録（そねっとさんの提供情報、2026-11-01）",
+    "price": "¥329,800",
+    "note": "受注生産・税込329,800円（そねっとさんの提供情報、2026-11-01）",
     "specs": [
       {
         "label": "CPU",
@@ -113,7 +113,11 @@
     "ver": 5,
     "pricing": {
       "other": 0,
-      "base": null,
+      "base": {
+        "price": 329800,
+        "parts": null,
+        "pending": true
+      },
       "show": true,
       "track": {
         "cats": {
@@ -297,8 +301,8 @@
     "shop": "FRONTIER",
     "model": "FRGHLMB650/WS0924",
     "url": "https://www.frontier-direct.jp/direct/g/g124387-Oct5/",
-    "price": null,
-    "priceDate": null,
+    "price": 329800,
+    "priceDate": "2026-11-01",
     "parts": {
       "CPU": "Ryzen 7 9700X",
       "CPUクーラー": "CPS RT400-BK（空冷）",
@@ -311,11 +315,10 @@
       "無線": "AMD RZ616 Wi-Fi 6E・Bluetooth 5.3",
       "OS": "Windows 11 Home 64bit"
     },
-    "note": "受注生産・価格未登録（そねっとさんの提供情報、2026-11-01）",
+    "note": "受注生産・税込329,800円（そねっとさんの提供情報、2026-11-01）",
     "informationSource": "2026-11-01 そねっとさんが提供した販売ページの内容（Claudeはページを開いていない）",
     "date": "2026-11-01",
     "unknown": [
-      "価格",
       "ケースファンの数・型番",
       "GPUのカード型番・寸法",
       "マザーボードの製品名",
