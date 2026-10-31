@@ -38,6 +38,8 @@ function renderCards(){
     const top=node('div','card-top');top.append(node('span','tier-badge tier-'+tierOf(p),tiers[tierOf(p)]||'価格未登録'),node('span','sample-label',p.sample?p.model:p.pr?'PR':''));b.append(top,node('h3','',p.name),node('p','card-shop',p.shop+(p.sample?'':' · '+p.model)));
     const dl=node('dl','card-specs');for(const [k,v]of [['CPU',p.cpu],['GPU',p.gpu],['RAM',p.memory],['SSD',p.ssd]])dl.append(node('dt','',k),node('dd','',v));b.append(dl);
     const bottom=node('div','card-bottom');bottom.append(node('span','price',p.price?'¥'+p.price.toLocaleString('ja-JP'):'価格未登録'),node('span','select-label',selected?.id===p.id?'選択中':'結果を見る'));b.append(bottom);
+    // a price that went up: the earlier price under the current one
+    if(p.price&&p.priceBefore>0&&p.priceBefore<p.price)b.append(node('p','price-before','値上がり前 ¥'+p.priceBefore.toLocaleString('ja-JP')+(p.priceBeforeDate?'('+p.priceBeforeDate+'時点)':'')));
     if(p.price&&p.priceDate)b.append(node('p','price-date',p.priceDate+'時点・'+(p.priceTaxConfirmed===false?'税込区分未確認':'税込')+(p.priceNote?' · '+p.priceNote:'')));
     if(p.genericCase)b.append(node('p','generic-note','目安（汎用ケースで計算）'));
     b.addEventListener('click',()=>selectProduct(p));list.append(b);
