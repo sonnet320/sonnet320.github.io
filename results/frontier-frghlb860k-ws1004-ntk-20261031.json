@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T12:38:07.393Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 74,
+    "grade": "並",
+    "cap": null,
+    "cpu": 75.7,
+    "gpu": 64.7,
+    "vrm": 68.5,
+    "intake": 8.59,
+    "stag": 2,
+    "press": 45.8,
+    "rows": {
+      "cpu": "並",
+      "gpu": "良",
+      "vrm": "並",
+      "intake": "並",
+      "stag": "優",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 6.32,
+      "cpuT": 8.59,
+      "gpuT": 1.51,
+      "vrmT": 10.36,
+      "vrmV": 0.33,
+      "exT": 7.66,
+      "pIn": 0.088,
+      "stag": 0.02,
+      "fanIn": 79.3,
+      "fanOut": 33.4,
+      "leakIn": 21,
+      "leakOut": 67
+    },
+    "coolQ": 22.9,
+    "gpuQ": 41.8
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 104,
+    "gpuPower": 275.424
+  },
+  "image": "results/frontier-frghlb860k-ws1004-ntk-20261031.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "frontier-frghlb860k-ws1004-ntk-20261031",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-10-31）：ケースはGHLシリーズ（230×500×465mm）。ファンはGHLシリーズと同じ前面140mm吸気×3／背面排気×1（型番・回転数は仮定）。CPUクーラーはID-COOLING FROZN A620 PRO XE。GPUはASRock製（カード型番・寸法は不明）のため汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}
