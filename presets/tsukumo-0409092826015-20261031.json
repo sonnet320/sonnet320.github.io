@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "id": "tsukumo-0409092826015-20261031",
+  "shop": "ツクモ",
+  "model": "GV7A-H261B/R/CP1",
+  "grade": "標準構成",
+  "case": "G-GEAR ピラーレスミドルタワー（GCS-ATM499-B）",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "ツクモ GV7A-H261B/R/CP1",
+    "price": "¥499,980",
+    "note": "送料別・2026-10-31 そねっとさんの確認（店舗ページは開いていない）",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 9800X3D",
+        "detail": "8コア／16スレッド・定格4.7GHz・最大5.2GHz"
+      },
+      {
+        "label": "クーラー",
+        "name": "G-GEARオリジナル 360mm LED水冷",
+        "detail": "計算は一般的な360mm簡易水冷・天面の仮定"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5080 16GB",
+        "detail": "2.5スロット厚・GPUサポートホルダー付き。メーカー・型番は記載なし。計算は汎用3ファン形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5-5600 32GB（16GB×2）",
+        "detail": "4スロット中2空き・最大256GB"
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe SSD Gen4（Crucial製）",
+        "detail": "製品型番は記載なし"
+      },
+      {
+        "label": "マザーボード",
+        "name": "ASUS TUF GAMING B850-PLUS WIFI（ATX）",
+        "detail": "AMD B850"
+      },
+      {
+        "label": "電源",
+        "name": "CWT GPX850S/Gen5/V2 850W 80PLUS GOLD",
+        "detail": "ATX 3.1・12V-2x6"
+      },
+      {
+        "label": "ケース",
+        "name": "G-GEAR ピラーレスミドルタワー（GCS-ATM499-B）",
+        "detail": "235×430×434mm（本体のみ）。シートのケース「ツクモ G-GEAR ピラーレスミドルタワー(GCS-ATM499)」で計算"
+      },
+      {
+        "label": "ケースファン",
+        "name": "天面120mm×3・底面120mm×3・背面120mm×1（ARGB）",
+        "detail": "販売ページの構成。風向（底面吸気・天面と背面排気）と、天面ファンが水冷のファンを兼ねるかは未確認"
+      }
+    ],
+    "board": "atx",
+    "cooler": "aio",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 320,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio360",
+    "coolerCustom": {
+      "type": "air",
+      "pipes": 4,
+      "fans": 1,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "glass",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly",
+      "side": "closed"
+    },
+    "psuArea": {
+      "shroud": "solid",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "dual",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 499980,
+        "parts": 502388,
+        "pv": "2026-10-31"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": "gen-aio360"
+    },
+    "caseDim": {
+      "preset": "ggatm499",
+      "d": 430,
+      "h": 434,
+      "w": 235
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "j6tpntl",
+        "x": 125,
+        "y": 452.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "ggatm120"
+      },
+      {
+        "id": "csf9xyt",
+        "x": 250,
+        "y": 452.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "ggatm120"
+      },
+      {
+        "id": "p29n43o",
+        "x": 375,
+        "y": 452.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "ggatm120"
+      },
+      {
+        "id": "60q3v9b",
+        "x": 447.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "ggatm120"
+      },
+      {
+        "id": "lb4e6ma",
+        "x": 117.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "obwyzv1",
+        "x": 242.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "dn2hgz2",
+        "x": 367.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 126,
+    "gpuFans": 3,
+    "gpuFanD": null,
+    "cFans": 3,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27
+  },
+  "verifiedHardware": {
+    "id": "tsukumo-0409092826015-20261031",
+    "shop": "ツクモ",
+    "model": "GV7A-H261B/R/CP1",
+    "url": "https://shop.tsukumo.co.jp/goods/0409092826015/",
+    "price": 499980,
+    "priceDate": "2026-10-31",
+    "parts": {
+      "OS": "Windows 11 Home (64ビット版)",
+      "CPU": "AMD Ryzen 7 9800X3D",
+      "CPUクーラー": "【水冷 360mm LED】G-GEARオリジナル水冷クーラ",
+      "GPU": "NVIDIA GeForce RTX 5080 16GB GDDR7（2.5スロット厚、GPUサポートホルダー装着済）",
+      "マザーボード": "ASUS TUF GAMING B850-PLUS WIFI (ATX)",
+      "メモリ": "32GB (16GB×2) DDR5-5600",
+      "SSD": "1TB M.2 NVMe Gen4（Crucial製）",
+      "電源": "CWT製 GPX850S/Gen5/V2 (定格850W) ATX3.1・80PLUS GOLD",
+      "ケース": "G-GEAR ピラーレスミドルタワーケース (GCS-ATM499-B)",
+      "ファン": "天面×3(120mm) / 底面×3(120mm) / 背面×1(120mm) ARGB",
+      "無線": "Wi-Fi 7・Bluetooth 5.4",
+      "外形寸法": "235(W)×430(D)×434(H)mm"
+    },
+    "note": "2026-10-31 そねっとさんがチャットで提供した販売ページの内容。ツクモのページはClaudeは開いていない。税込499,980円。",
+    "informationSource": "そねっとさんの提供（2026-10-31）",
+    "date": "2026-10-31",
+    "unknown": [
+      "水冷のラジエーター位置と、天面ファンが水冷のファンを兼ねるか",
+      "ファンの風向・型番・回転数",
+      "GPUのメーカー・カード型番・寸法",
+      "在庫・納期・送料"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-10-31）：ケースはツクモ G-GEAR ピラーレスミドルタワー(GCS-ATM499)。ファンは販売ページの構成（底面120mm×3・背面120mm×1・天面120mm×3）で、底面吸気・天面と背面排気と仮定し、天面の3基は360mm水冷のラジエーターファンを兼ねるとして計算（型番・回転数は仮定）。CPUクーラーは一般的な360mm簡易水冷（天面）。GPUはメーカー・型番不明のため汎用3ファン形状。内部構造は非公表のため二室構造と仮定。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-10-31T12:42:18.905Z"
+  }
+}
