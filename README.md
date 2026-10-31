@@ -27,6 +27,7 @@ YouTubeチャンネル「そねっとの趣味部屋」の Web ツールです�
 | name / shop / model / grade | 表示名・ショップ・モデル・グレード |
 | cpu / gpu / memory / ssd / cooler / case | カードに表示する仕様 |
 | price / priceDate | 税込価格と、確認した日付。価格を載せるときは日付も必ず入れる |
+| priceBefore / priceBeforeDate | 値上がりしたときの、値上がり前の価格とその日付。カードの価格の下に「値上がり前」と表示する(今の価格より高いときは表示しない) |
 | tier | 価格帯のタブ。20(20万円以下)/ 30(30万円以下)/ 40(40万円以下)/ plus(40万円超) |
 | url / affiliateUrl / pr | 販売ページ・アフィリエイトURL・PR対象かどうか |
 | sample / genericCase | 表示サンプルか、汎用ケースで計算したか |

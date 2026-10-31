@@ -9,8 +9,8 @@
   "buildReady": true,
   "state": {
     "title": "パソコン工房 LEVEL-M1AM-R77-RRXB（ILeDEi-M1AM-AR77-RRSXBB）",
-    "price": "¥209,800",
-    "note": "送料別（会員は無料）・セール対象外",
+    "price": "¥229,700",
+    "note": "送料別（会員は無料）・2026-10-31時点で「229,700円～」（2026-10-25は209,800円）",
     "specs": [
       {
         "label": "CPU",
@@ -110,7 +110,7 @@
     "pricing": {
       "other": 0,
       "base": {
-        "price": 209800,
+        "price": 229700,
         "parts": 180300,
         "pv": "2026-10-16"
       },
@@ -289,8 +289,8 @@
     "model": "LEVEL-M1AM-R77-RRXB（ILeDEi-M1AM-AR77-RRSXBB）",
     "grade": "標準構成",
     "url": "https://www.pc-koubou.jp/products/detail.php?product_id=1209163",
-    "price": 209800,
-    "priceDate": "2026-10-25",
+    "price": 229700,
+    "priceDate": "2026-10-31",
     "parts": {
       "CPU": "Ryzen 7 7700",
       "CPUクーラー": "空冷CPUクーラー（メーカー・型番記載なし）",
@@ -303,7 +303,7 @@
       "ケースファン": "LEDケースファン標準搭載（数・位置の記載なし）"
     },
     "sale": "通常販売（商品固有の値引き表示なし）。期限記載なし",
-    "note": "出荷予定5～10日後（最大10日間）。会員限定送料無料。Windows 11 Home。1年保証。価格は「209,800円～」の表示で税込の明記なし。",
+    "note": "出荷予定5～10日後（最大10日間）。会員限定送料無料。Windows 11 Home。1年保証。価格は2026-10-31時点で「229,700円～」の表示で税込の明記なし(2026-10-25は209,800円～)。",
     "informationSource": "2026-10-25 公式販売ページで確認（一部はそねっとさんの確認）",
     "date": "2026-10-25",
     "unknown": [
