@@ -232,3 +232,4 @@ config.json に載せているBTOのケースは、すべてシートの「ケ�
 - アプライド Katamen-449134 は売り切れ(2026-10-31 そねっとさんの確認)のため掲載から外した
 - パソコン工房 SOLUTION-M0AM-R97X-BRX(549,800円、RTX PRO 4000 Blackwell SFF)を「未計算」で追加(エアフローは計算しない、そねっとさんの指定)
 - FRONTIER FRGHLMB650/WS1025/NTK(9800X3D・RX 9070 XT、365,800円)・FRGHLB860K/WS1004/NTK(270K Plus・RX 9070 XT、349,800円)・FRGHLB860K/WS1024/TCG(270K Plus・RTX 5070 Ti、424,800円)を追加。構成・価格はBLACK FRIDAYセールのページ(11/6 15:00まで)を1回だけ開いて確認。ケースの記載がないため、ケース・ファンはGHLシリーズとして仮定。GPUはカード型番不明のため汎用3ファン形状。構成データは WS0902(WS1025)・WS1029(WS1004・WS1024)を下敷きにし、2Dはクラウドの headless Chromium で `PCSheet.computeResult()` を呼んで計算(3Dは未実施)
+- FRONTIER FRGHLMB650/WS0900/NTK(g124324、9700X・MSI製 RTX 5070 Ti・32GB×1・750W、399,800円、セールの記載なし)を追加(2026-10-31)。以前の同じ型番(7800X3D・RX 9070 XT)とは構成が変わっていたため、新しい構成データ `frontier-frghlmb650-ws0900-ntk-20261031` を作った(古い `frontier-frghlmb650-ws0900-ntk` は残している)。商品ページを1回だけ開いて確認。ケース・ファンはGHLシリーズとして仮定、2Dで計算(3Dは未実施)
