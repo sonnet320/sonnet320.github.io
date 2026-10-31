@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T21:52:28.058Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 86,
+    "grade": "良",
+    "cap": null,
+    "cpu": 57.1,
+    "gpu": 58.9,
+    "vrm": 51.5,
+    "intake": 5.92,
+    "stag": 5.9,
+    "press": 43.8,
+    "rows": {
+      "cpu": "優",
+      "gpu": "優",
+      "vrm": "良",
+      "intake": "良",
+      "stag": "良",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 3.32,
+      "cpuT": 5.92,
+      "gpuT": 1.1,
+      "vrmT": 6.56,
+      "vrmV": 0.343,
+      "exT": 4.13,
+      "pIn": 0.082,
+      "stag": 0.059,
+      "fanIn": 80.2,
+      "fanOut": 35.7,
+      "leakIn": 21.4,
+      "leakOut": 65.9
+    },
+    "coolQ": 28.8,
+    "gpuQ": 43.8
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 57.024,
+    "gpuPower": 144.95999999999998
+  },
+  "image": "results/frontier-frghlb550-gbf-20261101.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "frontier-frghlb550-gbf-20261101",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-11-01）：ケースはGHLシリーズ（230×500×465mm）。ファンは商品詳細ページに記載がないため、GHLシリーズの前面140mm吸気×3／背面排気×1と仮定（型番・回転数も仮定）。CPUクーラーは型番の記載がないため一般的なシングルタワー。GPUはASRock製（カード型番・寸法は不明）のため汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}
