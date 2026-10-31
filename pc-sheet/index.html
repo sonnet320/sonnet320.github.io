@@ -87,6 +87,33 @@ body{background:var(--bg);color:var(--ink);font-family:var(--jp);font-size:14px;
 .case-top{display:flex;flex-direction:column;gap:6px}
 .ct-row{display:flex;justify-content:space-between;align-items:center;gap:6px 12px;flex-wrap:wrap}
 @media (max-width:899px){.ct-row{flex-direction:column;align-items:flex-start}}
+/* keep the badges in fixed places while the numbers update (they used to change width, wrap and jump between rows).
+   Fixed grid areas; the pressure/heat badges fill their cell and cut long text with …, the evaluation badge has a fixed width.
+   When the top is narrow (large text in recording mode, small windows) it stacks one badge per row instead. */
+@media (min-width:900px){
+  .case-top{display:grid;container-type:inline-size;grid-template-columns:minmax(0,1fr) auto auto;
+    grid-template-areas:"p e seg" "h lg lg";gap:6px 12px;align-items:center}
+  .ct-row{display:contents}
+  .ct-row>.badge:first-child{min-width:0;justify-self:stretch}
+  .ct-row:first-child>.badge:first-child{grid-area:p}
+  #ebadge{grid-area:e;justify-content:flex-start}
+  #dimseg{grid-area:seg}
+  .ct-row:nth-child(2)>.badge:first-child{grid-area:h}
+  #legend{grid-area:lg;justify-self:end;flex-wrap:nowrap}
+}
+@media (min-width:900px){
+  @container (max-width:620px){
+    .case-top{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"p seg" "e e" "h h" "lg lg"}
+    #ebadge{justify-self:start}
+    #legend{justify-self:start;flex-wrap:wrap}
+  }
+  body.present.rec-big:not(.rec-tall) .case-top{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"p seg" "e e" "h h" "lg lg"}
+  body.present.rec-big:not(.rec-tall) #ebadge{justify-self:start}
+  body.present.rec-big:not(.rec-tall) #legend{justify-self:start;flex-wrap:wrap}
+}
+.badge>span:not(.dot){white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+#etext{min-width:14.6em;text-align:left}
+#ff{min-width:calc(11.2em + 26px)}
 .badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:clamp(11px,1.02cqw,15px);padding:3px 11px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-variant-numeric:tabular-nums}
 .dot{width:9px;height:9px;border-radius:50%;flex:none}
 .legend{display:flex;gap:6px 12px;font-size:clamp(10px,.92cqw,13px);color:var(--muted);align-items:center;flex-wrap:wrap}
@@ -5452,6 +5479,7 @@ let recMoved=[];
 function recApply(){
   document.body.style.setProperty('--fz',String(rec.fz));
   document.body.classList.toggle('rec-tall',rec.lay==='tall');
+  document.body.classList.toggle('rec-big',rec.fz>=1.6);   // large text: stack the badges over the figure, one per row
   $('rec-fz').value=String(rec.fz);$('rec-lay').value=rec.lay;
   requestAnimationFrame(()=>{fit();fitRows();});
 }
@@ -5463,7 +5491,7 @@ function setPresent(on){
     selId=null;renderInspector();recApply();recBtoList();window.scrollTo(0,0);
   }else{
     for(const [n,ph] of recMoved)ph.replaceWith(n);
-    recMoved=[];document.body.classList.remove('rec-tall');
+    recMoved=[];document.body.classList.remove('rec-tall','rec-big');
     requestAnimationFrame(()=>{fit();fitRows();});
   }
 }
