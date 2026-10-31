@@ -6406,7 +6406,7 @@ pricesReady=true;
 /* the latest prices (2026-10-14): data/prices.json (the price sheet's data, refreshed whenever a new price CSV arrives),
    tied to this sheet's parts by data/price_map.json (tools/make_price_map.py, exact name matches only). For each part,
    the lowest in-stock price on the latest day it was in stock (at most 21 days before the data's update) replaces the
-   reference prices above; GPU chips take the lowest in-stock card of the chip. Without the files the references stay. */
+   reference prices above; GPU chips (and memory sizes) take the lowest in-stock card on the newest day any card of the chip was in stock. Without the files the references stay. */
 (async()=>{
   try{
     const get=u=>fetch(u,{cache:'no-cache'}).then(r=>{if(!r.ok)throw 0;return r.json();});
@@ -6422,9 +6422,10 @@ pricesReady=true;
       }
       for(const [cat,m] of Object.entries(pm||{}))if(m&&typeof m==='object')for(const [id,key] of Object.entries(m)){
         const l=last[id];if(!l)continue;const k=cat+'\u0000'+key, o=low[k];
-        // memory (by size): only the newest day checked counts, then the lowest price on that day
-        if(cat==='mem'?(o==null||l.d>o.d||(l.d===o.d&&l.p<o.p)):(o==null||l.p<o.p))low[k]={p:l.p,d:l.d,s:[...l.s]};
-        else if(cat==='mem'&&l.d===o.d&&l.p===o.p)for(const s of l.s)if(!o.s.includes(s))o.s.push(s);}
+        // every part (CPU, GPU chip/card, cooler, fan, case, memory size): only the newest day it was in stock counts
+        // (an older, cheaper day is not used once a newer price exists), then the lowest price on that day
+        if(o==null||l.d>o.d||(l.d===o.d&&l.p<o.p))low[k]={p:l.p,d:l.d,s:[...l.s]};
+        else if(l.d===o.d&&l.p===o.p)for(const s of l.s)if(!o.s.includes(s))o.s.push(s);}
       return low;
     };
     const tabs={cpu:CPU_PRICE,gpuChip:GPU_CHIP_PRICE,gpuCard:GPU_CARD_PRICE,cooler:COOLER_PRICE,fan:FAN_PRICE,case:CASE_PRICE,mem:MEM_PRICE};
@@ -6444,7 +6445,7 @@ pricesReady=true;
     PRICE_LIVE={date:pd.updated,n};
     if(before!=null){b.parts+=partsTotal()-before;b.pv=pd.updated;save();}
     const d=pd.updated, jd=`${+d.slice(0,4)}年${+d.slice(5,7)}月${+d.slice(8,10)}日`, shops=(pd.stores||[]).join('・')||'通販3店';
-    const basis=`CPU・グラフィックボード・CPUクーラー・ケースファン・一部のケース・メモリ(2枚組の容量ごと)は、価格シートの最新データ(${jd}更新)の通販${(pd.stores||[]).length||3}店(${shops})の在庫ありの最安値(その日に在庫がなかったものは、直前に在庫があった日の値)`;
+    const basis=`CPU・グラフィックボード・CPUクーラー・ケースファン・一部のケース・メモリ(2枚組の容量ごと)は、価格シートの最新データ(${jd}更新)の通販${(pd.stores||[]).length||3}店(${shops})の、在庫ありだったいちばん新しい日の最安値(それより前の日の価格は使いません)`;
     const b1=$('price-basis'), b2=$('price-basis2');
     if(b1)b1.textContent=`目安は、${basis}、そのほかは2026年9月下旬の秋葉原の最安値・実売価格をもとにしています。`;
     if(b2)b2.textContent=`目安の価格は、${basis}、そのほかは2026年9月下旬時点の秋葉原の最安値・実売価格をもとにしており、現在の販売価格とは異なる場合があります。`;
