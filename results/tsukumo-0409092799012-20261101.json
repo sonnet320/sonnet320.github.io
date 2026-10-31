@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T21:52:55.283Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 63,
+    "grade": "並",
+    "cap": null,
+    "cpu": 59.8,
+    "gpu": 75.1,
+    "vrm": 53.8,
+    "intake": 8.82,
+    "stag": 16.4,
+    "press": -10,
+    "rows": {
+      "cpu": "優",
+      "gpu": "並",
+      "vrm": "良",
+      "intake": "並",
+      "stag": "要改善",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 5.47,
+      "cpuT": 8.82,
+      "gpuT": 3.82,
+      "vrmT": 8.9,
+      "vrmV": 0.285,
+      "exT": 10.22,
+      "pIn": 0.019,
+      "stag": 0.164,
+      "fanIn": 20.9,
+      "fanOut": 26.5,
+      "leakIn": 36,
+      "leakOut": 30.3
+    },
+    "coolQ": 27.9,
+    "gpuQ": 34.1
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 57.024,
+    "gpuPower": 226.49999999999997
+  },
+  "image": "results/tsukumo-0409092799012-20261101.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "tsukumo-0409092799012-20261101",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-11-01）：ケースはツクモ G-GEAR プレミアムミドルタワー(66JD)。ファンは販売ページの構成（前面120mm×1・背面120mm×1）で、前面吸気・背面排気と仮定（型番・回転数は仮定）。CPUクーラーはDeepCool AK400。GPUはメーカー・型番不明のため汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v66-side",
+  "mode": "2d",
+  "computedAt": "2026-10-31T21:52:42.300Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "evaluation": {
+    "score": 73,
+    "grade": "並",
+    "cap": null,
+    "cpu": 68.7,
+    "gpu": 71.8,
+    "vrm": 58.5,
+    "intake": 8.3,
+    "stag": 3.6,
+    "press": 43.2,
+    "rows": {
+      "cpu": "良",
+      "gpu": "並",
+      "vrm": "良",
+      "intake": "並",
+      "stag": "良",
+      "press": "良"
+    },
+    "air": {
+      "tIn": 4.23,
+      "cpuT": 8.3,
+      "gpuT": 1.38,
+      "vrmT": 5.21,
+      "vrmV": 0.417,
+      "exT": 6.02,
+      "pIn": 0.091,
+      "stag": 0.036,
+      "fanIn": 81,
+      "fanOut": 36.2,
+      "leakIn": 22.7,
+      "leakOut": 67.6
+    },
+    "coolQ": 38.8,
+    "gpuQ": 34.1
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 86,
+    "gpuPower": 226.49999999999997
+  },
+  "image": "results/frontier-frghlmb650-ws0924-20261101.jpg",
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "presetId": "frontier-frghlmb650-ws0924-20261101",
+  "status": "assumed",
+  "note": "仮定による参考計算（2026-11-01）：ケースはGHLシリーズ（230×500×465mm）。ファンは商品詳細ページに記載がないため、GHLシリーズの前面140mm吸気×3／背面排気×1と仮定（型番・回転数も仮定）。CPUクーラーはPCCOOLER CPS RT400。GPUはMSI製（カード型番・寸法は不明）のため汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}
