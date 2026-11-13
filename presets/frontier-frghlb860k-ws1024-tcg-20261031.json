@@ -39,7 +39,7 @@
       },
       {
         "label": "マザーボード",
-        "name": "MSI製 B860（ATX、Intel B860）",
+        "name": "MSI PRO B860-S01 WIFI（ATX、Intel B860）",
         "detail": "Wi-Fi 6E・Bluetooth 5.3・5GbE・Thunderbolt 4"
       },
       {
@@ -310,7 +310,7 @@
       "メモリ": "32GB（16GB×2）DDR5",
       "SSD": "1TB M.2 NVMe SSD Gen4",
       "電源": "850W ATX 80PLUS PLATINUM（静音電源）",
-      "マザーボード": "MSI製 Intel B860",
+      "マザーボード": "MSI PRO B860-S01 WIFI（ATX、Intel B860）",
       "ケース": "記載なし（GHLシリーズとして扱う）"
     },
     "note": "2026-10-31 FRONTIERのBLACK FRIDAYセールのページ（https://www.frontier-direct.jp/direct/e/ej-sale/）で確認（Claudeが1回取得）。税込・受注生産。セール 10/30 15時～11/6 15時。ケースの記載なし。",

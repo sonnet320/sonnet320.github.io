@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "id": "tsukumo-0409092862013-20261113",
+  "shop": "ツクモ",
+  "model": "G-GEAR GE7A-L261BHCP6",
+  "grade": "標準構成",
+  "case": "G-GEAR プレミアムミドルタワーケース（66JD）",
+  "sample": false,
+  "state": {
+    "title": "ツクモ G-GEAR GE7A-L261BHCP6",
+    "price": "¥519,990",
+    "note": "税込519,990円（2026-11-13 そねっとさんがチャットで提供した販売ページの内容（ツクモのページは開いていない））",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Ryzen 7 9800X3D",
+        "detail": "8コア／16スレッド・定格4.7GHz・最大5.2GHz"
+      },
+      {
+        "label": "クーラー",
+        "name": "ID-COOLING SE-610-XT BASIC（静音ファン）",
+        "detail": "シングルタワー・6mmヒートパイプ×6・120mm PWMファン×1・TDP 250W（仕様はそねっとさんの提供、2026-11-13）。BTOの「静音FAN」は単品の付属ファンと同じ値で計算"
+      },
+      {
+        "label": "GPU",
+        "name": "GeForce RTX 5080 16GB",
+        "detail": "3スロット占有・GPUサポートホルダー付き。メーカー・型番は記載なし。計算は汎用3ファン・大型の形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5-5600 32GB（16GB×2）",
+        "detail": "4スロット中2空き・最大256GB"
+      },
+      {
+        "label": "SSD",
+        "name": "KIOXIA EXCERIA BASIC 2TB（M.2 NVMe Gen4）",
+        "detail": "読込最大7300MB/s・書込最大6800MB/s"
+      },
+      {
+        "label": "マザボ",
+        "name": "ASUS TUF GAMING B850-PLUS WIFI（ATX、AMD B850）",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "CWT GPW850S5/TB 850W 80PLUS GOLD",
+        "detail": "ATX 3.1・12V-2x6"
+      },
+      {
+        "label": "ケース",
+        "name": "G-GEAR プレミアムミドルタワーケース（66JD）",
+        "detail": "幅230×奥行445×高さ460mm（本体のみ、突起物含まず）、約14kg / シートのケース「66JD」で計算"
+      },
+      {
+        "label": "前面ファン",
+        "name": "120mm ×3",
+        "detail": "吸気と仮定。型番・性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mm ×1",
+        "detail": "排気と仮定。型番・性能は一般的な付属ファンの値"
+      }
+    ],
+    "board": "atx",
+    "cooler": "air",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": 250,
+    "gpuSlots": 3,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "ID-COOLING",
+    "coolerModel": "id-se610xt",
+    "coolerCustom": {
+      "type": "aio",
+      "pipes": 4,
+      "fans": 2,
+      "fs": 120,
+      "h": 155,
+      "rad": 240,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3l",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 60,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly",
+      "side": "closed"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 519990,
+        "parts": null,
+        "pending": true
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": null
+    },
+    "caseDim": {
+      "preset": "gg66jd",
+      "d": 445,
+      "h": 460,
+      "w": 230
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "ts862013-front-1",
+        "x": 52.5,
+        "y": 125,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      },
+      {
+        "id": "ts862013-front-2",
+        "x": 52.5,
+        "y": 250,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      },
+      {
+        "id": "ts862013-front-3",
+        "x": 52.5,
+        "y": 375,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      },
+      {
+        "id": "ts862013-rear-1",
+        "x": 462.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      }
+    ],
+    "gpuT": 60,
+    "gpuH": 126,
+    "gpuFans": 3,
+    "cFans": 1,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27,
+    "gpuFanD": null
+  },
+  "verifiedHardware": {
+    "id": "tsukumo-0409092862013-20261113",
+    "shop": "ツクモ",
+    "model": "G-GEAR GE7A-L261BHCP6",
+    "url": "https://shop.tsukumo.co.jp/goods/0409092862013/",
+    "price": 519990,
+    "priceDate": "2026-11-13",
+    "parts": {
+      "OS": "Windows 11 Home （64ビット版）",
+      "CPU": "AMD Ryzen 7 9800X3D",
+      "CPUクーラー": "ID-COOLING SE-610-XT BASIC（120mm PWM Fan、ヒートパイプ式、静音FAN）",
+      "GPU": "NVIDIA GeForce RTX 5080 16GB GDDR7（3スロット占有、GPUサポートホルダー付）",
+      "マザーボード": "ASUS TUF GAMING B850-PLUS WIFI （ATX）",
+      "メモリ": "32GB （16GB×2） DDR5-5600",
+      "SSD": "2TB KIOXIA EXCERIA BASIC（M.2 NVMe Gen4）",
+      "電源": "CWT製 GPW850S5/TB （定格850W） ATX3.1・80PLUS GOLD",
+      "ケース": "G-GEAR プレミアムミドルタワーケース（66JD）",
+      "ファン": "フロント×3、リア×1（120mm）",
+      "無線": "Wi-Fi 7・Bluetooth 5.4",
+      "外形寸法": "230（W）×445（D）×460（H）mm・約14kg"
+    },
+    "note": "税込519,990円（2026-11-13 そねっとさんがチャットで提供した販売ページの内容（ツクモのページは開いていない））",
+    "informationSource": "2026-11-13 そねっとさんがチャットで提供した販売ページの内容（ツクモのページは開いていない）",
+    "date": "2026-11-13",
+    "unknown": [
+      "ファンの風向・型番・回転数",
+      "GPUのメーカー・カード型番・寸法",
+      "在庫・納期・送料",
+      "BTOの静音FANの回転数・風量（単品の付属ファンの値で計算）"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算（2026-11-13）：ケースはツクモ G-GEAR プレミアムミドルタワー（66JD）。ファンは販売ページの構成（前面120mm×3・背面120mm×1）で、前面吸気・背面排気と仮定（型番・回転数は仮定）。CPUクーラーは ID-COOLING SE-610-XT（ファンは単品の仕様の値）。GPUはメーカー・型番不明のため汎用3ファン・大型の形状（3スロット）。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-11-13T11:23:51.688Z"
+  }
+}

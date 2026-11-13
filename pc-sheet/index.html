@@ -1759,6 +1759,7 @@ const FAN_DB=[
   {id:'aslc4fan',name:'ASUS ROG STRIX LC IV 付属ファン',size:120,rpm:2500,cfm:82.57,mm:4.36,t:27,bundled:true,aio:true},
   {id:'dsl240fan',name:'ドスパラセレクト L240M2 付属ファン',size:120,rpm:2000,cfm:70.88,mm:1.9,bundled:true,aio:true},
   {id:'msicb7',name:'MSI CycloBlade 7(CORELIQUID 付属)',size:120,rpm:2000,cfm:62.6,mm:2.36,bundled:true,aio:true},
+  {id:'msie240fan',name:'MSI MAG CORELIQUID E240 付属ファン',size:120,rpm:1800,cfm:75.04,mm:2.52,bundled:true,aio:true},   // ARGB 120mm, 600–1800 rpm, 25.5–75.04 CFM, 0.31–2.52 mmH2O, 11.2–32.5 dBA (spec sheet values given by the user, 2026-11-13)
   {id:'msii240fan',name:'MSI MAG CORELIQUID I240 付属ファン',size:120,rpm:2350,cfm:70.7,mm:3.61,bundled:true,aio:true},   // retailer spec listings (MSI CLI240): 2350 rpm, 70.7 CFM, 3.61 mmH2O
   {id:'lltlw',name:'Lian Li UNI FAN TL Wireless(HydroShift II 付属)',size:120,rpm:2600,cfm:90.1,mm:3.97,t:28,bundled:true,aio:true},
   {id:'trtlc12bs',name:'Thermalright TL-C12B-S V2(Aqua Elite 付属)',size:120,rpm:1500,cfm:66.17,mm:1.53,bundled:true,aio:true},
@@ -2141,6 +2142,7 @@ const COOLERS=[
   {id:'cm-212-3dhp',brand:'Cooler Master',name:'Hyper 212 3DHP',type:'air',pipes:4,fans:1,fs:120,h:158,tdp:null,fq:63.1,fp:2.69,note:'3Dヒートパイプ2本(通常の4本相当)'},
   {id:'cm-atmos2-360',brand:'Cooler Master',name:'MasterLiquid 360 Atmos II',type:'aio',rad:360,thick:27,fans:3,fs:120,tdp:null,rf:'cmsfedge'},
   {id:'id-a620se',brand:'ID-COOLING',name:'FROZN A620 PRO SE',type:'air2',pipes:6,fans:2,fs:120,h:157,tdp:260},
+  {id:'id-se610xt',brand:'ID-COOLING',name:'SE-610-XT',type:'air',pipes:6,fans:1,fs:120,h:151,tdp:250,fq:78.25,fp:2.68,fanNote:'120mm×1(500〜2000rpm)'},   // 128×94×151mm, 6mm pipes ×6, TDP 250W, fan 78.25 CFM / 2.68 mmH2O / 29.85 dBA (spec sheet values given by the user, 2026-11-13)
   {id:'id-a620xe',brand:'ID-COOLING',name:'FROZN A620 PRO XE',type:'air2',pipes:6,fans:2,fs:120,h:157,tdp:260,fq:58,fp:1.94,fanNote:'120mm×2(300〜2000rpm)'},   // 129×142×157mm, 6mm pipes ×6 (spec sheet values given by the user, 2026-10-31)
   {id:'id-is55',brand:'ID-COOLING',name:'IS-55 BLACK',type:'top',pipes:5,fans:1,fs:120,h:55,tdp:125},
   {id:'pc-rt400',brand:'PCCOOLER',name:'CPS RT400',type:'air',pipes:4,fans:1,fs:120,h:148,tdp:235},
@@ -2164,6 +2166,7 @@ const COOLERS=[
   {id:'co-naut360',brand:'Corsair',name:'NAUTILUS 360 RS',type:'aio',rad:360,thick:27,fans:3,fs:120,tdp:null,rf:'rs120'},
   {id:'ar-lf3-280',brand:'ARCTIC',name:'Liquid Freezer III Pro 280',type:'aio',rad:280,thick:38,fans:2,fs:140,tdp:null,rf:'p14pro'},
   {id:'msi-a13-360',brand:'MSI',name:'MAG CORELIQUID A13 360',type:'aio',rad:360,thick:27,fans:3,fs:120,tdp:null,rf:'msicb7'},
+  {id:'msi-e240',brand:'MSI',name:'MAG CORELIQUID E240',type:'aio',rad:240,thick:27,fans:2,fs:120,tdp:null,rf:'msie240fan'},   // radiator 277×119.2×27mm (spec sheet values given by the user, 2026-11-13)
   {id:'msi-i240',brand:'MSI',name:'MAG CORELIQUID I240',type:'aio',rad:240,thick:27,fans:2,fs:120,tdp:null,rf:'msii240fan'},   // FRONTIER GHL standard cooler
   {id:'ll-hs2-360',brand:'Lian Li',name:'HydroShift II LCD-C 360TL',type:'aio',rad:360,thick:24,fans:3,fs:120,tdp:null,rf:'lltlw'},
   {id:'tr-ae360v3',brand:'Thermalright',name:'Aqua Elite 360 V3',type:'aio',rad:360,thick:27,fans:3,fs:120,tdp:null,rf:'trtlc12bs'},
