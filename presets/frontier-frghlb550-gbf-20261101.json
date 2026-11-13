@@ -39,7 +39,7 @@
       },
       {
         "label": "マザーボード",
-        "name": "MSI MPG B550 GAMING PLUS（ATX、AMD B550）",
+        "name": "MSI MPG B550 GAMING PLUS WIFI（ATX、AMD B550）",
         "detail": "カスタマイズページで確認(そねっとさんの提供情報)"
       },
       {
@@ -309,7 +309,7 @@
       "GPU": "ASRock製 Radeon RX 9060 XT 16GB",
       "メモリ": "DDR4 32GB（32GB×1）",
       "SSD": "1TB M.2 NVMe Gen4",
-      "マザーボード": "MSI MPG B550 GAMING PLUS（ATX）",
+      "マザーボード": "MSI MPG B550 GAMING PLUS WIFI（ATX、AMD B550）",
       "電源": "600W ATX 80PLUS PLATINUM（静音電源・日本製コンデンサ仕様）",
       "ケース": "GHLシリーズ",
       "OS": "Windows 11 Home 64bit"

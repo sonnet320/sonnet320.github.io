@@ -20,7 +20,7 @@
       {
         "label": "クーラー",
         "name": "MSI MAG CORELIQUID E240（240mm簡易水冷）",
-        "detail": "ARGB。シート未登録のため一般的な240mm簡易水冷（天面）で計算"
+        "detail": "ARGB・ラジエーター277×119.2×27mm・120mmファン×2（600〜1,800rpm・最大75.04CFM）。天面に置いて計算"
       },
       {
         "label": "GPU",
@@ -79,8 +79,8 @@
     "gpuSlots": 2.5,
     "gpuLen": 304,
     "gpuCooler": "flow",
-    "coolerBrand": "generic",
-    "coolerModel": "gen-aio240",
+    "coolerBrand": "MSI",
+    "coolerModel": "msi-e240",
     "coolerCustom": {
       "type": "air",
       "pipes": 4,
@@ -159,7 +159,7 @@
     "radFan": {
       "model": null,
       "rpm": null,
-      "for": "gen-aio240"
+      "for": "msi-e240"
     },
     "caseDim": {
       "preset": "geg",
@@ -282,23 +282,23 @@
         "model": "geg120"
       },
       {
-        "id": "1ebjq1m",
+        "id": "b1qk81f",
         "x": 207.5,
         "y": 81.5,
         "a": 270,
         "size": 120,
         "rpm": 70,
-        "model": "gen120",
+        "model": "msie240fan",
         "auto": "rad"
       },
       {
-        "id": "lo9rzz5",
+        "id": "f5rp41e",
         "x": 332.5,
         "y": 81.5,
         "a": 270,
         "size": 120,
         "rpm": 70,
-        "model": "gen120",
+        "model": "msie240fan",
         "auto": "rad"
       }
     ],
@@ -346,7 +346,7 @@
   },
   "simulation": {
     "status": "assumed",
-    "note": "仮定による参考計算（2026-11-13）：ケースはドスパラ GALLERIA GE-G ケース。ファンは販売ページに記載がないため、GE-G ケースの付属ファンと同じ配置と仮定（型番・回転数も仮定）。CPUクーラー MSI MAG CORELIQUID E240 はシート未登録のため一般的な240mm簡易水冷（天面）。GPUはメーカー・型番不明のため汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
-    "computedAt": "2026-11-13T11:18:42.350Z"
+    "note": "仮定による参考計算（2026-11-13）：ケースはドスパラ GALLERIA GE-G ケース。ファンは販売ページに記載がないため、GE-G ケースの付属ファンと同じ配置と仮定（型番・回転数も仮定）。CPUクーラーは MSI MAG CORELIQUID E240（天面と仮定）。GPUはメーカー・型番不明のため汎用3ファン形状。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-11-13T11:24:00.760Z"
   }
 }
