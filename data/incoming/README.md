@@ -4,12 +4,12 @@
 
 ## 取り込みの流れ
 
-1. そねっとさんが、GPTの出したCSV(例 `prices_20261009.csv`)をチャットで Claude に渡す
+1. 運営者が、GPTの出したCSV(例 `prices_20261009.csv`)をチャットで Claude に渡す
 2. Claude が手元で、自動更新(`.github/workflows/update-prices.yml`)と同じ処理を行う
    - `python tools/make_prices.py --out data --strip-inputs CSVのパス`(載せない店舗の行を消し、`data/prices.json` と `data/prices_long.csv` を作り直す)
    - `python tools/make_price_map.py`
    - 処理したCSVを `data/archive/` に置く
-3. Claude が、消したあとのCSVと作り直したデータだけを PR にする。そねっとさんが確認して Merge する
+3. Claude が、消したあとのCSVと作り直したデータだけを PR にする。運営者が確認して Merge する
 
 ## 決まり
 
