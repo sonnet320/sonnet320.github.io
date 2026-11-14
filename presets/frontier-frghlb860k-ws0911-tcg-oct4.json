@@ -40,7 +40,7 @@
       {
         "label": "マザーボード",
         "name": "MSI B860 PRO S01（ATX、Intel B860）",
-        "detail": "GHLシリーズのIntel機のボード（そねっとさんの確認、正確な製品名は未照合）"
+        "detail": "GHLシリーズのIntel機のボード（確認、正確な製品名は未照合）"
       },
       {
         "label": "電源",
@@ -305,7 +305,7 @@
       "GPU": "ASUS GeForce RTX 5070 Ti 専用VRAM 16GB（10/16時点）",
       "メモリ": "32GB（16GB×2）DDR5",
       "SSD": "1TB M.2 NVMe SSD Gen4",
-      "マザーボード": "MSI B860 PRO S01（そねっとさんの確認・正確な製品名は未照合）",
+      "マザーボード": "MSI B860 PRO S01（確認・正確な製品名は未照合）",
       "電源": "850W ATX 80PLUS PLATINUM（日本製コンデンサ仕様、10/16時点）",
       "ケース": "FRONTIER GHL シリーズ",
       "ケースファン": "記載なし（シリーズは前面3基・背面1基）"

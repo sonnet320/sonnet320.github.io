@@ -17,7 +17,7 @@ YouTubeチャンネル「そねっとの趣味部屋」の Web ツールです�
 
 ## 更新のしかた
 
-変更はブランチを作って Pull Request にし、そねっとさんが確認して Merge します。main に直接は書き込みません。作業の決めごとや経緯は `_dev/HANDOFF.md` にあります。
+変更はブランチを作って Pull Request にし、運営者が確認して Merge します。main に直接は書き込みません。作業の決めごとや経緯は `_dev/HANDOFF.md` にあります。
 
 ### おすすめBTO(`config.json`)
 
