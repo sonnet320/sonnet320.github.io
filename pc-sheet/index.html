@@ -1970,7 +1970,7 @@ const GPU_CHIPS=[
   {key:'5090',name:'GeForce RTX 5090',re:/5090/,tgp:575,die:750,vram:'VRAM 32GB'},
   {key:'5080',name:'GeForce RTX 5080',re:/5080/,tgp:360,die:378,vram:'VRAM 16GB'},
   {key:'5070ti',name:'GeForce RTX 5070 Ti',re:/5070\s*ti/i,tgp:300,die:378,vram:'VRAM 16GB',k:0.75},
-  {key:'5070',name:'GeForce RTX 5070',re:/5070/,tgp:250,die:263,vram:'VRAM 12GB',k:0.88},
+  {key:'5070',name:'GeForce RTX 5070',re:/5070/,tgp:250,die:263,vram:'VRAM 12GB',k:1.10,kSrc:'レビューで一般的な温度の傾向(目安)'},   // k: see GPU_CALIB (2026-11-15)
   {key:'5060ti',name:'GeForce RTX 5060 Ti',re:/5060\s*ti/i,tgp:180,die:181,vram:'VRAM 16GB',vrams:[8,16],k:0.70},   // 8 GB and 16 GB: same board power (NVIDIA); k: see GPU_CALIB
   {key:'5060',name:'GeForce RTX 5060',re:/5060/,tgp:145,die:181,vram:'VRAM 8GB',k:0.70},
   {key:'rtxpro4000sff',name:'NVIDIA RTX PRO 4000 Blackwell SFF',re:/RTX\s*PRO\s*4000\b.*\bSFF|PRO\s*4000\s*SFF/i,tgp:70,die:378,vram:'VRAM 24GB'},   // 70 W: ark-pc.co.jp 20107760 (2026-10-25). die: GB203 assumed (378 mm², not checked against a source); no in-case measurements, so k = 1
@@ -1987,7 +1987,12 @@ const GPU_CHIPS=[
    the fan % taken from the measured rpm. 5060/5060 Ti stay 0.70 (5 cards, median 0.72); 5070 0.88 (1 card), 5070 Ti 0.75
    (1 card); 5080 stays 1.0 (the user's machine and TUF agree); 5090 left at 1.0 (1 card, 1.11); RX 9060 XT 0.92 (2 cards);
    RX 9070 XT 1.15 (2 cards) and RX 9070 the same die. Radeon report the edge temperature, about 20 °C under the hotspot,
-   which is why their k is above 1. Records (private notes): gpu_calib_chips_20261013.md */
+   which is why their k is above 1. Records (private notes): gpu_calib_chips_20261013.md
+   2026-11-15: RTX 5070 0.88 → 1.10 at the author's request (the sheet read high for this chip). Not a measurement: it is the
+   assistant's general knowledge of where RTX 5070 cards usually sit in reviews at their stock fan speed (large 3-fan about
+   58-63 °C, mid 3-fan 62-67 °C, 2-fan 66-72 °C, Founders Edition mid-70s at ~25 °C room; ±4 °C, no source checked).
+   That range alone would give about 1.2; 1.10 keeps the sheet on the warm side and is close to what the RTX 5080 fit (k = 1)
+   implies for this die and power (~1.0). The one hwcooling card that gave 0.88 now reads about 6 °C under its measurement. */
 const GPU_CALIB_SRC='hwcooling.net のケース内実測';
 function chipOf(name){if(!name)return null;for(const c of GPU_CHIPS)if(c.re.test(name))return c;return null;}
 function chipByKey(k){return GPU_CHIPS.find(c=>c.key===k)||null;}
@@ -4789,7 +4794,7 @@ function renderPartsUI(){
   $('radposbox').hidden=c.type!=='aio';$('radpos').value=state.radPos;
   // graphics card
   const row=gpuRow(), chip=row?chipOf(row.name):null, gb=state.gpuBrand;
-  $('g-chip').textContent=!row?'構成表にGPUの行がありません。':chip?`構成表のGPU:${chip.name}${chip.vrams?` ${rowVram(row,chip)}GB`:''}(標準 ${chipTgp(chip,rowVram(row,chip))}W${chip.k?`・冷え方は${GPU_CALIB_SRC}で補正`:''})`:`構成表のGPU:${row.name||'未入力'}(製品データがないため一般的なサイズで計算)`;
+  $('g-chip').textContent=!row?'構成表にGPUの行がありません。':chip?`構成表のGPU:${chip.name}${chip.vrams?` ${rowVram(row,chip)}GB`:''}(標準 ${chipTgp(chip,rowVram(row,chip))}W${chip.k?`・冷え方は${chip.kSrc||GPU_CALIB_SRC}で補正`:''})`:`構成表のGPU:${row.name||'未入力'}(製品データがないため一般的なサイズで計算)`;
   const has=b=>chip&&GPU_CARDS.some(x=>x.brand===b&&x.chip===chip.key);
   fillSelect($('g-brand'),'<option value="generic">一般的なカード(メーカー不明)</option>'+GPU_BRANDS.map(b=>`<option value="${esc(b)}">${esc(b)}${chip&&!has(b)?'(このGPUなし)':''}</option>`).join('')+'<option value="custom">カスタム(分かる値だけ入力)</option>',gb);
   let mh='';
@@ -7355,7 +7360,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v66-side';
+const DIAG_VER='sheet-v67-gpu5070';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},
