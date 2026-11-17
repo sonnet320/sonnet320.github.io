@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v70-noisemax",
+  "modelVersion": "sheet-v71-hearing",
   "mode": "2d",
-  "computedAt": "2026-11-17T08:34:25.723Z",
+  "computedAt": "2026-11-17T23:11:25.400Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
@@ -17,7 +17,8 @@
     "gpuFanMode": "curve",
     "noise": {
       "total": 25.7,
-      "example": "深夜の郊外・ささやき声くらい",
+      "near": 31.7,
+      "example": "静かな部屋だと気づく",
       "parts": [
         {
           "k": "case",
@@ -41,7 +42,8 @@
         }
       ],
       "max": 41.1,
-      "maxExample": "図書館・静かな住宅地の昼くらい",
+      "maxNear": 47.1,
+      "maxExample": "普通に聞こえる(テレビやゲームの音で隠れる)",
       "maxParts": [
         {
           "k": "case",

@@ -692,7 +692,7 @@ body.present .row{grid-template-columns:clamp(66px,7.4cqw,100px) minmax(0,1fr) a
           <div class="nzlist" id="nzpc-list"></div>
         </div>
         <div class="nzcol">
-          <b class="subh">騒音の大きさの例</b>
+          <b class="subh">聞こえ方の目安(机の上・約50cm)</b>
           <div class="nzlist" id="nzpc-ex"></div>
           <p class="hint" id="nzpc-note"></p>
         </div>
@@ -5472,8 +5472,13 @@ function renderNoiseNow(){
    Everything is on the makers' basis (free fan, about 1 m, quiet room); a meter at a desk usually reads 5-10 dB more. */
 const NZ_GEN={120:{db:24.6,rpm:1500},140:{db:19.9,rpm:1200}};
 const nzGenAt=(size,N)=>{const r=NZ_GEN[size>=135?140:120];return N>0?r.db+NOISE_K*Math.log10(N/r.rpm):null;};
-const NZ_EX=[[20,'木の葉がふれ合う音・置き時計の秒針'],[30,'深夜の郊外・ささやき声'],[40,'図書館・静かな住宅地の昼'],[50,'静かな事務所'],[60,'普通の会話・静かな乗用車の中']];
-function nzExample(db){if(db==null)return '';let k=0;for(let i=0;i<NZ_EX.length;i++)if(db>=NZ_EX[i][0]-5)k=i;return db<15?'ほとんど聞こえない':NZ_EX[k][1]+'くらい';}
+/* how it sounds (2026-11-18): described by what you notice rather than by a named sound — the estimate is on the makers'
+   basis and likely reads low, so a band of wording fits better than one exact comparison. Read at a desk, about 50 cm:
+   the 1 m estimate + 6 dB (half the distance; a room's reflections make the real step 3-5 dB). */
+const NZ_NEAR=6;
+const NZ_HEAR=[[0,'〜30','耳を近づけないと分からない'],[30,'30〜40','静かな部屋だと気づく'],[40,'40〜50','普通に聞こえる(テレビやゲームの音で隠れる)'],[50,'50〜60','会話の邪魔になり始める'],[60,'60〜','大きな声で話す必要がある']];
+const nzHearIdx=db=>db==null?-1:NZ_HEAR.reduce((k,e,i)=>db+NZ_NEAR>=e[0]?i:k,0);
+function nzExample(db){return db==null?'':NZ_HEAR[nzHearIdx(db)][2];}
 /* full=true: every fan at its maximum (case and radiator fans 100%, CPU cooler fans at their maximum, GPU fans at 100%,
    the PSU fan at the top of its range) — the loudest the PC can get, which differs a lot between PCs */
 function pcNoise(full){
@@ -5509,17 +5514,18 @@ function renderPcNoise(){
   if(!$('nzpc-total'))return;
   let n,mx;try{n=pcNoise();mx=pcNoise(true);}catch(e){return;}   // before the first layout (G, P not ready yet)
   const loud=n.parts.filter(q=>q.db!=null).sort((a,b)=>b.db-a.db)[0];
-  const t=`合計 <b>${n.total==null?'—':nzFmt(n.total)+' dBA'}</b>(推定)${n.total!=null?`:${esc(nzExample(n.total))}`:''}`
-    +(mx.total!=null?`<br>全部のファンが最大回転のとき <b>${nzFmt(mx.total)} dBA</b>:${esc(nzExample(mx.total))}`:'')
+  const at=d=>`<b>${nzFmt(d)} dBA</b>(机の上・約50cmで約${Math.round(d+NZ_NEAR)} dBA):${esc(nzExample(d))}`;
+  const t=`いま ${n.total==null?'—':at(n.total)}`
+    +(mx.total!=null?`<br>全部のファンが最大回転 ${at(mx.total)}`:'')
     +(loud&&n.parts.filter(q=>q.db!=null).length>1?`<br>いま一番大きいのは${esc(loud.t)}です。`:'')+(n.unknown?`<br>大きさが120・140mm以外のファン ${n.unknown}台は入っていません。`:'');
   if($('nzpc-total').innerHTML!==t)$('nzpc-total').innerHTML=t;
   const l='<div class="nzrow"><i>部分</i><i>いま</i><i>最大回転</i></div>'+n.parts.map(q=>{const m=mx.parts.find(z=>z.k===q.k);
     return `<div class="nzrow nz3"><span>${esc(q.t)}<small>${esc(q.d)}</small></span><b class="num">${q.db==null?'—':nzFmt(q.db)+' dBA'}</b><b class="num nzmax">${m&&m.db!=null?nzFmt(m.db)+' dBA':'—'}</b></div>`;}).join('');
   if($('nzpc-list').innerHTML!==l)$('nzpc-list').innerHTML=l;
-  const cur=n.total==null?-1:NZ_EX.reduce((k,e,i)=>n.total>=e[0]-5?i:k,0);
-  const ex=NZ_EX.map((e,i)=>`<div class="nzrow${i===cur?' cur':''}"><span>${esc(e[1])}</span><i></i><b class="num">${e[0]} dB</b></div>`).join('');
+  const cur=nzHearIdx(n.total), top=nzHearIdx(mx.total);
+  const ex=NZ_HEAR.map((e,i)=>`<div class="nzrow${i===cur?' cur':''}"><span>${esc(e[2])}</span><i>${i===cur&&i===top?'いま・最大回転':i===cur?'いま':i===top?'最大回転':''}</i><b class="num">${e[1]} dB</b></div>`).join('');
   if($('nzpc-ex').innerHTML!==ex)$('nzpc-ex').innerHTML=ex;
-  $('nzpc-note').textContent='メーカー公称と同じ基準(ファン単体・約1m・静かな部屋)の目安です。机の上で測ると5〜10dBほど大きく出ることが多く、ケースのパネルやファンの共振でも変わります。データのないファンは、シートに登録したファンの公称値の中央(120mm 1,500rpmで24.6dBA、140mm 1,200rpmで19.9dBA)から推定しています。例の音の大きさは一般的な目安です。';
+  $('nzpc-note').textContent='数値はメーカー公称と同じ基準(ファン単体・約1m・静かな部屋)の推定です。机の上(約50cm)では、距離が半分になる分を+6dBとして聞こえ方を選んでいます(部屋の反射で実際は+3〜5dBのことも)。メーカー公称は小さめに書かれていることが多く、実際に測るともう少し大きく出ることがあります。データのないファンは、シートに登録したファンの公称値の中央(120mm 1,500rpmで24.6dBA、140mm 1,200rpmで19.9dBA)から推定しています。';
 }
 /* the same-noise table: every catalog fan of the chosen size at the target noise */
 const NZ_TOP=8;let nzAll=false;   // rows shown before 「すべて表示」
@@ -7479,7 +7485,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v70-noisemax';
+const DIAG_VER='sheet-v71-hearing';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},
@@ -7577,7 +7583,7 @@ function diagEval(m,fq,coolQ,gpuQ,is3d){
   lastVals=vals;showEvaluation();
   const cf=x=>r1(x*Sim.CFM,1);
   return {score:ev.score,grade:ev.g?GRADE[ev.g].t:null,cap:ev.cap?ev.cap.by.join('・'):null,
-    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',noise:(()=>{const n=pcNoise(),m=pcNoise(true);return n.total==null?null:{total:r1(n.total),example:nzExample(n.total),parts:n.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d})),max:m.total==null?null:r1(m.total),maxExample:m.total==null?null:nzExample(m.total),maxParts:m.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d}))};})(),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
+    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',noise:(()=>{const n=pcNoise(),m=pcNoise(true);return n.total==null?null:{total:r1(n.total),near:r1(n.total+NZ_NEAR),example:nzExample(n.total),parts:n.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d})),max:m.total==null?null:r1(m.total),maxNear:m.total==null?null:r1(m.total+NZ_NEAR),maxExample:m.total==null?null:nzExample(m.total),maxParts:m.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d}))};})(),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
     rows:Object.fromEntries(ev.rows.filter(r=>r.w>0).map(r=>[r.ax.id,r.r?GRADE[r.r.g].t:null])),
     air:{tIn:r1(m.tIn,2),cpuT:r1(m.cpuT,2),gpuT:r1(m.gpuT,2),vrmT:r1(m.vrmT,2),vrmV:r1(m.vrmV,3),exT:r1(m.exT,2),pIn:r1(m.pIn,3),stag:r1(m.stag,3),
       fanIn:cf(m.fanIn),fanOut:cf(m.fanOut),leakIn:cf(m.leakIn),leakOut:cf(m.leakOut)},
