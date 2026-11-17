@@ -5194,7 +5194,8 @@ function syncGpuFan(){
   $('gfan-rpmbox').hidden=!(man&&mx);
   if(man&&mx){const el=$('gfan-rpm');el.max=mx;if(document.activeElement!==el)el.value=rp(v);}
   $('gfan-note').textContent=man?(v?'手動の回転数で回ります。':'ファンが止まっています。GPUの冷却は、ケース内の風がヒートシンクを通る分だけになります。')
-    :'自動:GPUの温度に合わせて回ります(55°Cで30%、1°C上がるごとに+2%、90°Cで100%。全カード共通の目安で、実際のカードの設定とは違います)。GPU使用率が15%未満では止まります。';
+    :`自動:GPUの温度に合わせて回ります(55°Cで30%、1°C上がるごとに+2%、90°Cで100%。全カード共通の目安で、実際のカードの設定とは違います)。GPU使用率が15%未満では止まります。`
+     +(curGpu&&curGpu.mrpm?`このカードの最大回転数は約${curGpu.mrpm}rpmです。`:`最大回転数が分からないカードは、約${GPU_MRPM_TYP}rpm(最大回転数が分かっている33枚の中央)として回転数を出しています。`);
 }
 $('gfan-mode').onchange=e=>{const man=e.target.value==='manual';if(man&&state.gpuFan.mode!=='manual')state.gpuFan.pct=Math.round((gpuAutoR!=null?gpuAutoR:gpuFanAuto(state.gpuLoad/100))*20)*5;state.gpuFan.mode=man?'manual':'auto';syncGpuFan();dirty();};
 $('gfan').oninput=e=>{state.gpuFan.pct=+e.target.value;syncGpuFan();dirty();};
@@ -6962,8 +6963,8 @@ function updateMetrics(){
   const tj=cpuTjmax();
   $('m-ctemp').textContent=tc==null?'—':tc>tj?`${tj}°C・制限中`:t0(tc)+(tc>=tj-5?'・上限付近':'');
   $('m-gtemp').textContent=tg==null?'—':tg>GPU_TLIMIT?`${GPU_TLIMIT}°C・制限中`:t0(tg)+(tg>=GPU_TLIMIT-5?'・上限付近':'');
-  {const gs=gpuFanShown();$('m-gpu').textContent=(tg==null?'':P.gfr<0.02?'ファン停止・':`ファン${gs.pct}%${gs.rpm?`(約${gs.rpm.toLocaleString()}rpm)`:''}・`)+'吸気 '+deg(gpuIntake());
-   if(state.gpuFan.mode!=='manual'&&tg!=null){const t=gs.pct?gs.pct+'%'+(gs.rpm?`(約${gs.rpm}rpm)`:''):'停止';if($('gfanv').textContent!==t){$('gfanv').textContent=t;$('gfan').value=gs.pct;}}}
+  {const gs=gpuFanShown();$('m-gpu').textContent=(tg==null?'':P.gfr<0.02?'ファン停止・':`ファン約${gs.rpm.toLocaleString()}rpm${gs.est?'(目安)':''}・`)+'吸気 '+deg(gpuIntake());
+   if(state.gpuFan.mode!=='manual'&&tg!=null){const t=gs.pct?`${gs.pct}%(約${gs.rpm}rpm${gs.est?'・目安':''})`:'停止';if($('gfanv').textContent!==t){$('gfanv').textContent=t;$('gfan').value=gs.pct;}}}
   $('m-vtemp').textContent=t0(tv);$('m-vair').textContent=M.vrmT==null?'—':'周りの空気 '+deg(M.vrmT);
   $('m-ex').textContent=deg(M.exT);$('m-exq').textContent=`排気量 ${cf(M.fanOut+M.leakOut)} CFM`;
   const gw=[];
@@ -7043,8 +7044,12 @@ function gpuTemp(){
   gpuAutoR=r;
   return gpuTempAt(r,op,is3d);
 }
-/* the GPU fan speed to show: the curve's speed on automatic, the set speed on manual */
-function gpuFanShown(){const r=gpuAutoR!=null?gpuAutoR:P.gfr, mx=curGpu&&curGpu.mrpm;return {pct:Math.round(r*100),rpm:mx&&r>0?Math.round(mx*r/10)*10:null};}
+/* the GPU fan speed to show: the curve's speed on automatic, the set speed on manual.
+   rpm: the card's own maximum where a review gave it; otherwise 3,400 rpm, the median maximum of the 33 cards with a
+   published maximum (2,875-4,350 rpm; private notes gpu_fan_maxrpm_20261013.md). At full load cards measured 1,550-2,120 rpm
+   (median ~1,750), close to 55% of 3,400, the speed the formula is calibrated around. est: the rpm is that estimate. */
+const GPU_MRPM_TYP=3400;
+function gpuFanShown(){const r=gpuAutoR!=null?gpuAutoR:P.gfr, own=curGpu&&curGpu.mrpm, mx=own||GPU_MRPM_TYP;return {pct:Math.round(r*100),rpm:r>0?Math.round(mx*r/10)*10:null,est:!own};}
 /* Motherboard VRM: the heatsink size comes from the chipset (VRM_CHIPSETS) unless the viewer chose one (state.vrmHs) */
 function mbChip(){
   const r=state.specs.find(s=>catOf(s.label)==='mb'), t=r?r.name:'';
@@ -7493,7 +7498,7 @@ function diagEval(m,fq,coolQ,gpuQ,is3d){
   lastVals=vals;showEvaluation();
   const cf=x=>r1(x*Sim.CFM,1);
   return {score:ev.score,grade:ev.g?GRADE[ev.g].t:null,cap:ev.cap?ev.cap.by.join('・'):null,
-    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
+    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
     rows:Object.fromEntries(ev.rows.filter(r=>r.w>0).map(r=>[r.ax.id,r.r?GRADE[r.r.g].t:null])),
     air:{tIn:r1(m.tIn,2),cpuT:r1(m.cpuT,2),gpuT:r1(m.gpuT,2),vrmT:r1(m.vrmT,2),vrmV:r1(m.vrmV,3),exT:r1(m.exT,2),pIn:r1(m.pIn,3),stag:r1(m.stag,3),
       fanIn:cf(m.fanIn),fanOut:cf(m.fanOut),leakIn:cf(m.leakIn),leakOut:cf(m.leakOut)},

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "modelVersion": "sheet-v68-gpucurve",
   "mode": "2d",
-  "computedAt": "2026-11-17T03:06:08.061Z",
+  "computedAt": "2026-11-17T03:46:07.089Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
@@ -12,7 +12,8 @@
     "cpu": 75.3,
     "gpu": 74.9,
     "gpuFan": 70,
-    "gpuFanRpm": null,
+    "gpuFanRpm": 2370,
+    "gpuFanRpmEst": true,
     "gpuFanMode": "curve",
     "vrm": 68.9,
     "intake": 8.39,
