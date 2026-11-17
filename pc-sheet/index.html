@@ -5188,15 +5188,15 @@ function syncCpuLoad(typing){
 $('gpuload').oninput=e=>{state.gpuLoad=+e.target.value;$('gpuloadv').textContent=state.gpuLoad+'%';syncGpuFan();renderPartsUI();dirty();};
 /* GPU fan speed: automatic shows the speed the card would pick; switching to manual starts from it */
 function syncGpuFan(){
-  const man=state.gpuFan.mode==='manual', a=Math.round(gpuFanAuto(state.gpuLoad/100)*100), v=man?state.gpuFan.pct:a;
+  const man=state.gpuFan.mode==='manual', a=gpuAutoR!=null?Math.round(gpuAutoR*100):Math.round(gpuFanAuto(state.gpuLoad/100)*100), v=man?state.gpuFan.pct:a;
   const mx=curGpu&&curGpu.mrpm, rp=p=>Math.round(mx*p/100/10)*10;
   $('gfan-mode').value=man?'manual':'auto';$('gfan').disabled=!man;$('gfan').value=v;$('gfanv').textContent=v?v+'%'+(mx?`(約${rp(v)}rpm)`:''):'停止';
   $('gfan-rpmbox').hidden=!(man&&mx);
   if(man&&mx){const el=$('gfan-rpm');el.max=mx;if(document.activeElement!==el)el.value=rp(v);}
   $('gfan-note').textContent=man?(v?'手動の回転数で回ります。':'ファンが止まっています。GPUの冷却は、ケース内の風がヒートシンクを通る分だけになります。')
-    :'自動:GPU使用率が15%未満ではファンが止まり、それ以上は使用率に合わせて回ります。';
+    :'自動:GPUの温度に合わせて回ります(55°Cで30%、1°C上がるごとに+2%、90°Cで100%。全カード共通の目安で、実際のカードの設定とは違います)。GPU使用率が15%未満では止まります。';
 }
-$('gfan-mode').onchange=e=>{const man=e.target.value==='manual';if(man&&state.gpuFan.mode!=='manual')state.gpuFan.pct=Math.round(gpuFanAuto(state.gpuLoad/100)*20)*5;state.gpuFan.mode=man?'manual':'auto';syncGpuFan();dirty();};
+$('gfan-mode').onchange=e=>{const man=e.target.value==='manual';if(man&&state.gpuFan.mode!=='manual')state.gpuFan.pct=Math.round((gpuAutoR!=null?gpuAutoR:gpuFanAuto(state.gpuLoad/100))*20)*5;state.gpuFan.mode=man?'manual':'auto';syncGpuFan();dirty();};
 $('gfan').oninput=e=>{state.gpuFan.pct=+e.target.value;syncGpuFan();dirty();};
 $('gfan-rpm').onchange=e=>{const mx=curGpu&&curGpu.mrpm, v=parseFloat(e.target.value);if(!mx||!isFinite(v))return;state.gpuFan.pct=clamp(Math.round(v/mx*100),0,100);e.target.blur();syncGpuFan();dirty();};
 $('g-rpm').onchange=e=>{
@@ -6955,19 +6955,21 @@ function updateMetrics(){
   $('m-fan').textContent=`${cf(M.fanIn)} / ${cf(M.fanOut)} CFM`;
   $('m-leak').textContent=`すき間 入${cf(M.leakIn)} 出${cf(M.leakOut)}`;
   $('m-tin').textContent=deg(M.tIn);$('m-tinr').textContent=`室温+${M.tIn.toFixed(1)}°C`;
-  $('m-cpu').textContent='吸気 '+deg(isOpen()?OPEN_CPU_RISE:M.cpuT);$('m-gpu').textContent='吸気 '+deg(gpuIntake());
+  $('m-cpu').textContent='吸気 '+deg(isOpen()?OPEN_CPU_RISE:M.cpuT);/* GPU fan shown after gpuTemp() below */
   if(G.cfans.length)ema(M,'coolQ',d3&&d3.coolQ!=null?d3.coolQ:Sim.flowThrough({x:G.cfans[0].x,y:G.cfans[0].y,a:0,L:G.cfans[0].L})*Sim.CFM,.2);
   ema(M,'gpuQ',d3?d3.gpuQ:G.gfans.reduce((s,f)=>s+Math.max(0,Sim.flowThrough(f))*Sim.CFM,0),.2);
   const tc=cpuTemp(), tg=gpuTemp(), tv=vrmTemp(), tdp=state.coolerTdp, t0=v=>v==null?'—':`${v.toFixed(0)}°C`;
   const tj=cpuTjmax();
   $('m-ctemp').textContent=tc==null?'—':tc>tj?`${tj}°C・制限中`:t0(tc)+(tc>=tj-5?'・上限付近':'');
   $('m-gtemp').textContent=tg==null?'—':tg>GPU_TLIMIT?`${GPU_TLIMIT}°C・制限中`:t0(tg)+(tg>=GPU_TLIMIT-5?'・上限付近':'');
+  {const gs=gpuFanShown();$('m-gpu').textContent=(tg==null?'':P.gfr<0.02?'ファン停止・':`ファン${gs.pct}%${gs.rpm?`(約${gs.rpm.toLocaleString()}rpm)`:''}・`)+'吸気 '+deg(gpuIntake());
+   if(state.gpuFan.mode!=='manual'&&tg!=null){const t=gs.pct?gs.pct+'%'+(gs.rpm?`(約${gs.rpm}rpm)`:''):'停止';if($('gfanv').textContent!==t){$('gfanv').textContent=t;$('gfan').value=gs.pct;}}}
   $('m-vtemp').textContent=t0(tv);$('m-vair').textContent=M.vrmT==null?'—':'周りの空気 '+deg(M.vrmT);
   $('m-ex').textContent=deg(M.exT);$('m-exq').textContent=`排気量 ${cf(M.fanOut+M.leakOut)} CFM`;
   const gw=[];
   if(clashList.length)gw.push(`グラボが${clashList.join('・')}と重なっています。`);
-  if(tg!=null&&tg>GPU_TLIMIT)gw.push(`GPU温度が約${GPU_TLIMIT}°Cを超える計算です。実機ではクロックと消費電力が下がって温度が抑えられます。`+(P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
-  else if(tg!=null&&tg>=85)gw.push('GPU温度が高めです。'+(P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
+  if(tg!=null&&tg>GPU_TLIMIT)gw.push(`GPU温度が約${GPU_TLIMIT}°Cを超える計算です。実機ではクロックと消費電力が下がって温度が抑えられます。`+(state.gpuFan.mode==='manual'&&P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
+  else if(tg!=null&&tg>=85)gw.push('GPU温度が高めです。'+(state.gpuFan.mode==='manual'&&P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
   const gwt=gw.join(' ');if($('gpuwarn').textContent!==gwt)$('gpuwarn').textContent=gwt;
   const warn=[];
   if(P.cpu>tdp*0.95)warn.push(`CPUの発熱 約${Math.round(P.cpu)}W がクーラーの冷却性能の目安(約${tdp}W相当)に近いか超えています。`);
@@ -7010,17 +7012,39 @@ function gpuIntake(){
   if(M.gpuT==null)return null;
   return gpuIs3d()||M.exT==null?M.gpuT:M.gpuT+GPU_2D_MIX*Math.max(0,M.exT-M.gpuT);
 }
-function gpuTemp(){
-  const op=isOpen();
-  if(!curGpu||(M.gpuT==null&&!op))return null;
-  const r=P.gfr, is3d=!op&&gpuIs3d();let fac;
-  if(r<0.02)fac=3.5;
-  else{
-    const ref=(state.gpuCooler==='blower'?15:G.gfans.reduce((s,f)=>s+34*Math.pow(f.L/95,2),0))*r*(is3d?Math.pow(r/GPU_REF3D_AT,GPU_REF3D_EXP):1), q=op?ref:is3d?(M.gpuQ||0):Math.min(M.gpuQ||0,ref);
-    fac=Math.min(3.5,(q>1?clamp(Math.pow(ref/q,0.4),0.85,2):2)*Math.pow(P.gRef/r,0.4));   // air reaching the fans × speed against the usual curve
-  }
+/* GPU fans on automatic (2026-11-17, sheet-v68-gpucurve): real cards raise their fans with temperature, so a card that
+   runs hot spins faster and settles cooler, and one that runs cool spins slower. One curve for every card (no per-card
+   data): 30% at 55 °C, +2 points per °C, 100% at 90 °C. It is a general shape, not a measurement; against the 14 measured
+   cards (private notes: gpu_vc_fancurve_20261116.md) it brought NVIDIA from 3.4 to 1.9 °C rms (Radeon, whose reported
+   temperature is the edge, 2.7 → 3.8). The air the solver moves through the card stays at the usual-curve speed; the speed
+   the curve picks only enters the temperature formula (air through the fins ∝ speed^0.7 in 2D, ^1.5 in 3D). */
+const GPU_CURVE={t0:55,r0:0.30,slope:0.02};
+const gpuCurve=T=>clamp(GPU_CURVE.r0+GPU_CURVE.slope*(T-GPU_CURVE.t0),GPU_CURVE.r0,1);
+let gpuAutoR=null;   // the speed the curve settled on in the last evaluation (null: manual, stopped or no card)
+const gpuOnCurve=()=>state.gpuFan.mode!=='manual'&&P.gfr>=0.02;
+function gpuTempAt(r,op,is3d){
+  if(r<0.02)return state.room+gpuIntake()+40*Math.pow(P.gpu/curGpu.cap,0.8)*3.5;
+  const rs=Math.max(0.02,P.gfr), gf=state.gpuCooler==='blower'?15:G.gfans.reduce((s,f)=>s+34*Math.pow(f.L/95,2),0);
+  const ref=gf*r*(is3d?Math.pow(r/GPU_REF3D_AT,GPU_REF3D_EXP):1), qm=(M.gpuQ||0)*Math.pow(r/rs,is3d?1.5:0.7);
+  const q=op?ref:is3d?qm:Math.min(qm,ref);
+  const fac=Math.min(3.5,(q>1?clamp(Math.pow(ref/q,0.4),0.85,2):2)*Math.pow(P.gRef/r,0.4));   // air reaching the fans × speed against the usual curve
   return state.room+gpuIntake()+40*Math.pow(P.gpu/curGpu.cap,0.8)*fac;
 }
+function gpuTemp(){
+  const op=isOpen();gpuAutoR=null;
+  if(!curGpu||(M.gpuT==null&&!op))return null;
+  const is3d=!op&&gpuIs3d();
+  if(!gpuOnCurve())return gpuTempAt(P.gfr,op,is3d);
+  // the speed where the curve and the card's temperature meet (both fall as the speed rises: bisection)
+  const g=r=>gpuCurve(gpuTempAt(r,op,is3d))-r;
+  let lo=GPU_CURVE.r0, hi=1, r;
+  if(g(lo)<=0)r=lo;else if(g(hi)>=0)r=hi;
+  else{for(let i=0;i<40;i++){const m=(lo+hi)/2;if(g(m)>0)lo=m;else hi=m;}r=(lo+hi)/2;}
+  gpuAutoR=r;
+  return gpuTempAt(r,op,is3d);
+}
+/* the GPU fan speed to show: the curve's speed on automatic, the set speed on manual */
+function gpuFanShown(){const r=gpuAutoR!=null?gpuAutoR:P.gfr, mx=curGpu&&curGpu.mrpm;return {pct:Math.round(r*100),rpm:mx&&r>0?Math.round(mx*r/10)*10:null};}
 /* Motherboard VRM: the heatsink size comes from the chipset (VRM_CHIPSETS) unless the viewer chose one (state.vrmHs) */
 function mbChip(){
   const r=state.specs.find(s=>catOf(s.label)==='mb'), t=r?r.name:'';
@@ -7371,7 +7395,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v67-gpuslot';
+const DIAG_VER='sheet-v68-gpucurve';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},
@@ -7469,7 +7493,7 @@ function diagEval(m,fq,coolQ,gpuQ,is3d){
   lastVals=vals;showEvaluation();
   const cf=x=>r1(x*Sim.CFM,1);
   return {score:ev.score,grade:ev.g?GRADE[ev.g].t:null,cap:ev.cap?ev.cap.by.join('・'):null,
-    cpu:r1(tc),gpu:r1(tg),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
+    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
     rows:Object.fromEntries(ev.rows.filter(r=>r.w>0).map(r=>[r.ax.id,r.r?GRADE[r.r.g].t:null])),
     air:{tIn:r1(m.tIn,2),cpuT:r1(m.cpuT,2),gpuT:r1(m.gpuT,2),vrmT:r1(m.vrmT,2),vrmV:r1(m.vrmV,3),exT:r1(m.exT,2),pIn:r1(m.pIn,3),stag:r1(m.stag,3),
       fanIn:cf(m.fanIn),fanOut:cf(m.fanOut),leakIn:cf(m.leakIn),leakOut:cf(m.leakOut)},
