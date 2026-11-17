@@ -2088,7 +2088,9 @@ const GPU_CLASSES=[
 function gpuClass(chipKey,cls){
   const def=GPU_CLASSES.find(c=>c.id===cls);if(!def)return null;
   const list=GPU_CARDS.filter(c=>c.chip===chipKey&&def.test(c));if(!list.length)return null;
-  const L=med(list.map(c=>c.L)),H=med(list.map(c=>c.H)),T=med(list.map(c=>c.T)),fans=med(list.map(c=>c.fans));
+  // true median: with an even count the two middle cards are averaged (2026-11-17; it took the larger one before)
+  const md=a=>{const b=a.slice().sort((x,y)=>x-y),n=b.length;return n%2?b[n>>1]:(b[n/2-1]+b[n/2])/2;};
+  const L=md(list.map(c=>c.L)),H=md(list.map(c=>c.H)),T=md(list.map(c=>c.T)),fans=Math.round(md(list.map(c=>c.fans)));
   return {id:cls,brand:'',series:def.name,chip:chipKey,L,H,T,fans,power:0,vc:false,type:fans>=3&&L>=280?'flow':'open',q:1,generic:true,n:list.length};
 }
 /* GPU cooling capacity: the board power the cooler holds at ~40 K above its intake air.
@@ -4683,6 +4685,7 @@ function renderSpecs(){
     n.onchange=()=>{if(cat==='mb')detectBoard(s.name);else if(cat==='case')detectCase(s.name);else if(cat==='cooler')detectCooler(s.name);else if(cat==='gpu')detectGpuCard(s.name);else if(cat==='fan')detectFan(s.name);else if(cat==='fanpos')applyPosText(s);};
     if(cat==='fan'||cat==='fanpos'){n.addEventListener('blur',()=>syncFanRow());d.addEventListener('blur',()=>syncFanRow());}
     if(cat==='fanpos')d.onchange=()=>applyPosText(s);
+    if(cat==='gpu')d.onchange=()=>detectGpuSlots();
     d.oninput=()=>{s.detail=d.value;if(cat==='psu')dirty();else save();};
   });
   fitRows();updatePrices();
@@ -4908,11 +4911,22 @@ function detectCooler(t){
   for(const c of COOLERS){if(!c.brand)continue;for(const m of [normN(c.name),c.alias?normN(c.alias):''])if(m.length>=(m===normN(c.name)?4:3)&&n.includes(m)&&m.length>bl){best=c;bl=m.length;}}
   if(best&&(best.id!==state.coolerModel||state.coolerBrand!==best.brand)){state.coolerBrand=best.brand;state.coolerModel=best.id;applyCooler(false);}
 }
+/* "2スロット厚" / "3スロット占有" in the GPU row (BTO shops write this): with no maker card chosen, it picks the generic type.
+   2.2 slots or less → 2-fan compact, 2.8 or more → large 3-fan (when the catalog has that type for the chip). 2026-11-17 */
+function gpuSlotsHint(r,extra){const m=`${r?r.name||'':''} ${r?r.detail||'':''} ${extra||''}`.match(/(\d(?:\.\d)?)\s*スロット/);return m?+m[1]:null;}
+function detectGpuSlots(extra){
+  if(state.gpuBrand!=='generic')return false;
+  const r=gpuRow(), chip=r?chipOf(r.name):null, sl=gpuSlotsHint(r,extra);if(!chip||sl==null)return false;
+  const want=sl<=2.2?'c2':sl>=2.8?'c3l':'c3', id=gpuClass(chip.key,want)?want:'c3';
+  if(state.gpuModel===id)return false;
+  state.gpuModel=id;applyGpu(false);return true;
+}
 function detectGpuCard(t){
   const chip=chipOf(t);if(!chip)return;
   const n=normN(t);let best=null,bl=0;
   for(const c of GPU_CARDS){if(c.chip!==chip.key)continue;const sr=normN(c.series);if(n.includes(normN(c.brand))&&n.includes(sr)&&sr.length>bl){best=c;bl=sr.length;}}
   if(best&&(state.gpuBrand!==best.brand||state.gpuModel!==best.id)){state.gpuBrand=best.brand;state.gpuModel=best.id;applyGpu(false);}
+  else if(!best)detectGpuSlots(t);
 }
 function selectGpuCard(id){const c=gpuCard(id);if(!c)return;state.gpuBrand=c.brand;state.gpuModel=id;applyGpu(true);}
 /* fan row: shows the case fans (model, count, where they sit) and drives them.
@@ -5691,7 +5705,9 @@ function fmtGpu(v){
   let name=base.replace(/\b\d+\s*GB?\b/ig,'').replace(/\bGDDR\d\w*\b/ig,'').replace(/\bnvidia\b|\bamd\b/ig,'').replace(/搭載|グラフィックス?(カード|ボード)?|ビデオカード/g,'').replace(/\s+/g,' ').trim();
   const chip=chipOf(name);
   if(chip){const a=normN(name).replace(/GEFORCE|RADEON/g,''), b=normN(chip.name).replace(/GEFORCE|RADEON/g,'');if(a===b)name=chip.name;}   // a bare chip is written the catalog way
-  return {name:name||base,detail:vram?`VRAM ${vram}GB`:chip?chip.vram:''};
+  const sl=(tidy(v).match(/(\d(?:\.\d)?)\s*スロット(厚|占有)?/)||[]);   // "※2スロット厚" is kept: it picks the generic card type
+  const vt=vram?`VRAM ${vram}GB`:chip?chip.vram:'';
+  return {name:name||base,detail:sl[1]?[vt,`${sl[1]}スロット${sl[2]||''}`].filter(Boolean).join('・'):vt};
 }
 function fmtMem(v){
   const t=tidy(v);
@@ -7355,7 +7371,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v66-side';
+const DIAG_VER='sheet-v67-gpuslot';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},
