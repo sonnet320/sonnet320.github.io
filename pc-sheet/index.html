@@ -258,6 +258,9 @@ body.present .about{display:none}
 .nztab td small{display:block;color:var(--muted);font-size:11px;line-height:1.4}
 .nztab tr.cur td{background:color-mix(in srgb,var(--accent) 8%,transparent)}
 .nztab .btn{padding:3px 8px;font-size:11.5px}
+.nzpc{display:grid;grid-template-columns:minmax(0,1fr);gap:14px 24px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--stage)}
+@media (min-width:1080px){.nzpc{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.nzrow.cur{font-weight:700;color:var(--ink)}
 .nzmore summary{cursor:pointer;font-size:12.5px;color:var(--muted);width:fit-content}
 .nzmore summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 .nzmore p{margin:6px 0 0}
@@ -679,6 +682,18 @@ body.present .row{grid-template-columns:clamp(66px,7.4cqw,100px) minmax(0,1fr) a
       <h2>ファンの騒音</h2>
       <p class="hint">メーカー公称の騒音(dBA)からの推定です。メーカーごとに測り方が違うため、比べるための目安です。</p>
       <details class="nzmore"><summary>計算のしかた</summary><p class="hint">メーカーが公表している騒音(dBA)と、その回転数をもとにしています。ARCTIC は dBA を公表していないため、Cybenetics の測定(ファン単体・1m・25 dBA になる回転数)を使っています。回転数を下げたときの騒音は「回転数が2倍で約15dB上がる」という近似で計算しています。メーカーごとに測り方(距離・部屋・取り付け)が違い、ケースの中ではフィルターや共振でも変わります。</p></details>
+      <div class="nzpc" id="nz-pc">
+        <div class="nzcol">
+          <b class="subh">PC全体の騒音(推定・目安)</b>
+          <p class="nztotal" id="nzpc-total"></p>
+          <div class="nzlist" id="nzpc-list"></div>
+        </div>
+        <div class="nzcol">
+          <b class="subh">騒音の大きさの例</b>
+          <div class="nzlist" id="nzpc-ex"></div>
+          <p class="hint" id="nzpc-note"></p>
+        </div>
+      </div>
       <div class="nzgrid">
         <div class="nzcol">
           <b class="subh">いまのファンの騒音(推定)</b>
@@ -5125,6 +5140,7 @@ gcSet('gc-fans','fans',Number);gcSet('gc-type','type');gcSet('gc-vc','vc');
 /* ---------- controls ---------- */
 let selId=null, needRebuild=true, running=!window.matchMedia('(prefers-reduced-motion: reduce)').matches, warm=0;
 function dirty(){needRebuild=true;save();renderNoiseNow();renderNoiseTable();}
+let nzPcT=0;
 function selFan(){return state.fans.find(f=>f.id===selId)||null;}
 function syncControls(){
   if(typeof syncOpenFrame==='function'&&$('openframe'))syncOpenFrame();
@@ -5435,13 +5451,67 @@ function renderNoiseNow(){
     if(x.db!=null){ls.push(x.db);if(x.le)le=true;}else if(x.below)below++;else if(!x.off)miss++;
   }
   const t=ls.length?sumDb(ls):null;
+  renderPcNoise();
   $('nz-total').innerHTML=!state.fans.length?'ファンがありません。':
     (t!=null?`ケースファン・ラジエーターのファン ${ls.length}台の合計 <b>${le?'≤':''}${nzFmt(t)} dBA</b>(推定)`:'騒音を推定できるファンがありません。')
-    +(miss?`<br>騒音のデータがないファン ${miss}台は合計に入っていません。`:'')+(below?`<br>回転数が低すぎて推定できないファン ${below}台は合計に入っていません。`:'')
-    +'<br>CPUクーラー・グラボ・電源のファンとポンプの音は含みません。';
+    +(miss?`<br>騒音のデータがないファン ${miss}台は、この合計には入っていません(上の「PC全体の騒音」では一般的な値で推定しています)。`:'')+(below?`<br>回転数が低すぎて推定できないファン ${below}台は合計に入っていません。`:'')
+    +'<br>CPUクーラー・グラボ・電源のファンとポンプを含めた全体は、上の「PC全体の騒音」を見てください。';
   $('nz-list').innerHTML=[...groups.values()].map(g=>{
     const v=g.x.db!=null?`${g.x.le?'≤':''}${nzFmt(g.x.db)} dBA`:g.x.off?'停止':g.x.below?'推定の範囲外':'データなし';
     return `<div class="nzrow"><span>${esc(g.name)} ×${g.n}</span><i>${g.rpm}%・約${Math.round(g.max*g.rpm/100)}rpm</i><b class="num">${v}</b></div>`;}).join('');
+}
+/* whole PC (2026-11-17): case fans, CPU cooler fans, GPU fans, pump and PSU, added as uncorrelated sources.
+   Fans with a maker dBA use it (FAN_NOISE). Fans without one (the sheet's generic and case-bundled fans, CPU cooler fans,
+   GPU fans) use the median of the catalog's maker figures, read at the same rpm with the same 50·log10(rpm) rule:
+   120 mm 24.6 dBA at 1,500 rpm (17 fans), 140 mm 19.9 dBA at 1,200 rpm (6 fans). GPU fans: the 120 mm figure with a
+   50·log10(diameter/120) term (tip speed), at the rpm the fan curve settled on. CPU cooler fans run 30% + 60% × CPU load of
+   1,800 rpm (120 mm) / 1,500 rpm (140 mm), like the solver. Pump 20 dBA, PSU fan off below 30% load and 18-25 dBA above.
+   Everything is on the makers' basis (free fan, about 1 m, quiet room); a meter at a desk usually reads 5-10 dB more. */
+const NZ_GEN={120:{db:24.6,rpm:1500},140:{db:19.9,rpm:1200}};
+const nzGenAt=(size,N)=>{const r=NZ_GEN[size>=135?140:120];return N>0?r.db+NOISE_K*Math.log10(N/r.rpm):null;};
+const NZ_EX=[[20,'木の葉がふれ合う音・置き時計の秒針'],[30,'深夜の郊外・ささやき声'],[40,'図書館・静かな住宅地の昼'],[50,'静かな事務所'],[60,'普通の会話・静かな乗用車の中']];
+function nzExample(db){if(db==null)return '';let k=0;for(let i=0;i<NZ_EX.length;i++)if(db>=NZ_EX[i][0]-5)k=i;return db<15?'ほとんど聞こえない':NZ_EX[k][1]+'くらい';}
+function pcNoise(){
+  const parts=[];let unknown=0;
+  // case fans and radiator fans
+  const cf=[];for(const f of state.fans){
+    const sp=fanSpec(f), N=sp.rpm*f.rpm/100, x=fanNoiseNow(f);
+    if(x.db!=null)cf.push(x.db);else if(x.off||x.below||!(N>0))continue;
+    else if(sp.size===120||sp.size===140){const g=nzGenAt(sp.size,N);if(g!=null)cf.push(g);}else unknown++;
+  }
+  if(cf.length)parts.push({k:'case',t:'ケースファン'+(state.fans.some(f=>f.auto==='rad')?'・ラジエーター':''),db:sumDb(cf),d:`${cf.length}台`});
+  // CPU cooler fans (an all-in-one's fans are among the case fans) and the pump
+  const aio=curCooler&&curCooler.type==='aio';
+  if(curCooler&&!aio&&G.cfans.length){
+    const sz=state.cFanSize>=135?140:120, mx=sz===140?1500:1800, N=mx*(0.3+0.6*P.Lc), one=nzGenAt(sz,N);
+    if(one!=null)parts.push({k:'cpu',t:'CPUクーラーのファン',db:one+10*Math.log10(G.cfans.length),d:`${G.cfans.length}基・約${Math.round(N/10)*10}rpm`});
+  }
+  if(aio)parts.push({k:'pump',t:'簡易水冷のポンプ',db:20,d:'一般的な値'});
+  // GPU fans at the speed the fan curve (or the manual setting) gives
+  if(curGpu&&P.gfr>=0.02&&G.gfans.length){
+    const gs=gpuFanShown(), N=gs.rpm;
+    if(N>0){const ls=G.gfans.map(f=>NZ_GEN[120].db+NOISE_K*Math.log10(N/NZ_GEN[120].rpm)+50*Math.log10(Math.max(40,f.L)/120));
+      parts.push({k:'gpu',t:'グラボのファン',db:sumDb(ls),d:`${G.gfans.length}基・約${N.toLocaleString()}rpm${gs.est?'(目安)':''}`});}
+  }
+  // PSU: off at light load (most units), then a little with load
+  const x=P.out/Math.max(1,P.psuW);
+  parts.push(x<0.3?{k:'psu',t:'電源のファン',db:null,d:`停止(負荷 約${Math.round(x*100)}%)`}:{k:'psu',t:'電源のファン',db:Math.min(25,18+20*(x-0.3)),d:`負荷 約${Math.round(x*100)}%`});
+  const ls=parts.filter(q=>q.db!=null).map(q=>q.db);
+  return {parts,total:ls.length?sumDb(ls):null,unknown};
+}
+function renderPcNoise(){
+  if(!$('nzpc-total'))return;
+  let n;try{n=pcNoise();}catch(e){return;}   // before the first layout (G, P not ready yet)
+  const loud=n.parts.filter(q=>q.db!=null).sort((a,b)=>b.db-a.db)[0];
+  const t=`合計 <b>${n.total==null?'—':nzFmt(n.total)+' dBA'}</b>(推定)${n.total!=null?`:${esc(nzExample(n.total))}`:''}`
+    +(loud&&n.parts.filter(q=>q.db!=null).length>1?`<br>一番大きいのは${esc(loud.t)}です。`:'')+(n.unknown?`<br>大きさが120・140mm以外のファン ${n.unknown}台は入っていません。`:'');
+  if($('nzpc-total').innerHTML!==t)$('nzpc-total').innerHTML=t;
+  const l=n.parts.map(q=>`<div class="nzrow"><span>${esc(q.t)}</span><i>${esc(q.d)}</i><b class="num">${q.db==null?'—':nzFmt(q.db)+' dBA'}</b></div>`).join('');
+  if($('nzpc-list').innerHTML!==l)$('nzpc-list').innerHTML=l;
+  const cur=n.total==null?-1:NZ_EX.reduce((k,e,i)=>n.total>=e[0]-5?i:k,0);
+  const ex=NZ_EX.map((e,i)=>`<div class="nzrow${i===cur?' cur':''}"><span>${esc(e[1])}</span><i></i><b class="num">${e[0]} dB</b></div>`).join('');
+  if($('nzpc-ex').innerHTML!==ex)$('nzpc-ex').innerHTML=ex;
+  $('nzpc-note').textContent='メーカー公称と同じ基準(ファン単体・約1m・静かな部屋)の目安です。机の上で測ると5〜10dBほど大きく出ることが多く、ケースのパネルやファンの共振でも変わります。データのないファンは、シートに登録したファンの公称値の中央(120mm 1,500rpmで24.6dBA、140mm 1,200rpmで19.9dBA)から推定しています。例の音の大きさは一般的な目安です。';
 }
 /* the same-noise table: every catalog fan of the chosen size at the target noise */
 const NZ_TOP=8;let nzAll=false;   // rows shown before 「すべて表示」
@@ -6972,6 +7042,7 @@ function updateMetrics(){
   if(tg!=null&&tg>GPU_TLIMIT)gw.push(`GPU温度が約${GPU_TLIMIT}°Cを超える計算です。実機ではクロックと消費電力が下がって温度が抑えられます。`+(state.gpuFan.mode==='manual'&&P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
   else if(tg!=null&&tg>=85)gw.push('GPU温度が高めです。'+(state.gpuFan.mode==='manual'&&P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
   const gwt=gw.join(' ');if($('gpuwarn').textContent!==gwt)$('gpuwarn').textContent=gwt;
+  {const nw=performance.now();if(nw-nzPcT>500){nzPcT=nw;renderPcNoise();}}
   const warn=[];
   if(P.cpu>tdp*0.95)warn.push(`CPUの発熱 約${Math.round(P.cpu)}W がクーラーの冷却性能の目安(約${tdp}W相当)に近いか超えています。`);
   if(tc!=null&&tc>tj)warn.push(`CPU温度が上限の${tj}°Cに達します。実機ではクロックと消費電力が下がって温度が抑えられます。`);
@@ -7400,7 +7471,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v68-gpucurve';
+const DIAG_VER='sheet-v69-noise';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},
@@ -7498,7 +7569,7 @@ function diagEval(m,fq,coolQ,gpuQ,is3d){
   lastVals=vals;showEvaluation();
   const cf=x=>r1(x*Sim.CFM,1);
   return {score:ev.score,grade:ev.g?GRADE[ev.g].t:null,cap:ev.cap?ev.cap.by.join('・'):null,
-    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
+    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',noise:(()=>{const n=pcNoise();return n.total==null?null:{total:r1(n.total),example:nzExample(n.total),parts:n.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d}))};})(),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
     rows:Object.fromEntries(ev.rows.filter(r=>r.w>0).map(r=>[r.ax.id,r.r?GRADE[r.r.g].t:null])),
     air:{tIn:r1(m.tIn,2),cpuT:r1(m.cpuT,2),gpuT:r1(m.gpuT,2),vrmT:r1(m.vrmT,2),vrmV:r1(m.vrmV,3),exT:r1(m.exT,2),pIn:r1(m.pIn,3),stag:r1(m.stag,3),
       fanIn:cf(m.fanIn),fanOut:cf(m.fanOut),leakIn:cf(m.leakIn),leakOut:cf(m.leakOut)},

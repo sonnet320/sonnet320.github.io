@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v68-gpucurve",
+  "modelVersion": "sheet-v69-noise",
   "mode": "2d",
-  "computedAt": "2026-11-17T03:46:07.089Z",
+  "computedAt": "2026-11-17T03:56:43.569Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
@@ -15,6 +15,32 @@
     "gpuFanRpm": 2370,
     "gpuFanRpmEst": true,
     "gpuFanMode": "curve",
+    "noise": {
+      "total": 33.4,
+      "example": "深夜の郊外・ささやき声くらい",
+      "parts": [
+        {
+          "k": "case",
+          "db": 14.2,
+          "d": "4台"
+        },
+        {
+          "k": "cpu",
+          "db": 17.8,
+          "d": "2基・約960rpm"
+        },
+        {
+          "k": "gpu",
+          "db": 32.9,
+          "d": "3基・約2,370rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 21.8,
+          "d": "負荷 約49%"
+        }
+      ]
+    },
     "vrm": 68.9,
     "intake": 8.39,
     "stag": 2,
