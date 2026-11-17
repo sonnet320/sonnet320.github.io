@@ -261,6 +261,9 @@ body.present .about{display:none}
 .nzpc{display:grid;grid-template-columns:minmax(0,1fr);gap:14px 24px;align-items:start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--stage)}
 @media (min-width:1080px){.nzpc{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 .nzrow.cur{font-weight:700;color:var(--ink)}
+.nzrow.nz3 span{display:flex;flex-direction:column;min-width:0}
+.nzrow.nz3 small{color:var(--muted);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nzrow .nzmax{color:var(--muted)}
 .nzmore summary{cursor:pointer;font-size:12.5px;color:var(--muted);width:fit-content}
 .nzmore summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 .nzmore p{margin:6px 0 0}
@@ -5471,11 +5474,13 @@ const NZ_GEN={120:{db:24.6,rpm:1500},140:{db:19.9,rpm:1200}};
 const nzGenAt=(size,N)=>{const r=NZ_GEN[size>=135?140:120];return N>0?r.db+NOISE_K*Math.log10(N/r.rpm):null;};
 const NZ_EX=[[20,'木の葉がふれ合う音・置き時計の秒針'],[30,'深夜の郊外・ささやき声'],[40,'図書館・静かな住宅地の昼'],[50,'静かな事務所'],[60,'普通の会話・静かな乗用車の中']];
 function nzExample(db){if(db==null)return '';let k=0;for(let i=0;i<NZ_EX.length;i++)if(db>=NZ_EX[i][0]-5)k=i;return db<15?'ほとんど聞こえない':NZ_EX[k][1]+'くらい';}
-function pcNoise(){
+/* full=true: every fan at its maximum (case and radiator fans 100%, CPU cooler fans at their maximum, GPU fans at 100%,
+   the PSU fan at the top of its range) — the loudest the PC can get, which differs a lot between PCs */
+function pcNoise(full){
   const parts=[];let unknown=0;
   // case fans and radiator fans
   const cf=[];for(const f of state.fans){
-    const sp=fanSpec(f), N=sp.rpm*f.rpm/100, x=fanNoiseNow(f);
+    const sp=fanSpec(f), N=sp.rpm*(full?1:f.rpm/100), x=full?(()=>{const n=fanNoiseRef(f);return n.db!=null?Object.assign({n},noiseAt(n,N,sp.rpm)):{why:n.why};})():fanNoiseNow(f);
     if(x.db!=null)cf.push(x.db);else if(x.off||x.below||!(N>0))continue;
     else if(sp.size===120||sp.size===140){const g=nzGenAt(sp.size,N);if(g!=null)cf.push(g);}else unknown++;
   }
@@ -5483,30 +5488,33 @@ function pcNoise(){
   // CPU cooler fans (an all-in-one's fans are among the case fans) and the pump
   const aio=curCooler&&curCooler.type==='aio';
   if(curCooler&&!aio&&G.cfans.length){
-    const sz=state.cFanSize>=135?140:120, mx=sz===140?1500:1800, N=mx*(0.3+0.6*P.Lc), one=nzGenAt(sz,N);
+    const sz=state.cFanSize>=135?140:120, mx=sz===140?1500:1800, N=mx*(full?1:0.3+0.6*P.Lc), one=nzGenAt(sz,N);
     if(one!=null)parts.push({k:'cpu',t:'CPUクーラーのファン',db:one+10*Math.log10(G.cfans.length),d:`${G.cfans.length}基・約${Math.round(N/10)*10}rpm`});
   }
   if(aio)parts.push({k:'pump',t:'簡易水冷のポンプ',db:20,d:'一般的な値'});
   // GPU fans at the speed the fan curve (or the manual setting) gives
-  if(curGpu&&P.gfr>=0.02&&G.gfans.length){
-    const gs=gpuFanShown(), N=gs.rpm;
+  if(curGpu&&(full||P.gfr>=0.02)&&G.gfans.length){
+    const gs=gpuFanShown(), N=full?Math.round((curGpu.mrpm||GPU_MRPM_TYP)/10)*10:gs.rpm;
     if(N>0){const ls=G.gfans.map(f=>NZ_GEN[120].db+NOISE_K*Math.log10(N/NZ_GEN[120].rpm)+50*Math.log10(Math.max(40,f.L)/120));
       parts.push({k:'gpu',t:'グラボのファン',db:sumDb(ls),d:`${G.gfans.length}基・約${N.toLocaleString()}rpm${gs.est?'(目安)':''}`});}
   }
   // PSU: off at light load (most units), then a little with load
   const x=P.out/Math.max(1,P.psuW);
-  parts.push(x<0.3?{k:'psu',t:'電源のファン',db:null,d:`停止(負荷 約${Math.round(x*100)}%)`}:{k:'psu',t:'電源のファン',db:Math.min(25,18+20*(x-0.3)),d:`負荷 約${Math.round(x*100)}%`});
+  if(full)parts.push({k:'psu',t:'電源のファン',db:25,d:'最大の目安'});
+  else parts.push(x<0.3?{k:'psu',t:'電源のファン',db:null,d:`停止(負荷 約${Math.round(x*100)}%)`}:{k:'psu',t:'電源のファン',db:Math.min(25,18+20*(x-0.3)),d:`負荷 約${Math.round(x*100)}%`});
   const ls=parts.filter(q=>q.db!=null).map(q=>q.db);
   return {parts,total:ls.length?sumDb(ls):null,unknown};
 }
 function renderPcNoise(){
   if(!$('nzpc-total'))return;
-  let n;try{n=pcNoise();}catch(e){return;}   // before the first layout (G, P not ready yet)
+  let n,mx;try{n=pcNoise();mx=pcNoise(true);}catch(e){return;}   // before the first layout (G, P not ready yet)
   const loud=n.parts.filter(q=>q.db!=null).sort((a,b)=>b.db-a.db)[0];
   const t=`合計 <b>${n.total==null?'—':nzFmt(n.total)+' dBA'}</b>(推定)${n.total!=null?`:${esc(nzExample(n.total))}`:''}`
-    +(loud&&n.parts.filter(q=>q.db!=null).length>1?`<br>一番大きいのは${esc(loud.t)}です。`:'')+(n.unknown?`<br>大きさが120・140mm以外のファン ${n.unknown}台は入っていません。`:'');
+    +(mx.total!=null?`<br>全部のファンが最大回転のとき <b>${nzFmt(mx.total)} dBA</b>:${esc(nzExample(mx.total))}`:'')
+    +(loud&&n.parts.filter(q=>q.db!=null).length>1?`<br>いま一番大きいのは${esc(loud.t)}です。`:'')+(n.unknown?`<br>大きさが120・140mm以外のファン ${n.unknown}台は入っていません。`:'');
   if($('nzpc-total').innerHTML!==t)$('nzpc-total').innerHTML=t;
-  const l=n.parts.map(q=>`<div class="nzrow"><span>${esc(q.t)}</span><i>${esc(q.d)}</i><b class="num">${q.db==null?'—':nzFmt(q.db)+' dBA'}</b></div>`).join('');
+  const l='<div class="nzrow"><i>部分</i><i>いま</i><i>最大回転</i></div>'+n.parts.map(q=>{const m=mx.parts.find(z=>z.k===q.k);
+    return `<div class="nzrow nz3"><span>${esc(q.t)}<small>${esc(q.d)}</small></span><b class="num">${q.db==null?'—':nzFmt(q.db)+' dBA'}</b><b class="num nzmax">${m&&m.db!=null?nzFmt(m.db)+' dBA':'—'}</b></div>`;}).join('');
   if($('nzpc-list').innerHTML!==l)$('nzpc-list').innerHTML=l;
   const cur=n.total==null?-1:NZ_EX.reduce((k,e,i)=>n.total>=e[0]-5?i:k,0);
   const ex=NZ_EX.map((e,i)=>`<div class="nzrow${i===cur?' cur':''}"><span>${esc(e[1])}</span><i></i><b class="num">${e[0]} dB</b></div>`).join('');
@@ -7471,7 +7479,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v69-noise';
+const DIAG_VER='sheet-v70-noisemax';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},
@@ -7569,7 +7577,7 @@ function diagEval(m,fq,coolQ,gpuQ,is3d){
   lastVals=vals;showEvaluation();
   const cf=x=>r1(x*Sim.CFM,1);
   return {score:ev.score,grade:ev.g?GRADE[ev.g].t:null,cap:ev.cap?ev.cap.by.join('・'):null,
-    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',noise:(()=>{const n=pcNoise();return n.total==null?null:{total:r1(n.total),example:nzExample(n.total),parts:n.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d}))};})(),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
+    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',noise:(()=>{const n=pcNoise(),m=pcNoise(true);return n.total==null?null:{total:r1(n.total),example:nzExample(n.total),parts:n.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d})),max:m.total==null?null:r1(m.total),maxExample:m.total==null?null:nzExample(m.total),maxParts:m.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d}))};})(),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
     rows:Object.fromEntries(ev.rows.filter(r=>r.w>0).map(r=>[r.ax.id,r.r?GRADE[r.r.g].t:null])),
     air:{tIn:r1(m.tIn,2),cpuT:r1(m.cpuT,2),gpuT:r1(m.gpuT,2),vrmT:r1(m.vrmT,2),vrmV:r1(m.vrmV,3),exT:r1(m.exT,2),pIn:r1(m.pIn,3),stag:r1(m.stag,3),
       fanIn:cf(m.fanIn),fanOut:cf(m.fanOut),leakIn:cf(m.leakIn),leakOut:cf(m.leakOut)},

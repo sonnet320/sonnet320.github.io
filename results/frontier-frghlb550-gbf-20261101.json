@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v69-noise",
+  "modelVersion": "sheet-v70-noisemax",
   "mode": "2d",
-  "computedAt": "2026-11-17T03:55:53.453Z",
+  "computedAt": "2026-11-17T08:34:25.723Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
@@ -38,6 +38,30 @@
           "k": "psu",
           "db": 20.1,
           "d": "負荷 約40%"
+        }
+      ],
+      "max": 41.1,
+      "maxExample": "図書館・静かな住宅地の昼くらい",
+      "maxParts": [
+        {
+          "k": "case",
+          "db": 22,
+          "d": "4台"
+        },
+        {
+          "k": "cpu",
+          "db": 28.6,
+          "d": "1基・約1800rpm"
+        },
+        {
+          "k": "gpu",
+          "db": 40.7,
+          "d": "3基・約3,400rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 25,
+          "d": "最大の目安"
         }
       ]
     },
