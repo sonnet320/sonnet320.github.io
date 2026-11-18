@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v71-hearing",
+  "modelVersion": "sheet-v72-gpunoise",
   "mode": "2d",
-  "computedAt": "2026-11-17T23:11:34.695Z",
+  "computedAt": "2026-11-18T00:03:55.135Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
@@ -16,8 +16,8 @@
     "gpuFanRpmEst": true,
     "gpuFanMode": "curve",
     "noise": {
-      "total": 34.1,
-      "near": 40.1,
+      "total": 36,
+      "near": 42,
       "example": "普通に聞こえる(テレビやゲームの音で隠れる)",
       "parts": [
         {
@@ -32,7 +32,7 @@
         },
         {
           "k": "gpu",
-          "db": 33.7,
+          "db": 35.7,
           "d": "2基・約2,380rpm(目安)"
         },
         {
@@ -41,9 +41,9 @@
           "d": "負荷 約43%"
         }
       ],
-      "max": 41.8,
-      "maxNear": 47.8,
-      "maxExample": "普通に聞こえる(テレビやゲームの音で隠れる)",
+      "max": 45.1,
+      "maxNear": 51.1,
+      "maxExample": "会話の邪魔になり始める",
       "maxParts": [
         {
           "k": "case",
@@ -57,7 +57,7 @@
         },
         {
           "k": "gpu",
-          "db": 41.4,
+          "db": 45,
           "d": "2基・約3,400rpm(目安)"
         },
         {
