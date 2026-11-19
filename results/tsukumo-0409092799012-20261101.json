@@ -1,44 +1,100 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v66-side",
+  "modelVersion": "sheet-v72-gpunoise",
   "mode": "2d",
-  "computedAt": "2026-10-31T21:52:55.283Z",
+  "computedAt": "2026-11-18T00:03:55.135Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
-    "score": 63,
-    "grade": "並",
+    "score": 54,
+    "grade": "要改善",
     "cap": null,
-    "cpu": 59.8,
-    "gpu": 75.1,
-    "vrm": 53.8,
-    "intake": 8.82,
-    "stag": 16.4,
-    "press": -10,
+    "cpu": 62.3,
+    "gpu": 75,
+    "gpuFan": 70,
+    "gpuFanRpm": 2380,
+    "gpuFanRpmEst": true,
+    "gpuFanMode": "curve",
+    "noise": {
+      "total": 36,
+      "near": 42,
+      "example": "普通に聞こえる(テレビやゲームの音で隠れる)",
+      "parts": [
+        {
+          "k": "case",
+          "db": 15,
+          "d": "2台"
+        },
+        {
+          "k": "cpu",
+          "db": 19.5,
+          "d": "1基・約1190rpm"
+        },
+        {
+          "k": "gpu",
+          "db": 35.7,
+          "d": "2基・約2,380rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 20.6,
+          "d": "負荷 約43%"
+        }
+      ],
+      "max": 45.1,
+      "maxNear": 51.1,
+      "maxExample": "会話の邪魔になり始める",
+      "maxParts": [
+        {
+          "k": "case",
+          "db": 22.8,
+          "d": "2台"
+        },
+        {
+          "k": "cpu",
+          "db": 28.6,
+          "d": "1基・約1800rpm"
+        },
+        {
+          "k": "gpu",
+          "db": 45,
+          "d": "2基・約3,400rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 25,
+          "d": "最大の目安"
+        }
+      ]
+    },
+    "vrm": 52.1,
+    "intake": 11.12,
+    "stag": 22.1,
+    "press": -10.6,
     "rows": {
-      "cpu": "優",
+      "cpu": "良",
       "gpu": "並",
       "vrm": "良",
-      "intake": "並",
+      "intake": "要改善",
       "stag": "要改善",
-      "press": "良"
+      "press": "並"
     },
     "air": {
-      "tIn": 5.47,
-      "cpuT": 8.82,
-      "gpuT": 3.82,
-      "vrmT": 8.9,
-      "vrmV": 0.285,
-      "exT": 10.22,
-      "pIn": 0.019,
-      "stag": 0.164,
-      "fanIn": 20.9,
-      "fanOut": 26.5,
-      "leakIn": 36,
-      "leakOut": 30.3
+      "tIn": 5.29,
+      "cpuT": 11.12,
+      "gpuT": 4.26,
+      "vrmT": 7.16,
+      "vrmV": 0.281,
+      "exT": 11.05,
+      "pIn": 0.026,
+      "stag": 0.221,
+      "fanIn": 21.2,
+      "fanOut": 26.9,
+      "leakIn": 32.5,
+      "leakOut": 26.8
     },
-    "coolQ": 27.9,
-    "gpuQ": 34.1
+    "coolQ": 27.3,
+    "gpuQ": 36.8
   },
   "conditions": {
     "room": 25,

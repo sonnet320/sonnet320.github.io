@@ -1,16 +1,72 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v66-side",
+  "modelVersion": "sheet-v72-gpunoise",
   "mode": "2d",
-  "computedAt": "2026-10-31T12:38:24.386Z",
+  "computedAt": "2026-11-18T00:04:32.013Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
-    "score": 68,
+    "score": 70,
     "grade": "並",
     "cap": null,
     "cpu": 75.3,
-    "gpu": 78.4,
+    "gpu": 74.9,
+    "gpuFan": 70,
+    "gpuFanRpm": 2370,
+    "gpuFanRpmEst": true,
+    "gpuFanMode": "curve",
+    "noise": {
+      "total": 35.2,
+      "near": 41.2,
+      "example": "普通に聞こえる(テレビやゲームの音で隠れる)",
+      "parts": [
+        {
+          "k": "case",
+          "db": 14.2,
+          "d": "4台"
+        },
+        {
+          "k": "cpu",
+          "db": 17.8,
+          "d": "2基・約960rpm"
+        },
+        {
+          "k": "gpu",
+          "db": 34.9,
+          "d": "3基・約2,370rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 21.8,
+          "d": "負荷 約49%"
+        }
+      ],
+      "max": 44.6,
+      "maxNear": 50.6,
+      "maxExample": "会話の邪魔になり始める",
+      "maxParts": [
+        {
+          "k": "case",
+          "db": 22,
+          "d": "4台"
+        },
+        {
+          "k": "cpu",
+          "db": 31.6,
+          "d": "2基・約1800rpm"
+        },
+        {
+          "k": "gpu",
+          "db": 44.3,
+          "d": "3基・約3,400rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 25,
+          "d": "最大の目安"
+        }
+      ]
+    },
     "vrm": 68.9,
     "intake": 8.39,
     "stag": 2,
