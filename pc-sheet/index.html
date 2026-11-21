@@ -124,7 +124,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--jp);font-size:14px;
 canvas{display:block;max-width:100%;border-radius:6px}
 canvas:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 canvas.edit{touch-action:none}
-.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(98px,1fr));gap:6px}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:6px}
 .chip{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:4px 8px;display:flex;flex-direction:column;min-width:0}
 .chip span{font-size:clamp(9px,.82cqw,11px);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chip b{font-family:var(--mono);font-size:clamp(12px,1.15cqw,16px);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -434,6 +434,7 @@ body.present .row{grid-template-columns:clamp(66px,7.4cqw,100px) minmax(0,1fr) a
           <div class="chip"><span>排気の温度</span><b id="m-ex">—</b><i id="m-exq">—</i></div>
           <div class="chip"><span>ケース内の空気</span><b id="m-tin">—</b><i id="m-tinr">—</i></div>
           <div class="chip"><span>ファン吸気/排気</span><b id="m-fan">—</b><i id="m-leak">—</i></div>
+          <div class="chip" id="m-noisechip" title="机の上(約50cm)で聞いたときの推定。メーカー公称と同じ基準の目安です"><span>PCの騒音(目安)</span><b id="m-noise">—</b><i id="m-noisemax">—</i></div>
         </div>
         <p class="stage-note" id="stagenote">※温度・風量・評価は、ケースを真横から見た2次元の流体シミュレーションによる目安です(実機の測定値ではありません)。</p>
       </div>
@@ -5483,7 +5484,7 @@ const nzGenAt=(size,N)=>{const r=NZ_GEN[size>=135?140:120];return N>0?r.db+NOISE
    the 1 m estimate + 6 dB (half the distance; a room's reflections make the real step 3-5 dB). */
 const NZ_NEAR=6;
 const NZ_HEAR=[[0,'〜30','耳を近づけないと分からない'],[30,'30〜40','静かな部屋だと気づく'],[40,'40〜50','普通に聞こえる(テレビやゲームの音で隠れる)'],[50,'50〜60','会話の邪魔になり始める'],[60,'60〜','大きな声で話す必要がある']];
-const nzHearIdx=db=>db==null?-1:NZ_HEAR.reduce((k,e,i)=>db+NZ_NEAR>=e[0]?i:k,0);
+const nzHearIdx=db=>db==null?-1:NZ_HEAR.reduce((k,e,i)=>Math.round(db+NZ_NEAR)>=e[0]?i:k,0);   // the rounded figure the page shows
 function nzExample(db){return db==null?'':NZ_HEAR[nzHearIdx(db)][2];}
 /* full=true: every fan at its maximum (case and radiator fans 100%, CPU cooler fans at their maximum, GPU fans at 100%,
    the PSU fan at the top of its range) — the loudest the PC can get, which differs a lot between PCs */
@@ -5519,6 +5520,10 @@ function pcNoise(full){
 function renderPcNoise(){
   if(!$('nzpc-total'))return;
   let n,mx;try{n=pcNoise();mx=pcNoise(true);}catch(e){return;}   // before the first layout (G, P not ready yet)
+  {const b=n.total==null?'—':`約${Math.round(n.total+NZ_NEAR)} dB`, i=mx.total==null?'—':`最大 約${Math.round(mx.total+NZ_NEAR)} dB`;
+   if($('m-noise').textContent!==b)$('m-noise').textContent=b;if($('m-noisemax').textContent!==i)$('m-noisemax').textContent=i;
+   const tt=`机の上(約50cm)で聞いたときの推定:いま${n.total==null?'—':nzExample(n.total)}/全ファン最大回転で${mx.total==null?'—':nzExample(mx.total)}。メーカー公称と同じ基準の目安です`;
+   if($('m-noisechip').title!==tt)$('m-noisechip').title=tt;}
   const loud=n.parts.filter(q=>q.db!=null).sort((a,b)=>b.db-a.db)[0];
   const at=d=>`<b>${nzFmt(d)} dBA</b>(机の上・約50cmで約${Math.round(d+NZ_NEAR)} dBA):${esc(nzExample(d))}`;
   const t=`いま ${n.total==null?'—':at(n.total)}`
@@ -7428,8 +7433,8 @@ function queue3D(){clearTimeout(q3);if(diagRun)return;q3=setTimeout(()=>{if(dim3
 function syncDim(){
   document.querySelectorAll('#dimseg button').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.dim===(dim3?'3d':'2d')));b.disabled=dimBusy;if(b.dataset.dim==='3d'){b.disabled=dimBusy||gpu3===false;b.title=gpu3===false?'このブラウザではWebGPUが使えないため、3Dは表示できません':'3次元で計算(WebGPU)';}});
   $('cv').hidden=dim3;$('v3box').hidden=!dim3;
-  $('stagenote').textContent=dim3?`※温度・風量・評価は、ケースを3次元(5mm格子・WebGPU)で計算した流体シミュレーションによる目安です(実機の測定値ではありません)。`
-    :'※温度・風量・評価は、ケースを真横から見た2次元の流体シミュレーションによる目安です(実機の測定値ではありません)。';
+  $('stagenote').textContent=dim3?`※温度・風量・評価は、ケースを3次元(5mm格子・WebGPU)で計算した流体シミュレーションによる目安です(実機の測定値ではありません)。騒音は机の上(約50cm)で聞いたときの推定です。`
+    :'※温度・風量・評価は、ケースを真横から見た2次元の流体シミュレーションによる目安です(実機の測定値ではありません)。騒音は机の上(約50cm)で聞いたときの推定です。';
   $('s3note').textContent=gpu3===false?'このブラウザではWebGPUが使えないため、3Dは表示できません(PCのChrome・Edgeなどで使えます)。'
     :dim3?`3Dで計算中(${Air3D.gpuName()}${Air3D.stepMs()>0?`・計算1歩 約${Air3D.stepMs()<10?Air3D.stepMs().toFixed(1):Math.round(Air3D.stepMs())}ms`:''})。ケースファンとラジエーターのファンは、公開測定から作った平均的な性能曲線で計算しています。3D表示中は図でファンを動かせません。配置を変えるときは2Dに戻すか、構成表・プリセットを使ってください。`
     :'図の上の「3D」で、同じ構成を3次元で計算します(WebGPUが使えるPCのみ)。';
@@ -7491,7 +7496,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v72-gpunoise';
+const DIAG_VER='sheet-v73-noisechip';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v72-gpunoise",
+  "modelVersion": "sheet-v73-noisechip",
   "mode": "2d",
-  "computedAt": "2026-11-18T00:03:45.619Z",
+  "computedAt": "2026-11-21T23:46:17.241Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
