@@ -5492,7 +5492,8 @@ function pcNoise(full){
   const parts=[];let unknown=0;
   // case fans and radiator fans
   const cf=[];for(const f of state.fans){
-    const sp=fanSpec(f), N=sp.rpm*(full?1:f.rpm/100), x=full?(()=>{const n=fanNoiseRef(f);return n.db!=null?Object.assign({n},noiseAt(n,N,sp.rpm)):{why:n.why};})():fanNoiseNow(f);
+    const fr=f.auto==='rad'&&cpuAutoR!=null?cpuAutoR*100:f.rpm;   // radiator fans follow the CPU temperature
+    const sp=fanSpec(f), N=sp.rpm*(full?1:fr/100), x=full||fr!==f.rpm?(()=>{const n=fanNoiseRef(f);return n.db!=null?Object.assign({n},noiseAt(n,N,sp.rpm)):{why:n.why};})():fanNoiseNow(f);
     if(x.db!=null)cf.push(x.db);else if(x.off||x.below||!(N>0))continue;
     else if(sp.size===120||sp.size===140){const g=nzGenAt(sp.size,N);if(g!=null)cf.push(g);}else unknown++;
   }
@@ -5500,7 +5501,7 @@ function pcNoise(full){
   // CPU cooler fans (an all-in-one's fans are among the case fans) and the pump
   const aio=curCooler&&curCooler.type==='aio';
   if(curCooler&&!aio&&G.cfans.length){
-    const sz=state.cFanSize>=135?140:120, mx=sz===140?1500:1800, N=mx*(full?1:0.3+0.6*P.Lc), one=nzGenAt(sz,N);
+    const sz=state.cFanSize>=135?140:120, mx=sz===140?1500:1800, N=mx*(full?1:cpuAutoR!=null?cpuAutoR:0.3+0.6*P.Lc), one=nzGenAt(sz,N);
     if(one!=null)parts.push({k:'cpu',t:'CPUクーラーのファン',db:one+10*Math.log10(G.cfans.length),d:`${G.cfans.length}基・約${Math.round(N/10)*10}rpm`});
   }
   if(aio)parts.push({k:'pump',t:'簡易水冷のポンプ',db:20,d:'一般的な値'});
@@ -7051,12 +7052,13 @@ function updateMetrics(){
   $('m-fan').textContent=`${cf(M.fanIn)} / ${cf(M.fanOut)} CFM`;
   $('m-leak').textContent=`すき間 入${cf(M.leakIn)} 出${cf(M.leakOut)}`;
   $('m-tin').textContent=deg(M.tIn);$('m-tinr').textContent=`室温+${M.tIn.toFixed(1)}°C`;
-  $('m-cpu').textContent='吸気 '+deg(isOpen()?OPEN_CPU_RISE:M.cpuT);/* GPU fan shown after gpuTemp() below */
+/* CPU and GPU fans shown after cpuTemp() / gpuTemp() below */
   if(G.cfans.length)ema(M,'coolQ',d3&&d3.coolQ!=null?d3.coolQ:Sim.flowThrough({x:G.cfans[0].x,y:G.cfans[0].y,a:0,L:G.cfans[0].L})*Sim.CFM,.2);
   ema(M,'gpuQ',d3?d3.gpuQ:G.gfans.reduce((s,f)=>s+Math.max(0,Sim.flowThrough(f))*Sim.CFM,0),.2);
   const tc=cpuTemp(), tg=gpuTemp(), tv=vrmTemp(), tdp=state.coolerTdp, t0=v=>v==null?'—':`${v.toFixed(0)}°C`;
   const tj=cpuTjmax();
   $('m-ctemp').textContent=tc==null?'—':tc>tj?`${tj}°C・制限中`:t0(tc)+(tc>=tj-5?'・上限付近':'');
+  {const cs=tc==null?null:cpuFanShown();$('m-cpu').textContent=(cs?`ファン約${cs.rpm.toLocaleString()}rpm・`:'')+'吸気 '+deg(isOpen()?OPEN_CPU_RISE:M.cpuT);}
   $('m-gtemp').textContent=tg==null?'—':tg>GPU_TLIMIT?`${GPU_TLIMIT}°C・制限中`:t0(tg)+(tg>=GPU_TLIMIT-5?'・上限付近':'');
   {const gs=gpuFanShown();$('m-gpu').textContent=(tg==null?'':P.gfr<0.02?'ファン停止・':`ファン約${gs.rpm.toLocaleString()}rpm${gs.est?'(目安)':''}・`)+'吸気 '+deg(gpuIntake());
    if(state.gpuFan.mode!=='manual'&&tg!=null){const t=gs.pct?`${gs.pct}%(約${gs.rpm}rpm${gs.est?'・目安':''})`:'停止';if($('gfanv').textContent!==t){$('gfanv').textContent=t;$('gfan').value=gs.pct;}}}
@@ -7221,12 +7223,43 @@ function cpuExtra(cp){
    the gap at 10°C instead of 17+). All-in-one coolers and top-flow coolers are left as they are.
    Records (private notes): cpu_intel_estimate_20261014.md */
 function towerSat(E){const t=curCooler?curCooler.type:state.cooler;return t==='air'||t==='air2'?1+0.6*Math.max(0,P.cpu/E-0.85):1;}
-function cpuTemp(){
-  const op=isOpen();
-  if(M.cpuT==null&&!op)return null;
-  const info=cpuInfo(), tdp=Math.max(40,curCooler?curCooler.cap.E:state.coolerTdp||200), cf=coolerFlow(), ex=cpuExtra();
-  const fac=!cf?1:cf.q>1?clamp(Math.pow(cf.ref/cf.q,0.6),0.8,3):3;
+/* CPU cooler fans follow the CPU temperature (2026-11-22, sheet-v74-cpucurve), like the GPU fans: a board's usual fan
+   setting is about 30-40% near 50 °C and 100% at 80-85 °C, so one curve for every PC: 30% at 50 °C, +2 points per °C,
+   100% at 85 °C. Tower coolers and an all-in-one's radiator fans (they sit on the CPU fan header). In a case only; the open
+   frame keeps the load-based speed its review match was made with. The solver keeps moving air at the old speed (tower:
+   30% + 60% × CPU load; radiator: the case-fan setting); the curve's speed scales the air through the cooler (∝ speed)
+   in the temperature formula only. Not re-checked against measurements: the CPU fits of October assumed the old speed. */
+const CPU_CURVE={t0:50,r0:0.30,slope:0.02};
+const cpuCurve=T=>clamp(CPU_CURVE.r0+CPU_CURVE.slope*(T-CPU_CURVE.t0),CPU_CURVE.r0,1);
+let cpuAutoR=null;   // the cooler-fan speed the curve settled on in the last evaluation (null: open frame, top-flow or no cooler fans)
+function cpuFanBase(){   // the speed the solver runs the cooler's fans at
+  if(G.rad){let r=0,n=0;state.fans.forEach(f=>{if(f.auto==='rad'){r+=(f.rpm||0)/100;n++;}});return n?r/n:null;}
+  return G.cfans.length?0.3+0.6*P.Lc:null;
+}
+function cpuTempAt(r,cf,op){
+  const info=cpuInfo(), tdp=Math.max(40,curCooler?curCooler.cap.E:state.coolerTdp||200), ex=cpuExtra();
+  const rs=cpuFanBase(), q=cf&&r!=null&&rs?cf.q*r/Math.max(0.05,rs):cf&&cf.q;
+  const fac=!cf?1:q>1?clamp(Math.pow(cf.ref/q,0.6),0.8,3):3;
   return state.room+(op?OPEN_CPU_RISE:M.cpuT)+P.cpu*(info.rp+30/tdp*fac*towerSat(tdp))+ex.hot+ex.idle;
+}
+function cpuTemp(){
+  const op=isOpen();cpuAutoR=null;
+  if(M.cpuT==null&&!op)return null;
+  const cf=coolerFlow();
+  if(op||!cf||cpuFanBase()==null)return cpuTempAt(null,cf,op);
+  const g=r=>cpuCurve(cpuTempAt(r,cf,op))-r;
+  let lo=CPU_CURVE.r0, hi=1, r;
+  if(g(lo)<=0)r=lo;else if(g(hi)>=0)r=hi;
+  else{for(let i=0;i<40;i++){const m=(lo+hi)/2;if(g(m)>0)lo=m;else hi=m;}r=(lo+hi)/2;}
+  cpuAutoR=r;
+  return cpuTempAt(r,cf,op);
+}
+/* the cooler-fan speed to show: a tower's fans 1,800 rpm (120 mm) / 1,500 rpm (140 mm) at 100% (the noise estimate's
+   figures); radiator fans at their own fan's maximum */
+function cpuFanShown(){
+  const r=cpuAutoR!=null?cpuAutoR:cpuFanBase();if(r==null)return null;
+  let mx;if(G.rad){const f=state.fans.find(x=>x.auto==='rad');mx=f?fanSpec(f).rpm:1800;}else mx=state.cFanSize>=135?1500:1800;
+  return {pct:Math.round(r*100),rpm:Math.round(mx*r/10)*10,max:mx,aio:!!G.rad};
 }
 function updateHeat(){
   const cW=(G.cards||[]).reduce((s,c)=>s+(c.W||0),0);
@@ -7496,7 +7529,7 @@ $('p3d').onchange=e=>{state.view.panel3d=e.target.value;save();};
 $('f3d').onchange=e=>{state.view.flow3d=e.target.value;save();};
 
 /* ---------- 3D self-check: a fixed set of configurations, 2D and 3D, checked and stored ---------- */
-const DIAG_VER='sheet-v73-noisechip';
+const DIAG_VER='sheet-v74-cpucurve';
 const setCool=(id,pos)=>{state.coolerBrand='generic';state.coolerModel=id;if(pos)state.radPos=pos;};
 const DIAG_CFG=[
   {k:'now',t:'今の構成',now:true},
@@ -7594,7 +7627,7 @@ function diagEval(m,fq,coolQ,gpuQ,is3d){
   lastVals=vals;showEvaluation();
   const cf=x=>r1(x*Sim.CFM,1);
   return {score:ev.score,grade:ev.g?GRADE[ev.g].t:null,cap:ev.cap?ev.cap.by.join('・'):null,
-    cpu:r1(tc),gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',noise:(()=>{const n=pcNoise(),m=pcNoise(true);return n.total==null?null:{total:r1(n.total),near:r1(n.total+NZ_NEAR),example:nzExample(n.total),parts:n.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d})),max:m.total==null?null:r1(m.total),maxNear:m.total==null?null:r1(m.total+NZ_NEAR),maxExample:m.total==null?null:nzExample(m.total),maxParts:m.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d}))};})(),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
+    cpu:r1(tc),cpuFan:tc==null||!cpuFanShown()?null:cpuFanShown().pct,cpuFanRpm:tc==null||!cpuFanShown()?null:cpuFanShown().rpm,gpu:r1(tg),gpuFan:tg==null?null:gpuFanShown().pct,gpuFanRpm:tg==null?null:gpuFanShown().rpm,gpuFanRpmEst:tg==null?null:gpuFanShown().est,gpuFanMode:state.gpuFan.mode==='manual'?'manual':'curve',noise:(()=>{const n=pcNoise(),m=pcNoise(true);return n.total==null?null:{total:r1(n.total),near:r1(n.total+NZ_NEAR),example:nzExample(n.total),parts:n.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d})),max:m.total==null?null:r1(m.total),maxNear:m.total==null?null:r1(m.total+NZ_NEAR),maxExample:m.total==null?null:nzExample(m.total),maxParts:m.parts.map(q=>({k:q.k,db:q.db==null?null:r1(q.db),d:q.d}))};})(),vrm:r1(tv),intake:r1(vals.intake,2),stag:r1(vals.stag),press:r1(vals.press),
     rows:Object.fromEntries(ev.rows.filter(r=>r.w>0).map(r=>[r.ax.id,r.r?GRADE[r.r.g].t:null])),
     air:{tIn:r1(m.tIn,2),cpuT:r1(m.cpuT,2),gpuT:r1(m.gpuT,2),vrmT:r1(m.vrmT,2),vrmV:r1(m.vrmV,3),exT:r1(m.exT,2),pIn:r1(m.pIn,3),stag:r1(m.stag,3),
       fanIn:cf(m.fanIn),fanOut:cf(m.fanOut),leakIn:cf(m.leakIn),leakOut:cf(m.leakOut)},
