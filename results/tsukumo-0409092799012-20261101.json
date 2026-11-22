@@ -1,23 +1,25 @@
 {
   "schemaVersion": 1,
-  "modelVersion": "sheet-v73-noisechip",
+  "modelVersion": "sheet-v74-cpucurve",
   "mode": "2d",
-  "computedAt": "2026-11-21T23:46:25.900Z",
+  "computedAt": "2026-11-22T00:09:34.479Z",
   "simulatedSeconds": 8,
   "settled": true,
   "evaluation": {
     "score": 54,
     "grade": "要改善",
     "cap": null,
-    "cpu": 62.3,
+    "cpu": 63.3,
+    "cpuFan": 57,
+    "cpuFanRpm": 1020,
     "gpu": 75,
     "gpuFan": 70,
     "gpuFanRpm": 2380,
     "gpuFanRpmEst": true,
     "gpuFanMode": "curve",
     "noise": {
-      "total": 36,
-      "near": 42,
+      "total": 35.9,
+      "near": 41.9,
       "example": "普通に聞こえる(テレビやゲームの音で隠れる)",
       "parts": [
         {
@@ -27,8 +29,8 @@
         },
         {
           "k": "cpu",
-          "db": 19.5,
-          "d": "1基・約1190rpm"
+          "db": 16.2,
+          "d": "1基・約1020rpm"
         },
         {
           "k": "gpu",
