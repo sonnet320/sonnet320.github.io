@@ -5431,7 +5431,9 @@ function rpmForNoise(n,max,T){   // the rpm at which one fan makes T dBA, within
   return {N,cap,low,pct:N/max*100,db:n.db+NOISE_K*Math.log10(N/n.rpm),le:!!n.le};
 }
 const sumDb=ls=>10*Math.log10(ls.reduce((s,l)=>s+Math.pow(10,l/10),0));
-function fanNoiseNow(f){const n=fanNoiseRef(f);if(n.db==null)return {why:n.why};const sp=fanSpec(f);return Object.assign({n},noiseAt(n,sp.rpm*f.rpm/100,sp.rpm));}
+/* the speed a fan runs at now (%): radiator fans follow the CPU temperature in a case (cpuTemp), the rest their setting */
+function fanRpmNow(f){return f.auto==='rad'&&cpuAutoR!=null?Math.round(cpuAutoR*100):f.rpm;}
+function fanNoiseNow(f){const n=fanNoiseRef(f);if(n.db==null)return {why:n.why};const sp=fanSpec(f);return Object.assign({n},noiseAt(n,sp.rpm*fanRpmNow(f)/100,sp.rpm));}
 function noiseSrcLink(n){const s=NOISE_SRC[n.s];return s?`<a href="${esc(s.u)}" target="_blank" rel="noopener">${n.cyb?'Cybenetics の報告 #'+esc(n.cyb):'メーカー資料'}</a>`:'';}
 function noiseRefText(n,max){
   if(n.cyb)return `Cybenetics の測定 ${n.db} dBA(${Math.round(n.rpm)}rpm)`+(n.rel?`※測定したのは「${n.rel}」(同じ製品か未確認)`:'');
@@ -5449,8 +5451,8 @@ function renderNoiseNow(){
   if(!$('nz-total'))return;
   const groups=new Map();let ls=[],le=false,miss=0,below=0;
   for(const f of state.fans){
-    const sp=fanSpec(f), x=fanNoiseNow(f), key=`${f.model}|${f.rpm}|${f.auto==='rad'?'rad':''}`;
-    if(!groups.has(key))groups.set(key,{name:(f.auto==='rad'?'ラジエーター:':'')+(f.model==='custom'?'カスタム':sp.name),rpm:f.rpm,max:sp.rpm,x,n:0});
+    const sp=fanSpec(f), x=fanNoiseNow(f), rn=fanRpmNow(f), key=`${f.model}|${rn}|${f.auto==='rad'?'rad':''}`;
+    if(!groups.has(key))groups.set(key,{name:(f.auto==='rad'?'ラジエーター:':'')+(f.model==='custom'?'カスタム':sp.name),rpm:rn,max:sp.rpm,x,n:0,cpu:f.auto==='rad'&&rn!==f.rpm});
     groups.get(key).n++;
     if(x.db!=null){ls.push(x.db);if(x.le)le=true;}else if(x.below)below++;else if(!x.off)miss++;
   }
@@ -5462,14 +5464,14 @@ function renderNoiseNow(){
     +'<br>CPUクーラー・グラボ・電源のファンとポンプを含めた全体は、上の「PC全体の騒音」を見てください。';
   $('nz-list').innerHTML=[...groups.values()].map(g=>{
     const v=g.x.db!=null?`${g.x.le?'≤':''}${nzFmt(g.x.db)} dBA`:g.x.off?'停止':g.x.below?'推定の範囲外':'データなし';
-    return `<div class="nzrow"><span>${esc(g.name)} ×${g.n}</span><i>${g.rpm}%・約${Math.round(g.max*g.rpm/100)}rpm</i><b class="num">${v}</b></div>`;}).join('');
+    return `<div class="nzrow"><span>${esc(g.name)} ×${g.n}</span><i>${g.rpm}%・約${Math.round(g.max*g.rpm/100)}rpm${g.cpu?'(CPU温度で自動)':''}</i><b class="num">${v}</b></div>`;}).join('');
 }
 /* whole PC (2026-11-17): case fans, CPU cooler fans, GPU fans, pump and PSU, added as uncorrelated sources.
    Fans with a maker dBA use it (FAN_NOISE). Fans without one (the sheet's generic and case-bundled fans, CPU cooler fans,
    GPU fans) use the median of the catalog's maker figures, read at the same rpm with the same 50·log10(rpm) rule:
    120 mm 24.6 dBA at 1,500 rpm (17 fans), 140 mm 19.9 dBA at 1,200 rpm (6 fans). GPU fans: the 120 mm figure with a
-   50·log10(diameter/120) term (tip speed), at the rpm the fan curve settled on. CPU cooler fans run 30% + 60% × CPU load of
-   1,800 rpm (120 mm) / 1,500 rpm (140 mm), like the solver. Pump 20 dBA, PSU fan off below 30% load and 18-25 dBA above.
+   50·log10(diameter/120) term (tip speed), at the rpm the fan curve settled on. CPU cooler fans and radiator fans at the
+   speed the CPU fan curve settled on (cpuTemp; tower fans 1,800 rpm at 120 mm / 1,500 rpm at 140 mm). Pump 20 dBA, PSU fan off below 30% load and 18-25 dBA above.
    Everything is on the makers' basis (free fan, about 1 m, quiet room); a meter at a desk usually reads 5-10 dB more. */
 const NZ_GEN={120:{db:24.6,rpm:1500},140:{db:19.9,rpm:1200}};
 /* GPU fans get louder with speed faster than case fans (air forced through the fins): 60·log10(rpm) fits the hwcooling.net
@@ -5492,8 +5494,7 @@ function pcNoise(full){
   const parts=[];let unknown=0;
   // case fans and radiator fans
   const cf=[];for(const f of state.fans){
-    const fr=f.auto==='rad'&&cpuAutoR!=null?cpuAutoR*100:f.rpm;   // radiator fans follow the CPU temperature
-    const sp=fanSpec(f), N=sp.rpm*(full?1:fr/100), x=full||fr!==f.rpm?(()=>{const n=fanNoiseRef(f);return n.db!=null?Object.assign({n},noiseAt(n,N,sp.rpm)):{why:n.why};})():fanNoiseNow(f);
+    const sp=fanSpec(f), N=sp.rpm*(full?1:fanRpmNow(f)/100), x=full?(()=>{const n=fanNoiseRef(f);return n.db!=null?Object.assign({n},noiseAt(n,N,sp.rpm)):{why:n.why};})():fanNoiseNow(f);
     if(x.db!=null)cf.push(x.db);else if(x.off||x.below||!(N>0))continue;
     else if(sp.size===120||sp.size===140){const g=nzGenAt(sp.size,N);if(g!=null)cf.push(g);}else unknown++;
   }
@@ -7069,7 +7070,7 @@ function updateMetrics(){
   if(tg!=null&&tg>GPU_TLIMIT)gw.push(`GPU温度が約${GPU_TLIMIT}°Cを超える計算です。実機ではクロックと消費電力が下がって温度が抑えられます。`+(state.gpuFan.mode==='manual'&&P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
   else if(tg!=null&&tg>=85)gw.push('GPU温度が高めです。'+(state.gpuFan.mode==='manual'&&P.gfr<P.gRef-0.05?'GPUファンの回転数を上げると下がります。':'グラボの下に吸気が届くと下がります。'));
   const gwt=gw.join(' ');if($('gpuwarn').textContent!==gwt)$('gpuwarn').textContent=gwt;
-  {const nw=performance.now();if(nw-nzPcT>500){nzPcT=nw;renderPcNoise();}}
+  {const nw=performance.now();if(nw-nzPcT>500){nzPcT=nw;renderNoiseNow();}}   // renderNoiseNow also redraws the whole-PC estimate
   const warn=[];
   if(P.cpu>tdp*0.95)warn.push(`CPUの発熱 約${Math.round(P.cpu)}W がクーラーの冷却性能の目安(約${tdp}W相当)に近いか超えています。`);
   if(tc!=null&&tc>tj)warn.push(`CPU温度が上限の${tj}°Cに達します。実機ではクロックと消費電力が下がって温度が抑えられます。`);
