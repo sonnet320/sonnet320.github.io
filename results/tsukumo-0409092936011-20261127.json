@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "modelVersion": "sheet-v74-cpucurve",
+  "mode": "2d",
+  "computedAt": "2026-11-27T14:07:35.850Z",
+  "simulatedSeconds": 8,
+  "settled": true,
+  "state": {
+    "title": "ツクモ G-GEAR GE7A-L263BH/C/CP4",
+    "price": "¥399,980",
+    "note": "税込399,980円(2026-11-27 販売ページの内容と価格(提供情報。ツクモのページは開いていない))",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "AMD Ryzen 7 9800X3D（8コア／16スレッド、定格4.7GHz、最大5.2GHz、L2 8MB＋L3 96MB）",
+        "detail": ""
+      },
+      {
+        "label": "クーラー",
+        "name": "玄人志向 KURO-AIOWC240/V2（240mm簡易水冷、LEDなし、実装位置・方向不明）。メーカー仕様：120×120×26mm PWMファン2基、FDB、2000rpm±10%、71.61CFM、最大32.4dB。ラジエーター120×274×27mm、ファン込み120×274×53mm",
+        "detail": ""
+      },
+      {
+        "label": "GPU",
+        "name": "AMD Radeon RX 9070 XT 16GB GDDR6",
+        "detail": "2スロット厚・GPUサポートホルダー付き。メーカー・型番は記載なし"
+      },
+      {
+        "label": "メモリ",
+        "name": "32GB(16GB×2)DDR5-5600 ホワイトカラー仕様",
+        "detail": "4スロット中2空き・最大256GB"
+      },
+      {
+        "label": "SSD",
+        "name": "CFD CSSD-M2PE27TKB6T2000GB、2TB M.2 NVMe PCIe Gen4、M2_1搭載",
+        "detail": ""
+      },
+      {
+        "label": "マザボ",
+        "name": "ASUS TUF GAMING B850-PLUS WIFI（ATX／AMD B850）。2.5GbE、Wi-Fi 7（2×2・160MHz）、Bluetooth 5.4",
+        "detail": ""
+      },
+      {
+        "label": "電源",
+        "name": "ASUS Prime 750W Gold（定格750W、80PLUS GOLD、ATX 3.1、12V-2x6対応）",
+        "detail": ""
+      },
+      {
+        "label": "ケース",
+        "name": "G-GEAR プレミアムミドルタワーケース（66JD）",
+        "detail": "幅230×奥行445×高さ460mm（本体のみ、突起物含まず）、約14kg / シートのケース「66JD」で計算（電源カバーの形は推定）"
+      },
+      {
+        "label": "前面ファン",
+        "name": "120mm ×1",
+        "detail": "吸気（公式66JD共通説明）、性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "背面ファン",
+        "name": "120mm ×1",
+        "detail": "排気（公式66JD共通説明）、性能は一般的な付属ファンの値"
+      },
+      {
+        "label": "天面ファン",
+        "name": "計算用：240mm水冷の120mmファン ×2",
+        "detail": "天面排気は仮設定、実機の実装位置・方向は不明"
+      },
+      {
+        "label": "底面ファン",
+        "name": "未確認（計算用は0基）",
+        "detail": "電源専用吸気はケースファンに数えない"
+      }
+    ],
+    "board": "atx",
+    "cooler": "aio",
+    "radSize": 240,
+    "radPos": "top",
+    "coolerTdp": 250,
+    "gpuSlots": 2.2,
+    "gpuLen": 301,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio240",
+    "coolerCustom": {
+      "type": "aio",
+      "pipes": 4,
+      "fans": 2,
+      "fs": 120,
+      "h": 155,
+      "rad": 240,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 40.64,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly",
+      "side": "closed"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen120",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 399980,
+        "parts": 439088,
+        "pv": "2026-10-31"
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": 70,
+      "for": "gen-aio240"
+    },
+    "caseDim": {
+      "preset": "gg66jd",
+      "d": 445,
+      "h": 460,
+      "w": 230
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "tsukumo-ge7a-l262bh-c-cp4-front-1",
+        "x": 52.5,
+        "y": 250,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      },
+      {
+        "id": "tsukumo-ge7a-l262bh-c-cp4-rear-1",
+        "x": 462.5,
+        "y": 174,
+        "a": 0,
+        "size": 120,
+        "rpm": 70,
+        "model": "gg120"
+      },
+      {
+        "id": "nyrpjol",
+        "x": 185,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "pgfbn3j",
+        "x": 310,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 45.5,
+    "gpuH": 120.5,
+    "gpuFans": 3,
+    "cFans": 2,
+    "cFanSize": 120,
+    "cFanQ": 0,
+    "cFanP": 0,
+    "radThick": 27,
+    "gpuFanD": null
+  },
+  "evaluation": {
+    "score": 54,
+    "grade": "要改善",
+    "cap": null,
+    "cpu": 73.3,
+    "cpuFan": 77,
+    "cpuFanRpm": 1150,
+    "gpu": 68,
+    "gpuFan": 56,
+    "gpuFanRpm": 1900,
+    "gpuFanRpmEst": true,
+    "gpuFanMode": "curve",
+    "noise": {
+      "total": 30.9,
+      "near": 36.9,
+      "example": "静かな部屋だと気づく",
+      "parts": [
+        {
+          "k": "case",
+          "db": 22.7,
+          "d": "4台"
+        },
+        {
+          "k": "pump",
+          "db": 20,
+          "d": "一般的な値"
+        },
+        {
+          "k": "gpu",
+          "db": 28.9,
+          "d": "3基・約1,900rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 22.6,
+          "d": "負荷 約53%"
+        }
+      ],
+      "max": 44.2,
+      "maxNear": 50.2,
+      "maxExample": "会話の邪魔になり始める",
+      "maxParts": [
+        {
+          "k": "case",
+          "db": 28.8,
+          "d": "4台"
+        },
+        {
+          "k": "pump",
+          "db": 20,
+          "d": "一般的な値"
+        },
+        {
+          "k": "gpu",
+          "db": 44,
+          "d": "3基・約3,400rpm(目安)"
+        },
+        {
+          "k": "psu",
+          "db": 25,
+          "d": "最大の目安"
+        }
+      ]
+    },
+    "vrm": 67.9,
+    "intake": 8.48,
+    "stag": 19.8,
+    "press": -60.7,
+    "rows": {
+      "cpu": "並",
+      "gpu": "良",
+      "vrm": "並",
+      "intake": "並",
+      "stag": "要改善",
+      "press": "要改善"
+    },
+    "air": {
+      "tIn": 7.56,
+      "cpuT": 8.48,
+      "gpuT": 2.83,
+      "vrmT": 15.58,
+      "vrmV": 0.225,
+      "exT": 11.84,
+      "pIn": 0.034,
+      "stag": 0.198,
+      "fanIn": 21.2,
+      "fanOut": 58.7,
+      "leakIn": 40.6,
+      "leakOut": 3.1
+    },
+    "coolQ": null,
+    "gpuQ": 42.7
+  },
+  "conditions": {
+    "room": 25,
+    "cpuMode": "game",
+    "cpuLoad": 60,
+    "gpuLoad": 90,
+    "fanRpm": 70,
+    "cpuPower": 82.6,
+    "gpuPower": 275.424
+  },
+  "calculation": {
+    "settle": 6,
+    "average": 2,
+    "gridMm": 5
+  },
+  "image": "results/tsukumo-0409092936011-20261127.jpg",
+  "presetId": "tsukumo-0409092936011-20261127",
+  "status": "assumed",
+  "note": "仮定による参考計算(2026-11-27):ケースはツクモ G-GEAR プレミアムミドルタワー(66JD)。ファンは販売ページの構成(前面120mm×1吸気・背面120mm×1排気)と、240mm簡易水冷(玄人志向 KURO-AIOWC240/V2、シート未登録のため一般的な240mm簡易水冷)を天面排気と仮定。GPUはメーカー・型番不明。「2スロット厚」の記載から汎用の種類を選んでいる。前の型番 GE7A-L261BH/C/CP4 と同じ構成で、計算結果も同じ。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません"
+}

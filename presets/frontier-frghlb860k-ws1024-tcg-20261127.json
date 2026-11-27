@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "id": "frontier-frghlb860k-ws1024-tcg-20261127",
+  "shop": "FRONTIER",
+  "model": "FRGHLB860K/WS1024/TCG",
+  "grade": "BLACK FRIDAYセール・標準構成・受注生産",
+  "case": "FRONTIER GHL シリーズ",
+  "sample": false,
+  "buildReady": true,
+  "state": {
+    "title": "FRONTIER FRGHLB860K/WS1024/TCG",
+    "price": "¥449,800",
+    "note": "税込449,800円(ブラックフライデーセール 12/4 15:00まで)。受注生産。",
+    "specs": [
+      {
+        "label": "CPU",
+        "name": "Core Ultra 7 270K Plus",
+        "detail": "24コア／24スレッド"
+      },
+      {
+        "label": "クーラー",
+        "name": "CPS DA360 V2 ARGB（360mm簡易水冷）",
+        "detail": "シート未登録のため一般的な360mm簡易水冷で計算。ラジエーターは天面排気と仮定"
+      },
+      {
+        "label": "GPU",
+        "name": "MSI製 GeForce RTX 5070 Ti 16GB",
+        "detail": "カード型番・寸法は不明。計算は汎用3ファン形状の仮定"
+      },
+      {
+        "label": "メモリ",
+        "name": "DDR5 32GB（16GB×2）",
+        "detail": "4スロット中2空き・最大128GB"
+      },
+      {
+        "label": "SSD",
+        "name": "1TB M.2 NVMe SSD Gen4",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "マザーボード",
+        "name": "MSI製 B860（ATX、Intel B860）",
+        "detail": "Wi-Fi 6E・Bluetooth 5.3・5GbE・Thunderbolt 4"
+      },
+      {
+        "label": "電源",
+        "name": "850W ATX 80PLUS PLATINUM（静音電源）",
+        "detail": "メーカー・型番不明"
+      },
+      {
+        "label": "ケース",
+        "name": "FRONTIER GHL シリーズ",
+        "detail": "販売ページにケースの記載なし。シートのケース「FRONTIER GHL シリーズ」で計算"
+      },
+      {
+        "label": "ケースファン",
+        "name": "GHLシリーズと同じ（前面3基・背面1基）",
+        "detail": "GHLシリーズと同じと仮定。型番・回転数は不明"
+      }
+    ],
+    "board": "atx",
+    "cooler": "aio",
+    "radSize": 360,
+    "radPos": "top",
+    "coolerTdp": null,
+    "gpuSlots": 2.5,
+    "gpuLen": 304,
+    "gpuCooler": "flow",
+    "coolerBrand": "generic",
+    "coolerModel": "gen-aio360",
+    "coolerCustom": {
+      "type": "aio",
+      "pipes": 4,
+      "fans": 3,
+      "fs": 120,
+      "h": 155,
+      "rad": 360,
+      "thick": 27,
+      "tdp": null
+    },
+    "gpuBrand": "generic",
+    "gpuModel": "c3",
+    "gpuCustom": {
+      "L": 300,
+      "H": 125,
+      "T": 50,
+      "fans": 3,
+      "type": "flow",
+      "power": null,
+      "vc": false,
+      "rpm": null
+    },
+    "gpuRpm": {},
+    "panels": {
+      "front": "mesh",
+      "top": "mesh",
+      "rear": "vent",
+      "bottom": "fanonly",
+      "side": "closed"
+    },
+    "psuArea": {
+      "shroud": "mesh",
+      "side": "closed",
+      "bottom": "mesh"
+    },
+    "caseType": "standard",
+    "openFrame": false,
+    "clearance": 25,
+    "vrmHs": "auto",
+    "vrmPh": null,
+    "vrmAmp": null,
+    "fanModel": "gen140",
+    "ver": 5,
+    "pricing": {
+      "other": 0,
+      "base": {
+        "price": 449800,
+        "parts": null,
+        "pending": true
+      },
+      "show": true,
+      "track": {
+        "cats": {
+          "cpu": "daily",
+          "gpu": "daily",
+          "gpucard": "weekly",
+          "mem": "daily",
+          "ssd": "daily",
+          "mb": "weekly",
+          "cooler": "weekly",
+          "psu": "weekly",
+          "fan": "weekly"
+        },
+        "shops": 3
+      }
+    },
+    "card": {
+      "model": "none",
+      "off": 5,
+      "gap": null,
+      "L": 151,
+      "H": 121,
+      "T": 22,
+      "W": null
+    },
+    "radFan": {
+      "model": null,
+      "rpm": null,
+      "for": "gen-aio360"
+    },
+    "caseDim": {
+      "preset": "ghl",
+      "d": 465,
+      "h": 485,
+      "w": 230
+    },
+    "room": 25,
+    "cpuLoad": 60,
+    "cpuMode": "game",
+    "cpuManualW": null,
+    "gpuLoad": 90,
+    "gpuFan": {
+      "mode": "auto",
+      "pct": 60
+    },
+    "fanRpm": 70,
+    "mirror": true,
+    "noiseT": 25,
+    "noiseSize": "120",
+    "view": {
+      "overlay": "temp",
+      "particles": true,
+      "arrows": true,
+      "cfm": true,
+      "count": 1000,
+      "speed": 0.5,
+      "conf": true,
+      "stage": "spec",
+      "dim": "2d",
+      "panel3d": "real",
+      "flow3d": "smoke"
+    },
+    "criteria": {
+      "cap": true,
+      "v": 3,
+      "cpu": {
+        "t": [
+          60,
+          70,
+          82
+        ],
+        "w": 1
+      },
+      "gpu": {
+        "t": [
+          60,
+          68,
+          78
+        ],
+        "w": 2
+      },
+      "vrm": {
+        "t": [
+          45,
+          60,
+          80
+        ],
+        "w": 1
+      },
+      "intake": {
+        "t": [
+          5.5,
+          7.5,
+          9.5
+        ],
+        "w": 2
+      },
+      "stag": {
+        "t": [
+          3,
+          6,
+          10
+        ],
+        "w": 1
+      },
+      "eff": {
+        "t": [
+          1.6,
+          1.3,
+          1
+        ],
+        "w": 0
+      },
+      "press": {
+        "t": [
+          [
+            0,
+            25
+          ],
+          [
+            -10,
+            50
+          ],
+          [
+            -30,
+            80
+          ]
+        ],
+        "w": 1
+      }
+    },
+    "fans": [
+      {
+        "id": "l0kj5bm",
+        "x": 52.5,
+        "y": 262.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "5tcbfeo",
+        "x": 52.5,
+        "y": 407.5,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "uggiqkg",
+        "x": 482.5,
+        "y": 174,
+        "a": 0,
+        "size": 140,
+        "rpm": 70,
+        "model": "ghl140"
+      },
+      {
+        "id": "rp4iwed",
+        "x": 132.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "h8j7231",
+        "x": 257.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      },
+      {
+        "id": "sk4nxfq",
+        "x": 382.5,
+        "y": 81.5,
+        "a": 270,
+        "size": 120,
+        "rpm": 70,
+        "model": "gen120",
+        "auto": "rad"
+      }
+    ],
+    "gpuT": 50,
+    "gpuH": 130,
+    "gpuFans": 3,
+    "cFans": 2,
+    "cFanSize": 120,
+    "cFanQ": 58,
+    "cFanP": 19.024901,
+    "gpuFanD": null
+  },
+  "verifiedHardware": {
+    "id": "frontier-frghlb860k-ws1024-tcg-20261127",
+    "shop": "FRONTIER",
+    "model": "FRGHLB860K/WS1024/TCG",
+    "url": "https://www.frontier-direct.jp/direct/g/g124563-Nov4/",
+    "price": 449800,
+    "priceDate": "2026-11-27",
+    "parts": {
+      "CPU": "インテル Core Ultra 7 プロセッサー 270K Plus",
+      "CPUクーラー": "水冷 CPS DA360 V2 ARGB(360mm)",
+      "GPU": "MSI製 GeForce RTX 5070 Ti 16GB",
+      "メモリ": "DDR5 32GB(16GB×2)",
+      "SSD": "1TB M.2 NVMe SSD Gen4",
+      "電源": "850W ATX 80PLUS PLATINUM(静音電源・日本製コンデンサ仕様)",
+      "ケース": "FRONTIER GHL シリーズ(販売ページに記載なし・仮定)"
+    },
+    "note": "税込449,800円(ブラックフライデーセール 12/4 15:00まで)。受注生産。",
+    "date": "2026-11-27",
+    "sale": "BLACK FRIDAYセール 2026-10-30 15:00～2026-11-06 15:00（日本時間）",
+    "informationSource": "2026-11-27 販売ページの内容と価格(FRONTIERの商品ページを1回だけ開いて確認)",
+    "unknown": [
+      "ケース・ケースファン(GHLシリーズと仮定)",
+      "水冷ラジエーターの位置(天面と仮定)",
+      "GPUのカード型番・寸法",
+      "送料・納期"
+    ],
+    "sources": [
+      "https://www.frontier-direct.jp/direct/e/ej-sale/"
+    ]
+  },
+  "simulation": {
+    "status": "assumed",
+    "note": "仮定による参考計算(2026-11-27):ケースはFRONTIER GHL シリーズ(230×500×465mm、販売ページに記載なし)。ファンはGHLモデルと同じ前面140mm吸気×3/背面排気×1と仮定し、CPS DA360 V2 ARGB(シート未登録のため一般的な360mm簡易水冷)を天面排気と仮定。ラジエーターと重なる前面上のファン1基はシートの判定で外れている。GPUはMSI製(カード型番・寸法は不明)のため汎用3ファン形状。11/22まで載せていた計算(デュアルタワー空冷)から、販売ページの水冷に合わせて計算し直した。2Dのみで計算し、3Dでの確認は未実施。実機の温度を保証しません",
+    "computedAt": "2026-11-27T14:09:30.718Z"
+  }
+}
